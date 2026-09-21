@@ -16,10 +16,18 @@ export const ui = {
     'nav.pourquoi': "Pourquoi l'Afrique du Sud",
     'nav.reseaux': 'Nos réseaux',
     'nav.contact': 'Nous contacter',
+    'nav.temoignages': 'Témoignages',
+    'nav.liens': 'Liens utiles',
+    'soins.titre': 'Nos domaines d’accompagnement',
+    'soins.fiv': 'Fécondation in vitro',
+    'soins.oncologie': 'Oncologie',
+    'soins.chirurgie': 'Interventions chirurgicales',
+    'soins.bilan': 'Bilan de santé',
     'nav.menu': 'Menu',
     'nav.fermer': 'Fermer',
     'nav.evitement': 'Aller au contenu principal',
     'pied.plan': 'Le site',
+    'pied.aussi': 'À découvrir',
     'pied.legal': 'Informations légales',
     'pied.contact': 'Contact',
     'pied.confidentialite': 'Politique de confidentialité',
@@ -47,10 +55,18 @@ export const ui = {
     'nav.pourquoi': 'Why South Africa',
     'nav.reseaux': 'Our network',
     'nav.contact': 'Contact us',
+    'nav.temoignages': 'Testimonials',
+    'nav.liens': 'Useful links',
+    'soins.titre': 'Where we support patients',
+    'soins.fiv': 'In vitro fertilisation',
+    'soins.oncologie': 'Oncology',
+    'soins.chirurgie': 'Surgery',
+    'soins.bilan': 'General check-up',
     'nav.menu': 'Menu',
     'nav.fermer': 'Close',
     'nav.evitement': 'Skip to main content',
     'pied.plan': 'The site',
+    'pied.aussi': 'Also worth a look',
     'pied.legal': 'Legal',
     'pied.contact': 'Contact',
     'pied.confidentialite': 'Privacy policy',
@@ -91,6 +107,14 @@ export const equivalences: Record<string, string> = {
   'contact': 'contact',
   'confidentialite': 'privacy-policy',
   'conditions-generales': 'terms-and-conditions',
+  'vision-et-mission': 'vision-and-mission',
+  'hebergement': 'accommodation',
+  'temoignages': 'testimonials',
+  'liens-utiles': 'useful-links',
+  'fecondation-in-vitro': 'in-vitro-fertilisation',
+  'oncologie': 'oncology',
+  'interventions-chirurgicales': 'surgeries',
+  'bilan-de-sante': 'general-check-up',
 };
 
 export const equivalencesInverses: Record<string, string> = Object.fromEntries(
@@ -105,4 +129,20 @@ export const menu = [
   { fr: 'pourquoi-afrique-du-sud', cle: 'nav.pourquoi' },
   { fr: 'nos-reseaux', cle: 'nav.reseaux' },
   { fr: 'contact', cle: 'nav.contact' },
+] as const;
+
+/** Pages secondaires, listees dans le pied de page. */
+export const menuPied = [
+  { fr: 'vision-et-mission', cle: 'nav.vision' },
+  { fr: 'hebergement', cle: 'nav.hebergement' },
+  { fr: 'temoignages', cle: 'nav.temoignages' },
+  { fr: 'liens-utiles', cle: 'nav.liens' },
+] as const;
+
+/** Sous-pages de soins, listees depuis la page Soins medicaux. */
+export const sousPagesSoins = [
+  { fr: 'fecondation-in-vitro', cle: 'soins.fiv', image: 'soin-fiv' },
+  { fr: 'oncologie', cle: 'soins.oncologie', image: 'soin-oncologie' },
+  { fr: 'interventions-chirurgicales', cle: 'soins.chirurgie', image: 'soin-chirurgie' },
+  { fr: 'bilan-de-sante', cle: 'soins.bilan', image: 'soin-bilans' },
 ] as const;

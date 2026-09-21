@@ -1,34 +1,42 @@
 ---
 titre: Medical care
 surtitre: Where we support patients
-chapeau: Some of the most common reasons patients come to us. This list is illustrative rather than exhaustive — contact us to discuss your own case.
-description: In vitro fertilisation, oncology, surgery and general check-ups — the main areas in which BanaHealth supports its patients.
+chapeau: "These are the most common reasons patients come to us. The list is illustrative rather than exhaustive: contact us to discuss your own case."
+description: "In vitro fertilisation, oncology, surgery and general check-ups — the main areas in which BanaHealth supports its patients."
 langue: en
 url: medical-care
 ordre: 4
-galerie:
+cartes:
   - image: soin-fiv
-    legende: In vitro fertilisation
+    titre: In vitro fertilisation
+    texte: A series of procedures that can address genetic or fertility problems and help you conceive.
+    lien: /en/in-vitro-fertilisation/
+    lienLibelle: Learn more
   - image: soin-oncologie
-    legende: Oncology
+    titre: Oncology
+    texte: The branch of medicine devoted to cancer, of which more than two hundred distinct types are recognised.
+    lien: /en/oncology/
+    lienLibelle: Learn more
   - image: soin-chirurgie
-    legende: Surgery
+    titre: Surgery
+    texte: Relieving or preventing illness, improving a bodily function, controlling the symptoms of a disease.
+    lien: /en/surgeries/
+    lienLibelle: Learn more
   - image: soin-bilans
-    legende: General check-ups
+    titre: General check-up
+    texte: A thorough examination by professionals — the only reliable way to take stock of your health.
+    lien: /en/general-check-up/
+    lienLibelle: Learn more
 ---
 
-## In vitro fertilisation
+## How we work
 
-In vitro fertilisation (IVF) is a series of procedures that can address genetic or fertility problems and help you conceive. A more common procedure, artificial insemination, involves introducing sperm into the uterus; IVF goes considerably further.
+Whatever the reason, our role stays the same: find you the right specialist, obtain a cost estimate, arrange appointments and stand beside you from arrival to return.
 
-## Oncology
+We make no diagnosis and provide no treatment — those acts belong to the practitioners and institutions. Our job is to make your journey legible and free of friction, inside a foreign healthcare system whose administration can be disorienting.
 
-Oncology is the branch of medicine devoted to cancer. More than two hundred distinct types of cancer are recognised.
+## Your case is not on this list?
 
-## Surgery
+The four areas above are the most frequent, not the only ones. We have supported patients in cardiology, orthopaedics, nephrology, ophthalmology and many other specialities.
 
-Surgery may be performed for a great many reasons. While some procedures aim to relieve or prevent illness, others seek to improve a particular bodily function or to control the symptoms of a disease.
-
-## General check-ups
-
-As medicine and technology advance, we are constantly flooded with new research — and with websites inviting us to diagnose ourselves. A thorough check-up carried out by professionals remains the only reliable way to take stock.
+Send your medical report to [hello@banahealth.care](mailto:hello@banahealth.care) and we will consult our network and tell you quickly what can be done.

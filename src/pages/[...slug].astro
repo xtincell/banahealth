@@ -17,6 +17,7 @@ const { page } = Astro.props;
 const { Content } = await render(page);
 const d = page.data;
 const banniere = media(d.banniere);
+const cartes = (d.cartes ?? []).map((k) => ({ ...k, src: media(k.image) }));
 const galerie = (d.galerie ?? [])
   .map((g) => ({ ...g, src: media(g.image) }))
   .filter((g) => g.src);
@@ -48,6 +49,27 @@ const galerie = (d.galerie ?? [])
         <figure class="banniere__entier reveler">
           <Image src={banniere} alt={d.titre} width={1100} loading="eager" />
         </figure>
+      </div>
+    )}
+
+    {cartes.length > 0 && (
+      <div class="enveloppe">
+        <ul class="cartes">
+          {cartes.map((k, i) => (
+            <li class="carte reveler" style={`transition-delay:${i * 0.07}s`}>
+              {k.src && <Image src={k.src} alt="" class="carte__image" width={640} loading="lazy" />}
+              <div class="carte__corps">
+                <h2 class="carte__titre">{k.titre}</h2>
+                {k.texte && <p class="carte__texte">{k.texte}</p>}
+                {k.lien && (
+                  <a class="carte__lien" href={k.lien}>
+                    {k.lienLibelle ?? k.titre}<span aria-hidden="true">→</span>
+                  </a>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     )}
 
@@ -114,6 +136,51 @@ const galerie = (d.galerie ?? [])
     border-radius: 1rem;
     box-shadow: var(--ombre-forte);
   }
+
+  .cartes {
+    list-style: none;
+    margin: clamp(2.5rem, 6vw, 4rem) 0 0;
+    padding: 0;
+    display: grid;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+  .carte {
+    display: flex;
+    flex-direction: column;
+    background: var(--papier);
+    border: 1px solid var(--trait);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .carte:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ombre-forte);
+    border-color: color-mix(in srgb, var(--orange) 45%, var(--trait));
+  }
+  .carte__image { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+  .carte__corps {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    flex: 1;
+  }
+  .carte__titre { font-size: 1.22rem; margin: 0; }
+  .carte__texte { color: var(--encre-douce); font-size: .95rem; margin: 0; flex: 1; }
+  .carte__lien {
+    margin-top: .5rem;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: .9rem;
+    color: var(--teal-fonce);
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+  }
+  .carte__lien span { transition: transform .2s ease; }
+  .carte:hover .carte__lien span { transform: translateX(4px); }
 
   .galerie {
     list-style: none;

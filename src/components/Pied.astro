@@ -1,5 +1,5 @@
 ---
-import { t, chemin, menu, equivalences, type Langue } from '../i18n/ui';
+import { t, chemin, menu, menuPied, equivalences, type Langue } from '../i18n/ui';
 import Logo from './Logo.astro';
 
 interface Props { langue: Langue; }
@@ -7,10 +7,9 @@ const { langue } = Astro.props;
 const tr = t(langue);
 const annee = new Date().getFullYear();
 
-const plan = menu.map((m) => ({
-  href: chemin(langue, langue === 'fr' ? m.fr : (equivalences[m.fr] ?? m.fr)),
-  libelle: tr(m.cle),
-}));
+const lien = (fr: string) => chemin(langue, langue === 'fr' ? fr : (equivalences[fr] ?? fr));
+const plan = menu.map((m) => ({ href: lien(m.fr), libelle: tr(m.cle) }));
+const planSecondaire = menuPied.map((m) => ({ href: lien(m.fr), libelle: tr(m.cle) }));
 
 const legal = langue === 'fr'
   ? [
@@ -33,6 +32,11 @@ const legal = langue === 'fr'
     <nav class="pied__colonne" aria-label={tr('pied.plan')}>
       <h2 class="pied__titre">{tr('pied.plan')}</h2>
       <ul>{plan.map((l) => <li><a href={l.href}>{l.libelle}</a></li>)}</ul>
+    </nav>
+
+    <nav class="pied__colonne" aria-label={tr('pied.aussi')}>
+      <h2 class="pied__titre">{tr('pied.aussi')}</h2>
+      <ul>{planSecondaire.map((l) => <li><a href={l.href}>{l.libelle}</a></li>)}</ul>
     </nav>
 
     <nav class="pied__colonne" aria-label={tr('pied.legal')}>

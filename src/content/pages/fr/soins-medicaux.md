@@ -1,34 +1,42 @@
 ---
 titre: Soins médicaux
 surtitre: Nos domaines d'accompagnement
-chapeau: "Quelques-uns des motifs de soins les plus fréquents parmi les patients que nous accompagnons. Cette liste n'est pas exhaustive : contactez-nous pour discuter de votre cas."
-description: Fécondation in vitro, oncologie, interventions chirurgicales, bilans de santé — les principaux domaines dans lesquels BanaHealth accompagne ses patients.
+chapeau: "Voici les motifs de soins les plus fréquents parmi les patients que nous accompagnons. Cette liste est illustrative : contactez-nous pour discuter de votre cas."
+description: "Fécondation in vitro, oncologie, interventions chirurgicales, bilans de santé — les principaux domaines dans lesquels BanaHealth accompagne ses patients."
 langue: fr
 url: soins-medicaux
 ordre: 4
-galerie:
+cartes:
   - image: soin-fiv
-    legende: Fécondation in vitro
+    titre: Fécondation in vitro
+    texte: Une série de procédures pouvant traiter les problèmes génétiques ou de fécondité et vous aider à concevoir votre enfant.
+    lien: /fecondation-in-vitro/
+    lienLibelle: En savoir plus
   - image: soin-oncologie
-    legende: Oncologie
+    titre: Oncologie
+    texte: La branche de la médecine consacrée au cancer, dont on recense aujourd'hui plus de deux cents types différents.
+    lien: /oncologie/
+    lienLibelle: En savoir plus
   - image: soin-chirurgie
-    legende: Interventions chirurgicales
+    titre: Interventions chirurgicales
+    texte: Atténuer ou prévenir un mal, améliorer une fonction du corps, contrôler les symptômes d'une maladie.
+    lien: /interventions-chirurgicales/
+    lienLibelle: En savoir plus
   - image: soin-bilans
-    legende: Bilans de santé
+    titre: Bilan de santé
+    texte: Un examen complet réalisé par des professionnels, seule manière fiable de faire le point sur votre état.
+    lien: /bilan-de-sante/
+    lienLibelle: En savoir plus
 ---
 
-## Fécondation in vitro
+## Comment nous intervenons
 
-La fécondation in vitro (FIV) consiste en une série de procédures pouvant traiter les problèmes génétiques ou de fécondité et vous aider à concevoir votre enfant. Une procédure plus commune, l'insémination artificielle, consiste à introduire des spermatozoïdes dans l'utérus ; la FIV va au-delà de cette procédure.
+Quel que soit le motif, notre rôle reste le même : vous trouver le bon spécialiste, obtenir une estimation des coûts, organiser les rendez-vous et vous accompagner de votre arrivée à votre retour.
 
-## Oncologie
+Nous ne posons aucun diagnostic et ne dispensons aucun soin — ces actes relèvent des praticiens et des établissements. Notre métier consiste à rendre votre parcours lisible et sans friction, dans un système de santé étranger dont l'administration peut dérouter.
 
-L'oncologie est la branche de la médecine consacrée au cancer. Il existe plus de deux cents types de cancer différents.
+## Votre cas ne figure pas dans cette liste ?
 
-## Interventions chirurgicales
+Les quatre domaines ci-dessus sont les plus fréquents, non les seuls. Nous avons accompagné des patients en cardiologie, en orthopédie, en néphrologie, en ophtalmologie et dans bien d'autres spécialités.
 
-Une intervention chirurgicale peut être réalisée pour une multitude de raisons. Tandis que certains traitements ont pour but d'atténuer ou de prévenir des maux, d'autres cherchent à améliorer une fonction particulière du corps ou à contrôler les symptômes d'une maladie.
-
-## Bilans de santé
-
-Avec le progrès de la médecine et de la technologie, nous sommes constamment inondés de nouvelles recherches, et même de sites web nous permettant de nous diagnostiquer nous-mêmes. Un bilan de santé complet, réalisé par des professionnels, reste la seule manière fiable de faire le point.
+Envoyez-nous votre rapport médical à [hello@banahealth.care](mailto:hello@banahealth.care) : nous consultons notre réseau et vous disons rapidement ce qu'il est possible de faire.
