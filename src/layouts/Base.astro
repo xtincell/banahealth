@@ -63,27 +63,6 @@ const canonique = new URL(chemin(langue, slug), Astro.site ?? 'https://banahealt
     </main>
     <Pied langue={langue} />
 
-    <script>
-      // Revelation au defilement — desactivee si l'utilisateur
-      // a demande a reduire les animations.
-      const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const cibles = document.querySelectorAll('.reveler');
-      if (reduit || !('IntersectionObserver' in window)) {
-        cibles.forEach((e) => e.classList.add('vu'));
-      } else {
-        const obs = new IntersectionObserver(
-          (entrees) => {
-            for (const e of entrees) {
-              if (e.isIntersecting) {
-                e.target.classList.add('vu');
-                obs.unobserve(e.target);
-              }
-            }
-          },
-          { rootMargin: '0px 0px -10% 0px', threshold: 0.05 },
-        );
-        cibles.forEach((e) => obs.observe(e));
-      }
-    </script>
+    <script is:inline defer src="/js/site.js"></script>
   </body>
 </html>

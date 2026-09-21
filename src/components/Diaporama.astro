@@ -186,14 +186,15 @@ const diapos = c.diapos.map((d) => ({ ...d, src: media(d.image), ...decouperTitr
 
   /* --- Commandes --- */
   .diaporama__commandes {
+    display: none;
     position: absolute;
     left: 0; right: 0;
     bottom: clamp(1.25rem, 3vw, 2.25rem);
     z-index: 2;
-    display: flex;
     align-items: center;
     gap: 1rem;
   }
+  :global(.diaporama--actif) .diaporama__commandes { display: flex; }
   .diaporama__fleche {
     flex: none;
     width: 2.6rem; height: 2.6rem;
@@ -224,61 +225,3 @@ const diapos = c.diapos.map((d) => ({ ...d, src: media(d.image), ...decouperTitr
   }
 </style>
 
-<script>
-  const racine = document.querySelector<HTMLElement>('[data-diaporama]');
-  if (racine) {
-    const diapos = [...racine.querySelectorAll<HTMLElement>('[data-diapo]')];
-    const puces = [...racine.querySelectorAll<HTMLButtonElement>('[data-puce]')];
-    const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let index = 0;
-    let minuteur: ReturnType<typeof setInterval> | null = null;
-
-    function afficher(n: number) {
-      index = (n + diapos.length) % diapos.length;
-      diapos.forEach((d, i) => {
-        const actif = i === index;
-        d.classList.toggle('est-active', actif);
-        if (actif) d.removeAttribute('aria-hidden');
-        else d.setAttribute('aria-hidden', 'true');
-      });
-      puces.forEach((p, i) => {
-        p.classList.toggle('est-active', i === index);
-        if (i === index) p.setAttribute('aria-current', 'true');
-        else p.removeAttribute('aria-current');
-      });
-    }
-
-    function demarrer() {
-      // Pas de defilement automatique si l'utilisateur a demande
-      // a reduire les animations, ni s'il n'y a qu'une diapo.
-      if (reduit || diapos.length < 2 || minuteur) return;
-      minuteur = setInterval(() => afficher(index + 1), 6500);
-    }
-    function arreter() {
-      if (minuteur) { clearInterval(minuteur); minuteur = null; }
-    }
-    function relancer() { arreter(); demarrer(); }
-
-    racine.querySelector('[data-precedent]')?.addEventListener('click', () => {
-      afficher(index - 1); relancer();
-    });
-    racine.querySelector('[data-suivant]')?.addEventListener('click', () => {
-      afficher(index + 1); relancer();
-    });
-    puces.forEach((p, i) =>
-      p.addEventListener('click', () => { afficher(i); relancer(); }),
-    );
-
-    // On suspend tant que la souris ou le clavier est sur le carrousel
-    racine.addEventListener('mouseenter', arreter);
-    racine.addEventListener('mouseleave', demarrer);
-    racine.addEventListener('focusin', arreter);
-    racine.addEventListener('focusout', demarrer);
-    // et quand l'onglet passe en arriere-plan
-    document.addEventListener('visibilitychange', () =>
-      document.hidden ? arreter() : demarrer(),
-    );
-
-    demarrer();
-  }
-</script>

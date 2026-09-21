@@ -152,10 +152,20 @@ strong { font-weight: 700; }
 .bouton--clair { background: var(--orange); color: #fff; }
 .bouton--clair:hover { background: #fff; color: var(--teal-nuit); }
 
-/* --- Reveler au defilement --- */
-.reveler { opacity: 0; transform: translateY(1.5rem); transition: opacity .7s ease, transform .7s ease; }
-.reveler.vu { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveler { opacity: 1; transform: none; } }
+/* --- Reveler au defilement ---
+   Le contenu est visible par defaut. Il n'est masque que si le script
+   a demarre et pose la classe js-anim : ainsi, un script bloque ou en
+   erreur laisse la page parfaitement lisible plutot que vide. */
+.reveler { opacity: 1; transform: none; }
+.js-anim .reveler {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.js-anim .reveler.vu { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js-anim .reveler { opacity: 1; transform: none; }
+}
 
 /* --- Accessibilite --- */
 .lien-evitement {
