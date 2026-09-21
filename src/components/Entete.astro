@@ -1,0 +1,159 @@
+---
+import { t, chemin, menu, equivalences, type Langue } from '../i18n/ui';
+import Logo from './Logo.astro';
+
+interface Props { langue: Langue; slug: string; urlAutre: string; }
+const { langue, slug, urlAutre } = Astro.props;
+const tr = t(langue);
+
+const liens = menu.map((m) => {
+  const s = langue === 'fr' ? m.fr : (equivalences[m.fr] ?? m.fr);
+  return { href: chemin(langue, s), libelle: tr(m.cle), actif: s === slug };
+});
+---
+
+<header class="entete">
+  <div class="enveloppe entete__grille">
+    <a class="marque" href={chemin(langue)} aria-label="BanaHealth — Medical Facilitation">
+      <Logo taille={2.35} />
+    </a>
+
+    <input type="checkbox" id="bascule-menu" class="visuellement-cache" />
+    <label for="bascule-menu" class="bouton-menu">
+      <span class="bouton-menu__barres" aria-hidden="true"></span>
+      <span class="visuellement-cache">{tr('nav.menu')}</span>
+    </label>
+
+    <nav class="navigation" aria-label={tr('nav.menu')}>
+      <ul class="navigation__liste">
+        {liens.map((l) => (
+          <li>
+            <a href={l.href} class:list={['navigation__lien', { 'est-actif': l.actif }]} aria-current={l.actif ? 'page' : undefined}>
+              {l.libelle}
+            </a>
+          </li>
+        ))}
+        <li class="navigation__langue">
+          <a href={urlAutre} class="navigation__lien navigation__lien--langue" hreflang={langue === 'fr' ? 'en' : 'fr'}>
+            {tr('langue.bascule')}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .entete {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--papier) 88%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--trait);
+  }
+  .entete__grille {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    min-height: 4.75rem;
+  }
+
+  .marque { text-decoration: none; display: inline-flex; }
+
+  .navigation__liste {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: clamp(.9rem, 1.6vw, 1.75rem);
+    margin: 0;
+    padding: 0;
+  }
+  .navigation__lien {
+    text-decoration: none;
+    color: var(--encre-douce);
+    font-size: .92rem;
+    font-weight: 500;
+    padding-block: .35rem;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color .18s ease, border-color .18s ease;
+  }
+  .navigation__lien:hover { color: var(--teal-fonce); border-color: var(--orange); }
+  .navigation__lien.est-actif { color: var(--teal-fonce); border-color: var(--orange); }
+  .navigation__lien--langue {
+    border: 1px solid var(--trait);
+    border-radius: 100px;
+    padding: .35rem .85rem;
+    font-size: .8rem;
+    letter-spacing: .04em;
+  }
+  .navigation__lien--langue:hover { border-color: var(--orange); }
+
+  .bouton-menu { display: none; }
+
+  /* --- Mobile --- */
+  @media (max-width: 62rem) {
+    .bouton-menu {
+      display: grid;
+      place-items: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      cursor: pointer;
+      border: 1px solid var(--trait);
+      border-radius: .6rem;
+    }
+    .bouton-menu__barres,
+    .bouton-menu__barres::before,
+    .bouton-menu__barres::after {
+      display: block;
+      width: 1.15rem;
+      height: 2px;
+      background: var(--teal-fonce);
+      border-radius: 2px;
+      transition: transform .25s ease, opacity .2s ease;
+    }
+    .bouton-menu__barres { position: relative; }
+    .bouton-menu__barres::before,
+    .bouton-menu__barres::after { content: ''; position: absolute; left: 0; }
+    .bouton-menu__barres::before { top: -6px; }
+    .bouton-menu__barres::after { top: 6px; }
+
+    #bascule-menu:checked ~ .bouton-menu .bouton-menu__barres { background: transparent; }
+    #bascule-menu:checked ~ .bouton-menu .bouton-menu__barres::before { transform: translateY(6px) rotate(45deg); }
+    #bascule-menu:checked ~ .bouton-menu .bouton-menu__barres::after { transform: translateY(-6px) rotate(-45deg); }
+
+    .navigation {
+      position: absolute;
+      inset: 100% 0 auto;
+      background: var(--papier);
+      border-bottom: 1px solid var(--trait);
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .3s ease;
+      box-shadow: var(--ombre-douce);
+    }
+    .navigation__liste {
+      overflow: hidden;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding-inline: var(--gouttiere);
+    }
+    #bascule-menu:checked ~ .navigation { grid-template-rows: 1fr; }
+    .navigation__lien {
+      display: block;
+      padding: .9rem 0;
+      border-bottom: 1px solid var(--trait);
+      border-left: 2px solid transparent;
+      font-size: 1.05rem;
+    }
+    .navigation__lien:hover, .navigation__lien.est-actif { border-bottom-color: var(--trait); padding-left: .6rem; }
+    .navigation__langue { padding-block: 1rem 1.4rem; }
+    .navigation__lien--langue { display: inline-block; padding: .45rem 1rem; }
+  }
+  @media (min-width: 62.01rem) {
+    #bascule-menu, .bouton-menu { display: none; }
+  }
+</style>

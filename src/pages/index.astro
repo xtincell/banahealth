@@ -1,17 +1,14 @@
 ---
-
+import Base from '../layouts/Base.astro';
+import Accueil from '../components/Accueil.astro';
+import { ui } from '../i18n/ui';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base
+  langue="fr"
+  titre={ui.fr['nom']}
+  description="BanaHealth accompagne les patients francophones vers les hôpitaux privés d'Afrique du Sud : choix des spécialistes, devis, rendez-vous, visa, vols et hébergement."
+  slug=""
+>
+  <Accueil langue="fr" />
+</Base>

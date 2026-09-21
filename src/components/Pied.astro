@@ -1,0 +1,108 @@
+---
+import { t, chemin, menu, equivalences, type Langue } from '../i18n/ui';
+import Logo from './Logo.astro';
+
+interface Props { langue: Langue; }
+const { langue } = Astro.props;
+const tr = t(langue);
+const annee = new Date().getFullYear();
+
+const plan = menu.map((m) => ({
+  href: chemin(langue, langue === 'fr' ? m.fr : (equivalences[m.fr] ?? m.fr)),
+  libelle: tr(m.cle),
+}));
+
+const legal = langue === 'fr'
+  ? [
+      { href: chemin('fr', 'confidentialite'), libelle: tr('pied.confidentialite') },
+      { href: chemin('fr', 'conditions-generales'), libelle: tr('pied.conditions') },
+    ]
+  : [
+      { href: chemin('en', 'privacy-policy'), libelle: tr('pied.confidentialite') },
+      { href: chemin('en', 'terms-and-conditions'), libelle: tr('pied.conditions') },
+    ];
+---
+
+<footer class="pied">
+  <div class="enveloppe pied__grille">
+    <div class="pied__marque">
+      <Logo sens="vertical" taille={1.9} clair />
+      <p class="pied__slogan">{tr('slogan')}</p>
+    </div>
+
+    <nav class="pied__colonne" aria-label={tr('pied.plan')}>
+      <h2 class="pied__titre">{tr('pied.plan')}</h2>
+      <ul>{plan.map((l) => <li><a href={l.href}>{l.libelle}</a></li>)}</ul>
+    </nav>
+
+    <nav class="pied__colonne" aria-label={tr('pied.legal')}>
+      <h2 class="pied__titre">{tr('pied.legal')}</h2>
+      <ul>{legal.map((l) => <li><a href={l.href}>{l.libelle}</a></li>)}</ul>
+    </nav>
+
+    <div class="pied__colonne">
+      <h2 class="pied__titre">{tr('pied.contact')}</h2>
+      <ul>
+        <li><a href="mailto:hello@banahealth.care">hello@banahealth.care</a></li>
+        <li><a href="tel:+27826844154">+27 (0) 82 684 4154</a></li>
+        <li><a href="tel:+27827756975">+27 (0) 82 775 6975</a></li>
+        <li class="pied__lieu">Johannesbourg, {langue === 'fr' ? 'Afrique du Sud' : 'South Africa'}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="enveloppe pied__bas">
+    <p>© {annee} BanaHealth. {tr('pied.droits')}</p>
+  </div>
+</footer>
+
+<style>
+  .pied {
+    background: var(--charbon);
+    color: #D9DEDE;
+    padding-block: clamp(3rem, 6vw, 4.5rem) 0;
+    margin-top: clamp(3rem, 8vw, 6rem);
+  }
+  .pied__grille {
+    display: grid;
+    gap: clamp(2rem, 4vw, 3rem);
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    padding-bottom: 3rem;
+  }
+  .pied__marque { display: grid; gap: 1rem; justify-items: start; }
+  .pied__slogan {
+    font-size: .8rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #9AA1A1;
+    margin: .5rem 0 0;
+  }
+  .pied__titre {
+    font-family: var(--texte);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin: 0 0 1rem;
+  }
+  .pied__colonne ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+  .pied__colonne a {
+    color: #D9DEDE;
+    text-decoration: none;
+    font-size: .92rem;
+    transition: color .18s ease;
+  }
+  .pied__colonne a:hover { color: var(--orange-clair); text-decoration: underline; }
+  .pied__lieu { font-size: .92rem; color: #9AA1A1; }
+
+  .pied__bas {
+    border-top: 1px solid rgba(255,255,255,.12);
+    padding-block: 1.5rem;
+  }
+  .pied__bas p {
+    margin: 0;
+    font-size: .82rem;
+    color: #8A9191;
+  }
+</style>

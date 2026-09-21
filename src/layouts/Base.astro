@@ -1,0 +1,89 @@
+---
+import { t, chemin, equivalences, equivalencesInverses, type Langue } from '../i18n/ui';
+import Entete from '../components/Entete.astro';
+import Pied from '../components/Pied.astro';
+import '../styles/global.css';
+
+interface Props {
+  langue: Langue;
+  titre: string;
+  description: string;
+  slug?: string;
+  classe?: string;
+}
+
+const { langue, titre, description, slug = '', classe = '' } = Astro.props;
+const tr = t(langue);
+
+// Chemin equivalent dans l'autre langue, pour hreflang et le selecteur
+const autre: Langue = langue === 'fr' ? 'en' : 'fr';
+const slugAutre = langue === 'fr' ? (equivalences[slug] ?? '') : (equivalencesInverses[slug] ?? '');
+const urlAutre = chemin(autre, slugAutre);
+
+const titreComplet = slug === '' ? `${tr('nom')} — ${tr('slogan')}` : `${titre} · ${tr('nom')}`;
+const canonique = new URL(chemin(langue, slug), Astro.site ?? 'https://banahealth.care').href;
+---
+
+<!doctype html>
+<html lang={langue}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titreComplet}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonique} />
+    <link rel="alternate" hreflang={langue} href={canonique} />
+    <link rel="alternate" hreflang={autre} href={new URL(urlAutre, Astro.site ?? 'https://banahealth.care').href} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={tr('nom')} />
+    <meta property="og:title" content={titreComplet} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={langue === 'fr' ? 'fr_FR' : 'en_GB'} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0AA89E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,800;1,400&display=swap"
+    />
+  </head>
+
+  <body class={classe}>
+    <a class="lien-evitement" href="#contenu">{tr('nav.evitement')}</a>
+    <Entete langue={langue} slug={slug} urlAutre={urlAutre} />
+    <main id="contenu">
+      <slot />
+    </main>
+    <Pied langue={langue} />
+
+    <script>
+      // Revelation au defilement — desactivee si l'utilisateur
+      // a demande a reduire les animations.
+      const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const cibles = document.querySelectorAll('.reveler');
+      if (reduit || !('IntersectionObserver' in window)) {
+        cibles.forEach((e) => e.classList.add('vu'));
+      } else {
+        const obs = new IntersectionObserver(
+          (entrees) => {
+            for (const e of entrees) {
+              if (e.isIntersecting) {
+                e.target.classList.add('vu');
+                obs.unobserve(e.target);
+              }
+            }
+          },
+          { rootMargin: '0px 0px -10% 0px', threshold: 0.05 },
+        );
+        cibles.forEach((e) => obs.observe(e));
+      }
+    </script>
+  </body>
+</html>

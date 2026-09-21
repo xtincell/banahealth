@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+import icone from '../assets/logo-banahealth.png';
+
+interface Props {
+  /** horizontal : icone a gauche, texte a droite (charte, p.4)
+   *  vertical   : icone au-dessus, texte centre dessous (charte, p.5) */
+  sens?: 'horizontal' | 'vertical';
+  /** hauteur de l'icone en rem */
+  taille?: number;
+  /** inverse : sur fond sombre */
+  clair?: boolean;
+}
+
+const { sens = 'horizontal', taille = 2.6, clair = false } = Astro.props;
+---
+
+<span class:list={['logo', `logo--${sens}`, { 'logo--clair': clair }]} style={`--icone: ${taille}rem`}>
+  <Image src={icone} alt="" class="logo__icone" width={220} height={220} loading="eager" />
+  <span class="logo__texte">
+    <span class="logo__nom"><span class="logo__bana">Bana</span><span class="logo__health">Health</span></span>
+    <span class="logo__metier">Medical Facilitation</span>
+  </span>
+</span>
+
+<style>
+  /* Le nom est deux fois plus gras que le metier (charte, p.11).
+     Le filet turquoise court sous l'ensemble du nom et ne doit
+     jamais couper le logo en deux (charte, p.6). */
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: .6em;
+    line-height: 1;
+    text-decoration: none;
+  }
+  .logo__icone {
+    width: var(--icone);
+    height: var(--icone);
+    flex: none;
+  }
+  .logo__texte { display: grid; gap: .1em; }
+
+  .logo__nom {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: calc(var(--icone) * .66);
+    letter-spacing: -.01em;
+    line-height: 1;
+    border-bottom: 1px solid var(--teal);
+    padding-bottom: .1em;
+  }
+  .logo__bana { color: var(--orange); }
+  .logo__health { color: var(--teal); }
+
+  .logo__metier {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: calc(var(--icone) * .235);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gris);
+    text-align: right;
+    line-height: 1;
+  }
+
+  /* Verrou vertical : tout centre sur le meme axe */
+  .logo--vertical {
+    flex-direction: column;
+    gap: .45em;
+  }
+  .logo--vertical .logo__icone { width: calc(var(--icone) * 2.1); height: calc(var(--icone) * 2.1); }
+  .logo--vertical .logo__metier { text-align: center; }
+
+  /* Sur fond sombre : le metier passe en gris clair pour rester lisible */
+  .logo--clair .logo__metier { color: #A9AFAF; }
+</style>

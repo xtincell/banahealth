@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { t, chemin } from '../i18n/ui';
+const tr = t('fr');
+---
+
+<Base langue="fr" titre={tr('erreur.titre')} description={tr('erreur.texte')} slug="404">
+  <section class="section erreur">
+    <div class="enveloppe etroit">
+      <p class="surtitre">404</p>
+      <h1>{tr('erreur.titre')}</h1>
+      <p class="erreur__texte">{tr('erreur.texte')}</p>
+      <a class="bouton bouton--plein" href={chemin('fr')}>{tr('erreur.retour')}</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .erreur { padding-block: clamp(4rem, 12vw, 9rem); }
+  .erreur__texte { color: var(--encre-douce); font-size: 1.1rem; margin-bottom: 2rem; }
+</style>
