@@ -20,8 +20,10 @@ galerie:
     legende: Bedroom
 ---
 
-We offer apartments strategically located close to shopping centres, restaurants and Gautrain stations, allowing our clients to run errands, shop or simply unwind with ease and comfort.
+Below, are pictures of some of the self-catering apartments we offer. They are all strategically located within a walking distance from popular shopping centres, restaurants and Gautrain Stations making it easy and convenient for our clients to stock up on provisions, shop or go out for leisure.
 
-These fully equipped apartments are comfortable, tastefully furnished, and all situated in secure neighbourhoods of Johannesburg.
 
-We are committed to making sure you genuinely feel at home during your medical care.
+These fully equipped apartments are cosy, tastefully decorated and are all situated in safe and secure suburbs of Johannesburg, South Africa.
+
+
+Our commitment is to make you feel truly at home whilst receiving medical care.

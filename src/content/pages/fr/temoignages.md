@@ -6,7 +6,6 @@ langue: fr
 url: temoignages
 ordre: 9
 ---
-> Ce que nos clients disent de nous
 
 ## Témoignages de nos patients
 

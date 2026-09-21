@@ -8,7 +8,6 @@ ordre: 44
 banniere: soin-bilans
 banniere_cadrage: large
 ---
-### Bilan de santé
 
 Avec le progrès de la médecine et de la technologie, nous sommes constamment inondés de nouvelles recherches et même de sites Web qui nous permettent de nous diagnostiquer. Il n'est donc pas surprenant qu'un nombre croissant de personnes fasse des bilans médicaux annuels pour s'assurer du fonctionnement optimal de leur corps ou, par mesure de précaution, pour détecter des problèmes (le cas échéant). De nos jours, les gens font des bilans de santé tout simplement pour se rassurer.
 

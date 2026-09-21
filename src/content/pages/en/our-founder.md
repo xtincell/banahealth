@@ -10,18 +10,12 @@ banniere: marie-ngameni
 banniere_cadrage: portrait
 ---
 
-> Because we care: this phrase would become BanaHealth's motto. These words also describe better than any other how Marie founded and grew what is today one of the most respected medical facilitation companies in Africa.
+> Because we care: a famous line which eventually became BanaHealth's slogan. Those words would also be the best ones to describe how Marie founded and nurtured what is now a leading medical facilitation company in Africa.
 
-Her journey began in the early 2000s when, in an act of compassion, she offered to help the sister of a friend living in Cameroon find a solution to her difficulties conceiving. Marie found her a fertility treatment in Johannesburg, and that demanding journey eventually led to a newborn child.
+Her adventure started in the early 2000s when, in a compassionate gesture, she volunteered to assist a friend’s sister from Cameroon to overcome her difficulties to conceive. Marie found for her a suitable fertility treatment in Johannesburg and the heart-rending journey eventually led to a new born. The news spread. The one friend became a few relatives and before she knew it, she had built a business on acts of kindness. Acts of kindness and a rare willingness to walk with suffering individuals through the painful days that accompany illness and medical intervention.
 
-Word spread. What she had done for one friend was repeated for a few acquaintances and, before she realised it, she had built a company founded on acts of kindness — acts of kindness, but also a rare determination to stand beside people going through the ordeal of illness or medical intervention.
+From a couch in her living room, the business grew overtime to more than a dozen residential facilities where clients from across the continent are hosted and looked after. BanaHealth network also expanded to now include the most reputable private hospitals and specialists in South Africa.
 
-From those beginnings on her living room sofa, the company grew over time into a dozen accommodation centres where clients from across the continent are welcomed and cared for. BanaHealth's professional network has likewise expanded to include South Africa's most respected private hospitals and specialists.
+Because we care. It has always been about her patients, about the depth of care which marks her relationship with each of them. She carries them in her heart. Like a mother, their pain moves her. Their joy lifts her. The good report of their health fulfils her. And that is where all the difference is made.
 
-## Because we care
-
-For Marie, everything has always revolved around her patients, and around the quality of care that shapes her relationship with each of them. She carries them in her heart. Like a mother, their suffering saddens her. Their joys lift her. Good news about their health fills her with happiness. And that is what makes all the difference.
-
-Beyond the respected businesswoman and the eminent mentor, Marie is an authority in her community, and a wife, a mother and a grandmother in private life. In a world in constant motion, where people have less and less time for one another, Marie and her team have made caring for those who suffer their reason for being.
-
-The happy smiles their patients wear on the way home are their greatest reward.
+Beyond the successful entrepreneur and renowned mentor, Marie is a leader in her community, a wife, a mother and a grandmother in her private life. In a quickly changing world where people have less and less time for each other, Marie and her team have made lifting others their purpose in life.  They have no better rewards than happy smiles on healed patients’ faces as they return home. Because they care.

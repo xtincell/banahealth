@@ -9,8 +9,8 @@ ordre: 2
 
 ## Vision
 
-Our vision at BanaHealth is to become the service provider of choice in medical facilitation across our markets, consistently delivering the medical solutions and tailored support our clients deserve.
+Our vision at BanaHealth is to emerge as the preferred service provider in the Medical Facilitation sector in our markets – consistently providing tailor-made medical solutions and care that our clients deserve.
 
 ## Mission
 
-Our mission is to provide exceptional medical facilitation services built entirely around meeting our clients' needs. Our aim is to give them a dependable, professional service, to create a memorable experience and — most importantly — a positive medical journey.
+Our mission is to deliver exceptional medical facilitation services where satisfying our clients’ needs is integral. We aim to provide our clients a seamless and professional service, a memorable experience and more importantly, a positive medical journey.

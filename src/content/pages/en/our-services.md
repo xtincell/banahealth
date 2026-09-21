@@ -10,54 +10,55 @@ banniere: services-banniere
 banniere_cadrage: entier
 ---
 
-## Medical facilitation
+## Treatment Facilitation
 
-### Selecting the doctors best suited to your needs
+## Obtain the right medical practitioners for you
 
-On receiving your medical report, we assess it and consult our network of highly qualified doctors to find the specialists best suited to your case.
+Upon reception of your medical report, we assess and consult with our network of highly qualified medical practitioners to match you with the appropriate experts for your condition.
 
-### Obtaining quotes for your treatment
+## Provide quotations for your treatments
 
-We contact the medical centres you will visit and obtain cost estimates for your treatment. You benefit from the preferential rates we have negotiated with several of them.
+We liaise with the medical facilities you will be visiting and obtain quotations for your treatments. You will benefit from our preferential prices negotiated with many of them.
 
-### Arranging all your medical appointments
+## Organize all your medical appointments
 
-We book every medical appointment required for the length of your stay. This includes follow-up appointments with your treating doctors, as well as visits to associated specialists — radiologists, phlebotomists and others.
+We endeavour to book all required medical appointments within the time frame that your trip allows. This includes any follow-up appointments with your treating doctor(s) as well as visits to adjacent services such as radiologists, phlebotomists, etc.
 
-### Translation services at every stage
+## Provide translation services at all steps
 
-If you are not a fluent English speaker, an experienced translator from our team will convey everything your doctors wish to tell you and, in turn, everything you wish to ask them. If your medical reports need translating into English, we handle that too.
+Should you not be fluent in English, an experienced facilitator from our team will translate whatever the medical practitioners wish to express to you and conversely, whatever you wish to express to them. If your medical reports from your home country need to be translated into English, we are happy to assist with that service too.
 
-### Coordinating your medical journey
+## Coordinate your medical journey
 
-From your very first appointment to your return home, we coordinate your journey at every step. We guide you through the South African healthcare system, which can be administratively complex for visitors.
+From your very 1st appointment right to your return, we coordinate your medical journey at every step. We smoothen your journey into the South African health schemes – which for outsiders can be administratively complex.
 
-If you need further help — renewing a prescription, following up with your treating doctors — we are here.
 
-## Travel facilitation
+Should you require further assistance i.e. repeat script medication or even follow-up questions for your treating doctor(s) etc., we are here to support you.
 
-### Obtaining your visa and extensions
+## Travel Facilitation
 
-We provide the documents you need for your medical visa: visa letter, proof of accommodation, appointment letters from your treating doctors. If your stay must be extended for medical reasons, our facilitators help you secure an extension with the Department of Home Affairs.
+## Facilitate your visa obtention and extensions
 
-### Help arranging your flights
+We provide you with the necessary documentation to obtain your medical visa. This includes documents such as : Visa Letter, Proof of Accommodation, Appointment Letter from your treating doctor(s), etc. In case your stay needs to be extended for medical reasons, our facilitators can assist in organizing a visa extension with Home Affairs.
 
-We advise you on airlines and flight combinations to reach Johannesburg. As your return approaches, we help you book or confirm your date.
+## Assist in your flights organization
 
-### Arranging your transfers
+We are happy to advise you on good airlines and flight combinations that you can take to reach Johannesburg, South Africa. Leading up to your return, we will also assist you in booking/confirming your return date back home.
 
-We meet you at the airport and arrange transport to your accommodation, along with every trip to and from hospital. You can be certain you will never miss an appointment, and you avoid the difficulties of local public transport.
+## Organize your airport & hospital transfers
 
-## Your stay
+We welcome you at the airport and organize your transfer to the residence as well as all transfers to hospitals. That way, you’re sure to never miss an appointment and avoid the hassles of local public transports.
 
-### Accommodation
+## Hosting
 
-We have very comfortable apartments where you will be housed and looked after. We have also negotiated preferential terms with well-situated guesthouses and hotels should you prefer to stay elsewhere.
+## Provide accommodation
 
-### Leisure and tourism
+We have very comfortable apartments where you will be hosted and looked after. We also have preferential conditions with well located guesthouses and hotels should you wish for a change.
 
-Aware that leisure and tourism contribute to a swift recovery, we recommend the best places to visit and the most suitable shopping centres. On request, we arrange tourist activities such as safaris, so you can explore South Africa's landscapes.
+## Organize your leisure activities/ tourism
 
-### Your family away from home
+As leisure is part of your recovery, we advise on nice places for you to visit, shop and, on-demand, we can organize touristic activities like safaris for you to explore the beautiful landscape South Africa offers.
 
-If you need to stay in hospital for several days, we will be at your side. We are your carer, the person to call in an emergency — in short, your family away from home.
+## We are your family away from home
+
+If you have to spend days in hospital, we will be there for you. We are your care attendant, your emergency number, your family away from home !
