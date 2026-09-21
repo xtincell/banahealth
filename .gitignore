@@ -1,0 +1,55 @@
+# ---------------------------------------------------------------
+# DEPOT PUBLIC — rien de sensible ne doit jamais etre commite.
+# Un secret pousse reste dans l'historique meme apres suppression.
+# ---------------------------------------------------------------
+
+# Dependances et artefacts de build
+node_modules/
+dist/
+.astro/
+.output/
+.vercel/
+.netlify/
+
+# Secrets et configuration d'environnement
+.env
+.env.*
+!.env.example
+*.SECRET
+*.secret
+secrets/
+credentials*
+*.pem
+*.key
+*.p12
+id_rsa*
+.htpasswd
+.netrc
+
+# Heritage WordPress — ne doit jamais remonter ici
+wp-config.php
+wp-content/
+wp-admin/
+wp-includes/
+
+# Sauvegardes et exports de base : contiennent des donnees
+# personnelles et des empreintes de mots de passe
+*.sql
+*.sql.gz
+*.wpress
+*.dump
+dumps/
+backups/
+quarantaine/
+*.zip
+*.tar
+*.tar.gz
+*.gz
+
+# Systeme et editeurs
+.DS_Store
+Thumbs.db
+*.swp
+*.log
+npm-debug.log*
+.idea/
