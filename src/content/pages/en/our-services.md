@@ -7,6 +7,7 @@ langue: en
 url: our-services
 ordre: 3
 banniere: services-banniere
+banniere_cadrage: entier
 ---
 
 ## Medical facilitation

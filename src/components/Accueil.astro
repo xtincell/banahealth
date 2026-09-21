@@ -1,60 +1,31 @@
 ---
 import { Image } from 'astro:assets';
-import mandala from '../assets/logo-banahealth.png';
 import { t, chemin, type Langue } from '../i18n/ui';
 import { accueil } from '../i18n/accueil';
+import { media } from './Media';
+import Diaporama from './Diaporama.astro';
 
 interface Props { langue: Langue; }
 const { langue } = Astro.props;
 const tr = t(langue);
 const c = accueil[langue];
-
-// On ne referme que sur les medias reellement presents dans le depot.
-const medias = import.meta.glob<{ default: ImageMetadata }>('../assets/media/*.{jpg,jpeg,png,webp}', { eager: true });
-const trouver = (nom: string) => {
-  const cle = Object.keys(medias).find((k) => k.split('/').pop()?.replace(/\.[^.]+$/, '') === nom);
-  return cle ? medias[cle].default : null;
-};
-const portrait = trouver('marie-ngameni');
+const portrait = media('marie-ngameni');
 ---
 
-<!-- ================= Hero ================= -->
-<section class="hero">
-  <div class="enveloppe hero__grille">
-    <div class="hero__texte">
-      <p class="surtitre">{c.heroSurtitre}</p>
-      <h1>
-        {c.heroTitre.map((ligne, i) => (
-          <span class="hero__ligne" style={`animation-delay:${0.1 + i * 0.12}s`}>{ligne}</span>
-        ))}
-      </h1>
-      <p class="hero__accroche">{c.heroTexte}</p>
-      <div class="hero__actions">
-        <a class="bouton bouton--plein" href={chemin(langue, langue === 'fr' ? 'contact' : 'contact')}>
-          {tr('cta.contact')}
-        </a>
-        <a class="bouton bouton--contour" href={chemin(langue, c.piliers[0].lien)}>
-          {tr('cta.services')}
-        </a>
-      </div>
-    </div>
-
-    <Image src={mandala} alt="" class="hero__mandala" width={760} height={760} loading="eager" aria-hidden="true" />
-  </div>
-</section>
+<Diaporama langue={langue} />
 
 <!-- ================= Trois piliers ================= -->
-<section class="section section--creme">
+<section class="section">
   <div class="enveloppe">
     <p class="surtitre reveler">{c.piliersSurtitre}</p>
     <h2 class="reveler titre-section">{c.piliersTitre}</h2>
 
     <ul class="piliers">
       {c.piliers.map((p, i) => {
-        const img = trouver(p.image);
+        const img = media(p.image);
         return (
           <li class="pilier reveler" style={`transition-delay:${i * 0.09}s`}>
-            {img && <Image src={img} alt="" class="pilier__icone" width={64} height={64} loading="lazy" />}
+            {img && <Image src={img} alt="" class="pilier__icone" width={96} height={96} loading="lazy" />}
             <h3>{p.titre}</h3>
             <p>{p.texte}</p>
             <a class="pilier__lien" href={chemin(langue, p.lien)}>{tr('cta.suite')}<span aria-hidden="true">→</span></a>
@@ -65,19 +36,8 @@ const portrait = trouver('marie-ngameni');
   </div>
 </section>
 
-<!-- ================= Citation ================= -->
-<section class="section section--vert citation">
-  <div class="enveloppe">
-    <blockquote class="reveler">
-      <p>{c.citation}</p>
-      <cite>{c.citationAuteur}</cite>
-    </blockquote>
-    <p class="citation__engagement reveler">{c.engagement}</p>
-  </div>
-</section>
-
 <!-- ================= Pourquoi l'Afrique du Sud ================= -->
-<section class="section">
+<section class="section section--creme">
   <div class="enveloppe">
     <p class="surtitre reveler">{c.raisonsSurtitre}</p>
     <h2 class="reveler titre-section">{c.raisonsTitre}</h2>
@@ -99,10 +59,10 @@ const portrait = trouver('marie-ngameni');
 </section>
 
 <!-- ================= Fondatrice ================= -->
-<section class="section section--creme">
+<section class="section">
   <div class="enveloppe fondatrice">
     {portrait && (
-      <Image src={portrait} alt="Marie Ngameni" class="fondatrice__portrait reveler" width={520} loading="lazy" />
+      <Image src={portrait} alt="Marie Ngameni" class="fondatrice__portrait reveler" width={620} loading="lazy" />
     )}
     <div class="fondatrice__texte reveler">
       <p class="surtitre">{c.fondatriceSurtitre}</p>
@@ -110,6 +70,25 @@ const portrait = trouver('marie-ngameni');
       <p>{c.fondatriceTexte}</p>
       <a class="bouton bouton--contour" href={chemin(langue, c.fondatriceLien)}>{tr('cta.suite')}</a>
     </div>
+  </div>
+</section>
+
+<!-- ================= Temoignages ================= -->
+<section class="section section--vert">
+  <div class="enveloppe">
+    <p class="surtitre reveler">{c.temoignagesSurtitre}</p>
+    <h2 class="reveler titre-section">{c.temoignagesTitre}</h2>
+
+    <ul class="temoignages">
+      {c.temoignages.map((m, i) => (
+        <li class="temoignage reveler" style={`transition-delay:${i * 0.08}s`}>
+          <blockquote>
+            <p>{m.texte}</p>
+          </blockquote>
+          {m.auteur && <p class="temoignage__auteur">{m.auteur}</p>}
+        </li>
+      ))}
+    </ul>
   </div>
 </section>
 
@@ -126,64 +105,6 @@ const portrait = trouver('marie-ngameni');
 </section>
 
 <style>
-  /* ---------- Hero ---------- */
-  .hero {
-    position: relative;
-    overflow: hidden;
-    padding-block: clamp(3.5rem, 9vw, 7.5rem) clamp(3rem, 7vw, 6rem);
-    background:
-      radial-gradient(46rem 26rem at 0% -8%, var(--orange-clair), transparent 62%),
-      radial-gradient(50rem 34rem at 88% 6%, var(--teal-clair), transparent 64%),
-      var(--papier);
-  }
-  .hero__grille { position: relative; }
-  .hero__texte { max-width: 34rem; }
-
-  .hero h1 {
-    font-size: clamp(2.7rem, 1.6rem + 4.6vw, 5.25rem);
-    line-height: .98;
-    margin-bottom: 0;
-  }
-  .hero__ligne {
-    display: block;
-    opacity: 0;
-    animation: monter .8s cubic-bezier(.2, .7, .3, 1) forwards;
-  }
-  .hero__ligne:last-child {
-    color: var(--orange);
-  }
-  @keyframes monter {
-    from { opacity: 0; transform: translateY(1.4rem); }
-    to   { opacity: 1; transform: none; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hero__ligne { opacity: 1; animation: none; }
-  }
-
-  .hero__accroche {
-    font-size: clamp(1.05rem, 1rem + .45vw, 1.3rem);
-    line-height: 1.6;
-    color: var(--encre-douce);
-    margin-top: 1.75rem;
-    max-width: 40ch;
-  }
-  .hero__actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.25rem; }
-
-  /* Mandala de marque en reserve, deborde a droite */
-  .hero__mandala {
-    display: none;
-    position: absolute;
-    right: -7rem;
-    top: 50%;
-    translate: 0 -50%;
-    width: min(34rem, 42vw);
-    height: auto;
-    opacity: .1;
-    pointer-events: none;
-  }
-  @media (min-width: 62rem) { .hero__mandala { display: block; } }
-
-  /* ---------- Titres de section ---------- */
   .titre-section { max-width: 18ch; margin-bottom: 2.75rem; }
 
   /* ---------- Piliers ---------- */
@@ -210,46 +131,20 @@ const portrait = trouver('marie-ngameni');
     box-shadow: var(--ombre-forte);
     border-color: color-mix(in srgb, var(--orange) 45%, var(--trait));
   }
-  .pilier__icone { width: 3rem; height: 3rem; object-fit: contain; margin-bottom: .75rem; }
+  .pilier__icone { width: 3.4rem; height: 3.4rem; object-fit: contain; margin-bottom: .9rem; }
   .pilier h3 { margin-bottom: .35em; }
   .pilier p { color: var(--encre-douce); flex: 1; font-size: .97rem; }
   .pilier__lien {
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
     font-size: .9rem;
-    color: var(--teal);
+    color: var(--teal-fonce);
     display: inline-flex;
     gap: .4rem;
     align-items: center;
   }
   .pilier__lien span { transition: transform .2s ease; }
   .pilier__lien:hover span { transform: translateX(4px); }
-
-  /* ---------- Citation ---------- */
-  .citation blockquote { margin: 0; max-width: 26ch; }
-  .citation blockquote p {
-    font-family: var(--display);
-    font-size: clamp(1.45rem, 1.05rem + 1.7vw, 2.35rem);
-    line-height: 1.3;
-    color: #fff;
-    margin: 0 0 1rem;
-  }
-  .citation cite {
-    font-style: normal;
-    font-size: .8rem;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--orange-clair);
-  }
-  .citation__engagement {
-    margin: 3rem 0 0;
-    max-width: 44ch;
-    margin-left: auto;
-    font-size: 1.05rem;
-    color: color-mix(in srgb, var(--teal-clair) 88%, transparent);
-    border-left: 2px solid var(--orange);
-    padding-left: 1.25rem;
-  }
 
   /* ---------- Raisons ---------- */
   .raisons {
@@ -264,7 +159,8 @@ const portrait = trouver('marie-ngameni');
   .raison__chiffre {
     display: block;
     font-family: var(--display);
-    font-size: clamp(2.6rem, 2rem + 2.4vw, 4rem);
+    font-weight: 900;
+    font-size: clamp(2.4rem, 1.9rem + 2.2vw, 3.6rem);
     line-height: 1;
     color: var(--teal-fonce);
     margin-bottom: .6rem;
@@ -285,17 +181,49 @@ const portrait = trouver('marie-ngameni');
   .fondatrice__portrait {
     width: 100%;
     height: auto;
+    max-height: 32rem;
+    object-fit: cover;
+    object-position: center top;
     border-radius: 1rem;
     box-shadow: var(--ombre-forte);
   }
   .fondatrice__texte h2 { max-width: 16ch; }
   .fondatrice__texte p { color: var(--encre-douce); max-width: 46ch; margin-bottom: 1.75rem; }
 
+  /* ---------- Temoignages ---------- */
+  .temoignages {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+  .temoignage {
+    border-left: 2px solid var(--orange);
+    padding-left: 1.4rem;
+  }
+  .temoignage blockquote { margin: 0; }
+  .temoignage blockquote p {
+    color: rgba(255, 255, 255, .9);
+    font-size: .99rem;
+    line-height: 1.62;
+    margin: 0 0 .9rem;
+  }
+  .temoignage__auteur {
+    margin: 0;
+    font-weight: 800;
+    font-size: .82rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
   /* ---------- Appel ---------- */
   .appel__contenu { text-align: center; }
   .appel__contenu h2 { max-width: none; }
   .appel__contenu > p { color: var(--encre-douce); margin-bottom: 2rem; }
   .appel__tel { margin-top: 1.5rem; font-size: .95rem; color: var(--encre-douce); }
-  .appel__tel a { color: var(--teal); text-decoration: none; }
+  .appel__tel a { color: var(--teal-fonce); text-decoration: none; }
   .appel__tel a:hover { color: var(--orange); text-decoration: underline; }
 </style>

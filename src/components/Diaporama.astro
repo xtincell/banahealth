@@ -1,0 +1,284 @@
+---
+import { Image } from 'astro:assets';
+import { t, chemin, type Langue } from '../i18n/ui';
+import { accueil } from '../i18n/accueil';
+import { media } from './Media';
+
+interface Props { langue: Langue; }
+const { langue } = Astro.props;
+const tr = t(langue);
+const c = accueil[langue];
+
+/** Le titre porte une portion mise en valeur, notee *entre asterisques*. */
+function decouperTitre(titre: string) {
+  const m = titre.match(/^(.*?)\*(.+?)\*(.*)$/);
+  if (!m) return { avant: titre, fort: '', apres: '' };
+  return { avant: m[1], fort: m[2], apres: m[3] };
+}
+
+const diapos = c.diapos.map((d) => ({ ...d, src: media(d.image), ...decouperTitre(d.titre) }));
+---
+
+<section
+  class="diaporama"
+  aria-roledescription="carrousel"
+  aria-label={c.diapoAller}
+  data-diaporama
+>
+  <div class="diaporama__scene">
+    {diapos.map((d, i) => (
+      <article
+        class:list={['diapo', { 'est-active': i === 0 }]}
+        data-diapo
+        role="group"
+        aria-roledescription="diapositive"
+        aria-label={`${i + 1} / ${diapos.length}`}
+        aria-hidden={i === 0 ? undefined : 'true'}
+      >
+        {d.src && (
+          <Image
+            src={d.src}
+            alt=""
+            class="diapo__fond"
+            widths={[760, 1200, 1800]}
+            sizes="100vw"
+            loading={i === 0 ? 'eager' : 'lazy'}
+          />
+        )}
+        <div class="enveloppe diapo__contenu">
+          <p class="diapo__disponible">{c.toujoursDisponible}</p>
+          <h1 class="diapo__titre">
+            {d.avant}{d.fort && <em>{d.fort}</em>}{d.apres}
+          </h1>
+          <p class="diapo__texte">{d.texte}</p>
+          {d.auteur && <p class="diapo__auteur">— {d.auteur}</p>}
+          <div class="diapo__actions">
+            <a class="bouton bouton--plein" href={chemin(langue, d.lien)}>{d.lienLibelle}</a>
+            <a class="bouton bouton--fantome" href={chemin(langue, langue === 'fr' ? 'contact' : 'contact')}>
+              {tr('cta.contact')}
+            </a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div class="diaporama__commandes enveloppe">
+    <button type="button" class="diaporama__fleche" data-precedent aria-label={c.diapoPrecedente}>
+      <span aria-hidden="true">←</span>
+    </button>
+    <ul class="diaporama__puces">
+      {diapos.map((_, i) => (
+        <li>
+          <button
+            type="button"
+            class:list={['diaporama__puce', { 'est-active': i === 0 }]}
+            data-puce={i}
+            aria-label={`${c.diapoAller} ${i + 1}`}
+            aria-current={i === 0 ? 'true' : undefined}
+          ></button>
+        </li>
+      ))}
+    </ul>
+    <button type="button" class="diaporama__fleche" data-suivant aria-label={c.diapoSuivante}>
+      <span aria-hidden="true">→</span>
+    </button>
+  </div>
+</section>
+
+<style>
+  .diaporama { position: relative; background: var(--charbon); }
+
+  .diaporama__scene {
+    display: grid;
+    /* Toutes les diapos se superposent dans la meme case */
+    grid-template-areas: 'scene';
+    min-height: clamp(30rem, 74vh, 44rem);
+  }
+  .diapo {
+    grid-area: scene;
+    position: relative;
+    display: grid;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease;
+  }
+  .diapo.est-active { opacity: 1; visibility: visible; }
+
+  .diapo__fond {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+  /* Voile sombre : le texte doit rester lisible quelle que soit la photo */
+  .diapo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      100deg,
+      rgba(20, 24, 24, .88) 0%,
+      rgba(20, 24, 24, .72) 42%,
+      rgba(20, 24, 24, .25) 78%,
+      rgba(20, 24, 24, .1) 100%
+    );
+  }
+
+  .diapo__contenu {
+    position: relative;
+    z-index: 1;
+    max-width: 44rem;
+    padding-block: clamp(4rem, 10vw, 6rem);
+  }
+
+  .diapo__disponible {
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin: 0 0 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+  }
+  .diapo__disponible::before {
+    content: '';
+    width: 1.75rem; height: 2px;
+    background: currentColor;
+  }
+
+  .diapo__titre {
+    color: #fff;
+    font-size: clamp(2.3rem, 1.5rem + 3.6vw, 4.25rem);
+    line-height: 1.02;
+    margin: 0 0 1.4rem;
+    max-width: 16ch;
+  }
+  .diapo__titre em { font-style: normal; color: var(--orange); }
+
+  .diapo__texte {
+    color: rgba(255, 255, 255, .88);
+    font-size: clamp(1.02rem, .98rem + .45vw, 1.25rem);
+    line-height: 1.6;
+    max-width: 40ch;
+    margin: 0 0 .6rem;
+  }
+  .diapo__auteur {
+    color: var(--orange);
+    font-weight: 700;
+    font-size: .95rem;
+    margin: 0 0 1.8rem;
+  }
+  .diapo__texte + .diapo__actions { margin-top: 1.8rem; }
+  .diapo__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+
+  .bouton--fantome {
+    border-color: rgba(255, 255, 255, .45);
+    color: #fff;
+    background: transparent;
+  }
+  .bouton--fantome:hover { border-color: var(--orange); color: var(--orange); }
+
+  /* --- Commandes --- */
+  .diaporama__commandes {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: clamp(1.25rem, 3vw, 2.25rem);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .diaporama__fleche {
+    flex: none;
+    width: 2.6rem; height: 2.6rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: rgba(0, 0, 0, .25);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease;
+  }
+  .diaporama__fleche:hover { background: var(--orange); border-color: var(--orange); }
+
+  .diaporama__puces { display: flex; gap: .55rem; list-style: none; margin: 0; padding: 0; }
+  .diaporama__puce {
+    width: 2.25rem; height: 4px;
+    border: 0; padding: 0;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, .35);
+    cursor: pointer;
+    transition: background-color .25s ease;
+  }
+  .diaporama__puce:hover { background: rgba(255, 255, 255, .6); }
+  .diaporama__puce.est-active { background: var(--orange); }
+
+  @media (max-width: 34rem) {
+    .diaporama__fleche { display: none; }
+  }
+</style>
+
+<script>
+  const racine = document.querySelector<HTMLElement>('[data-diaporama]');
+  if (racine) {
+    const diapos = [...racine.querySelectorAll<HTMLElement>('[data-diapo]')];
+    const puces = [...racine.querySelectorAll<HTMLButtonElement>('[data-puce]')];
+    const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let index = 0;
+    let minuteur: ReturnType<typeof setInterval> | null = null;
+
+    function afficher(n: number) {
+      index = (n + diapos.length) % diapos.length;
+      diapos.forEach((d, i) => {
+        const actif = i === index;
+        d.classList.toggle('est-active', actif);
+        if (actif) d.removeAttribute('aria-hidden');
+        else d.setAttribute('aria-hidden', 'true');
+      });
+      puces.forEach((p, i) => {
+        p.classList.toggle('est-active', i === index);
+        if (i === index) p.setAttribute('aria-current', 'true');
+        else p.removeAttribute('aria-current');
+      });
+    }
+
+    function demarrer() {
+      // Pas de defilement automatique si l'utilisateur a demande
+      // a reduire les animations, ni s'il n'y a qu'une diapo.
+      if (reduit || diapos.length < 2 || minuteur) return;
+      minuteur = setInterval(() => afficher(index + 1), 6500);
+    }
+    function arreter() {
+      if (minuteur) { clearInterval(minuteur); minuteur = null; }
+    }
+    function relancer() { arreter(); demarrer(); }
+
+    racine.querySelector('[data-precedent]')?.addEventListener('click', () => {
+      afficher(index - 1); relancer();
+    });
+    racine.querySelector('[data-suivant]')?.addEventListener('click', () => {
+      afficher(index + 1); relancer();
+    });
+    puces.forEach((p, i) =>
+      p.addEventListener('click', () => { afficher(i); relancer(); }),
+    );
+
+    // On suspend tant que la souris ou le clavier est sur le carrousel
+    racine.addEventListener('mouseenter', arreter);
+    racine.addEventListener('mouseleave', demarrer);
+    racine.addEventListener('focusin', arreter);
+    racine.addEventListener('focusout', demarrer);
+    // et quand l'onglet passe en arriere-plan
+    document.addEventListener('visibilitychange', () =>
+      document.hidden ? arreter() : demarrer(),
+    );
+
+    demarrer();
+  }
+</script>

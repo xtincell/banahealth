@@ -7,6 +7,7 @@ langue: fr
 url: notre-fondatrice
 ordre: 1
 banniere: marie-ngameni
+banniere_cadrage: portrait
 ---
 
 > Votre santé nous tient à cœur : cette phrase deviendra le slogan de BanaHealth. Ces mots sont aussi ceux qui décrivent le mieux comment Marie a fondé et fait grandir ce qui est aujourd'hui l'une des sociétés de facilitation médicale les plus reconnues en Afrique.

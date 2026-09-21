@@ -24,17 +24,30 @@ const galerie = (d.galerie ?? [])
 
 <Base langue={d.langue as Langue} titre={d.titre} description={d.description} slug={d.url}>
   <article>
-    <header class="banniere">
-      <div class="enveloppe">
-        {d.surtitre && <p class="surtitre reveler">{d.surtitre}</p>}
-        <h1 class="reveler">{d.titre}</h1>
-        {d.chapeau && <p class="chapeau reveler">{d.chapeau}</p>}
+    <header class:list={['banniere', { 'banniere--avec-portrait': banniere && d.banniere_cadrage === 'portrait' }]}>
+      <div class="enveloppe banniere__grille">
+        <div class="banniere__texte">
+          {d.surtitre && <p class="surtitre reveler">{d.surtitre}</p>}
+          <h1 class="reveler">{d.titre}</h1>
+          {d.chapeau && <p class="chapeau reveler">{d.chapeau}</p>}
+        </div>
+        {banniere && d.banniere_cadrage === 'portrait' && (
+          <Image src={banniere} alt={d.titre} class="banniere__portrait reveler" width={620} loading="eager" />
+        )}
       </div>
     </header>
 
-    {banniere && (
+    {banniere && d.banniere_cadrage === 'large' && (
       <div class="enveloppe">
-        <Image src={banniere} alt="" class="banniere__image reveler" width={1200} loading="eager" />
+        <Image src={banniere} alt="" class="banniere__large reveler" width={1400} loading="eager" />
+      </div>
+    )}
+
+    {banniere && d.banniere_cadrage === 'entier' && (
+      <div class="enveloppe">
+        <figure class="banniere__entier reveler">
+          <Image src={banniere} alt={d.titre} width={1100} loading="eager" />
+        </figure>
       </div>
     )}
 
@@ -60,13 +73,46 @@ const galerie = (d.galerie ?? [])
 </Base>
 
 <style>
-  .banniere__image {
+  /* Photo paysage : bandeau pleine largeur */
+  .banniere__large {
     width: 100%;
     height: clamp(14rem, 34vw, 26rem);
     object-fit: cover;
     border-radius: 1rem;
     margin-top: clamp(1.5rem, 4vw, 3rem);
     box-shadow: var(--ombre-douce);
+  }
+
+  /* Infographie : jamais recadree, posee sur un fond doux */
+  .banniere__entier {
+    margin: clamp(2rem, 5vw, 3.5rem) auto 0;
+    max-width: 46rem;
+    background: var(--papier-ombre);
+    border-radius: 1rem;
+    padding: clamp(1rem, 3vw, 2.5rem);
+  }
+  .banniere__entier img {
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+  }
+
+  /* Image verticale : a cote du texte d'introduction */
+  .banniere__grille { display: grid; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
+  .banniere--avec-portrait .banniere__grille { grid-template-columns: 1fr; }
+  @media (min-width: 54rem) {
+    .banniere--avec-portrait .banniere__grille {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    }
+  }
+  .banniere__portrait {
+    width: 100%;
+    height: auto;
+    max-height: 30rem;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 1rem;
+    box-shadow: var(--ombre-forte);
   }
 
   .galerie {

@@ -7,6 +7,7 @@ langue: en
 url: our-founder
 ordre: 1
 banniere: marie-ngameni
+banniere_cadrage: portrait
 ---
 
 > Because we care: this phrase would become BanaHealth's motto. These words also describe better than any other how Marie founded and grew what is today one of the most respected medical facilitation companies in Africa.

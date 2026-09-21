@@ -7,6 +7,7 @@ langue: fr
 url: nos-services
 ordre: 3
 banniere: services-banniere
+banniere_cadrage: entier
 ---
 
 ## Facilitation des soins

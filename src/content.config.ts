@@ -16,6 +16,12 @@ const pages = defineCollection({
     ordre: z.number().default(99),
     /** Nom de fichier (sans extension) dans src/assets/media */
     banniere: z.string().optional(),
+    /**
+     * large    : photo paysage, recadree en bandeau pleine largeur
+     * portrait : image verticale, posee a cote du texte d'introduction
+     * entier   : affichee sans recadrage (infographie, schema)
+     */
+    banniere_cadrage: z.enum(['large', 'portrait', 'entier']).default('large'),
     /** Galerie affichee apres le texte */
     galerie: z
       .array(
