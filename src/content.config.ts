@@ -22,6 +22,12 @@ const pages = defineCollection({
      * entier   : affichee sans recadrage (infographie, schema)
      */
     banniere_cadrage: z.enum(['large', 'portrait', 'entier']).default('large'),
+    /** Numerote les sections de niveau 2 (pages a arguments) */
+    sections_numerotees: z.boolean().default(false),
+    /** Etapes numerotees, affichees apres le texte */
+    etapes: z
+      .array(z.object({ titre: z.string(), texte: z.string() }))
+      .optional(),
     /** Cartes illustrees, affichees avant le texte */
     cartes: z
       .array(
@@ -31,6 +37,8 @@ const pages = defineCollection({
           texte: z.string().optional(),
           lien: z.string().optional(),
           lienLibelle: z.string().optional(),
+          /** logo : image contenue sur fond neutre, sans recadrage */
+          cadrage: z.enum(["photo", "logo"]).default("photo"),
         }),
       )
       .optional(),

@@ -6,6 +6,7 @@ description: Technologies de pointe, soins abordables, délais courts, visa acce
 langue: fr
 url: pourquoi-afrique-du-sud
 ordre: 5
+sections_numerotees: true
 galerie:
   - image: sa-technologie
     legende: Bloc opératoire robotisé

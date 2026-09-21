@@ -1,65 +1,64 @@
 ---
 titre: Nos réseaux
 surtitre: Proposer à nos patients les meilleurs soins
-chapeau: Quelques-uns des hôpitaux privés avec lesquels nous travaillons pour apporter à nos patients les soins dont ils ont besoin.
-description: "Les hôpitaux et cliniques privés partenaires de BanaHealth à Johannesbourg : Wits Donald Gordon, Netcare, Medfem, Mediclinic, Life Healthcare."
+chapeau: Les hôpitaux privés et cliniques spécialisées avec lesquels nous travaillons pour apporter à nos patients les soins dont ils ont besoin.
+description: "Les établissements partenaires de BanaHealth à Johannesbourg : Wits Donald Gordon, Netcare, Medfem, Mediclinic et Life Healthcare."
 langue: fr
 url: nos-reseaux
 ordre: 7
-galerie:
+cartes:
   - image: hopital-wits-donald-gordon
     cadrage: logo
-    legende: Wits Donald Gordon Medical Centre
+    titre: Wits Donald Gordon Medical Centre
+    texte: Premier et seul hôpital d'enseignement privé d'Afrique du Sud, créé en 2002 par l'Université du Witwatersrand. 190 lits, spécialisés notamment en chirurgie de transplantation, oncologie pédiatrique et adulte, néphrologie et cardiologie, avec une unité de soins intensifs dirigée par des spécialistes.
+    lien: https://dgmc.co.za/
+    lienLibelle: Visiter le site
   - image: hopital-netcare
     cadrage: logo
-    legende: Netcare
+    titre: Netcare Milpark
+    texte: Unité de traumatologie et centre de brûlures de niveau 1 reconnus internationalement — premier établissement privé du pays à recevoir cette accréditation. Sur 346 lits, 95 sont réservés aux soins intensifs. Centre de référence pour les soins du sein et la transplantation cardiaque et pulmonaire.
+    lien: https://www.netcare.co.za/netcare-facilities/netcare-milpark-hospital
+    lienLibelle: Visiter le site
   - image: hopital-medfem
     cadrage: logo
-    legende: Medfem Fertility Clinic
+    titre: Medfem Fertility Clinic
+    texte: Fondée en 1980, la clinique a participé à la mise au monde de plus de seize mille enfants. Ses spécialistes, accrédités en médecine de la reproduction, sont à l'origine de certains des premiers bébés conçus par fécondation in vitro en Afrique du Sud.
+    lien: https://www.medfem.co.za/
+    lienLibelle: Visiter le site
+  - image: hopital-netcare
+    cadrage: logo
+    titre: Netcare Rosebank
+    texte: Au cœur du quartier de Rosebank, à deux pas du centre commercial et de la gare du Gautrain. Centre sportif spécialisé en chirurgie orthopédique mini-invasive, et technologie Scan for Life capable de détecter maladies cardiaques, cancers et accidents vasculaires avant les premiers symptômes.
+    lien: https://www.netcare.co.za/netcare-facilities/netcare-rosebank-hospital
+    lienLibelle: Visiter le site
   - image: hopital-mediclinic
     cadrage: logo
-    legende: Mediclinic
+    titre: Mediclinic — Sandton et Morningside
+    texte: Groupe hospitalier privé présent en Afrique du Sud et en Namibie, spécialisé dans les soins de courte durée et les soins spécialisés multidisciplinaires. Une cinquantaine d'établissements dans le pays, plus de huit mille huit cents lits au total.
+    lien: https://www.mediclinic.co.za/
+    lienLibelle: Visiter le site
   - image: hopital-life-healthcare
     cadrage: logo
-    legende: Life Healthcare
+    titre: Life Healthcare
+    texte: L'un des principaux opérateurs privés du pays, avec une quarantaine d'établissements couvrant la majeure partie du territoire. Unités de soins intensifs, blocs opératoires, urgences, maternités, ainsi que rééducation intensive, dialyse, santé mentale et oncologie.
+    lien: https://www.lifehealthcare.co.za/
+    lienLibelle: Visiter le site
+  - image: hopital-netcare
+    cadrage: logo
+    titre: Netcare Sunninghill
+    texte: "Établissement multidisciplinaire distingué sur trois terrains : un centre de cardiologie et d'électrophysiologie parmi les plus complets du pays, un centre d'excellence en pédiatrie, et un service d'urgence ouvert en continu avec unité de traumatologie accréditée de niveau 2."
+    lien: https://www.netcare.co.za/netcare-facilities/netcare-sunninghill-hospital
+    lienLibelle: Visiter le site
 ---
 
-## Le Centre médical Wits Donald Gordon
+## Pourquoi ces établissements
 
-Le Centre médical Wits Donald Gordon est le premier et le seul hôpital d'enseignement privé d'Afrique du Sud. Il a été créé en 2002, lorsque l'Université du Witwatersrand a acquis l'hôpital Kenridge grâce à une donation fondatrice de la Fondation Donald Gordon.
+Nous ne travaillons pas avec un hôpital parce qu'il est proche ou parce qu'il nous accorde un tarif. Nous travaillons avec ceux dont les plateaux techniques et les équipes soutiennent la comparaison avec les meilleurs systèmes de santé au monde — et qui acceptent d'accueillir des patients internationaux dans de bonnes conditions.
 
-Les principales spécialités de cet établissement de 190 lits sont la chirurgie de transplantation, l'oncologie pédiatrique et adulte, la gastro-entérologie médicale et chirurgicale, la médecine gériatrique, l'ophtalmologie, la radiologie interventionnelle, l'oto-rhino-laryngologie, l'urologie, la néphrologie, la cardiologie, la santé des femmes et l'orthopédie. Ces disciplines sont soutenues par une unité de soins intensifs dirigée par des spécialistes.
+Ce réseau s'est construit au fil des années, dossier après dossier. Il continue de s'élargir à mesure que de nouvelles spécialités sont demandées.
 
-## L'hôpital Netcare Milpark
+## Le choix vous revient
 
-L'unité de traumatologie et le centre de brûlures de niveau 1 de l'hôpital Netcare Milpark sont reconnus à l'échelle internationale. L'hôpital a été le premier établissement privé d'Afrique du Sud — et reste l'un des deux seuls — à recevoir cette accréditation de la Trauma Society of South Africa.
+Nous vous proposons les spécialistes qui correspondent le mieux à votre cas, en vous expliquant pourquoi. La décision finale, elle, vous appartient : c'est votre corps et votre argent.
 
-Sur les 346 lits de l'hôpital, 95 sont réservés aux soins intensifs, tous équipés des derniers systèmes de surveillance et de maintien des fonctions vitales. L'établissement est également reconnu comme centre de référence pour les soins du sein, et propose l'électrophysiologie, le cathétérisme cardiaque et la transplantation cardiaque et pulmonaire.
-
-## La clinique de fertilité Medfem
-
-Fondée en 1980 à Johannesbourg, la clinique Medfem aide les gens à fonder des familles. Ses spécialistes sont accrédités en médecine de la reproduction et totalisent plus de cent ans d'expérience collective. Ils sont à l'origine de certains des premiers bébés conçus par fécondation in vitro en Afrique du Sud, et la clinique a participé à la mise au monde de plus de seize mille enfants.
-
-## L'hôpital Netcare Rosebank
-
-Situé au cœur du quartier de Rosebank, à proximité du centre commercial et de la gare du Gautrain, cet hôpital abrite un centre sportif spécialisé réunissant une large équipe de chirurgiens orthopédiques, avec un accent mis sur la chirurgie mini-invasive. Les services d'appui comprennent la médecine sportive, la physiothérapie, la biocinétique et la podologie.
-
-La technologie Scan for Life y fournit un balayage corporel médical avancé, capable de détecter les premiers stades des maladies cardiaques, des cancers et des accidents vasculaires cérébraux avant la manifestation des symptômes.
-
-## Le groupe Mediclinic — Sandton et Morningside
-
-Mediclinic Southern Africa est un groupe d'hôpitaux privés opérant en Afrique du Sud et en Namibie, spécialisé dans les soins de courte durée et les soins spécialisés multidisciplinaires. Le groupe exploite une cinquantaine d'hôpitaux privés en Afrique du Sud, auxquels s'ajoutent des cliniques de jour et des établissements spécialisés, ainsi que trois hôpitaux en Namibie — soit plus de huit mille huit cents lits.
-
-## Le groupe Life Healthcare
-
-Life Healthcare est l'un des principaux opérateurs d'hôpitaux privés d'Afrique du Sud, avec une quarantaine d'établissements répartis sur la majeure partie du pays, dont les régions métropolitaines les plus peuplées. Ses établissements proposent des unités de soins intensifs, des blocs opératoires, des unités d'urgence, des maternités et des unités de soins cardiaques, ainsi que des services spécialisés en rééducation intensive, dialyse rénale chronique, santé mentale et oncologie.
-
-## L'hôpital Netcare Sunninghill
-
-Établissement de soins multidisciplinaire doté d'équipements médicaux de pointe, l'hôpital Netcare Sunninghill se distingue sur trois terrains.
-
-Son **centre de cardiologie et d'électrophysiologie** traite les patients adultes et pédiatriques et propose chirurgie cardiothoracique, cathétérisme cardiaque, angiographie et radiologie interventionnelle. L'introduction de la stéréotaxie dans le laboratoire d'électrophysiologie en fait l'un des centres de soins cardiaques les plus complets du pays.
-
-Son **centre d'excellence en pédiatrie** offre cardiologie, neurologie, pneumologie et orthopédie pédiatriques, et utilise la méthode non invasive Ponseti pour le traitement du pied bot.
-
-Son **service d'urgence ouvert 24 heures sur 24**, doté d'une unité de traumatologie accréditée de niveau 2, dispose de ses propres chirurgiens traumatologues sur place et d'une base d'ambulances Netcare 911. Un service d'assistance post-traumatologique gratuit est proposé aux patients et à leurs familles.
+Pour discuter de votre dossier, [écrivez-nous](mailto:hello@banahealth.care).

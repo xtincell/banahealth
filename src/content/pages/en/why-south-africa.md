@@ -6,6 +6,7 @@ description: Advanced technology, affordable care, short waiting times, accessib
 langue: en
 url: why-south-africa
 ordre: 5
+sections_numerotees: true
 galerie:
   - image: sa-technologie
     legende: Robot-assisted operating theatre

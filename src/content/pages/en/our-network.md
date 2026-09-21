@@ -1,65 +1,64 @@
 ---
 titre: Our network
 surtitre: Bringing our patients the best care
-chapeau: A selection of the private hospitals we work with to bring our patients the care they need.
-description: BanaHealth's partner private hospitals and clinics in Johannesburg — Wits Donald Gordon, Netcare, Medfem, Mediclinic and Life Healthcare.
+chapeau: The private hospitals and specialist clinics we work with to bring our patients the care they need.
+description: "BanaHealth's partner institutions in Johannesburg: Wits Donald Gordon, Netcare, Medfem, Mediclinic and Life Healthcare."
 langue: en
 url: our-network
 ordre: 7
-galerie:
+cartes:
   - image: hopital-wits-donald-gordon
     cadrage: logo
-    legende: Wits Donald Gordon Medical Centre
+    titre: Wits Donald Gordon Medical Centre
+    texte: The first and only private teaching hospital in South Africa, established in 2002 by the University of the Witwatersrand. 190 beds, with particular strength in transplant surgery, paediatric and adult oncology, nephrology and cardiology, supported by a specialist-led intensive care unit.
+    lien: https://dgmc.co.za/
+    lienLibelle: Visit website
   - image: hopital-netcare
     cadrage: logo
-    legende: Netcare
+    titre: Netcare Milpark
+    texte: An internationally recognised level 1 trauma unit and burns centre — the first private facility in the country to receive that accreditation. Of its 346 beds, 95 are reserved for intensive care. A centre of excellence for breast care and for heart and lung transplantation.
+    lien: https://www.netcare.co.za/netcare-facilities/netcare-milpark-hospital
+    lienLibelle: Visit website
   - image: hopital-medfem
     cadrage: logo
-    legende: Medfem Fertility Clinic
+    titre: Medfem Fertility Clinic
+    texte: Founded in 1980, the clinic has taken part in the birth of more than sixteen thousand children. Its specialists, accredited in reproductive medicine, were behind some of the first IVF babies in South Africa.
+    lien: https://www.medfem.co.za/
+    lienLibelle: Visit website
+  - image: hopital-netcare
+    cadrage: logo
+    titre: Netcare Rosebank
+    texte: In the heart of Rosebank, a short walk from the shopping centre and the Gautrain station. A specialised sports centre focused on minimally invasive orthopaedic surgery, and Scan for Life technology able to detect heart disease, cancer and stroke before symptoms appear.
+    lien: https://www.netcare.co.za/netcare-facilities/netcare-rosebank-hospital
+    lienLibelle: Visit website
   - image: hopital-mediclinic
     cadrage: logo
-    legende: Mediclinic
+    titre: Mediclinic — Sandton and Morningside
+    texte: A private hospital group operating in South Africa and Namibia, specialising in acute and multidisciplinary specialist care. Around fifty facilities in the country, more than eight thousand eight hundred beds in total.
+    lien: https://www.mediclinic.co.za/
+    lienLibelle: Visit website
   - image: hopital-life-healthcare
     cadrage: logo
-    legende: Life Healthcare
+    titre: Life Healthcare
+    texte: One of the country's leading private operators, with around forty facilities across most of South Africa. Intensive care units, operating theatres, emergency departments and maternity wards, alongside intensive rehabilitation, dialysis, mental health and oncology.
+    lien: https://www.lifehealthcare.co.za/
+    lienLibelle: Visit website
+  - image: hopital-netcare
+    cadrage: logo
+    titre: Netcare Sunninghill
+    texte: "A multidisciplinary facility that stands out on three fronts: one of the country's most complete cardiology and electrophysiology centres, a centre of excellence in paediatrics, and a round-the-clock emergency department with a level 2 accredited trauma unit."
+    lien: https://www.netcare.co.za/netcare-facilities/netcare-sunninghill-hospital
+    lienLibelle: Visit website
 ---
 
-## Wits Donald Gordon Medical Centre
+## Why these institutions
 
-Wits Donald Gordon Medical Centre is the first and only private teaching hospital in South Africa. It was established in 2002, when the University of the Witwatersrand acquired Kenridge Hospital with a founding donation from the Donald Gordon Foundation.
+We do not work with a hospital because it is nearby or because it offers us a rate. We work with those whose facilities and teams bear comparison with the best healthcare systems in the world — and which are willing to receive international patients properly.
 
-The principal specialities of this 190-bed institution are transplant surgery, paediatric and adult oncology, medical and surgical gastroenterology, geriatric medicine, ophthalmology, interventional radiology, otorhinolaryngology, urology, nephrology, cardiology, women's health and orthopaedics. These disciplines are supported by an intensive care unit led by critical care specialists.
+This network has been built over the years, case by case. It continues to grow as new specialities are asked for.
 
-## Netcare Milpark Hospital
+## The choice is yours
 
-The trauma unit and level 1 burns centre at Netcare Milpark Hospital are internationally recognised. It was the first private facility in South Africa — and remains one of only two — to receive this accreditation from the Trauma Society of South Africa.
+We put forward the specialists best suited to your case and explain why. The final decision remains yours: it is your body and your money.
 
-Of the hospital's 346 beds, 95 are reserved for intensive care, all equipped with the latest monitoring and life support systems. The hospital is also widely known as a centre of excellence for breast care, and offers electrophysiology, cardiac catheterisation, and heart and lung transplantation.
-
-## Medfem Fertility Clinic
-
-Founded in Johannesburg in 1980 to help people build families, Medfem's specialists are accredited in reproductive medicine with more than a hundred years of collective experience. They were behind some of the first IVF babies in South Africa, and the clinic has taken part in the birth of more than sixteen thousand children.
-
-## Netcare Rosebank Hospital
-
-Set in the heart of the Rosebank district, close to the shopping centre and the Gautrain station, this hospital houses a specialised sports centre bringing together a large team of orthopaedic surgeons, with an emphasis on minimally invasive surgery. Support services include sports medicine, physiotherapy, biokinetics and podiatry.
-
-Scan for Life technology provides advanced medical body scanning, capable of detecting the early stages of heart disease, cancer and stroke before symptoms appear.
-
-## Mediclinic Group — Sandton and Morningside
-
-Mediclinic Southern Africa is a private hospital group operating in South Africa and Namibia, specialising in acute care and multidisciplinary specialist services. The group runs around fifty private hospitals in South Africa, alongside day clinics and specialised facilities, plus three hospitals in Namibia — more than eight thousand eight hundred beds in total.
-
-## Life Healthcare Group
-
-Life Healthcare is one of South Africa's leading private hospital operators, with around forty facilities across most of the country, including its most populous metropolitan areas. Its facilities provide intensive and high-care units, operating theatres, emergency units, maternity wards and cardiac care units, along with specialised services in intensive rehabilitation, chronic renal dialysis, mental health and oncology.
-
-## Netcare Sunninghill Hospital
-
-A multidisciplinary healthcare facility equipped with advanced medical technology, Netcare Sunninghill stands out in three areas.
-
-Its **cardiology and electrophysiology centre** treats adult and paediatric patients and offers cardiothoracic surgery, cardiac catheterisation, angiography and interventional radiology. The introduction of stereotaxis in the electrophysiology laboratory makes it one of the most complete cardiac care centres in the country.
-
-Its **centre of excellence in paediatrics** offers paediatric cardiology, neurology, pulmonology and orthopaedics, and uses the non-invasive Ponseti method to treat clubfoot.
-
-Its **24-hour emergency department**, with a level 2 accredited trauma unit, has its own trauma surgeons on site and a Netcare 911 ambulance base. A free post-trauma counselling service is offered to patients and their families.
+To discuss your case, [write to us](mailto:hello@banahealth.care).
