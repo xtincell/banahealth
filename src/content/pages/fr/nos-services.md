@@ -6,6 +6,7 @@ description: Facilitation des soins, facilitation de voyage et organisation du s
 langue: fr
 url: nos-services
 ordre: 3
+banniere: services-banniere
 ---
 
 ## Facilitation des soins

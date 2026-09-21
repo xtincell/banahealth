@@ -6,6 +6,7 @@ description: Medical facilitation, travel facilitation and stay arrangements —
 langue: en
 url: our-services
 ordre: 3
+banniere: services-banniere
 ---
 
 ## Medical facilitation

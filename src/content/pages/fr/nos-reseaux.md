@@ -6,6 +6,22 @@ description: "Les hôpitaux et cliniques privés partenaires de BanaHealth à Jo
 langue: fr
 url: nos-reseaux
 ordre: 7
+galerie:
+  - image: hopital-wits-donald-gordon
+    cadrage: logo
+    legende: Wits Donald Gordon Medical Centre
+  - image: hopital-netcare
+    cadrage: logo
+    legende: Netcare
+  - image: hopital-medfem
+    cadrage: logo
+    legende: Medfem Fertility Clinic
+  - image: hopital-mediclinic
+    cadrage: logo
+    legende: Mediclinic
+  - image: hopital-life-healthcare
+    cadrage: logo
+    legende: Life Healthcare
 ---
 
 ## Le Centre médical Wits Donald Gordon
@@ -22,7 +38,7 @@ Sur les 346 lits de l'hôpital, 95 sont réservés aux soins intensifs, tous éq
 
 ## La clinique de fertilité Medfem
 
-Fondée en 1980 à Johannesbourg, la clinique Medfem aide les gens à fonder des familles. Ses spécialistes sont accrédités en médecine de la reproduction et totalisent plus de cent ans d'expérience collective. Ils sont à l'origine de certains des premiers bébés conçus par fécondation in vitro en Afrique du Sud, et la clinique a participé à la mise au monde de plus de seize mille enfants à ce jour.
+Fondée en 1980 à Johannesbourg, la clinique Medfem aide les gens à fonder des familles. Ses spécialistes sont accrédités en médecine de la reproduction et totalisent plus de cent ans d'expérience collective. Ils sont à l'origine de certains des premiers bébés conçus par fécondation in vitro en Afrique du Sud, et la clinique a participé à la mise au monde de plus de seize mille enfants.
 
 ## L'hôpital Netcare Rosebank
 
@@ -32,11 +48,11 @@ La technologie Scan for Life y fournit un balayage corporel médical avancé, ca
 
 ## Le groupe Mediclinic — Sandton et Morningside
 
-Mediclinic Southern Africa est un groupe d'hôpitaux privés opérant en Afrique du Sud et en Namibie, spécialisé dans les soins de courte durée et les soins spécialisés multidisciplinaires. Le groupe exploite 49 hôpitaux privés en Afrique du Sud et trois en Namibie, offrant plus de huit mille lits au total.
+Mediclinic Southern Africa est un groupe d'hôpitaux privés opérant en Afrique du Sud et en Namibie, spécialisé dans les soins de courte durée et les soins spécialisés multidisciplinaires. Le groupe exploite une cinquantaine d'hôpitaux privés en Afrique du Sud, auxquels s'ajoutent des cliniques de jour et des établissements spécialisés, ainsi que trois hôpitaux en Namibie — soit plus de huit mille huit cents lits.
 
 ## Le groupe Life Healthcare
 
-Life Healthcare est le principal opérateur d'hôpitaux privés d'Afrique du Sud, avec un réseau couvrant sept des neuf provinces du pays et les régions métropolitaines les plus peuplées. Ses établissements proposent des unités de soins intensifs, des blocs opératoires, des unités d'urgence, des maternités et des unités de soins cardiaques, ainsi que des services spécialisés en rééducation intensive, dialyse rénale chronique, santé mentale et oncologie.
+Life Healthcare est l'un des principaux opérateurs d'hôpitaux privés d'Afrique du Sud, avec une quarantaine d'établissements répartis sur la majeure partie du pays, dont les régions métropolitaines les plus peuplées. Ses établissements proposent des unités de soins intensifs, des blocs opératoires, des unités d'urgence, des maternités et des unités de soins cardiaques, ainsi que des services spécialisés en rééducation intensive, dialyse rénale chronique, santé mentale et oncologie.
 
 ## L'hôpital Netcare Sunninghill
 

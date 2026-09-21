@@ -6,11 +6,12 @@ description: How Marie Ngameni built BanaHealth from a single act of kindness in
 langue: en
 url: our-founder
 ordre: 1
+banniere: marie-ngameni
 ---
 
 > Because we care: this phrase would become BanaHealth's motto. These words also describe better than any other how Marie founded and grew what is today one of the most respected medical facilitation companies in Africa.
 
-Her journey began fifteen years ago when, in an act of compassion, she offered to help the sister of a friend living in Cameroon find a solution to her difficulties conceiving. Marie found her a fertility treatment in Johannesburg, and that demanding journey eventually led to a newborn child.
+Her journey began in the early 2000s when, in an act of compassion, she offered to help the sister of a friend living in Cameroon find a solution to her difficulties conceiving. Marie found her a fertility treatment in Johannesburg, and that demanding journey eventually led to a newborn child.
 
 Word spread. What she had done for one friend was repeated for a few acquaintances and, before she realised it, she had built a company founded on acts of kindness — acts of kindness, but also a rare determination to stand beside people going through the ordeal of illness or medical intervention.
 

@@ -5,6 +5,19 @@ description: Des appartements équipés et confortables dans des quartiers sécu
 langue: fr
 url: hebergement
 ordre: 6
+galerie:
+  - image: logement-sejour-1
+    legende: Séjour d'un appartement
+  - image: logement-chambre-1
+    legende: Chambre équipée
+  - image: logement-cuisine-1
+    legende: Cuisine entièrement équipée
+  - image: logement-salle-de-bain
+    legende: Salle de bain
+  - image: logement-sejour-2
+    legende: Espace de vie
+  - image: logement-chambre-2
+    legende: Chambre
 ---
 
 Nous proposons des appartements stratégiquement situés à proximité des centres commerciaux, des restaurants et des gares du Gautrain, ce qui permet à nos clients d'aller faire leurs courses, de faire du shopping ou de se détendre facilement et en tout confort.

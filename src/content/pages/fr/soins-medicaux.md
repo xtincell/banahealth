@@ -6,6 +6,15 @@ description: Fécondation in vitro, oncologie, interventions chirurgicales, bila
 langue: fr
 url: soins-medicaux
 ordre: 4
+galerie:
+  - image: soin-fiv
+    legende: Fécondation in vitro
+  - image: soin-oncologie
+    legende: Oncologie
+  - image: soin-chirurgie
+    legende: Interventions chirurgicales
+  - image: soin-bilans
+    legende: Bilans de santé
 ---
 
 ## Fécondation in vitro
@@ -14,7 +23,7 @@ La fécondation in vitro (FIV) consiste en une série de procédures pouvant tra
 
 ## Oncologie
 
-L'oncologie est la branche de la médecine consacrée au cancer. Il existe aujourd'hui plus de deux cents types de cancer différents.
+L'oncologie est la branche de la médecine consacrée au cancer. Il existe plus de deux cents types de cancer différents.
 
 ## Interventions chirurgicales
 

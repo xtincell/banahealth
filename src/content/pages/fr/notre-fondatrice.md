@@ -6,11 +6,12 @@ description: Comment Marie Ngameni a bâti BanaHealth à partir d'un simple gest
 langue: fr
 url: notre-fondatrice
 ordre: 1
+banniere: marie-ngameni
 ---
 
 > Votre santé nous tient à cœur : cette phrase deviendra le slogan de BanaHealth. Ces mots sont aussi ceux qui décrivent le mieux comment Marie a fondé et fait grandir ce qui est aujourd'hui l'une des sociétés de facilitation médicale les plus reconnues en Afrique.
 
-Son aventure a démarré il y a quinze ans, lorsque, dans un geste de compassion, elle a offert d'aider la sœur d'une amie vivant au Cameroun à trouver une solution à ses difficultés à concevoir. Marie lui trouva un traitement de fertilité à Johannesbourg, et son parcours éprouvant déboucha finalement sur un nouveau-né.
+Son aventure a démarré au début des années 2000, lorsque, dans un geste de compassion, elle a offert d'aider la sœur d'une amie vivant au Cameroun à trouver une solution à ses difficultés à concevoir. Marie lui trouva un traitement de fertilité à Johannesbourg, et son parcours éprouvant déboucha finalement sur un nouveau-né.
 
 La nouvelle se répandit. Son geste pour une amie se multiplia pour quelques connaissances et, avant même de s'en rendre compte, elle avait bâti une société fondée sur des actes de bienveillance. Des actes de bienveillance, mais aussi une rare détermination à accompagner des personnes traversant les difficiles épreuves d'une maladie ou d'une intervention médicale.
 

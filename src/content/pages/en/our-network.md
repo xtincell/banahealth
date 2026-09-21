@@ -6,6 +6,22 @@ description: BanaHealth's partner private hospitals and clinics in Johannesburg 
 langue: en
 url: our-network
 ordre: 7
+galerie:
+  - image: hopital-wits-donald-gordon
+    cadrage: logo
+    legende: Wits Donald Gordon Medical Centre
+  - image: hopital-netcare
+    cadrage: logo
+    legende: Netcare
+  - image: hopital-medfem
+    cadrage: logo
+    legende: Medfem Fertility Clinic
+  - image: hopital-mediclinic
+    cadrage: logo
+    legende: Mediclinic
+  - image: hopital-life-healthcare
+    cadrage: logo
+    legende: Life Healthcare
 ---
 
 ## Wits Donald Gordon Medical Centre
@@ -22,7 +38,7 @@ Of the hospital's 346 beds, 95 are reserved for intensive care, all equipped wit
 
 ## Medfem Fertility Clinic
 
-Founded in Johannesburg in 1980 to help people build families, Medfem's specialists are accredited in reproductive medicine with more than a hundred years of collective experience. They were behind some of the first IVF babies in South Africa, and the clinic has taken part in the birth of more than sixteen thousand children to date.
+Founded in Johannesburg in 1980 to help people build families, Medfem's specialists are accredited in reproductive medicine with more than a hundred years of collective experience. They were behind some of the first IVF babies in South Africa, and the clinic has taken part in the birth of more than sixteen thousand children.
 
 ## Netcare Rosebank Hospital
 
@@ -32,11 +48,11 @@ Scan for Life technology provides advanced medical body scanning, capable of det
 
 ## Mediclinic Group — Sandton and Morningside
 
-Mediclinic Southern Africa is a private hospital group operating in South Africa and Namibia, specialising in acute care and multidisciplinary specialist services. The group runs 49 private hospitals in South Africa and three in Namibia, offering more than eight thousand beds in total.
+Mediclinic Southern Africa is a private hospital group operating in South Africa and Namibia, specialising in acute care and multidisciplinary specialist services. The group runs around fifty private hospitals in South Africa, alongside day clinics and specialised facilities, plus three hospitals in Namibia — more than eight thousand eight hundred beds in total.
 
 ## Life Healthcare Group
 
-Life Healthcare is South Africa's leading private hospital operator, with a network spanning seven of the country's nine provinces and its most populous metropolitan areas. Its facilities provide intensive and high-care units, operating theatres, emergency units, maternity wards and cardiac care units, along with specialised services in intensive rehabilitation, chronic renal dialysis, mental health and oncology.
+Life Healthcare is one of South Africa's leading private hospital operators, with around forty facilities across most of the country, including its most populous metropolitan areas. Its facilities provide intensive and high-care units, operating theatres, emergency units, maternity wards and cardiac care units, along with specialised services in intensive rehabilitation, chronic renal dialysis, mental health and oncology.
 
 ## Netcare Sunninghill Hospital
 

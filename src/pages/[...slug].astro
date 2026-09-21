@@ -1,5 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import { media } from '../components/Media';
 import Base from '../layouts/Base.astro';
 import type { Langue } from '../i18n/ui';
 
@@ -14,6 +16,10 @@ export async function getStaticPaths() {
 const { page } = Astro.props;
 const { Content } = await render(page);
 const d = page.data;
+const banniere = media(d.banniere);
+const galerie = (d.galerie ?? [])
+  .map((g) => ({ ...g, src: media(g.image) }))
+  .filter((g) => g.src);
 ---
 
 <Base langue={d.langue as Langue} titre={d.titre} description={d.description} slug={d.url}>
@@ -26,15 +32,75 @@ const d = page.data;
       </div>
     </header>
 
+    {banniere && (
+      <div class="enveloppe">
+        <Image src={banniere} alt="" class="banniere__image reveler" width={1200} loading="eager" />
+      </div>
+    )}
+
     <div class="enveloppe">
       <div class="prose reveler">
         <Content />
       </div>
     </div>
+
+    {galerie.length > 0 && (
+      <div class="enveloppe">
+        <ul class="galerie">
+          {galerie.map((g, i) => (
+            <li class:list={['galerie__element', `galerie__element--${g.cadrage}`, 'reveler']} style={`transition-delay:${i * 0.07}s`}>
+              <Image src={g.src!} alt={g.legende ?? ''} width={720} loading="lazy" />
+              {g.legende && <p class="galerie__legende">{g.legende}</p>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
   </article>
 </Base>
 
 <style>
+  .banniere__image {
+    width: 100%;
+    height: clamp(14rem, 34vw, 26rem);
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-top: clamp(1.5rem, 4vw, 3rem);
+    box-shadow: var(--ombre-douce);
+  }
+
+  .galerie {
+    list-style: none;
+    margin: 0 0 clamp(3rem, 7vw, 5rem);
+    padding: 0;
+    display: grid;
+    gap: clamp(1rem, 2.5vw, 2rem);
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+  .galerie__element img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: .75rem;
+  }
+  /* Photographie : l'image occupe tout le cadre */
+  .galerie__element--photo img {
+    object-fit: cover;
+    box-shadow: var(--ombre-douce);
+  }
+  /* Logo : respiration autour, sur fond neutre */
+  .galerie__element--logo img {
+    object-fit: contain;
+    background: var(--papier-ombre);
+    padding: 1.5rem;
+    aspect-ratio: 3 / 2;
+  }
+  .galerie__legende {
+    margin: .75rem 0 0;
+    font-size: .9rem;
+    color: var(--encre-douce);
+    text-align: center;
+  }
+
   .banniere {
     padding-block: clamp(3rem, 7vw, 5.5rem) clamp(1.5rem, 3vw, 2.5rem);
     background:

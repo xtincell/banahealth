@@ -6,6 +6,15 @@ description: In vitro fertilisation, oncology, surgery and general check-ups —
 langue: en
 url: medical-care
 ordre: 4
+galerie:
+  - image: soin-fiv
+    legende: In vitro fertilisation
+  - image: soin-oncologie
+    legende: Oncology
+  - image: soin-chirurgie
+    legende: Surgery
+  - image: soin-bilans
+    legende: General check-ups
 ---
 
 ## In vitro fertilisation
@@ -14,7 +23,7 @@ In vitro fertilisation (IVF) is a series of procedures that can address genetic 
 
 ## Oncology
 
-Oncology is the branch of medicine devoted to cancer. More than two hundred distinct types of cancer are recognised today.
+Oncology is the branch of medicine devoted to cancer. More than two hundred distinct types of cancer are recognised.
 
 ## Surgery
 
