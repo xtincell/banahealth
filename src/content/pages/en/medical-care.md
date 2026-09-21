@@ -1,42 +1,42 @@
 ---
 titre: Medical care
-surtitre: Where we support patients
-chapeau: "These are the most common reasons patients come to us. The list is illustrative rather than exhaustive: contact us to discuss your own case."
-description: "In vitro fertilisation, oncology, surgery and general check-ups — the main areas in which BanaHealth supports its patients."
+surtitre: Some of the conditions we attend to
+chapeau: "Below are some of the most frequent conditions among the patients we have recently assisted. The list is by no means exhaustive, but rather illustrative: do contact us to discuss your particular case."
+description: "In vitro fertilisation, oncology, surgery and general check-ups — the main areas in which BanaHealth assists its patients."
 langue: en
 url: medical-care
 ordre: 4
 cartes:
   - image: soin-fiv
     titre: In vitro fertilisation
-    texte: A series of procedures that can address genetic or fertility problems and help you conceive.
+    texte: A series of procedures which may treat genetic or fertility problems and assist you in conceiving your child.
     lien: /en/in-vitro-fertilisation/
-    lienLibelle: Learn more
+    lienLibelle: Find out more
   - image: soin-oncologie
     titre: Oncology
-    texte: The branch of medicine devoted to cancer, of which more than two hundred distinct types are recognised.
+    texte: The branch of medicine devoted to cancer, of which more than two hundred different types are recognised.
     lien: /en/oncology/
-    lienLibelle: Learn more
+    lienLibelle: Find out more
   - image: soin-chirurgie
     titre: Surgery
-    texte: Relieving or preventing illness, improving a bodily function, controlling the symptoms of a disease.
+    texte: Procedures undertaken to relieve or prevent ailments, to improve a particular bodily function, or to control the symptoms of a condition.
     lien: /en/surgeries/
-    lienLibelle: Learn more
+    lienLibelle: Find out more
   - image: soin-bilans
     titre: General check-up
-    texte: A thorough examination by professionals — the only reliable way to take stock of your health.
+    texte: A thorough examination carried out by professionals, and the only reliable way of taking stock of your health.
     lien: /en/general-check-up/
-    lienLibelle: Learn more
+    lienLibelle: Find out more
 ---
 
-## How we work
+## How we assist you
 
-Whatever the reason, our role stays the same: find you the right specialist, obtain a cost estimate, arrange appointments and stand beside you from arrival to return.
+Whatever the condition, our role remains the same. Upon reception of your medical report, we consult our network of highly qualified medical practitioners to match you with the appropriate experts, obtain quotations for your treatments, organize your appointments and accompany you from your arrival until your return home.
 
-We make no diagnosis and provide no treatment — those acts belong to the practitioners and institutions. Our job is to make your journey legible and free of friction, inside a foreign healthcare system whose administration can be disorienting.
+We do not diagnose and we do not treat. Those acts rest entirely with the practitioners and the medical facilities carrying them out. Our work is to make your journey clear and free of friction within a foreign healthcare system whose administration can be daunting for visitors.
 
-## Your case is not on this list?
+## Should your condition not appear above
 
-The four areas above are the most frequent, not the only ones. We have supported patients in cardiology, orthopaedics, nephrology, ophthalmology and many other specialities.
+The four areas listed here are the most frequent ones, not the only ones. We have assisted patients in cardiology, orthopaedics, nephrology, ophthalmology and many further specialities.
 
-Send your medical report to [hello@banahealth.care](mailto:hello@banahealth.care) and we will consult our network and tell you quickly what can be done.
+Send your medical report to [hello@banahealth.care](mailto:hello@banahealth.care) and we will consult our network and tell you promptly what can be done.
