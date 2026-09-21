@@ -1,0 +1,5 @@
+# banahealth.care
+User-agent: *
+Allow: /
+
+Sitemap: https://banahealth.care/sitemap-index.xml

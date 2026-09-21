@@ -1,0 +1,84 @@
+# =========================================================
+# banahealth.care — site statique
+#
+# Aucun PHP n'est servi ici : le site est entierement
+# pre-genere. Les regles ci-dessous verrouillent ce qui
+# pourrait l'etre malgre tout, et refusent explicitement
+# l'execution de scripts.
+# =========================================================
+
+# --- Toujours en HTTPS ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- Aucun script ne doit s'executer sur ce site ---
+<FilesMatch "\.(php|php\d|phtml|phps|pl|py|cgi|sh|lua)$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8
+
+# --- Fichiers sensibles ou techniques ---
+<FilesMatch "^\.|\.(env|ini|log|sql|bak|old|swp|json|lock|yml|yaml)$">
+  Require all denied
+</FilesMatch>
+<Files ".htaccess">
+  Require all denied
+</Files>
+# Le manifeste du site reste lisible
+<Files "site.webmanifest">
+  Require all granted
+</Files>
+
+# --- Pas de listage de repertoire ---
+Options -Indexes -ExecCGI
+DirectoryIndex index.html
+
+# --- En-tetes de securite ---
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  # Le site ne charge que ses propres ressources, plus les polices Google
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+</IfModule>
+
+# --- Page d'erreur ---
+ErrorDocument 404 /404.html
+
+# --- Mise en cache ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Les fichiers compiles portent une empreinte dans leur nom
+  <FilesMatch "\.(woff2?|ttf|otf|eot)$">
+    ExpiresDefault "access plus 1 year"
+    Header append Cache-Control "public, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|svg|ico)$">
+    ExpiresDefault "access plus 6 months"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    ExpiresDefault "access plus 1 year"
+    Header append Cache-Control "public, immutable"
+  </FilesMatch>
+  # Le HTML doit rester frais : il porte les liens vers les fichiers empreintes
+  <FilesMatch "\.html$">
+    ExpiresDefault "access plus 10 minutes"
+  </FilesMatch>
+</IfModule>
+
+# --- Compression ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/otf
+</IfModule>
