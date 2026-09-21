@@ -7,12 +7,76 @@
 # l'execution de scripts.
 # =========================================================
 
-# --- Toujours en HTTPS ---
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # --- Toujours en HTTPS ---
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # =======================================================
+  # Redirections des anciennes adresses WordPress
+  #
+  # Le site precedent vivait sous /wordpress/ et melait les
+  # deux langues sur les memes slugs, distinguees par ?lang=.
+  # Ces regles preservent le referencement acquis et evitent
+  # que les liens indexes par Google ne tombent dans le vide.
+  # =======================================================
+
+  # L'ancien prefixe disparait : on le retire avant tout le reste.
+  RewriteRule ^wordpress/?$ https://banahealth.care/ [R=301,L]
+  RewriteRule ^wordpress/(.*)$ https://banahealth.care/$1 [R=301,L]
+
+  # --- Slugs partages entre les deux langues : le francais d'abord ---
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^accommodation/?$ https://banahealth.care/hebergement/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^contact-us/?$ https://banahealth.care/contact/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^testimonials/?$ https://banahealth.care/temoignages/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^useful-links/?$ https://banahealth.care/liens-utiles/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^general-check-up/?$ https://banahealth.care/bilan-de-sante/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^our-network/?$ https://banahealth.care/nos-reseaux/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^services/?$ https://banahealth.care/nos-services/ [R=301,L,QSD]
+
+  # --- Anciennes adresses francaises dont le slug a change ---
+  RewriteRule ^page-daccueil/?$ https://banahealth.care/ [R=301,L,QSD]
+  RewriteRule ^pourquoi-lafrique-du-sud/?$ https://banahealth.care/pourquoi-afrique-du-sud/ [R=301,L,QSD]
+  RewriteRule ^vitro-fertilization-ivf/?$ https://banahealth.care/fecondation-in-vitro/ [R=301,L,QSD]
+
+  # --- Anciennes adresses anglaises ---
+  RewriteRule ^sample-page/?$ https://banahealth.care/en/ [R=301,L,QSD]
+  RewriteRule ^blog/?$ https://banahealth.care/en/ [R=301,L,QSD]
+  RewriteRule ^meet-the-founder/?$ https://banahealth.care/en/our-founder/ [R=301,L,QSD]
+  RewriteRule ^vision-and-mission/?$ https://banahealth.care/en/vision-and-mission/ [R=301,L,QSD]
+  RewriteRule ^services/?$ https://banahealth.care/en/our-services/ [R=301,L,QSD]
+  RewriteRule ^accommodation/?$ https://banahealth.care/en/accommodation/ [R=301,L,QSD]
+  RewriteRule ^why-south-africa/?$ https://banahealth.care/en/why-south-africa/ [R=301,L,QSD]
+  RewriteRule ^our-network(-2)?/?$ https://banahealth.care/en/our-network/ [R=301,L,QSD]
+  RewriteRule ^testimonials/?$ https://banahealth.care/en/testimonials/ [R=301,L,QSD]
+  RewriteRule ^useful-links/?$ https://banahealth.care/en/useful-links/ [R=301,L,QSD]
+  RewriteRule ^contact-us/?$ https://banahealth.care/en/contact/ [R=301,L,QSD]
+  RewriteRule ^in-vitro-fertilization-ivf/?$ https://banahealth.care/en/in-vitro-fertilisation/ [R=301,L,QSD]
+  RewriteRule ^oncology/?$ https://banahealth.care/en/oncology/ [R=301,L,QSD]
+  RewriteRule ^surgeries/?$ https://banahealth.care/en/surgeries/ [R=301,L,QSD]
+  RewriteRule ^general-check-up/?$ https://banahealth.care/en/general-check-up/ [R=301,L,QSD]
+  RewriteRule ^privacy-policy/?$ https://banahealth.care/en/privacy-policy/ [R=301,L,QSD]
+  RewriteRule ^(terms-and-conditions|conditions)/?$ https://banahealth.care/en/terms-and-conditions/ [R=301,L,QSD]
+  # Le site statique ne depose aucun cookie : la page d'origine n'a
+  # plus d'objet, sa remplacante est la politique de confidentialite.
+  RewriteRule ^cookie-policy/?$ https://banahealth.care/en/privacy-policy/ [R=301,L,QSD]
+
+  # --- Restes de WordPress : plus rien a servir ---
+  RewriteRule ^(wp-admin|wp-content|wp-includes|wp-login\.php|xmlrpc\.php) https://banahealth.care/ [R=301,L]
+
+  # --- Le parametre de langue de l'ancien systeme n'a plus cours ---
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^(.*)$ https://banahealth.care/$1 [R=301,L,QSD]
 </IfModule>
 
 # --- Aucun script ne doit s'executer sur ce site ---

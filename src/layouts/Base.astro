@@ -14,6 +14,7 @@ interface Props {
 
 const { langue, titre, description, slug = '', classe = '' } = Astro.props;
 const tr = t(langue);
+const SITE = Astro.site ?? new URL('https://banahealth.care');
 
 // Chemin equivalent dans l'autre langue, pour hreflang et le selecteur
 const autre: Langue = langue === 'fr' ? 'en' : 'fr';
@@ -21,7 +22,72 @@ const slugAutre = langue === 'fr' ? (equivalences[slug] ?? '') : (equivalencesIn
 const urlAutre = chemin(autre, slugAutre);
 
 const titreComplet = slug === '' ? `${tr('nom')} — ${tr('slogan')}` : `${titre} · ${tr('nom')}`;
-const canonique = new URL(chemin(langue, slug), Astro.site ?? 'https://banahealth.care').href;
+const canonique = new URL(chemin(langue, slug), SITE).href;
+const partage = new URL('/partage.png', SITE).href;
+
+// --- Donnees structurees ---
+// Une seule fiche d'organisation, referencee par son identifiant sur
+// chaque page : les moteurs rattachent ainsi toutes les pages a la
+// meme entite plutot qu'a autant d'organisations distinctes.
+const organisation = {
+  '@type': ['Organization', 'MedicalBusiness'],
+  '@id': `${SITE.origin}/#organisation`,
+  name: 'BanaHealth',
+  alternateName: 'BanaHealth Medical Facilitation',
+  url: SITE.origin,
+  logo: new URL('/icone-512.png', SITE).href,
+  image: partage,
+  slogan: langue === 'fr' ? 'Votre santé nous tient à cœur' : 'Because we care',
+  description:
+    langue === 'fr'
+      ? "BanaHealth organise et coordonne les parcours de soins de patients internationaux vers les hôpitaux privés d'Afrique du Sud."
+      : 'BanaHealth arranges and coordinates the care pathways of international patients travelling to South African private hospitals.',
+  email: 'hello@banahealth.care',
+  telephone: ['+27826844154', '+27827756975'],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Johannesburg',
+    addressCountry: 'ZA',
+  },
+  areaServed: [
+    { '@type': 'Country', name: 'South Africa' },
+    { '@type': 'Place', name: 'Africa' },
+  ],
+  availableLanguage: ['fr', 'en'],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '08:00',
+    closes: '19:00',
+  },
+  founder: { '@type': 'Person', name: 'Marie Ngameni' },
+};
+
+const donnees = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    organisation,
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE.origin}/#site`,
+      url: SITE.origin,
+      name: 'BanaHealth',
+      publisher: { '@id': organisation['@id'] },
+      inLanguage: ['fr', 'en'],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonique}#page`,
+      url: canonique,
+      name: titreComplet,
+      description,
+      inLanguage: langue,
+      isPartOf: { '@id': `${SITE.origin}/#site` },
+      about: { '@id': organisation['@id'] },
+      primaryImageOfPage: partage,
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -32,19 +98,36 @@ const canonique = new URL(chemin(langue, slug), Astro.site ?? 'https://banahealt
     <title>{titreComplet}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonique} />
+
     <link rel="alternate" hreflang={langue} href={canonique} />
-    <link rel="alternate" hreflang={autre} href={new URL(urlAutre, Astro.site ?? 'https://banahealth.care').href} />
+    <link rel="alternate" hreflang={autre} href={new URL(urlAutre, SITE).href} />
+    <link rel="alternate" hreflang="x-default" href={new URL(chemin('fr', langue === 'fr' ? slug : slugAutre), SITE).href} />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={tr('nom')} />
     <meta property="og:title" content={titreComplet} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonique} />
     <meta property="og:locale" content={langue === 'fr' ? 'fr_FR' : 'en_GB'} />
+    <meta property="og:locale:alternate" content={langue === 'fr' ? 'en_GB' : 'fr_FR'} />
+    <meta property="og:image" content={partage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="BanaHealth — Medical Facilitation" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={titreComplet} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={partage} />
 
-    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="BanaHealth" />
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#0AA89E" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,6 +136,8 @@ const canonique = new URL(chemin(langue, slug), Astro.site ?? 'https://banahealt
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,800;1,400&display=swap"
     />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(donnees)} />
   </head>
 
   <body class={classe}>
