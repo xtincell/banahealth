@@ -19,7 +19,7 @@ const SITE = 'https://banahealth.care';
 
 // Le logo est appele depuis le site. Ne pas le recopier ailleurs :
 // si son adresse change, toutes les signatures cassent d'un coup.
-const LOGO = { url: `${SITE}/signature/banahealth-vertical.png`, largeur: 150, hauteur: 142 };
+const LOGO = { url: `${SITE}/signature/banahealth-horizontal.png`, largeur: 190, hauteur: 50 };
 
 const COULEURS = {
   nom: '#242A29',
@@ -39,8 +39,8 @@ const ADRESSE = [
 const FAX = '+27 (0) 11 447 0226';
 
 const RESEAUX = [
-  { nom: 'LinkedIn', url: 'https://fr.linkedin.com/company/banahealth', icone: 'linkedin' },
-  { nom: 'Facebook', url: 'https://www.facebook.com/banahealth.care', icone: 'facebook' },
+  { nom: "Facebook", url: "https://www.facebook.com/banahealth.care", icone: "facebook" },
+  { nom: "LinkedIn", url: "https://fr.linkedin.com/company/banahealth", icone: "linkedin" },
 ];
 
 /**
@@ -71,8 +71,8 @@ const equipe = [
 function signature(p) {
   return `<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
   <tr>
-    <!-- Logo, verrou vertical de la charte -->
-    <td valign="top" style="padding:0;">
+    <!-- Logo, verrou horizontal de la charte (p.4) -->
+    <td valign="middle" style="padding:0 0 0 0;">
       <a href="${SITE}" style="text-decoration:none;border:0;">
         <img src="${LOGO.url}"
              alt="BanaHealth — Medical Facilitation"
@@ -111,11 +111,15 @@ function signature(p) {
         ${ADRESSE.join('<br />\n        ')}
       </div>
 
-      <div style="padding-top:11px;">
-        ${RESEAUX.map(
-          (r) => `<a href="${r.url}" style="text-decoration:none;border:0;"><img src="${SITE}/signature/${r.icone}.png" alt="${r.nom}" width="26" height="26" style="display:inline-block;border:0;outline:none;width:26px;height:26px;" /></a>`,
-        ).join('<span style="font-size:0;">&nbsp;&nbsp;</span>')}
-      </div>
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:12px;">
+        <tr>
+          ${RESEAUX.map(
+            (r, i) =>
+              (i ? '<td width="12" style="width:12px;font-size:0;line-height:0;">&nbsp;</td>' : '') +
+              `<td style="padding:0;"><a href="${r.url}" style="text-decoration:none;border:0;"><img src="${SITE}/signature/${r.icone}.png" alt="${r.nom}" width="28" height="28" style="display:block;border:0;outline:none;width:28px;height:28px;" /></a></td>`,
+          ).join('')}
+        </tr>
+      </table>
 
     </td>
   </tr>
