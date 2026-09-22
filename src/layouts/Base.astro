@@ -44,11 +44,17 @@ const organisation = {
       : 'BanaHealth arranges and coordinates the care pathways of international patients travelling to South African private hospitals.',
   email: 'hello@banahealth.care',
   telephone: ['+27826844154', '+27827756975'],
+  faxNumber: '+27114470226',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Johannesburg',
+    streetAddress: '28 Reform Avenue, Melrose',
+    addressLocality: 'Sandton',
+    addressRegion: 'Gauteng',
+    postalCode: '2196',
     addressCountry: 'ZA',
   },
+  // Coordonnees du quartier de Melrose, Sandton
+  geo: { '@type': 'GeoCoordinates', latitude: -26.1367, longitude: 28.0485 },
   areaServed: [
     { '@type': 'Country', name: 'South Africa' },
     { '@type': 'Place', name: 'Africa' },

@@ -19,7 +19,7 @@ cartes:
     lienLibelle: +27 (0) 82 684 4154
   - image: icone-famille
     titre: Où nous sommes
-    texte: Nos bureaux et nos hébergements se trouvent à Johannesbourg, en Afrique du Sud, à proximité immédiate des hôpitaux privés avec lesquels nous travaillons.
+    texte: "28 Reform Avenue, Melrose, Sandton, Afrique du Sud 2196 — à proximité immédiate des hôpitaux privés avec lesquels nous travaillons. Courrier postal : PO Box 652774 Benmore, Johannesburg 2010."
 etapes:
   - titre: Vous nous écrivez
     texte: Décrivez votre situation en quelques lignes et joignez votre rapport médical si vous en disposez. Rien d'autre n'est nécessaire à ce stade.

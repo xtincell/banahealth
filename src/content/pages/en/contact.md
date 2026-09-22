@@ -19,7 +19,7 @@ cartes:
     lienLibelle: +27 (0) 82 684 4154
   - image: icone-famille
     titre: Where to find us
-    texte: Our offices and residential facilities are in Johannesburg, South Africa, within easy reach of the private hospitals we team up with.
+    texte: "28 Reform Avenue, Melrose, Sandton, South Africa 2196 — within easy reach of the private hospitals we team up with. Postal address: PO Box 652774 Benmore, Johannesburg 2010."
 etapes:
   - titre: You tell us about your condition
     texte: Describe your situation in a few lines and attach your medical report should you have one. Nothing further is required at this stage.
