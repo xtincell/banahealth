@@ -1,6 +1,5 @@
 ---
 titre: Oncologie
-surtitre: Soins médicaux
 description: "L'oncologie en Afrique du Sud : types de cancer, traitements disponibles et accompagnement des patients internationaux."
 langue: fr
 url: oncologie
@@ -8,6 +7,7 @@ ordre: 42
 banniere: soin-oncologie
 banniere_cadrage: large
 ---
+
 L'oncologie est la branche de la médecine consacrée au cancer. Il existe aujourd'hui plus de 200 types de cancer différents.
 
 Le cancer est la croissance incontrôlée de cellules anormales, qui se produit en plusieurs phases. La plupart des cancers sont nommés en fonction de l'organe ou du type de cellule d'où provient le cancer. Ils peuvent se développer dans presque n'importe quel tissu ou organe, et notamment le sein, le poumon, le côlon, le tissu nerveux ou les os.
@@ -16,7 +16,7 @@ Les oncologues sont des médecins spécialisés dans la prévention, le diagnost
 
 Selon l'OMS, le cancer est la principale cause de mortalité dans le monde, causant 8,8 millions de décès en 2015. On compte, parmi les causes les plus fréquentes de décès liés au cancer, le cancer du poumon, le cancer du foie, le cancer colorectal, le cancer de l'estomac et le cancer du sein. Plus précisément, selon l’Association de lutte contre le cancer en Afrique du Sud (_Cancer Association of South Africa)_, le cancer de la prostate est le cancer le plus fréquent chez les hommes, alors que le cancer du sein est le cancer le plus fréquent chez les femmes.
 
-### Causes et prévention
+**Causes et prévention **
 
 Le cancer provient de la transformation des cellules corporelles normales en cellules tumorales suite à une série d'étapes qui progressent d'une lésion précancéreuse à une tumeur maligne.
 
@@ -33,7 +33,7 @@ Un autre facteur fondamental qui contribue au développement du cancer est le vi
 
 La prévention du cancer consiste donc à prendre des mesures pour réduire son facteur de risque. Cela inclut l’adoption d'un mode de vie sain, en évitant l'exposition à des substances cancérigènes connues et en prenant des médicaments ou des vaccins susceptibles d’empêcher le développement d’un cancer.
 
-### Diagnostic
+**Diagnostic **
 
 Le rôle d'un oncologue est d'abord de diagnostiquer un cancer, ce qui peut être réalisé à l’aide d’une biopsie, d’une radiographie, d’une endoscopie, d’un scanner cérébral, d’une IRM, d’une échographie, d’un examen de TEP et d’autres procédures radiologiques. Des tests sanguins, la médecine nucléaire et les marqueurs tumoraux peuvent également être utilisés pour diagnostiquer le cancer.
 
@@ -43,7 +43,7 @@ Le patient peut également être appelé à consulter d'autres médecins, en fon
 
 Une visite chez un psycho-oncologue ou un psychiatre est habituellement recommandée pour aider les patients à faire face à leur cancer psychologiquement.
 
-### Options de traitement
+**Options de traitement **
 
 Il existe plusieurs types de traitements contre le cancer disponibles pour les patients souffrant de cette maladie effrayante. Lors du choix du type de traitement qu'un patient souffrant d’un cancer va recevoir, les médecins fondent largement leurs décisions sur le type de cancer dont souffre le patient, ainsi que son état d’avancement. Certaines personnes atteintes de cancer peuvent nécessiter un seul traitement, tandis que d'autres ont besoin de plusieurs traitements combinés. Une fois encore, il appartient à l'équipe médicale de décider de ce qui sera le plus efficace. Les principaux types de traitement contre le cancer sont :
 
@@ -59,7 +59,7 @@ La thérapie ciblée : La thérapie ciblée est un type de traitement contre le
 
 La thérapie hormonale, la greffe de cellules souches et la médecine de précision sont d'autres exemples de traitements contre le cancer. La plupart de ces traitements et procédures sont disponibles et bien pratiqués en Afrique du Sud.
 
-### Progrès en oncologie
+**Progrès en oncologie**
 
 Il existe une quantité incroyable de recherches menées sur tous les aspects de l'oncologie, de la biologie des cellules cancéreuses aux rayonnements, en passant par les traitements de chimiothérapie et les soins palliatifs. Le domaine de l'oncologie change de fait continuellement et progressivement pour le bénéfice du patient.
 
@@ -67,7 +67,7 @@ Il existe une quantité incroyable de recherches menées sur tous les aspects de
 
 L'**hôpital Milpark** et le **Centre médical Wits Donald Gordon**, qui sont deux des hôpitaux avec lesquels nous travaillons, disposent des centres d'oncologie de renommée internationale qui traitent des cancers pédiatriques et chez l’adulte. Ils ont adopté une approche de traitement du cancer individualisé et vont au-delà des besoins médicaux des patients.
 
-### Références
+**Références**
 
  - Organisation mondiale de la santé (OMS), Fiche d'information sur le cancer 2017
 

@@ -1,5 +1,5 @@
 ---
-import { t, chemin, equivalences, equivalencesInverses, type Langue } from '../i18n/ui';
+import { t, chemin, equivalences, equivalencesInverses, coordonnees, type Langue } from '../i18n/ui';
 import Entete from '../components/Entete.astro';
 import Pied from '../components/Pied.astro';
 import '../styles/global.css';
@@ -42,19 +42,22 @@ const organisation = {
     langue === 'fr'
       ? "BanaHealth organise et coordonne les parcours de soins de patients internationaux vers les hôpitaux privés d'Afrique du Sud."
       : 'BanaHealth arranges and coordinates the care pathways of international patients travelling to South African private hospitals.',
-  email: 'hello@banahealth.care',
-  telephone: ['+27826844154', '+27827756975'],
-  faxNumber: '+27114470226',
+  email: coordonnees.courriel,
+  telephone: coordonnees.telephones.map((tel: any) => tel.appel),
+  faxNumber: coordonnees.fax,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '28 Reform Avenue, Melrose',
-    addressLocality: 'Sandton',
-    addressRegion: 'Gauteng',
-    postalCode: '2196',
-    addressCountry: 'ZA',
+    streetAddress: coordonnees.adresse.rue,
+    addressLocality: coordonnees.adresse.ville,
+    addressRegion: coordonnees.adresse.region,
+    postalCode: coordonnees.adresse.code_postal,
+    addressCountry: coordonnees.adresse.pays_code,
   },
-  // Coordonnees du quartier de Melrose, Sandton
-  geo: { '@type': 'GeoCoordinates', latitude: -26.1367, longitude: 28.0485 },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: coordonnees.adresse.latitude,
+    longitude: coordonnees.adresse.longitude,
+  },
   areaServed: [
     { '@type': 'Country', name: 'South Africa' },
     { '@type': 'Place', name: 'Africa' },
@@ -63,15 +66,12 @@ const organisation = {
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '08:00',
-    closes: '19:00',
+    opens: coordonnees.horaires.ouverture,
+    closes: coordonnees.horaires.fermeture,
   },
-  founder: { '@type': 'Person', name: 'Marie Ngameni' },
+  founder: { '@type': 'Person', name: coordonnees.fondatrice },
   // Rattache les profils officiels a l'entreprise aux yeux des moteurs
-  sameAs: [
-    'https://fr.linkedin.com/company/banahealth',
-    'https://www.facebook.com/banahealth.care',
-  ],
+  sameAs: coordonnees.reseaux.map((r: any) => r.url),
 };
 
 const donnees = {

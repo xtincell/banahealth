@@ -1,7 +1,5 @@
 ---
 titre: Soins médicaux
-surtitre: Nos domaines d'accompagnement
-chapeau: "Voici les motifs de soins les plus fréquents parmi les patients que nous accompagnons. Cette liste est illustrative : contactez-nous pour discuter de votre cas."
 description: "Fécondation in vitro, oncologie, interventions chirurgicales, bilans de santé — les principaux domaines dans lesquels BanaHealth accompagne ses patients."
 langue: fr
 url: soins-medicaux
@@ -29,14 +27,28 @@ cartes:
     lienLibelle: En savoir plus
 ---
 
-## Comment nous intervenons
+Voici quelques-unes des maladies et autres soucis de santé les plus fréquents de patients que nous avons récemment accompagné : la liste ci-dessous n'est nullement exhaustive, mais plutôt illustrative. Contactez-nous pour discuter de votre cas particulier.
 
-Quel que soit le motif, notre rôle reste le même : vous trouver le bon spécialiste, obtenir une estimation des coûts, organiser les rendez-vous et vous accompagner de votre arrivée à votre retour.
+## Fécondation in vitro
 
-Nous ne posons aucun diagnostic et ne dispensons aucun soin — ces actes relèvent des praticiens et des établissements. Notre métier consiste à rendre votre parcours lisible et sans friction, dans un système de santé étranger dont l'administration peut dérouter.
+La fécondation in vitro (FIV) consiste en une série de procédures pouvant traiter les problèmes génétiques ou de fécondité et vous aider à concevoir votre enfant. Une procédure plus commune, l’insémination artificielle, consiste à introduire des spermatozoïdes dans l'utérus, mais la FIV va au-delà de cette procédure.
 
-## Votre cas ne figure pas dans cette liste ?
+## L’Oncologie
 
-Les quatre domaines ci-dessus sont les plus fréquents, non les seuls. Nous avons accompagné des patients en cardiologie, en orthopédie, en néphrologie, en ophtalmologie et dans bien d'autres spécialités.
+L'oncologie est la branche de la médecine consacrée au cancer. Il existe aujourd'hui plus de 200 types de cancer différents.
 
-Envoyez-nous votre rapport médical à [hello@banahealth.care](mailto:hello@banahealth.care) : nous consultons notre réseau et vous disons rapidement ce qu'il est possible de faire.
+## Interventions chirurgicales
+
+Une chirurgie, ou encore opération chirurgicale, peut être réalisée pour une multitude de raisons. Tandis que certains traitements chirurgicaux ont pour but d’atténuer ou de prévenir des maux, d'autres cherchent à améliorer une fonction particulière du corps ou à contrôler les symptômes d’une maladie.
+
+## Bilans de santé
+
+Avec le progrès de la médecine et de la technologie, nous sommes constamment inondés de nouvelles recherches et même de sites Web nous permettant de nous diagnostiquer nous-mêmes.
+
+La fécondation in vitro (FIV) consiste en une série de procédures pouvant traiter les problèmes génétiques ou de fécondité et vous aider à concevoir votre enfant. Une procédure plus commune, l’insémination artificielle, consiste à introduire des spermatozoïdes dans l'utérus, mais la FIV va au-delà de cette procédure.
+
+L'oncologie est la branche de la médecine consacrée au cancer. Il existe aujourd’hui plus de 200 types de cancer différents.
+
+Une chirurgie, ou encore opération chirurgicale, peut être réalisée pour une multitude de raisons. Tandis que certains traitements chirurgicaux ont pour but d’atténuer ou de prévenir des maux, d'autres cherchent à améliorer une fonction particulière du corps ou à contrôler les symptômes d’une maladie.
+
+Avec le progrès de la médecine et de la technologie, nous sommes constamment inondés de nouvelles recherches et même de sites Web nous permettant de nous diagnostiquer nous-mêmes.

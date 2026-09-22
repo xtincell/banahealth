@@ -1,0 +1,128 @@
+# =====================================================================
+# Home page — English
+#
+# Each block matches a section of the page, in the order it appears.
+# To remove a section, delete its entries; to add one, duplicate an
+# existing entry.
+#
+# In carousel titles, the portion between *asterisks* is shown in
+# orange, like the "Bana" of the logo.
+# =====================================================================
+
+diapos:
+  - image: accueil-slide-1
+    titre: The *care* you deserve
+    texte: >-
+      At BanaHealth, our patients are at the heart of all we do. Their recovery
+      is what drives us day and night.
+    lienLibelle: What we do
+    lien: our-services
+
+  - image: accueil-slide-2
+    titre: We are here *for you*
+    texte: >-
+      You never know how strong you are until being strong is the only choice
+      you have.
+    auteur: Cayla Mills
+    lienLibelle: Who we are
+    lien: our-founder
+
+  - image: accueil-slide-3
+    titre: The greatest wealth is *health*
+    texte: >-
+      We at BanaHealth are committed to helping you overcome any health issue,
+      be it cosmetic surgery or a life-threatening condition.
+    auteur: Virgil
+    lienLibelle: Our network
+    lien: our-network
+
+diapoPrecedente: Previous message
+diapoSuivante: Next message
+diapoAller: Go to message
+toujoursDisponible: Always available
+
+piliersSurtitre: Our services
+piliersTitre: Support on three fronts
+piliers:
+  - titre: Treatment facilitation
+    texte: >-
+      We find the doctors best suited to your needs, obtain quotations for your
+      treatments and arrange every medical appointment.
+    lien: our-services
+    image: icone-medecins
+
+  - titre: Travel facilitation
+    texte: >-
+      We ease the process of obtaining your visa and its extensions, help you
+      arrange flights and handle transfers between airport and hospital.
+    lien: our-services
+    image: icone-visa
+
+  - titre: Your stay
+    texte: >-
+      We find you accommodation, arrange leisure and tourism on request, and
+      remain your family away from home.
+    lien: accommodation
+    image: icone-hebergement
+
+raisonsSurtitre: Why South Africa
+raisonsTitre: A leading destination
+raisons:
+  - chiffre: "10"
+    titre: Among the world's ten best healthcare systems
+    texte: The South African private sector ranks ahead of France, the United Kingdom and Germany.
+
+  - chiffre: "−70 %"
+    titre: Up to 70 % less
+    texte: >-
+      A procedure commonly costs 30 to 70 % less than in Western Europe or the
+      United States.
+
+  - chiffre: "7 M"
+    titre: Cases waiting in England
+    texte: Nearly four patients in ten there exceed the official eighteen-week standard.
+
+raisonsLien: why-south-africa
+
+fondatriceSurtitre: Our founder
+fondatriceTitre: The story of Marie Ngameni
+fondatriceTexte: >-
+  It began with a single gesture: helping a friend's sister find fertility
+  treatment. That gesture has become a company built on kindness.
+fondatriceLien: our-founder
+
+temoignagesSurtitre: What our clients say
+temoignagesTitre: Journeys, in their own words
+temoignages:
+  - texte: >-
+      I was really moved by the high level of personal care and service I
+      received from the BanaHealth team and the general medical body at DGMC.
+      They supported me every step of the way and truly became my family away
+      from home.
+    auteur: Thomas
+
+  - texte: >-
+      I came to South Africa for a thorough medical checkup. It was found that I
+      was borderline diabetic and needed a complete lifestyle change. I have
+      since adopted a healthier lifestyle and shed 18 kg. This experience has
+      given me a new lease on life.
+    auteur: Arlette
+
+  - texte: >-
+      I have been a client of BanaHealth since 2014, when I was diagnosed with
+      cancer. I remained in South Africa for six months to receive chemotherapy,
+      and every year since, I return to consult my treating oncologist. The
+      long-standing relationship I have forged with the team is special.
+
+  - texte: >-
+      Going into theatre for such a major operation made me quite nervous.
+      Thankfully my surgery was successful, and my doctor instructed that I
+      remain on my back for six weeks. I found BanaHealth's accommodation very
+      cosy and clean — a setting conducive to a speedy recovery.
+
+temoignagesLien: testimonials
+
+appelTitre: Let's talk about your situation
+appelTexte: >-
+  Every journey is particular. Write to us with your medical report if you have
+  one: we will review your case and come back with concrete answers.

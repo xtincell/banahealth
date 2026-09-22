@@ -1,0 +1,57 @@
+# =====================================================================
+# Libellés d'interface — français
+#
+# Tout ce qui n'est pas du contenu de page : menus, boutons, intitulés
+# du pied de page, messages d'erreur. Modifier une valeur suffit, la
+# structure ne doit pas changer.
+# =====================================================================
+
+nom: BanaHealth
+slogan: Votre santé nous tient à cœur
+
+nav:
+  accueil: Accueil
+  fondatrice: Notre fondatrice
+  vision: Vision et mission
+  services: Nos services
+  soins: Soins médicaux
+  hebergement: Hébergement
+  pourquoi: Pourquoi l'Afrique du Sud
+  reseaux: Nos réseaux
+  contact: Nous contacter
+  temoignages: Témoignages
+  liens: Liens utiles
+  menu: Menu
+  fermer: Fermer
+  evitement: Aller au contenu principal
+
+soins:
+  titre: Nos domaines d'accompagnement
+  fiv: Fécondation in vitro
+  oncologie: Oncologie
+  chirurgie: Interventions chirurgicales
+  bilan: Bilan de santé
+
+pied:
+  plan: Le site
+  aussi: À découvrir
+  legal: Informations légales
+  contact: Contact
+  confidentialite: Politique de confidentialité
+  conditions: Conditions générales
+  droits: Tous droits réservés.
+
+langue:
+  bascule: English
+  libelle: Choisir la langue
+
+cta:
+  contact: Parler à un accompagnateur
+  services: Découvrir nos services
+  suite: En savoir plus
+  site: Visiter le site
+
+erreur:
+  titre: Page introuvable
+  texte: Cette page n'existe pas ou a été déplacée.
+  retour: Revenir à l'accueil

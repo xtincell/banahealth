@@ -1,0 +1,57 @@
+# =====================================================================
+# Coordonnées de BanaHealth
+#
+# Ce fichier alimente le pied de page, la page contact, les données
+# transmises aux moteurs de recherche et les signatures de courriel.
+# Modifier une valeur ici la met à jour partout.
+#
+# Attention aux deux formes de numéro :
+#   affichage  — ce que lit le visiteur
+#   appel      — ce que compose le téléphone, sans le (0)
+# Le (0) est un préfixe national : il ne se compose pas depuis
+# l'étranger. Le laisser dans « appel » rendrait le lien inopérant.
+# =====================================================================
+
+courriel: hello@banahealth.care
+
+telephones:
+  - affichage: "+27 (0) 82 684 4154"
+    appel: "+27826844154"
+  - affichage: "+27 (0) 82 775 6975"
+    appel: "+27827756975"
+
+fax: "+27 (0) 11 447 0226"
+
+numero_vert: "0800 23 36 78 20"
+
+adresse:
+  rue: 28 Reform Avenue, Melrose
+  ville: Sandton
+  region: Gauteng
+  code_postal: "2196"
+  pays_code: ZA
+  pays:
+    fr: Afrique du Sud
+    en: South Africa
+  boite_postale: PO Box 652774 Benmore, Johannesburg 2010
+  # Coordonnées géographiques du quartier, pour les moteurs de recherche
+  latitude: -26.1367
+  longitude: 28.0485
+
+horaires:
+  jours:
+    fr: Du lundi au vendredi
+    en: Monday to Friday
+  ouverture: "08:00"
+  fermeture: "19:00"
+  fuseau: UTC+2
+
+reseaux:
+  - nom: Facebook
+    url: https://www.facebook.com/banahealth.care
+    icone: facebook
+  - nom: LinkedIn
+    url: https://fr.linkedin.com/company/banahealth
+    icone: linkedin
+
+fondatrice: Marie Ngameni

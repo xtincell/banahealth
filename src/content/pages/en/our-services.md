@@ -1,7 +1,5 @@
 ---
 titre: Our services
-surtitre: Support from beginning to end
-chapeau: From finding the right specialist to your journey home, we take care of every step.
 description: Medical facilitation, travel facilitation and stay arrangements — the complete support BanaHealth provides in South Africa.
 langue: en
 url: our-services

@@ -1,7 +1,5 @@
 ---
 titre: Our founder
-surtitre: A life of dedication
-chapeau: The story of Marie Ngameni
 description: How Marie Ngameni built BanaHealth from a single act of kindness into one of Africa's most respected medical facilitation companies.
 langue: en
 url: our-founder
@@ -10,9 +8,17 @@ banniere: marie-ngameni
 banniere_cadrage: portrait
 ---
 
+> A life of dedication
+
+## The story of Marie Ngameni
+
+> Marie Ngameni
+
+## CONTACT INFO
+
 > Because we care: a famous line which eventually became BanaHealth's slogan. Those words would also be the best ones to describe how Marie founded and nurtured what is now a leading medical facilitation company in Africa.
 
-Her adventure started in the early 2000s when, in a compassionate gesture, she volunteered to assist a friend’s sister from Cameroon to overcome her difficulties to conceive. Marie found for her a suitable fertility treatment in Johannesburg and the heart-rending journey eventually led to a new born. The news spread. The one friend became a few relatives and before she knew it, she had built a business on acts of kindness. Acts of kindness and a rare willingness to walk with suffering individuals through the painful days that accompany illness and medical intervention.
+Her adventure started fifteen years ago when, in a compassionate gesture, she volunteered to assist a friend’s sister from Cameroon to overcome her difficulties to conceive. Marie found for her a suitable fertility treatment in Johannesburg and the heart-rending journey eventually led to a new born. The news spread. The one friend became a few relatives and before she knew it, she had built a business on acts of kindness. Acts of kindness and a rare willingness to walk with suffering individuals through the painful days that accompany illness and medical intervention.
 
 From a couch in her living room, the business grew overtime to more than a dozen residential facilities where clients from across the continent are hosted and looked after. BanaHealth network also expanded to now include the most reputable private hospitals and specialists in South Africa.
 

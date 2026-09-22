@@ -1,91 +1,33 @@
+/**
+ * Acces aux textes d'interface.
+ *
+ * Les libelles ne vivent pas ici mais dans src/textes/*.yaml, pour
+ * qu'ils puissent etre modifies sans toucher au code. Ce fichier ne
+ * fait que les charger et les exposer.
+ */
+import interfaceFr from '../textes/interface.fr.yaml';
+import interfaceEn from '../textes/interface.en.yaml';
+import coordonnees from '../textes/coordonnees.yaml';
+
 export const langues = ['fr', 'en'] as const;
 export type Langue = (typeof langues)[number];
 export const langueParDefaut: Langue = 'fr';
 
-/** Libelles d'interface, par langue. */
-export const ui = {
-  fr: {
-    'nom': 'BanaHealth',
-    'slogan': 'Votre santé nous tient à cœur',
-    'nav.accueil': 'Accueil',
-    'nav.fondatrice': 'Notre fondatrice',
-    'nav.vision': 'Vision et mission',
-    'nav.services': 'Nos services',
-    'nav.soins': 'Soins médicaux',
-    'nav.hebergement': 'Hébergement',
-    'nav.pourquoi': "Pourquoi l'Afrique du Sud",
-    'nav.reseaux': 'Nos réseaux',
-    'nav.contact': 'Nous contacter',
-    'nav.temoignages': 'Témoignages',
-    'nav.liens': 'Liens utiles',
-    'soins.titre': 'Nos domaines d’accompagnement',
-    'soins.fiv': 'Fécondation in vitro',
-    'soins.oncologie': 'Oncologie',
-    'soins.chirurgie': 'Interventions chirurgicales',
-    'soins.bilan': 'Bilan de santé',
-    'nav.menu': 'Menu',
-    'nav.fermer': 'Fermer',
-    'nav.evitement': 'Aller au contenu principal',
-    'pied.plan': 'Le site',
-    'pied.aussi': 'À découvrir',
-    'pied.legal': 'Informations légales',
-    'pied.contact': 'Contact',
-    'pied.confidentialite': 'Politique de confidentialité',
-    'pied.conditions': 'Conditions générales',
-    'pied.droits': 'Tous droits réservés.',
-    'langue.bascule': 'English',
-    'langue.libelle': 'Choisir la langue',
-    'cta.contact': 'Parler à un accompagnateur',
-    'cta.services': 'Découvrir nos services',
-    'cta.suite': 'En savoir plus',
-    'cta.site': 'Visiter le site',
-    'erreur.titre': 'Page introuvable',
-    'erreur.texte': "Cette page n'existe pas ou a été déplacée.",
-    'erreur.retour': "Revenir à l'accueil",
-  },
-  en: {
-    'nom': 'BanaHealth',
-    'slogan': 'Because we care',
-    'nav.accueil': 'Home',
-    'nav.fondatrice': 'Our founder',
-    'nav.vision': 'Vision and mission',
-    'nav.services': 'Our services',
-    'nav.soins': 'Medical care',
-    'nav.hebergement': 'Accommodation',
-    'nav.pourquoi': 'Why South Africa',
-    'nav.reseaux': 'Our network',
-    'nav.contact': 'Contact us',
-    'nav.temoignages': 'Testimonials',
-    'nav.liens': 'Useful links',
-    'soins.titre': 'Where we support patients',
-    'soins.fiv': 'In vitro fertilisation',
-    'soins.oncologie': 'Oncology',
-    'soins.chirurgie': 'Surgery',
-    'soins.bilan': 'General check-up',
-    'nav.menu': 'Menu',
-    'nav.fermer': 'Close',
-    'nav.evitement': 'Skip to main content',
-    'pied.plan': 'The site',
-    'pied.aussi': 'Also worth a look',
-    'pied.legal': 'Legal',
-    'pied.contact': 'Contact',
-    'pied.confidentialite': 'Privacy policy',
-    'pied.conditions': 'Terms and conditions',
-    'pied.droits': 'All rights reserved.',
-    'langue.bascule': 'Français',
-    'langue.libelle': 'Choose language',
-    'cta.contact': 'Speak to a facilitator',
-    'cta.services': 'Explore our services',
-    'cta.suite': 'Learn more',
-    'cta.site': 'Visit website',
-    'erreur.titre': 'Page not found',
-    'erreur.texte': 'This page does not exist or has been moved.',
-    'erreur.retour': 'Back to home',
-  },
-} as const;
+const textes: Record<Langue, any> = { fr: interfaceFr, en: interfaceEn };
 
+export { coordonnees };
+
+/**
+ * Renvoie une fonction de lecture pour la langue donnee.
+ * Les cles sont pointees : t('nav.contact'), t('cta.suite').
+ * Une cle absente retombe sur le francais plutot que d'afficher un vide.
+ */
 export function t(lang: Langue) {
-  return (cle: keyof (typeof ui)['fr']) => ui[lang][cle] ?? ui.fr[cle];
+  return (cle: string): string => {
+    const lire = (source: any) =>
+      cle.split('.').reduce((n, part) => (n == null ? undefined : n[part]), source);
+    return lire(textes[lang]) ?? lire(textes.fr) ?? cle;
+  };
 }
 
 /** Chemin d'une page, prefixe /en pour l'anglais. */
@@ -94,7 +36,10 @@ export function chemin(lang: Langue, slug = ''): string {
   return slug ? `${base}/${slug}/` : `${base}/` || '/';
 }
 
-/** Correspondance des pages entre langues, pour le selecteur. */
+/**
+ * Correspondance des pages entre langues, pour le selecteur.
+ * A completer lors de l'ajout d'une page dans les deux langues.
+ */
 export const equivalences: Record<string, string> = {
   '': '',
   'notre-fondatrice': 'our-founder',
@@ -107,8 +52,6 @@ export const equivalences: Record<string, string> = {
   'contact': 'contact',
   'confidentialite': 'privacy-policy',
   'conditions-generales': 'terms-and-conditions',
-  'vision-et-mission': 'vision-and-mission',
-  'hebergement': 'accommodation',
   'temoignages': 'testimonials',
   'liens-utiles': 'useful-links',
   'fecondation-in-vitro': 'in-vitro-fertilisation',
@@ -121,7 +64,7 @@ export const equivalencesInverses: Record<string, string> = Object.fromEntries(
   Object.entries(equivalences).map(([fr, en]) => [en, fr]),
 );
 
-/** Menu principal : slug francais + cle de libelle. */
+/** Menu principal : slug francais + cle du libelle dans les fichiers de textes. */
 export const menu = [
   { fr: 'notre-fondatrice', cle: 'nav.fondatrice' },
   { fr: 'nos-services', cle: 'nav.services' },

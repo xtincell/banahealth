@@ -1,11 +1,12 @@
 ---
 titre: Témoignages
-surtitre: Ce que nos clients disent de nous
 description: Les récits de patients accompagnés par BanaHealth en Afrique du Sud, dans leurs propres mots.
 langue: fr
 url: temoignages
 ordre: 9
 ---
+
+> Ce que nos clients disent de nous
 
 ## Témoignages de nos patients
 

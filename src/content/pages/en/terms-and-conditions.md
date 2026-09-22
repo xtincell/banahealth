@@ -1,6 +1,5 @@
 ---
 titre: Terms and conditions
-surtitre: The scope of our services
 description: Terms of use for the BanaHealth website and the scope of the medical facilitation services offered.
 langue: en
 url: terms-and-conditions

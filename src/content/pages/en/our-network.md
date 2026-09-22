@@ -1,7 +1,5 @@
 ---
 titre: Our network
-surtitre: Bringing our patients the best care
-chapeau: The private hospitals and specialist clinics we work with to bring our patients the care they need.
 description: "BanaHealth's partner institutions in Johannesburg: Wits Donald Gordon, Netcare, Medfem, Mediclinic and Life Healthcare."
 langue: en
 url: our-network
@@ -44,6 +42,8 @@ cartes:
     lienLibelle: Visit website
 ---
 
+## Our Network
+
 > Bringing our patients the best medical care they need
 
 ## SOME OF THE HOSPITALS WE WORK WITH
@@ -78,11 +78,11 @@ The radiology department incorporates state-of-the-art imaging technology, inclu
 
 ## Mediclinic: Sandton & Morningside
 
-Mediclinic Southern Africa is a private hospital group operating in South Africa and Namibia focused on providing acute care, specialist-orientated, multi-disciplinary hospital services and related service offerings. Mediclinic places science at the heart of their care process by striving to provide evidence-based care of the highest standard. The group currently operates around fifty private hospitals throughout South Africa, alongside day clinics and specialised facilities, and three hospitals in Namibia — more than 8 900 beds in total.
+Mediclinic Southern Africa is a private hospital group operating in South Africa and Namibia focused on providing acute care, specialist-orientated, multi-disciplinary hospital services and related service offerings. Mediclinic places science at the heart of their care process by striving to provide evidence-based care of the highest standard. The group currently operates 49 private hospitals (including two day clinics) throughout South Africa and three hospitals in Namibia with more than 8 000 beds in total.
 
-Mediclinic International also operates Hirslanden in Switzerland and Mediclinic Middle East in the United Arab Emirates.
+Mediclinic International currently has three operating divisions - Mediclinic Southern Africa which operates 52 private hospitals (including two day clinics) in South Africa and Namibia; Hirslanden operates 16 private acute care facilities and three clinics in Switzerland with more than 1 600 inpatient beds and Mediclinic Middle East which operates five hospitals and 39 clinics with more than 700 inpatient beds in the United Arab Emirates.
 
-## Life Healthcare
+## Life Healhcare
 
 Life Healthcare is a leading private hospital operator in South Africa. This group’s primary business is acute hospital care and has an extensive geographic network of diverse facilities, including hospitals across seven of South Africa’s nine provinces and in the country’s most populous metropolitan areas. Life Healthcare’s vision is to be a world class provider of quality care for all.
 This leading private hospital operator primarily serves the market for privately insured individuals, representing approximately eight million people.

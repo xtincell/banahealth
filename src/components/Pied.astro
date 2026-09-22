@@ -1,5 +1,5 @@
 ---
-import { t, chemin, menu, menuPied, equivalences, type Langue } from '../i18n/ui';
+import { t, chemin, menu, menuPied, equivalences, coordonnees, type Langue } from '../i18n/ui';
 import Logo from './Logo.astro';
 
 interface Props { langue: Langue; }
@@ -47,16 +47,18 @@ const legal = langue === 'fr'
     <div class="pied__colonne">
       <h2 class="pied__titre">{tr('pied.contact')}</h2>
       <ul>
-        <li><a href="mailto:hello@banahealth.care">hello@banahealth.care</a></li>
-        <li><a href="tel:+27826844154">+27 (0) 82 684 4154</a></li>
-        <li><a href="tel:+27827756975">+27 (0) 82 775 6975</a></li>
+        <li><a href={`mailto:${coordonnees.courriel}`}>{coordonnees.courriel}</a></li>
+        {coordonnees.telephones.map((tel: any) => (
+          <li><a href={`tel:${tel.appel}`}>{tel.affichage}</a></li>
+        ))}
         <li class="pied__lieu">
-          28 Reform Avenue, Melrose<br />
-          Sandton, {langue === 'fr' ? 'Afrique du Sud' : 'South Africa'} 2196
+          {coordonnees.adresse.rue}<br />
+          {coordonnees.adresse.ville}, {coordonnees.adresse.pays[langue]} {coordonnees.adresse.code_postal}
         </li>
         <li class="pied__reseaux">
-          <a href="https://fr.linkedin.com/company/banahealth" rel="noopener">LinkedIn</a>
-          <a href="https://www.facebook.com/banahealth.care" rel="noopener">Facebook</a>
+          {coordonnees.reseaux.map((r: any) => (
+            <a href={r.url} rel="noopener">{r.nom}</a>
+          ))}
         </li>
       </ul>
     </div>

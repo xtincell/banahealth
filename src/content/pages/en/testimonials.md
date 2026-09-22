@@ -1,11 +1,11 @@
 ---
 titre: Testimonials
-surtitre: What our clients say
 description: Accounts from patients supported by BanaHealth in South Africa, in their own words.
 langue: en
 url: testimonials
 ordre: 9
 ---
+
 > What our customers say about us
 
 ## THE WORD OF MOUTH

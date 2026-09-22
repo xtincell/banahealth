@@ -1,0 +1,134 @@
+# =====================================================================
+# Page d'accueil — français
+#
+# Chaque bloc correspond à une section de la page, dans l'ordre où
+# elle apparaît. Pour retirer une section, supprimez ses entrées ;
+# pour en ajouter une, dupliquez une entrée existante.
+#
+# Dans les titres du carrousel, la portion entre *astérisques*
+# s'affiche en orange, comme le « Bana » du logo.
+# =====================================================================
+
+diapos:
+  - image: accueil-slide-1
+    titre: Les *soins* que vous méritez
+    texte: >-
+      À BanaHealth, nous plaçons nos patients au cœur de tout ce que nous
+      faisons. Leur guérison est ce qui nous pousse, jour et nuit.
+    lienLibelle: Nos services
+    lien: nos-services
+
+  - image: accueil-slide-2
+    titre: Nous sommes là *pour vous*
+    texte: >-
+      Vous ne connaissez jamais votre force, jusqu'au jour où vous n'avez pas
+      d'autre choix que d'être fort.
+    auteur: Cayla Mills
+    lienLibelle: Qui sommes-nous
+    lien: notre-fondatrice
+
+  - image: accueil-slide-3
+    titre: La plus grande richesse, c'est *la santé*
+    texte: >-
+      À BanaHealth, nous nous engageons à vous aider à surmonter tous vos
+      problèmes de santé, qu'il s'agisse d'une chirurgie esthétique ou d'une
+      maladie grave.
+    auteur: Virgile
+    lienLibelle: Nos réseaux
+    lien: nos-reseaux
+
+diapoPrecedente: Message précédent
+diapoSuivante: Message suivant
+diapoAller: Aller au message
+toujoursDisponible: Toujours disponible
+
+piliersSurtitre: Nos services
+piliersTitre: Un accompagnement sur trois fronts
+piliers:
+  - titre: Facilitation des soins
+    texte: >-
+      Nous trouvons les médecins qui répondent le mieux à vos besoins, obtenons
+      des devis pour vos traitements et organisons tous vos rendez-vous médicaux.
+    lien: nos-services
+    image: icone-medecins
+
+  - titre: Facilitation de voyage
+    texte: >-
+      Nous facilitons l'obtention de votre visa et de ses extensions, vous aidons
+      à organiser vos vols et prenons en charge vos déplacements entre l'aéroport
+      et l'hôpital.
+    lien: nos-services
+    image: icone-visa
+
+  - titre: Séjour
+    texte: >-
+      Nous vous trouvons un hébergement, organisons sur demande vos activités de
+      loisir et de tourisme, et restons votre famille loin de chez vous.
+    lien: hebergement
+    image: icone-hebergement
+
+raisonsSurtitre: Pourquoi l'Afrique du Sud
+raisonsTitre: Une destination de premier plan
+raisons:
+  - chiffre: "10"
+    titre: Parmi les dix meilleurs systèmes de santé au monde
+    texte: Le secteur privé sud-africain devance la France, le Royaume-Uni et l'Allemagne.
+
+  - chiffre: "−70 %"
+    titre: Jusqu'à 70 % d'économie
+    texte: >-
+      Une intervention coûte couramment 30 à 70 % de moins qu'en Europe de
+      l'Ouest ou aux États-Unis.
+
+  - chiffre: "7 M"
+    titre: Dossiers en attente en Angleterre
+    texte: Près de quatre patients sur dix y dépassent le délai officiel de dix-huit semaines.
+
+raisonsLien: pourquoi-afrique-du-sud
+
+fondatriceSurtitre: Notre fondatrice
+fondatriceTitre: L'histoire de Marie Ngameni
+fondatriceTexte: >-
+  Tout a commencé par un geste : aider la sœur d'une amie à trouver un
+  traitement de fertilité. Ce geste est devenu une société bâtie sur la
+  bienveillance.
+fondatriceLien: notre-fondatrice
+
+temoignagesSurtitre: Ce que nos clients disent de nous
+temoignagesTitre: Des parcours, des retours
+temoignages:
+  - texte: >-
+      J'ai été vraiment touché par la qualité des soins personnalisés et des
+      services que j'ai reçus de l'équipe de BanaHealth et du corps médical au
+      centre médical Wits Donald Gordon. Ils m'ont soutenu à chaque étape de mon
+      traitement et sont véritablement devenus ma seconde famille.
+    auteur: Thomas
+
+  - texte: >-
+      Je suis venue en Afrique du Sud pour un bilan de santé complet. On a
+      constaté que j'étais presque diabétique et que je devais changer
+      complètement mon style de vie. J'ai depuis adopté des habitudes plus saines
+      et perdu 18 kg. Cette expérience m'a donné un nouveau souffle.
+    auteur: Arlette
+
+  - texte: >-
+      Je suis cliente de BanaHealth depuis 2014, lorsqu'on m'a diagnostiqué un
+      cancer. Je suis restée six mois en Afrique du Sud pour suivre une
+      chimiothérapie, et chaque année depuis, j'y retourne consulter mon
+      oncologue. La relation de longue date que j'ai tissée avec l'équipe est
+      spéciale.
+
+  - texte: >-
+      J'étais assez nerveuse de me retrouver au bloc pour une si grosse
+      opération. Ma chirurgie fut un succès et mon médecin m'a demandé de rester
+      couchée six semaines. J'ai trouvé les appartements de BanaHealth très
+      confortables et propres, un environnement propice à un prompt
+      rétablissement.
+
+temoignagesLien: temoignages
+
+appelTitre: Parlons de votre situation
+appelTexte: >-
+  Chaque parcours est particulier. Écrivez-nous avec votre rapport médical si
+  vous en avez un : nous étudions votre dossier et revenons vers vous avec des
+  éléments concrets.

@@ -1,6 +1,5 @@
 ---
 titre: Bilan de santé
-surtitre: Soins médicaux
 description: "Le bilan de santé complet en Afrique du Sud : examens proposés, déroulement et intérêt du dépistage précoce."
 langue: fr
 url: bilan-de-sante
@@ -9,11 +8,13 @@ banniere: soin-bilans
 banniere_cadrage: large
 ---
 
+**Bilan de santé**
+
 Avec le progrès de la médecine et de la technologie, nous sommes constamment inondés de nouvelles recherches et même de sites Web qui nous permettent de nous diagnostiquer. Il n'est donc pas surprenant qu'un nombre croissant de personnes fasse des bilans médicaux annuels pour s'assurer du fonctionnement optimal de leur corps ou, par mesure de précaution, pour détecter des problèmes (le cas échéant). De nos jours, les gens font des bilans de santé tout simplement pour se rassurer.
 
 L'âge, le sexe et le mode de vie d’une personne peuvent également déterminer la fréquence et la nécessité d'un bilan médical complet. En moyenne, il est recommandé aux personnes en bonne santé de prévoir un examen physique complet tous les deux ans.
 
-### Pourquoi faire un bilan de santé
+**Pourquoi faire un bilan de santé**
 
 Un bilan de santé complet est effectué pour vérifier l'état général de santé d'un patient. Bien qu’on se sente en bonne santé, un bilan de santé peut être bénéfique pour les raisons suivantes :
 
@@ -28,7 +29,7 @@ Un bilan de santé complet est effectué pour vérifier l'état général de san
 
 En conséquence, les bilans de santé constituent un moyen d'économiser de l'argent à long terme, car ils réduisent essentiellement le risque de futurs problèmes de santé, notamment le risque de soins médicaux prolongés et de potentiels coûts chirurgicaux.
 
-### Préparation du bilan de santé
+**Préparation du bilan de santé**
 
 Différents médecins auront différentes méthodes pour établir un bilan de santé, mais le guide suivant vous aidera à comprendre ce à quoi il faut vous attendre avant d'entrer dans le cabinet du médecin.
 
@@ -36,7 +37,7 @@ Préparez à l’avance toutes les questions que vous voulez poser à votre méd
 
 Si vous consultez un médecin pour la première fois, essayez de lui envoyer vos dossiers médicaux antérieurs avant le bilan de santé, car cela l’aidera à comprendre vos antécédents médicaux.
 
-### Le bilan de santé
+**Le bilan de santé **
 
 À l'arrivée pour votre rendez-vous, une infirmière prendra votre tension artérielle, votre glycémie, effectuera une analyse urinaire, et enregistrera votre poids et votre taille pendant que vous attendez votre médecin.
 Votre médecin va écouter votre cœur et vos poumons pour détecter toute anomalie, et procèdera à un examen de votre tête, de votre cou, de vos yeux, de votre bouche, de vos oreilles et de vos réflexes. Le médecin est susceptible, entre autres, de poser quelques questions sur vos antécédents médicaux et ceux de votre famille.
@@ -47,7 +48,7 @@ Un bilan de santé ne consiste pas seulement à discuter des changements physiqu
 
 Votre médecin peut vous demander de faire des tests sanguins en fonction de votre âge et des symptômes que vous présentez. L’hémogramme est un test sanguin utilisé pour évaluer la santé globale d’une personne et détecter un large éventail de problèmes, comme une anémie, des infections et même une leucémie. D’autres tests sanguins peuvent être effectués pour détecter du diabète et même du cholestérol ; un test de la fonction thyroïdienne ou de l'hémoglobine peut également être effectué si vous présentez des symptômes apparentés.
 
-### Note finale
+**Note finale**
 
 A BanaHealth, nous recommandons vivement à nos clients de faire un bilan de santé complet chaque année, juste pour s'assurer de leur bonne santé, vérifier si tout fonctionne normalement ou détecter des signes de santé négatifs devant être améliorés ou nécessitant d'autres tests ou un traitement.
 Soyez assurés que nos partenaires sont équipés de manière adéquate et qu’ils sont prêts à vous aider au besoin.

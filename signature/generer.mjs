@@ -13,9 +13,15 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import yaml from 'js-yaml';
 
 const DOSSIER = path.dirname(new URL(import.meta.url).pathname);
 const SITE = 'https://banahealth.care';
+
+// Source unique : le meme fichier que celui qui alimente le site.
+const COORD = yaml.load(
+  fs.readFileSync(path.join(DOSSIER, '../src/textes/coordonnees.yaml'), 'utf8'),
+);
 
 // Le logo est appele depuis le site. Ne pas le recopier ailleurs :
 // si son adresse change, toutes les signatures cassent d'un coup.
@@ -32,16 +38,13 @@ const COULEURS = {
 };
 
 const ADRESSE = [
-  '28 Reform Avenue, Melrose, Sandton, South Africa 2196',
-  'PO Box 652774 Benmore, Johannesburg 2010',
+  `${COORD.adresse.rue}, ${COORD.adresse.ville}, ${COORD.adresse.pays.en} ${COORD.adresse.code_postal}`,
+  COORD.adresse.boite_postale,
 ];
 
-const FAX = '+27 (0) 11 447 0226';
+const FAX = COORD.fax;
 
-const RESEAUX = [
-  { nom: "Facebook", url: "https://www.facebook.com/banahealth.care", icone: "facebook" },
-  { nom: "LinkedIn", url: "https://fr.linkedin.com/company/banahealth", icone: "linkedin" },
-];
+const RESEAUX = COORD.reseaux;
 
 /**
  * Numero affichable -> forme composable.

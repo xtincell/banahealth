@@ -1,6 +1,5 @@
 ---
 titre: Oncology
-surtitre: Medical care
 description: "Oncology in South Africa: cancer types, available treatments and the support offered to international patients."
 langue: en
 url: oncology
@@ -8,6 +7,7 @@ ordre: 42
 banniere: soin-oncologie
 banniere_cadrage: large
 ---
+
 Oncology is the field of medicine that is dedicated to cancer. Today, there are more than 200 different types of cancer.
 
 Cancer is the uncontrolled growth of abnormal cells that occurs in multiple phases. Most cancers are named after the organ or the type of cell from whence the cancer originates. They can develop in almost any tissue or organ, such as the breast, lung, colon, nerve tissue or bones.
@@ -18,7 +18,7 @@ According to the WHO, cancer is the leading cause of death worldwide, causing 8.
 
 
 
-### Causes and Prevention
+**Causes and Prevention **
 
 Cancer occurs from the transformation of normal body cells into tumour cells via a series of stages progressing from a pre-cancerous lesion to a malignant tumour.
 
@@ -35,7 +35,7 @@ Another fundamental factor that contributes to the development of cancer is agin
 
 Cancer prevention therefore consist of actions taken to lower one’s risk factor. This includes maintaining a healthy lifestyle, avoiding exposure to known cancer-causing substances, and taking medicines or vaccines that can prevent cancer from developing.
 
-### Diagnosis
+**Diagnosis **
 
 The role of an oncologist is to first diagnose a cancer, which can be carried out via biopsy, X-ray, endoscopy, CT scanning, MRI scanning, ultrasound, PET scanning and other radiological procedures. Blood tests, nuclear medicine and tumour markers can also be used to diagnose cancer.
 
@@ -45,7 +45,7 @@ The patient may also have to see other doctors, depending on his/her case. For e
 
 A visit to a psycho-oncologist or psychiatrist is usually recommended in order to help patients cope with their cancer psychologically.
 
-### Treatment Options
+**Treatment Options **
 
 There are several types of cancer treatments available to patients suffering from this ghastly disease. When choosing the type of treatment a patient’s cancer should receive, doctors largely base their decisions on the type of cancer the patient has and how advanced it is. Some cancer sufferers may require one treatment, while others may require a combination treatments. Again, it is up to the medical team to decide what would be most effective.  The main types of cancer treatment include:
 
@@ -61,7 +61,7 @@ Targeted Therapy: Targeted therapy is a type of cancer treatment that targets an
 
 Hormone Therapy, Stem Cell Transplant and Precision Medicine are some other examples of cancer treatments. Most of these treatments and procedures are available and well executed in South Africa.
 
-### Progress in Oncology
+**Progress in Oncology**
 
 There is an incredible amount of research being done in all aspects of oncology, from cancer cell biology to radiation, chemotherapy treatments and palliative care. Thus, the field of oncology is continually changing and progressing for the benefit of the patient.
 
@@ -71,7 +71,7 @@ At BanaHealth, medical centres we team-up with have best in class oncologists wh
 
 
 
-### References
+**References**
 
  - World Health Organization (WHO), Cancer Fact Sheet 2017
 

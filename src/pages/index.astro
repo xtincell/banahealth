@@ -1,12 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
 import Accueil from '../components/Accueil.astro';
-import { ui } from '../i18n/ui';
+import { t } from '../i18n/ui';
 ---
 
 <Base
   langue="fr"
-  titre={ui.fr['nom']}
+  titre={t('fr')('nom')}
   description="BanaHealth accompagne les patients francophones vers les hôpitaux privés d'Afrique du Sud : choix des spécialistes, devis, rendez-vous, visa, vols et hébergement."
   slug=""
 >

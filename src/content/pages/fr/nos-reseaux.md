@@ -1,7 +1,5 @@
 ---
 titre: Nos réseaux
-surtitre: Proposer à nos patients les meilleurs soins
-chapeau: Les hôpitaux privés et cliniques spécialisées avec lesquels nous travaillons pour apporter à nos patients les soins dont ils ont besoin.
 description: "Les établissements partenaires de BanaHealth à Johannesbourg : Wits Donald Gordon, Netcare, Medfem, Mediclinic et Life Healthcare."
 langue: fr
 url: nos-reseaux
@@ -76,9 +74,9 @@ Le service de radiologie intègre la toute dernière technologie en matière d'i
 
 ## Le groupe Mediclinic : Sandton et Morningside
 
-Mediclinic Southern Africa est un groupe d'hôpitaux privés opérant en Afrique du Sud et en Namibie, spécialisé dans la prestation de services hospitaliers de soins de courte durée, de soins spécialisés et multidisciplinaires et de prestations de services connexes. Mediclinic place les sciences au centre de son processus de soins en s'efforçant de fournir des traitements du plus haut niveau fondés sur des données probantes. Le groupe exploite une cinquantaine d’hôpitaux privés dans toute l’Afrique du Sud, auxquels s’ajoutent des cliniques de jour et des établissements spécialisés, ainsi que trois hôpitaux en Namibie — plus de 8 900 lits au total.
+Mediclinic Southern Africa est un groupe d'hôpitaux privés opérant en Afrique du Sud et en Namibie, spécialisé dans la prestation de services hospitaliers de soins de courte durée, de soins spécialisés et multidisciplinaires et de prestations de services connexes. Mediclinic place les sciences au centre de son processus de soins en s'efforçant de fournir des traitements du plus haut niveau fondés sur des données probantes. Le groupe exploite actuellement 49 hôpitaux privés (y compris deux cliniques de jour) dans toute l'Afrique du Sud et trois hôpitaux en Namibie offrant plus de 8 000 lits au total.
 
-Mediclinic International exploite également Hirslanden en Suisse et Mediclinic Middle East aux Émirats arabes unis.
+Mediclinic International compte actuellement trois divisions : Mediclinic Southern Africa qui exploite 52 hôpitaux privés (dont deux cliniques de jour) en Afrique du Sud et en Namibie ; Hirslanden qui exploite 16 établissements privés de soins de courte durée et trois cliniques en Suisse avec plus de 1 600 lits d'hospitalisation ; et Mediclinic Middle East qui exploite cinq hôpitaux et 39 cliniques avec plus de 700 lits d'hospitalisation dans les Émirats Arabes Unis
 
 ## Le groupe Life Healthcare
 

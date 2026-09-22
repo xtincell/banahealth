@@ -1,6 +1,5 @@
 ---
 titre: Vision and mission
-surtitre: What guides us
 description: BanaHealth's vision and mission — to become the medical facilitation provider of choice, in service of a positive care journey.
 langue: en
 url: vision-and-mission

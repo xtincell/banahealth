@@ -1,6 +1,5 @@
 ---
 titre: Accommodation
-surtitre: Feeling at home
 description: Fully equipped, comfortable apartments in secure Johannesburg neighbourhoods, close to shops and Gautrain stations.
 langue: en
 url: accommodation

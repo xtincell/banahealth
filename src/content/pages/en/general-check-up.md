@@ -1,6 +1,5 @@
 ---
 titre: "General check-up"
-surtitre: Medical care
 description: "A full medical check-up in South Africa: the tests involved, how it unfolds and why early screening matters."
 langue: en
 url: general-check-up
@@ -8,13 +7,14 @@ ordre: 44
 banniere: soin-bilans
 banniere_cadrage: large
 ---
-### General Checkups
+
+**General Checkups**
 
 With the advancement in medicine and technology, we are now constantly bombarded with new researches and even websites that allow us to self-diagnose. It’s no wonder that an increasing number of people are booking annual checkups to ensure their bodies are running optimally or as a precautionary measure – to detect problems (if any). These days, people go for general checkups mainly to achieve a sense of reassurance.
 
 One’s age, gender and lifestyle may also determine the frequency and necessity for a general checkup. On average, people who are in good health are recommended to schedule a physical every one to two years.
 
-### Why Have a General Checkup
+**Why Have a General Checkup**
 
 A general checkup is performed to check a patient’s overall state of health. While one may feel like one is in good health, a general check-up can be beneficial for the following reasons:
 
@@ -29,7 +29,7 @@ A general checkup is performed to check a patient’s overall state of health. W
 
 As a result, checkups provide as a means of saving money in the long-term as they essentially reduce risk of potential health concerns thereby also reducing the risk of extensive medical care and possible surgery costs.
 
-### Preparing for the Checkup
+**Preparing for the Checkup**
 
 Different doctors have different methods of conducting a check-up but the following guide will help you understand what to expect before you step into the doctor’s office.
 
@@ -39,7 +39,7 @@ If you are seeing a doctor for the first time, try to send any previous medical 
 
 
 
-### General Checkup
+**General Checkup**
 
 Upon arrival for your scheduled appointment, your blood pressure, glucose, urinary analysis, weight and height will be measured by a nursing assistant while you wait for your doctor.
 Your doctor will listen to your heart and lungs to detect any abnormalities, followed by an assessment of your head, neck, eyes, mouth, ears and your reflexes. Amongst other questions, the doctor is likely to pose a few questions about your medical history and that of your family as well.
@@ -50,7 +50,7 @@ A general checkup isn’t only for the purpose of discussing physical changes yo
 
 Your doctor is likely to request that you have blood work done. Depending on your age and symptoms you may have brought to light. Complete Blood Count (CBC) is a blood test used to evaluate ones overall health and detect a wide range of disorders including anaemia, infections and even leukemia. Further blood tests can be carried out to detect diabetes and even cholesterol, moreover, a thyroid or hemoglobin test may also be done depending on whether you’re exhibiting any related symptoms.
 
-### Final note
+**Final note**
 
 In a nutshell, we at BanaHealth strongly recommend our clients to undergo annual general checkups just to ensure that health wise, all is in order or bring to light any negative health markers that need improvement or call for further investigations and/or treatment.
 Be assured that our partners are adequately equipped and willing to assist where needed.

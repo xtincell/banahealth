@@ -19,6 +19,7 @@
     "esbuild": true
   },
   "devDependencies": {
-    "@napi-rs/canvas": "^1.0.9"
+    "@napi-rs/canvas": "^1.0.9",
+    "@rollup/plugin-yaml": "^5.0.0"
   }
 }

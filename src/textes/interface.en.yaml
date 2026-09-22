@@ -1,0 +1,57 @@
+# =====================================================================
+# Interface labels — English
+#
+# Everything that is not page content: menus, buttons, footer
+# headings, error messages. Change a value; do not change the
+# structure.
+# =====================================================================
+
+nom: BanaHealth
+slogan: Because we care
+
+nav:
+  accueil: Home
+  fondatrice: Our founder
+  vision: Vision and mission
+  services: Our services
+  soins: Medical care
+  hebergement: Accommodation
+  pourquoi: Why South Africa
+  reseaux: Our network
+  contact: Contact us
+  temoignages: Testimonials
+  liens: Useful links
+  menu: Menu
+  fermer: Close
+  evitement: Skip to main content
+
+soins:
+  titre: Where we support patients
+  fiv: In vitro fertilisation
+  oncologie: Oncology
+  chirurgie: Surgery
+  bilan: General check-up
+
+pied:
+  plan: The site
+  aussi: Also worth a look
+  legal: Legal
+  contact: Contact
+  confidentialite: Privacy policy
+  conditions: Terms and conditions
+  droits: All rights reserved.
+
+langue:
+  bascule: Français
+  libelle: Choose language
+
+cta:
+  contact: Speak to a facilitator
+  services: Explore our services
+  suite: Learn more
+  site: Visit website
+
+erreur:
+  titre: Page not found
+  texte: This page does not exist or has been moved.
+  retour: Back to home
