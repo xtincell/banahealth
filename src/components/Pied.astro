@@ -54,6 +54,10 @@ const legal = langue === 'fr'
           28 Reform Avenue, Melrose<br />
           Sandton, {langue === 'fr' ? 'Afrique du Sud' : 'South Africa'} 2196
         </li>
+        <li class="pied__reseaux">
+          <a href="https://fr.linkedin.com/company/banahealth" rel="noopener">LinkedIn</a>
+          <a href="https://www.facebook.com/banahealth.care" rel="noopener">Facebook</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -102,6 +106,8 @@ const legal = langue === 'fr'
   }
   .pied__colonne a:hover { color: var(--orange-clair); text-decoration: underline; }
   .pied__lieu { font-size: .92rem; color: #9AA1A1; }
+  .pied__reseaux { display: flex; gap: 1rem; padding-top: .35rem; }
+  .pied__reseaux a { font-size: .88rem; }
 
   .pied__bas {
     border-top: 1px solid rgba(255,255,255,.12);

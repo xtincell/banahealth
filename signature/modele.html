@@ -1,82 +1,58 @@
 <!--
-  =====================================================================
-  BanaHealth — modele de signature de courriel
+  Gabarit : remplacez ce qui est entre crochets, ainsi que le
+  numero et l'adresse de courriel. Ne touchez ni aux balises
+  <table>, ni aux styles.
 
-  Remplacez uniquement ce qui est entre crochets. Ne touchez ni aux
-  balises <table>, ni aux styles : les logiciels de messagerie ne
-  comprennent ni la mise en page moderne, ni les feuilles de style
-  externes. Tout est donc en tableaux et en styles en ligne, comme
-  il se doit pour du courriel.
-
-  Les images sont appelees depuis banahealth.care. Ne les copiez pas
-  ailleurs : si leur adresse change, toutes les signatures cassent
-  d'un coup — c'est exactement ce qui vient d'arriver.
-  =====================================================================
+  Mieux : ajoutez la personne dans generer.mjs et relancez le
+  script, pour que toutes les signatures restent identiques.
 -->
 <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
   <tr>
-    <td style="padding:0 0 14px 0;">
+    <!-- Logo, verrou vertical de la charte -->
+    <td valign="top" style="padding:0;">
       <a href="https://banahealth.care" style="text-decoration:none;border:0;">
-        <img src="https://banahealth.care/signature/banahealth.png"
+        <img src="https://banahealth.care/signature/banahealth-vertical.png"
              alt="BanaHealth — Medical Facilitation"
-             width="276" height="64"
-             style="display:block;border:0;outline:none;width:276px;height:64px;" />
+             width="150" height="142"
+             style="display:block;border:0;outline:none;width:150px;height:142px;" />
       </a>
     </td>
-  </tr>
-  <tr>
-    <td>
-      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
-        <tr>
-          <!-- Filet orange : une cellule coloree, car les bordures CSS
-               sont mal rendues par Outlook -->
-          <td width="3" style="width:3px;background-color:#F1592F;font-size:0;line-height:0;">&nbsp;</td>
-          <td width="16" style="width:16px;font-size:0;line-height:0;">&nbsp;</td>
-          <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:20px;color:#5A6160;">
 
-            <div style="font-size:16px;font-weight:bold;color:#242A29;padding-bottom:1px;">[PRÉNOM NOM]</div>
-            <div style="font-size:13px;color:#0AA89E;padding-bottom:8px;">[Fonction]</div>
+    <td width="22" style="width:22px;font-size:0;line-height:0;">&nbsp;</td>
 
-            <div>
-              <span style="color:#838484;">T</span>
-              <a href="tel:[+27XXXXXXXXX]" style="color:#5A6160;text-decoration:none;">[+27 (0) 00 000 0000]</a>
-              <span style="color:#E1E9E8;">&nbsp;|&nbsp;</span>
-              <span style="color:#838484;">F</span> [+27 (0) 11 447 0226]
-            </div>
+    <!-- Filet : une cellule coloree, les bordures CSS etant mal rendues par Outlook -->
+    <td width="3" style="width:3px;background-color:#F1592F;font-size:0;line-height:0;">&nbsp;</td>
 
-            <div>
-              <span style="color:#838484;">E</span>
-              <a href="mailto:[prenom.nom@banahealth.care]" style="color:#0AA89E;text-decoration:none;">[prenom.nom@banahealth.care]</a>
-            </div>
+    <td width="18" style="width:18px;font-size:0;line-height:0;">&nbsp;</td>
 
-            <div style="padding-bottom:8px;">
-              <span style="color:#838484;">W</span>
-              <a href="https://banahealth.care" style="color:#0AA89E;text-decoration:none;">banahealth.care</a>
-            </div>
+    <td valign="top" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:20px;color:#5A6160;padding:2px 0 0 0;">
 
-            <div style="font-size:12px;line-height:18px;color:#838484;">
-              28 Reform Avenue, Melrose, Sandton, South Africa 2196<br />
-              PO Box 652774 Benmore, Johannesburg 2010
-            </div>
+      <div style="font-size:17px;font-weight:bold;color:#242A29;line-height:22px;">[PRÉNOM NOM]</div>
+      <div style="font-size:13px;color:#0AA89E;padding-bottom:9px;">[Fonction]</div>
 
-            <!-- Reseaux : retirez ce bloc si les comptes n'existent pas -->
-            <div style="padding-top:12px;">
-              <a href="[URL FACEBOOK]" style="text-decoration:none;border:0;">
-                <img src="https://banahealth.care/signature/facebook.png" alt="Facebook"
-                     width="24" height="24"
-                     style="display:inline-block;border:0;outline:none;width:24px;height:24px;" />
-              </a>
-              <span style="font-size:0;">&nbsp;</span>
-              <a href="[URL LINKEDIN]" style="text-decoration:none;border:0;">
-                <img src="https://banahealth.care/signature/linkedin.png" alt="LinkedIn"
-                     width="24" height="24"
-                     style="display:inline-block;border:0;outline:none;width:24px;height:24px;" />
-              </a>
-            </div>
+      <div>
+        <span style="color:#838484;">C</span>
+        <a href="tel:+27000000000" style="color:#5A6160;text-decoration:none;">+27 (0) 00 000 0000</a>
+        <span style="color:#D8E2E1;">&nbsp;|&nbsp;</span>
+        <span style="color:#838484;">F</span> +27 (0) 11 447 0226
+      </div>
 
-          </td>
-        </tr>
-      </table>
+      <div>
+        <span style="color:#838484;">E</span>
+        <a href="mailto:prenom.nom@banahealth.care" style="color:#0AA89E;text-decoration:none;">prenom.nom@banahealth.care</a>
+        <span style="color:#D8E2E1;">&nbsp;|&nbsp;</span>
+        <a href="https://banahealth.care" style="color:#0AA89E;text-decoration:none;">banahealth.care</a>
+      </div>
+
+      <div style="padding-top:8px;font-size:12px;line-height:18px;color:#838484;">
+        28 Reform Avenue, Melrose, Sandton, South Africa 2196<br />
+        PO Box 652774 Benmore, Johannesburg 2010
+      </div>
+
+      <div style="padding-top:11px;">
+        <a href="https://fr.linkedin.com/company/banahealth" style="text-decoration:none;border:0;"><img src="https://banahealth.care/signature/linkedin.png" alt="LinkedIn" width="26" height="26" style="display:inline-block;border:0;outline:none;width:26px;height:26px;" /></a><span style="font-size:0;">&nbsp;&nbsp;</span><a href="https://www.facebook.com/banahealth.care" style="text-decoration:none;border:0;"><img src="https://banahealth.care/signature/facebook.png" alt="Facebook" width="26" height="26" style="display:inline-block;border:0;outline:none;width:26px;height:26px;" /></a>
+      </div>
+
     </td>
   </tr>
 </table>
