@@ -23,9 +23,34 @@ const COORD = yaml.load(
   fs.readFileSync(path.join(DOSSIER, '../src/textes/coordonnees.yaml'), 'utf8'),
 );
 
+/**
+ * Mode d'inclusion des visuels.
+ *
+ *   node signature/generer.mjs            visuels appeles par URL
+ *   node signature/generer.mjs --embarque visuels inclus dans le HTML
+ *
+ * Beaucoup de messageries — Zoho, Gmail, Outlook — bloquent par defaut
+ * les images distantes, parce que c'est ainsi que fonctionnent les
+ * pisteurs. Le mode embarque supprime la dependance : l'image voyage
+ * dans le message. Il alourdit chaque envoi d'une douzaine de
+ * kilo-octets, et Outlook pour Windows peut presenter les images
+ * embarquees comme des pieces jointes.
+ */
+const EMBARQUE = process.argv.includes('--embarque');
+
+/** Transforme un fichier local en adresse de donnees. */
+function enDonnees(nomFichier) {
+  const chemin = path.join(DOSSIER, '../public/signature', nomFichier);
+  const b64 = fs.readFileSync(chemin).toString('base64');
+  return `data:image/png;base64,${b64}`;
+}
+
+const visuel = (nomFichier) =>
+  EMBARQUE ? enDonnees(nomFichier) : `${SITE}/signature/${nomFichier}`;
+
 // Le logo est appele depuis le site. Ne pas le recopier ailleurs :
 // si son adresse change, toutes les signatures cassent d'un coup.
-const LOGO = { url: `${SITE}/signature/banahealth-horizontal.png`, largeur: 190, hauteur: 50 };
+const LOGO = { fichier: 'banahealth-horizontal.png', largeur: 190, hauteur: 50 };
 
 const COULEURS = {
   nom: '#242A29',
@@ -77,7 +102,7 @@ function signature(p) {
     <!-- Logo, verrou horizontal de la charte (p.4) -->
     <td valign="middle" style="padding:0 0 0 0;">
       <a href="${SITE}" style="text-decoration:none;border:0;">
-        <img src="${LOGO.url}"
+        <img src="${visuel(LOGO.fichier)}"
              alt="BanaHealth — Medical Facilitation"
              width="${LOGO.largeur}" height="${LOGO.hauteur}"
              style="display:block;border:0;outline:none;width:${LOGO.largeur}px;height:${LOGO.hauteur}px;" />
@@ -119,7 +144,7 @@ function signature(p) {
           ${RESEAUX.map(
             (r, i) =>
               (i ? '<td width="12" style="width:12px;font-size:0;line-height:0;">&nbsp;</td>' : '') +
-              `<td style="padding:0;"><a href="${r.url}" style="text-decoration:none;border:0;"><img src="${SITE}/signature/${r.icone}.png" alt="${r.nom}" width="28" height="28" style="display:block;border:0;outline:none;width:28px;height:28px;" /></a></td>`,
+              `<td style="padding:0;"><a href="${r.url}" style="text-decoration:none;border:0;"><img src="${visuel(r.icone + '.png')}" alt="${r.nom}" width="28" height="28" style="display:block;border:0;outline:none;width:28px;height:28px;" /></a></td>`,
           ).join('')}
         </tr>
       </table>
@@ -131,8 +156,10 @@ function signature(p) {
 }
 
 for (const p of equipe) {
-  fs.writeFileSync(path.join(DOSSIER, p.fichier), signature(p));
-  console.log(`  ${p.fichier.padEnd(24)} ${p.nom} — ${p.fonction}`);
+  const nom = EMBARQUE ? p.fichier.replace('.html', '-embarque.html') : p.fichier;
+  const html = signature(p);
+  fs.writeFileSync(path.join(DOSSIER, nom), html);
+  console.log(`  ${nom.padEnd(34)} ${(html.length / 1024).toFixed(1)} ko  ${p.nom}`);
 }
 
 // Gabarit vierge, pour ceux qui preferent remplir a la main
@@ -143,7 +170,7 @@ const gabarit = signature({
   courriel: 'prenom.nom@banahealth.care',
 });
 fs.writeFileSync(
-  path.join(DOSSIER, 'modele.html'),
+  path.join(DOSSIER, EMBARQUE ? 'modele-embarque.html' : 'modele.html'),
   `<!--\n  Gabarit : remplacez ce qui est entre crochets, ainsi que le\n  numero et l'adresse de courriel. Ne touchez ni aux balises\n  <table>, ni aux styles.\n\n  Mieux : ajoutez la personne dans generer.mjs et relancez le\n  script, pour que toutes les signatures restent identiques.\n-->\n${gabarit}`,
 );
 console.log('  modele.html              gabarit vierge');

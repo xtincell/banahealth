@@ -1,49 +1,77 @@
 # Signatures de courriel
 
-## Pourquoi l'ancienne s'est cassée
+## Deux versions, et laquelle choisir
 
-Le logo était hébergé dans l'installation WordPress. Celle-ci a été
-supprimée lors de la reconstruction du site, et toutes les signatures
-qui pointaient vers cette image se sont brisées le même jour.
+| Fichier | Poids | Quand l'utiliser |
+|---|---|---|
+| `marie-ngameni.html` | 2,9 ko | Le logo est appelé depuis le site |
+| `marie-ngameni-embarque.html` | 14,9 ko | Le logo voyage dans le message |
 
-Les visuels vivent désormais dans `public/signature/` du site, à des
-adresses stables :
+**Si les images s'affichent mal, prenez la version embarquée.**
 
-- `https://banahealth.care/signature/banahealth.png` — logo, 276 × 64
-- `https://banahealth.care/signature/facebook.png` — 24 × 24
-- `https://banahealth.care/signature/linkedin.png` — 24 × 24
+La plupart des messageries — Zoho, Gmail, Outlook — bloquent par
+défaut les images distantes. Ce n'est pas un défaut : c'est ainsi que
+fonctionnent les pisteurs publicitaires, et une image appelée depuis
+un serveur extérieur en est exactement la signature.
 
-**Ne déplacez pas ces fichiers.** Si leur adresse change, toutes les
-signatures cassent à nouveau, d'un coup et sans avertissement.
+La version embarquée supprime le problème en incluant l'image dans le
+message. Rien à télécharger, donc rien à bloquer.
+
+Sa contrepartie : chaque courriel pèse douze kilo-octets de plus, et
+Outlook pour Windows présente parfois les images embarquées comme des
+pièces jointes.
+
+## Une troisième voie, la plus sûre dans Zoho
+
+Zoho héberge lui-même les images insérées depuis son propre éditeur de
+signature. C'est la solution la plus fiable pour un utilisateur Zoho,
+puisque l'image vient alors du domaine de Zoho et n'est jamais bloquée.
+
+1. Zoho Mail → Paramètres → Signatures
+2. Collez la version **par URL** (`marie-ngameni.html`)
+3. Supprimez le logo cassé
+4. Cliquez sur l'icône d'image de la barre d'outils
+5. Téléversez `public/signature/banahealth-horizontal.png`
+6. Réglez la largeur à 190 pixels
+7. Même opération pour les deux pastilles, à 28 pixels
 
 ## Installer une signature
 
-1. Ouvrez le fichier HTML voulu dans un navigateur
+1. Ouvrez le fichier HTML dans un navigateur
 2. Sélectionnez tout (⌘A / Ctrl+A) puis copiez (⌘C / Ctrl+C)
 3. Collez dans les réglages de signature de votre messagerie
 
-Coller le rendu, et non le code source : les messageries attendent du
-contenu formaté, pas du HTML brut.
+Collez le rendu, pas le code source.
 
-## Créer une signature pour quelqu'un d'autre
+## Produire les signatures
 
-Dupliquez `modele.html` et remplacez ce qui est entre crochets.
-Ne modifiez ni les balises `<table>`, ni les styles.
+```bash
+node signature/generer.mjs              # version par URL
+node signature/generer.mjs --embarque   # version embarquée
+```
+
+Pour ajouter quelqu'un, complétez la liste `equipe` dans
+`generer.mjs` et relancez. Les coordonnées communes — adresse, fax,
+réseaux — viennent de `src/textes/coordonnees.yaml`, le même fichier
+qui alimente le site.
 
 ## Pourquoi des tableaux et des styles en ligne
 
-Les logiciels de messagerie ne sont pas des navigateurs. Outlook rend
-le HTML avec le moteur de Microsoft Word, qui ignore la mise en page
-moderne et les feuilles de style externes. Les tableaux imbriqués et
-les styles écrits dans chaque balise restent la seule approche qui
-fonctionne partout.
+Les messageries ne sont pas des navigateurs. Outlook rend le HTML avec
+le moteur de Microsoft Word, qui ignore la mise en page moderne et les
+feuilles de style externes. Les tableaux imbriqués et les styles écrits
+dans chaque balise restent la seule approche qui fonctionne partout.
 
 Le filet orange est une cellule de tableau colorée plutôt qu'une
-bordure CSS, pour la même raison.
+bordure, pour la même raison.
 
-## Mode sombre
+## Ne déplacez pas les visuels
 
-Le fond blanc est forcé sur le tableau extérieur. Certaines messageries
-l'ignorent et inversent quand même les couleurs : le gris du texte
-secondaire peut alors manquer de contraste. C'est une limite connue du
-courriel, qu'aucune signature ne contourne vraiment.
+Ils vivent dans `public/signature/` et sont servis par le site :
+
+- `banahealth-horizontal.png` — logo, 190 × 50
+- `facebook.png` et `linkedin.png` — 28 × 28
+
+Changer leur adresse casse toutes les signatures qui les appellent.
+C'est exactement ce qui s'est produit lors de la reconstruction du
+site, quand l'ancien logo hébergé dans WordPress a disparu.
