@@ -51,11 +51,13 @@ export async function alleger(chemin, pasAlpha = 8) {
 }
 
 if (process.argv[1].endsWith('alleger.mjs')) {
-  const cibles = [
-    '/Users/imacmatanga1/BANAHEALTH/public/signature/banahealth-horizontal.png',
-    '/Users/imacmatanga1/BANAHEALTH/public/signature/facebook.png',
-    '/Users/imacmatanga1/BANAHEALTH/public/signature/linkedin.png',
-  ];
+  // Tous les visuels du dossier, pour qu'un fichier ajoute plus tard
+  // ne passe pas au travers de l'optimisation.
+  const DOSSIER = new URL('../public/signature/', import.meta.url).pathname;
+  const cibles = fs
+    .readdirSync(DOSSIER)
+    .filter((n) => n.endsWith('.png'))
+    .map((n) => DOSSIER + n);
   let avant = 0, apres = 0;
   for (const f of cibles) {
     const o = fs.statSync(f).size;

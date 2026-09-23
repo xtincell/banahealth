@@ -1,0 +1,16 @@
+NE SUPPRIMEZ JAMAIS UN FICHIER DE CE DOSSIER.
+
+Chaque image y est appelee par des signatures de courriel deja
+installees sur des postes. Supprimer ou renommer un fichier casse
+toutes les signatures qui le referencent, sans avertissement et sans
+moyen de savoir lesquelles.
+
+C'est arrive deux fois :
+  - le logo heberge dans WordPress, disparu avec la reconstruction
+  - banahealth.png et banahealth-vertical.png, renommes en cours
+    d'iteration sur la mise en page
+
+Les deux anciennes adresses sont retablies et pointent vers le meme
+logo. Elles doivent rester en place indefiniment.
+
+Pour changer de logo : remplacez le contenu du fichier, gardez le nom.
