@@ -14,8 +14,21 @@ dit où se trouve quoi.
 | Les signatures de courriel | `signature/generer.mjs` |
 
 `coordonnees.yaml` alimente le pied de page, la page contact, les
-données transmises à Google **et** les signatures de courriel. Changer
-une adresse à cet endroit la met à jour partout.
+données transmises à Google **et** les signatures de courriel. Après
+recompilation du site et régénération des signatures, la modification
+se retrouve dans ces fichiers. Il faut ensuite publier le site et
+réinstaller les signatures modifiées dans les messageries.
+
+Les deux pages Contact utilisent des repères tels que `{{courriel}}`,
+`{{telephone_affichage}}`, `{{adresse}}` et `{{ouverture}}`. Conservez-les
+dans les textes : leur valeur vient de `coordonnees.yaml`. Un repère
+inconnu arrête la compilation plutôt que de publier une valeur erronée.
+
+Dans `signatures:`, les noms, fonctions et courriels de l'équipe sont
+éditables. `telephone:` référence l'`id:` d'un numéro ; réordonner la
+liste des numéros ne change pas leur propriétaire. Pour régénérer les
+deux formats, lancez `node signature/generer.mjs`, puis
+`node signature/generer.mjs --embarque`.
 
 ---
 

@@ -10,16 +10,16 @@ cartes:
   - image: icone-coordination
     titre: Par courriel
     texte: "Le plus simple pour une première prise de contact. Joignez votre rapport médical si vous en avez un : nous orientons votre dossier vers les bons spécialistes dès le premier échange."
-    lien: mailto:hello@banahealth.care
-    lienLibelle: hello@banahealth.care
+    lien: "mailto:{{courriel}}"
+    lienLibelle: "{{courriel}}"
   - image: icone-rendez-vous
     titre: Par téléphone
-    texte: "Du lundi au vendredi, de 8 h à 19 h, heure d'Afrique du Sud (UTC+2). Un numéro gratuit est également à votre disposition : 0800 23 36 78 20."
-    lien: tel:+27826844154
-    lienLibelle: +27 (0) 82 684 4154
+    texte: "{{jours}}, de {{ouverture}} à {{fermeture}}, heure d'Afrique du Sud ({{fuseau}}). Un numéro gratuit est également à votre disposition : {{numero_vert}}."
+    lien: "tel:{{telephone_appel}}"
+    lienLibelle: "{{telephone_affichage}}"
   - image: icone-famille
     titre: Où nous sommes
-    texte: "28 Reform Avenue, Melrose, Sandton, Afrique du Sud 2196 — à proximité immédiate des hôpitaux privés avec lesquels nous travaillons. Courrier postal : PO Box 652774 Benmore, Johannesburg 2010."
+    texte: "{{adresse}} — à proximité immédiate des hôpitaux privés avec lesquels nous travaillons. Courrier postal : {{boite_postale}}."
 etapes:
   - titre: Vous nous écrivez
     texte: Décrivez votre situation en quelques lignes et joignez votre rapport médical si vous en disposez. Rien d'autre n'est nécessaire à ce stade.
