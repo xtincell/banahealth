@@ -1,0 +1,17 @@
+name: Site statique et coordonnées
+on: [push, pull_request]
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+      - run: node signature/generer.mjs
+      - run: node signature/generer.mjs --embarque
+      - run: git diff --exit-code -- signature

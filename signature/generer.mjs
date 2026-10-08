@@ -14,6 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import yaml from 'js-yaml';
+import { resoudreEquipeSignatures } from '../src/lib/coordonnees.mjs';
 
 const DOSSIER = path.dirname(new URL(import.meta.url).pathname);
 const SITE = 'https://banahealth.care';
@@ -79,22 +80,7 @@ const RESEAUX = COORD.reseaux;
  */
 const composable = (n) => '+' + n.replace(/\(0\)/, '').replace(/[^0-9]/g, '');
 
-const equipe = [
-  {
-    fichier: 'marie-ngameni.html',
-    nom: 'Marie Ngameni',
-    fonction: 'Founder & CEO',
-    mobile: '+27 (0) 82 775 6975',
-    courriel: 'marie.ngameni@banahealth.care',
-  },
-  {
-    fichier: 'nina-ngameni.html',
-    nom: 'Nina Ngameni',
-    fonction: 'Case Manager',
-    mobile: '+27 (0) 82 684 4154',
-    courriel: 'nina.ngameni@banahealth.care',
-  },
-];
+const equipe = resoudreEquipeSignatures(COORD);
 
 function signature(p) {
   return `<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
@@ -123,7 +109,7 @@ function signature(p) {
 
       <div>
         <span style="color:${COULEURS.discret};">C</span>
-        <a href="tel:${composable(p.mobile)}" style="color:${COULEURS.texte};text-decoration:none;">${p.mobile}</a>
+        <a href="tel:${p.appel ?? composable(p.mobile)}" style="color:${COULEURS.texte};text-decoration:none;">${p.mobile}</a>
         <span style="color:${COULEURS.separateur};">&nbsp;|&nbsp;</span>
         <span style="color:${COULEURS.discret};">F</span> ${FAX}
       </div>

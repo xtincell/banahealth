@@ -10,16 +10,16 @@ cartes:
   - image: icone-coordination
     titre: Write to us
     texte: The simplest way to reach us. Should you already hold a medical report, please attach it to your message, as this allows us to match you with the appropriate experts from the very first exchange.
-    lien: mailto:hello@banahealth.care
-    lienLibelle: hello@banahealth.care
+    lien: "mailto:{{courriel}}"
+    lienLibelle: "{{courriel}}"
   - image: icone-rendez-vous
     titre: Call us
-    texte: Monday to Friday, 8 a.m. to 7 p.m., South African time (UTC+2). A toll-free line is also at your disposal on 0800 23 36 78 20.
-    lien: tel:+27826844154
-    lienLibelle: +27 (0) 82 684 4154
+    texte: "{{jours}}, {{ouverture}} to {{fermeture}}, South African time ({{fuseau}}). A toll-free line is also at your disposal on {{numero_vert}}."
+    lien: "tel:{{telephone_appel}}"
+    lienLibelle: "{{telephone_affichage}}"
   - image: icone-famille
     titre: Where to find us
-    texte: "28 Reform Avenue, Melrose, Sandton, South Africa 2196 — within easy reach of the private hospitals we team up with. Postal address: PO Box 652774 Benmore, Johannesburg 2010."
+    texte: "{{adresse}} — within easy reach of the private hospitals we team up with. Postal address: {{boite_postale}}."
 etapes:
   - titre: You tell us about your condition
     texte: Describe your situation in a few lines and attach your medical report should you have one. Nothing further is required at this stage.

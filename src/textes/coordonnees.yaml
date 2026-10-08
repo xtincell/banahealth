@@ -15,10 +15,26 @@
 courriel: hello@banahealth.care
 
 telephones:
-  - affichage: "+27 (0) 82 684 4154"
+  - id: nina
+    affichage: "+27 (0) 82 684 4154"
     appel: "+27826844154"
-  - affichage: "+27 (0) 82 775 6975"
+  - id: marie
+    affichage: "+27 (0) 82 775 6975"
     appel: "+27827756975"
+
+# Les coordonnées professionnelles des signatures sont éditables ici.
+# Le téléphone référence son identifiant ci-dessus, même après réordonnancement.
+signatures:
+  - fichier: marie-ngameni.html
+    nom: Marie Ngameni
+    fonction: Founder & CEO
+    telephone: marie
+    courriel: marie.ngameni@banahealth.care
+  - fichier: nina-ngameni.html
+    nom: Nina Ngameni
+    fonction: Case Manager
+    telephone: nina
+    courriel: nina.ngameni@banahealth.care
 
 fax: "+27 (0) 11 447 0226"
 

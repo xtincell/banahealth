@@ -3,7 +3,8 @@ import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import { media } from '../components/Media';
 import Base from '../layouts/Base.astro';
-import type { Langue } from '../i18n/ui';
+import { coordonnees, type Langue } from '../i18n/ui';
+import { resoudreCartesContact } from '../lib/coordonnees.mjs';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages');
@@ -17,7 +18,10 @@ const { page } = Astro.props;
 const { Content } = await render(page);
 const d = page.data;
 const banniere = media(d.banniere);
-const cartes = (d.cartes ?? []).map((k) => ({ ...k, src: media(k.image) }));
+const cartesPage = d.url === 'contact'
+  ? resoudreCartesContact(d.cartes ?? [], coordonnees, d.langue)
+  : (d.cartes ?? []);
+const cartes = cartesPage.map((k) => ({ ...k, src: media(k.image) }));
 const galerie = (d.galerie ?? [])
   .map((g) => ({ ...g, src: media(g.image) }))
   .filter((g) => g.src);
