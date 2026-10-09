@@ -36,6 +36,7 @@ for (const f of await files(join(release, 'nouveau'))) {
   targets.add(url);
   for (const n of querySelectorAll(tree, '[href], [src], [srcset]')) {
     if (n.name === 'link' && ['canonical', 'alternate'].includes(n.attributes.rel)) continue;
+    if (n.name === 'a' && /^https?:\/\/(?:www\.)?banahealth\.care(?:\/|$)/.test(n.attributes.href ?? '')) throw new Error(`Absolute internal link leaves preview: ${path}`);
     const refs = [n.attributes.href, n.attributes.src, ...(n.attributes.srcset?.split(',').map(v => v.trim().split(/\s+/)[0]) ?? [])];
     for (const ref of refs.filter(r => r?.startsWith('/') && !r.startsWith('//'))) {
       const local = decodeURIComponent(ref.split(/[?#]/)[0]);

@@ -35,6 +35,10 @@ for (const file of backupFiles) {
 const preview = join(output, 'nouveau');
 await mkdir(preview);
 const rooted = value => {
+  if (/^https?:\/\/(?:www\.)?banahealth\.care(?:\/|$)/.test(value ?? '')) {
+    const url = new URL(value);
+    value = `${url.pathname}${url.search}${url.hash}`;
+  }
   if (!value?.startsWith('/') || value.startsWith('//') || value.startsWith('/signature/')) return value;
   return `${mount}${value}`;
 };

@@ -64,6 +64,10 @@ ne diffèrent que par le bandeau ; toutes les autres pages et ressources,
 dont les six signatures, correspondent à la sauvegarde. Les sitemaps et
 robots sont inchangés. Le lien FR a été cliqué dans le navigateur public et
 mène bien à `/nouveau/`. Preuve visuelle : `preview/discovery-live.png`.
+Le lien EN a également été cliqué avec succès vers `/nouveau/en/`. Le
+`.htaccess` principal récupéré après publication est identique à la sauvegarde.
+L'unique lien absolu interne des conditions anglaises est monté sous `/nouveau/`,
+sans changer son libellé historique ni aucun texte légal.
 
 Le code est sauvegardé sur la branche `codex/design-preview-20261009`, sans
 remplacer la branche principale GitHub, qui a évolué indépendamment. La
