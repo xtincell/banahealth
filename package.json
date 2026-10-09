@@ -7,13 +7,15 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/build-legacy.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
-    "astro": "^7.3.3"
+    "astro": "^7.3.3",
+    "entities": "4.5.0",
+    "ultrahtml": "1.7.0"
   },
   "allowScripts": {
     "esbuild": true

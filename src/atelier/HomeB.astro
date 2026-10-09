@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+import { accueil } from '../i18n/accueil';
+import { t, sousPagesSoins, equivalences, type Langue } from '../i18n/ui';
+import { media } from '../components/Media';
+import { path } from './paths';
+import MoreHome from './MoreHome.astro';
+import Contact from './Contact.astro';
+const { langue } = Astro.props as { langue: Langue };
+const c = accueil[langue];
+const tr = t(langue);
+const hero = media(c.diapos[0].image)!;
+const portrait = media('marie-ngameni')!;
+const images = [media('accueil-slide-1')!, media('sa-visa')!, media('logement-sejour-1')!];
+---
+<section class="journey-opening">
+  <div class="journey-promise"><h1>{c.diapos[0].titre.replace(/\*/g, '')}</h1><p>{c.diapos[0].texte}</p><a class="primary" href={path('b', langue, 'contact')}>{tr('cta.contact')}</a></div>
+  <Image src={hero} alt="" class="journey-photo" widths={[640, 1000, 1600]} sizes="(max-width: 760px) 100vw, 78vw" loading="eager" fetchpriority="high" />
+  <nav class="journey-index" aria-label={c.piliersSurtitre}>{c.piliers.map((p) => <a href={path('b', langue, p.lien)}>{p.titre}</a>)}<a href="#services">{c.diapos[0].lienLibelle}</a></nav>
+</section>
+<section class="journey-services section-pad" id="services">
+  <h2>{c.piliersTitre}</h2>
+  <div class="journey-workspace">
+    <div class="service-choices">{c.piliers.map((p, i) => <details id={`service-${i}`} name="services" open={i === 0}><summary>{p.titre}</summary><p>{p.texte}</p><a class="text-link" href={path('b', langue, p.lien)}>{tr('cta.suite')}</a></details>)}</div>
+    <div class="service-photographs" aria-hidden="true">{images.map((image, i) => <Image src={image} alt="" width={1000} loading="lazy" class={`service-photo service-photo-${i}`} />)}</div>
+  </div>
+  <nav class="specialities" aria-label={tr('soins.titre')}><h3>{tr('soins.titre')}</h3>{sousPagesSoins.map(s => <a class="text-link" href={path('b', langue, langue === 'fr' ? s.fr : equivalences[s.fr])}>{tr(s.cle)}</a>)}</nav>
+</section>
+<section class="journey-founder">
+  <div><a class="text-link" href={path('b', langue, c.fondatriceLien)}>{c.fondatriceSurtitre}</a><h2>{c.fondatriceTitre}</h2><p>{c.fondatriceTexte}</p><a class="primary" href={path('b', langue, c.fondatriceLien)}>{tr('cta.suite')}</a></div>
+  <Image src={portrait} alt="Marie Ngameni" width={900} loading="lazy" />
+</section>
+<MoreHome langue={langue} direction="b" />
+<Contact langue={langue} />

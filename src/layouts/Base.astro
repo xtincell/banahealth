@@ -2,7 +2,11 @@
 import { t, chemin, equivalences, equivalencesInverses, coordonnees, type Langue } from '../i18n/ui';
 import Entete from '../components/Entete.astro';
 import Pied from '../components/Pied.astro';
+import ModernHeader from '../components/ModernHeader.astro';
+import ModernFooter from '../components/ModernFooter.astro';
+import labels from '../textes/presentation.yaml';
 import '../styles/global.css';
+import '../styles/presence.css';
 
 interface Props {
   langue: Langue;
@@ -10,9 +14,10 @@ interface Props {
   description: string;
   slug?: string;
   classe?: string;
+  vue?: 'modern' | 'legacy';
 }
 
-const { langue, titre, description, slug = '', classe = '' } = Astro.props;
+const { langue, titre, description, slug = '', classe = '', vue = 'modern' } = Astro.props;
 const tr = t(langue);
 const SITE = Astro.site ?? new URL('https://banahealth.care');
 
@@ -102,7 +107,7 @@ const donnees = {
 ---
 
 <!doctype html>
-<html lang={langue}>
+<html lang={langue} data-view={vue}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -130,7 +135,7 @@ const donnees = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={partage} />
 
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="robots" content={vue === 'legacy' || slug === '404' ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
     <meta name="author" content="BanaHealth" />
 
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -153,12 +158,12 @@ const donnees = {
 
   <body class={classe}>
     <a class="lien-evitement" href="#contenu">{tr('nav.evitement')}</a>
-    <Entete langue={langue} slug={slug} urlAutre={urlAutre} />
+    {vue === 'legacy' ? <><Entete langue={langue} slug={slug} urlAutre={urlAutre} /><div class="view-bar enveloppe"><a class="view-switch" data-view-switch href={chemin(langue, slug)}>{labels[langue].moderne}</a></div></> : <ModernHeader langue={langue} slug={slug} urlAutre={urlAutre} />}
     <main id="contenu">
       <slot />
     </main>
-    <Pied langue={langue} />
+    {vue === 'legacy' ? <Pied langue={langue} /> : <ModernFooter langue={langue} slug={slug} />}
 
-    <script is:inline defer src="/js/site.js"></script>
+    {vue === 'legacy' && <script is:inline defer src="/js/site.js"></script>}
   </body>
 </html>

@@ -12,10 +12,11 @@
   'use strict';
 
   var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var moderne = document.documentElement.dataset.view === 'modern';
 
   // Signale que le script tourne : le CSS peut alors masquer le contenu
   // avant de le reveler. Sans cette classe, tout reste visible.
-  if (!reduit) document.documentElement.classList.add('js-anim');
+  if (!reduit && !moderne) document.documentElement.classList.add('js-anim');
 
   // ---------- Revelation au defilement ----------
   function revelations() {
@@ -50,6 +51,7 @@
     racine.classList.add('diaporama--actif');
     var index = 0;
     var minuteur = null;
+    var pauseManuelle = false;
 
     function afficher(n) {
       index = (n + diapos.length) % diapos.length;
@@ -58,6 +60,7 @@
         d.classList.toggle('est-active', actif);
         if (actif) d.removeAttribute('aria-hidden');
         else d.setAttribute('aria-hidden', 'true');
+        if (moderne) d.inert = !actif;
       });
       puces.forEach(function (p, i) {
         p.classList.toggle('est-active', i === index);
@@ -67,7 +70,7 @@
     }
 
     function demarrer() {
-      if (reduit || minuteur) return;
+      if ((moderne && racine.dataset.auto !== 'true') || reduit || pauseManuelle || minuteur) return;
       minuteur = setInterval(function () { afficher(index + 1); }, 6500);
     }
     function arreter() {
@@ -79,6 +82,18 @@
     var suiv = racine.querySelector('[data-suivant]');
     if (prec) prec.addEventListener('click', function () { afficher(index - 1); relancer(); });
     if (suiv) suiv.addEventListener('click', function () { afficher(index + 1); relancer(); });
+    var pause = racine.querySelector('[data-pause]');
+    if (pause) {
+      if (reduit) pause.hidden = true;
+      pause.addEventListener('click', function () {
+        pauseManuelle = !pauseManuelle;
+        pause.setAttribute('aria-label', pauseManuelle ? pause.dataset.labelPlay : pause.dataset.labelPause);
+        var symbole = pause.querySelector('span');
+        if (symbole) symbole.textContent = pauseManuelle ? '▷' : 'Ⅱ';
+        if (pauseManuelle) arreter();
+        else demarrer();
+      });
+    }
     puces.forEach(function (p, i) {
       p.addEventListener('click', function () { afficher(i); relancer(); });
     });

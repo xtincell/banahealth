@@ -1,0 +1,23 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { media } from '../components/Media';
+import { t } from '../i18n/ui';
+import { path, localLink, type Direction } from './paths';
+import labels from './labels.yaml';
+interface Props { page: CollectionEntry<'pages'>; direction: Direction; }
+const { page, direction } = Astro.props;
+const d = page.data;
+const { Content } = await render(page);
+const image = media(d.banniere);
+const tr = t(d.langue);
+---
+<article class:list={['detail-page', { 'detail-portrait': image && d.banniere_cadrage === 'portrait' }]}>
+  <header class="detail-heading"><a class="text-link" href={path(direction, d.langue)}>{labels[d.langue].retour}</a><h1>{d.titre}</h1>{d.surtitre && <p>{d.surtitre}</p>}{d.chapeau && <p class="lead">{d.chapeau}</p>}</header>
+  {image && <figure class:list={['detail-banner', `detail-banner-${d.banniere_cadrage}`]}><Image src={image} alt={d.banniere_cadrage === 'portrait' ? d.titre : ''} width={1300} loading="eager" /></figure>}
+  {(d.cartes?.length ?? 0) > 0 && <div class="detail-entries">{d.cartes!.map(k => { const src = media(k.image); return <section class:list={['detail-entry', `detail-entry-${k.cadrage}`]}>{src && <Image src={src} alt="" width={640} loading="lazy" />}<div><h2>{k.titre}</h2>{k.texte && <p>{k.texte}</p>}{k.lien && <a class="text-link" href={localLink(k.lien, direction, d.langue)}>{k.lienLibelle ?? k.titre}</a>}</div></section>; })}</div>}
+  <div class="reading"><Content /></div>
+  {(d.etapes?.length ?? 0) > 0 && <ol class="detail-steps">{d.etapes!.map(e => <li><h2>{e.titre}</h2><p>{e.texte}</p></li>)}</ol>}
+  {(d.galerie?.length ?? 0) > 0 && <div class="detail-gallery">{d.galerie!.map(g => { const src = media(g.image); return <figure class={`gallery-${g.cadrage}`}>{src && <Image src={src} alt={g.legende ?? ''} width={900} loading="lazy" />}{g.legende && <figcaption>{g.legende}</figcaption>}</figure>; })}</div>}
+  <div class="detail-contact"><a class="primary" href={path(direction, d.langue, 'contact')}>{tr('cta.contact')}</a></div>
+</article>

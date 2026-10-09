@@ -1,0 +1,27 @@
+---
+import { t, chemin, menu, menuPied, equivalences, type Langue } from '../i18n/ui';
+import labels from '../textes/presentation.yaml';
+interface Props { langue: Langue; slug: string; urlAutre: string; }
+const { langue, slug, urlAutre } = Astro.props;
+const tr = t(langue);
+const link = (s: string) => chemin(langue, langue === 'fr' ? s : equivalences[s] ?? s);
+---
+<header class="bh-header">
+  <a class="bh-brand" href={chemin(langue)} aria-label="BanaHealth — Medical Facilitation"><img src="/signature/banahealth-horizontal.png" width="380" height="100" alt="BanaHealth — Medical Facilitation" /></a>
+  <nav class="bh-navigation" aria-label={tr('nav.menu')}>
+    {menu.filter(m => m.fr !== 'contact').map(m => <a href={link(m.fr)} aria-current={link(m.fr) === chemin(langue, slug) ? 'page' : undefined}>{tr(m.cle)}</a>)}
+  </nav>
+  <div class="bh-header-end">
+    <a class="bh-language" href={urlAutre} hreflang={langue === 'fr' ? 'en' : 'fr'}>{tr('langue.bascule')}</a>
+    <a class="bh-contact-link" href={link('contact')}>{tr('nav.contact')}<span aria-hidden="true">↗</span></a>
+    <details class="bh-menu">
+      <summary>{tr('nav.menu')}<span aria-hidden="true">＋</span></summary>
+      <nav aria-label={tr('nav.menu')}>
+        <a href={chemin(langue)}>{tr('nav.accueil')}</a>
+        {[...menu, ...menuPied].map(m => <a href={link(m.fr)}>{tr(m.cle)}</a>)}
+        <a href={urlAutre} hreflang={langue === 'fr' ? 'en' : 'fr'}>{tr('langue.bascule')}</a>
+        <a class="bh-legacy" data-view-switch href={`/legacy${chemin(langue, slug)}`}>{labels[langue].legacy}</a>
+      </nav>
+    </details>
+  </div>
+</header>

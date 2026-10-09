@@ -1,0 +1,10 @@
+---
+import { accueil } from '../i18n/accueil';
+import { coordonnees, type Langue } from '../i18n/ui';
+const { langue } = Astro.props as { langue: Langue };
+const c = accueil[langue];
+---
+<section class="contact-section" id="contact">
+  <div><h2>{c.appelTitre}</h2><p>{c.appelTexte}</p><p>{c.toujoursDisponible}</p></div>
+  <div class="direct-contact"><a href={`mailto:${coordonnees.courriel}`}>{coordonnees.courriel}</a>{coordonnees.telephones.map((tel: any) => <a href={`tel:${tel.appel}`}>{tel.affichage}</a>)}</div>
+</section>

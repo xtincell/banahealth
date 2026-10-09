@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import { accueil } from '../i18n/accueil';
+import { t, type Langue } from '../i18n/ui';
+import { media } from '../components/Media';
+import { path } from './paths';
+import MoreHome from './MoreHome.astro';
+import Contact from './Contact.astro';
+const { langue } = Astro.props as { langue: Langue };
+const c = accueil[langue];
+const tr = t(langue);
+const hero = media(c.diapos[0].image)!;
+const portrait = media('marie-ngameni')!;
+---
+<section class="presence-opening">
+  <Image src={hero} alt="" class="opening-photo" widths={[640, 1000, 1600]} sizes="100vw" loading="eager" fetchpriority="high" />
+  <div class="presence-caption">
+    <h1>{c.diapos[0].titre.replace(/\*/g, '')}</h1>
+    <p>{c.diapos[0].texte}</p>
+    <a class="primary" href={path('a', langue, 'contact')}>{tr('cta.contact')}</a>
+    <a class="text-link" href="#services">{c.diapos[0].lienLibelle}</a>
+  </div>
+</section>
+<section class="presence-services section-pad" id="services">
+  <div class="section-intro"><h2>{c.piliersTitre}</h2><a class="text-link" href={path('a', langue, c.piliers[0].lien)}>{c.piliersSurtitre}</a></div>
+  <div class="service-lines">{c.piliers.map((p) => <article><h3><a href={path('a', langue, p.lien)}>{p.titre}</a></h3><p>{p.texte}</p><a class="text-link" href={path('a', langue, p.lien)}>{tr('cta.suite')}</a></article>)}</div>
+</section>
+<section class="presence-founder">
+  <Image src={portrait} alt="Marie Ngameni" width={900} loading="lazy" />
+  <div><a class="text-link" href={path('a', langue, c.fondatriceLien)}>{c.fondatriceSurtitre}</a><h2>{c.fondatriceTitre}</h2><p>{c.fondatriceTexte}</p><a class="primary" href={path('a', langue, c.fondatriceLien)}>{tr('cta.suite')}</a></div>
+</section>
+<MoreHome langue={langue} direction="a" />
+<Contact langue={langue} />

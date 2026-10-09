@@ -1,0 +1,26 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { media } from './Media';
+import { t, chemin } from '../i18n/ui';
+import labels from '../textes/presentation.yaml';
+import ModernEditorial from './ModernEditorial.astro';
+const { page } = Astro.props as { page: CollectionEntry<'pages'> };
+const d = page.data, tr = t(d.langue);
+const { Content } = await render(page);
+const image = media(d.banniere);
+const contactLinks = d.url === 'contact' ? (d.cartes ?? []).filter(k => k.lien?.startsWith('mailto:') || k.lien?.startsWith('tel:')) : [];
+const families = { 'our-services': 'services', 'nos-services': 'services', 'medical-care': 'care', 'soins-medicaux': 'care', 'why-south-africa': 'destination', 'pourquoi-afrique-du-sud': 'destination', 'our-network': 'network', 'nos-reseaux': 'network' } as const;
+const family = families[d.url as keyof typeof families];
+---
+{family ? <ModernEditorial page={page} family={family}><Content /></ModernEditorial> : <>
+<article class:list={['bh-article', { 'bh-article-portrait': image && d.banniere_cadrage === 'portrait' }]}>
+  <header class="bh-article-heading"><a href={chemin(d.langue)}>{labels[d.langue].retour}</a>{d.surtitre && <p class="bh-article-overline">{d.surtitre}</p>}<h1>{d.titre}</h1>{d.chapeau && <p class="bh-lead">{d.chapeau}</p>}{contactLinks.length > 0 && <nav class="bh-contact-actions" aria-label={tr('nav.contact')}>{contactLinks.map(k => <a class="bh-action" href={k.lien}>{k.lienLibelle ?? k.titre}<span aria-hidden="true">↗</span></a>)}</nav>}</header>
+  {image && <figure class={`bh-article-image bh-article-image-${d.banniere_cadrage}`}><Image src={image} alt={d.banniere_cadrage === 'large' ? '' : d.titre} widths={[640, 1000, 1400]} sizes={d.banniere_cadrage === 'portrait' ? '(max-width: 760px) 100vw, 50vw' : '100vw'} loading="eager" /></figure>}
+  {(d.cartes ?? []).length > 0 && <div class="bh-entries">{d.cartes!.map(k => { const src = media(k.image); const cadrage = k.image?.startsWith('icone-') ? 'icon' : k.cadrage; return <section class={`bh-entry bh-entry-${cadrage}`}><div class="bh-entry-media">{src && <Image src={src} alt="" width={cadrage === 'icon' ? 96 : 1000} loading="lazy" />}</div><div class="bh-entry-copy"><h2>{k.titre}</h2>{k.texte && <p>{k.texte}</p>}{k.lien && <a href={k.lien}>{k.lienLibelle ?? k.titre}<span aria-hidden="true">↗</span></a>}</div></section>; })}</div>}
+  <div class="bh-reading"><Content /></div>
+  {(d.etapes ?? []).length > 0 && <ol class="bh-steps">{d.etapes!.map(e => <li><h2>{e.titre}</h2><p>{e.texte}</p></li>)}</ol>}
+  {(d.galerie ?? []).length > 0 && <div class="bh-gallery">{d.galerie!.map(g => { const src = media(g.image); return <figure class={`bh-gallery-${g.cadrage}`}>{src && <Image src={src} alt={g.legende ?? ''} width={1200} loading="lazy" />}{g.legende && <figcaption>{g.legende}</figcaption>}</figure>; })}</div>}
+  {d.url !== 'contact' && <div class="bh-article-contact"><a class="bh-action" href={chemin(d.langue, 'contact')}>{tr('cta.contact')}<span aria-hidden="true">↗</span></a></div>}
+</article>
+</>}

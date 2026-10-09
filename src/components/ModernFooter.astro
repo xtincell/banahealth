@@ -1,0 +1,16 @@
+---
+import { t, chemin, menu, menuPied, equivalences, coordonnees, type Langue } from '../i18n/ui';
+import labels from '../textes/presentation.yaml';
+const { langue, slug = '' } = Astro.props as { langue: Langue; slug?: string };
+const tr = t(langue);
+const link = (s: string) => chemin(langue, langue === 'fr' ? s : equivalences[s] ?? s);
+---
+<footer class="bh-footer">
+  <div class="bh-footer-intro"><a class="bh-brand" href={chemin(langue)}><img src="/signature/banahealth-horizontal.png" width="380" height="100" alt="BanaHealth — Medical Facilitation" loading="lazy" /></a><p>{tr('slogan')}</p></div>
+  <div class="bh-footer-grid">
+    <nav aria-label={tr('pied.plan')}><h2>{tr('pied.plan')}</h2>{menu.map(m => <a href={link(m.fr)}>{tr(m.cle)}</a>)}</nav>
+    <nav aria-label={tr('pied.aussi')}><h2>{tr('pied.aussi')}</h2>{menuPied.map(m => <a href={link(m.fr)}>{tr(m.cle)}</a>)}</nav>
+    <div><h2>{tr('pied.contact')}</h2><a href={`mailto:${coordonnees.courriel}`}>{coordonnees.courriel}</a>{coordonnees.telephones.map((tel: any) => <a href={`tel:${tel.appel}`}>{tel.affichage}</a>)}<p>{coordonnees.adresse.rue}<br />{coordonnees.adresse.ville}, {coordonnees.adresse.pays[langue]} {coordonnees.adresse.code_postal}</p><div class="bh-social">{coordonnees.reseaux.map((r: any) => <a href={r.url} rel="noopener">{r.nom}</a>)}</div></div>
+  </div>
+  <div class="bh-footer-bottom"><p>© {new Date().getFullYear()} BanaHealth. {tr('pied.droits')}</p><nav aria-label={tr('pied.legal')}><a href={link('confidentialite')}>{tr('pied.confidentialite')}</a><a href={link('conditions-generales')}>{tr('pied.conditions')}</a></nav><a class="bh-legacy" data-view-switch href={`/legacy${chemin(langue, slug)}`}>{labels[langue].legacy}</a></div>
+</footer>

@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import { accueil } from '../i18n/accueil';
+import { t, chemin, type Langue } from '../i18n/ui';
+import labels from '../textes/presentation.yaml';
+import { media } from './Media';
+const { langue } = Astro.props as { langue: Langue };
+const c = accueil[langue], tr = t(langue);
+---
+<section class="bh-opening" data-diaporama data-auto="true" aria-roledescription={labels[langue].carrousel} aria-label={c.diapoAller}>
+  <div class="bh-hero-track">
+    {c.diapos.map((d, i) => {
+      const image = media(d.image)!;
+      const Heading = i === 0 ? 'h1' : 'h2';
+      return <article class:list={['bh-hero-slide', { 'est-active': i === 0 }]} data-diapo role="group" aria-roledescription={labels[langue].diapositive} aria-label={`${i + 1} / ${c.diapos.length}`}>
+        <Image class:list={['bh-opening-photo', { 'bh-opening-photo-secondary': i > 0 }]} src={image} alt="" widths={[640, 1000, 1600]} sizes="100vw" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : 'auto'} />
+        <div class="bh-opening-caption">
+          <div class="bh-hero-heading"><p class="bh-availability">{c.toujoursDisponible}</p><Heading class="bh-hero-title">{d.titre.replace(/\*/g, '')}</Heading></div>
+          <div class="bh-hero-copy"><p>{d.texte}</p>{d.auteur && <p class="bh-hero-author">— {d.auteur}</p>}<div class="bh-actions"><a class="bh-action" href={chemin(langue, 'contact')}>{tr('cta.contact')}<span aria-hidden="true">↗</span></a><a href={chemin(langue, d.lien)}>{d.lienLibelle}</a></div></div>
+        </div>
+      </article>;
+    })}
+  </div>
+  <nav class="bh-hero-controls" aria-label={c.diapoAller}>
+    <button type="button" data-precedent aria-label={c.diapoPrecedente}><span aria-hidden="true">←</span></button>
+    <div class="bh-hero-dots">{c.diapos.map((_, i) => <button class:list={['bh-hero-dot', { 'est-active': i === 0 }]} type="button" data-puce={i} aria-label={`${c.diapoAller} ${i + 1}`} aria-current={i === 0 ? 'true' : undefined}><span aria-hidden="true"></span></button>)}</div>
+    <button type="button" data-suivant aria-label={c.diapoSuivante}><span aria-hidden="true">→</span></button>
+    <button type="button" data-pause data-label-pause={labels[langue].pause} data-label-play={labels[langue].reprendre} aria-label={labels[langue].pause}><span aria-hidden="true">Ⅱ</span></button>
+  </nav>
+</section>
+<script is:inline defer src="/js/site.js"></script>

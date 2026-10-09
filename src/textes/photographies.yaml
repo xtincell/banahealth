@@ -1,0 +1,12 @@
+# Illustrations synthétiques autorisées le 9 octobre 2026.
+# Pas de patients, d'employés ou de lieux BanaHealth réels représentés ici.
+services:
+  - image: illustration-accompagnement
+    origine: generated
+  - image: illustration-voyage
+    origine: generated
+  - image: logement-sejour-1
+    origine: existing
+mentions:
+  fr: Image d’illustration — personnages fictifs.
+  en: Illustrative image — fictional characters.

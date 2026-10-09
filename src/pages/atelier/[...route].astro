@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import { chemin } from '../../i18n/ui';
+
+// This workshop is available to astro dev only. It creates zero production routes.
+export async function getStaticPaths() {
+  if (!import.meta.env.DEV) return [];
+  const pages = await getCollection('pages');
+  return (['a', 'b'] as const).flatMap((direction) => [
+    ...(['fr', 'en'] as const).map((langue) => ({
+      params: { route: `${direction}${langue === 'en' ? '/en' : ''}` }, props: { direction, langue, page: null },
+    })),
+    ...pages.map((page) => ({
+      params: { route: `${direction}/${page.data.langue === 'en' ? 'en/' : ''}${page.data.url}` },
+      props: { direction, langue: page.data.langue, page },
+    })),
+  ]);
+}
+const { langue, page } = Astro.props;
+// Previously shared prototype links now lead to the single current presentation.
+return Astro.redirect(chemin(langue, page?.data.url ?? ''), 302);
+---

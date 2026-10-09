@@ -1,0 +1,73 @@
+---
+import { t, menu, menuPied, equivalences, coordonnees, chemin, type Langue } from '../i18n/ui';
+import { path, translated, type Direction } from './paths';
+import labels from './labels.yaml';
+import './studio.css';
+interface Props { direction: Direction; langue: Langue; slug: string; titre?: string; description?: string; }
+const { direction, langue, slug, titre, description } = Astro.props;
+const tr = t(langue);
+const l = labels[langue];
+const otherLang = langue === 'fr' ? 'en' : 'fr';
+const otherDirection = direction === 'a' ? 'b' : 'a';
+const resolve = (s: string) => langue === 'fr' ? s : (equivalences[s] ?? s);
+const navigation = menu.map(m => ({ href: path(direction, langue, resolve(m.fr)), label: tr(m.cle), slug: resolve(m.fr) }));
+const allLinks = [...menu, ...menuPied].map(m => ({ href: path(direction, langue, resolve(m.fr)), label: tr(m.cle) }));
+// Legacy is produced by the existing post-build step, served by the local preview.
+const legacyHref = new URL(`/legacy${chemin(langue, slug)}`, 'http://127.0.0.1:4321').href;
+---
+<!doctype html>
+<html lang={langue} data-direction={direction}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    {description && <meta name="description" content={description} />}
+    <title>{titre ?? tr('nom')} · {l[direction]} · {l.prototype}</title>
+    <link rel="canonical" href={new URL(chemin(langue, slug), 'https://banahealth.care').href} />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,800;1,400&display=swap" />
+  </head>
+  <body>
+    <a class="skip" href="#contenu">{tr('nav.evitement')}</a>
+    <aside class="studio-bar" aria-label={l.comparaison}>
+      <span>{l.prototype}</span>
+      <a href={path('a', langue, slug)} aria-current={direction === 'a' ? 'page' : undefined}>{l.a}</a>
+      <a href={path('b', langue, slug)} aria-current={direction === 'b' ? 'page' : undefined}>{l.b}</a>
+    </aside>
+    <header class="masthead">
+      <a href={path(direction, langue)} class="brand" aria-label={`${tr('nom')} — ${tr('nav.accueil')}`}>
+        <img src="/signature/banahealth-horizontal.png" width="380" height="100" alt="BanaHealth — Medical Facilitation" />
+      </a>
+      <nav class="desktop-nav" aria-label={tr('nav.menu')}>
+        {navigation.filter(n => n.slug !== 'contact').map(n => <a href={n.href} aria-current={n.slug === slug ? 'page' : undefined}>{n.label}</a>)}
+      </nav>
+      <div class="masthead-actions">
+        <a class="language" href={path(direction, otherLang, translated(langue, slug))} hreflang={otherLang}>{tr('langue.bascule')}</a>
+        <a class="contact-link" href={path(direction, langue, 'contact')}>{tr('nav.contact')}</a>
+        <details class="mobile-menu">
+          <summary>{tr('nav.menu')}</summary>
+          <nav aria-label={tr('nav.menu')}>
+            <a href={path(direction, langue)}>{tr('nav.accueil')}</a>
+            {allLinks.map(n => <a href={n.href}>{n.label}</a>)}
+            <a href={path(direction, otherLang, translated(langue, slug))} hreflang={otherLang}>{tr('langue.bascule')}</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main id="contenu"><slot /></main>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a href={path(direction, langue)} class="brand"><img src="/signature/banahealth-horizontal.png" width="380" height="100" alt="BanaHealth — Medical Facilitation" loading="lazy" /></a>
+        <p>{tr('slogan')}</p>
+      </div>
+      <div class="footer-columns">
+        <nav aria-label={tr('pied.plan')}><h2>{tr('pied.plan')}</h2>{allLinks.map(n => <a href={n.href}>{n.label}</a>)}</nav>
+        <div><h2>{tr('pied.contact')}</h2><a href={`mailto:${coordonnees.courriel}`}>{coordonnees.courriel}</a>{coordonnees.telephones.map((tel: any) => <a href={`tel:${tel.appel}`}>{tel.affichage}</a>)}<p>{coordonnees.adresse.rue}<br />{coordonnees.adresse.ville}, {coordonnees.adresse.pays[langue]} {coordonnees.adresse.code_postal}</p></div>
+        <nav aria-label={tr('pied.aussi')}><h2>{tr('pied.aussi')}</h2>{coordonnees.reseaux.map((r: any) => <a href={r.url} rel="noopener">{r.nom}</a>)}<a href={legacyHref}>{l.legacy}</a><a href={path(otherDirection, langue, slug)}>{l[otherDirection]}</a></nav>
+      </div>
+      <div class="footer-bottom"><p>© {new Date().getFullYear()} BanaHealth. {tr('pied.droits')}</p><a href={path(direction, langue, resolve('confidentialite'))}>{tr('pied.confidentialite')}</a><a href={path(direction, langue, resolve('conditions-generales'))}>{tr('pied.conditions')}</a></div>
+    </footer>
+  </body>
+</html>

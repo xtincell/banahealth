@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Accueil from '../../components/Accueil.astro';
+import LegacyArticle from '../../components/LegacyArticle.astro';
+import { t, type Langue } from '../../i18n/ui';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return [
+    { params: { route: undefined }, props: { langue: 'fr', page: null } },
+    { params: { route: 'en' }, props: { langue: 'en', page: null } },
+    ...pages.map(page => ({ params: { route: `${page.data.langue === 'en' ? 'en/' : ''}${page.data.url}` }, props: { langue: page.data.langue, page } })),
+  ];
+}
+const { langue, page } = Astro.props;
+const description = page?.data.description ?? (langue === 'fr'
+  ? "BanaHealth accompagne les patients francophones vers les hôpitaux privés d'Afrique du Sud : choix des spécialistes, devis, rendez-vous, visa, vols et hébergement."
+  : "BanaHealth supports patients travelling to South Africa's private hospitals: choosing specialists, quotes, appointments, visas, flights and accommodation.");
+---
+<Base vue="legacy" langue={langue as Langue} titre={page?.data.titre ?? t(langue)('nom')} description={description} slug={page?.data.url ?? ''}>
+  {page ? <LegacyArticle page={page} /> : <Accueil langue={langue} />}
+</Base>

@@ -1,0 +1,26 @@
+fr:
+  decouvrirDesign: Découvrir le nouveau design
+  retourSiteActuel: Retour au site actuel
+  documentOriginal: Présentation originale
+  details: Lire le détail
+  carrousel: carrousel
+  diapositive: diapositive
+  pause: Mettre le diaporama en pause
+  reprendre: Reprendre le diaporama
+  legacy: Vue Legacy
+  moderne: Nouvelle vue
+  retour: Retour à l’accueil
+  fermer: Fermer le menu
+en:
+  decouvrirDesign: Discover the new design
+  retourSiteActuel: Back to the current site
+  documentOriginal: Original presentation
+  details: Read the detail
+  carrousel: carousel
+  diapositive: slide
+  pause: Pause slideshow
+  reprendre: Resume slideshow
+  legacy: Legacy view
+  moderne: New view
+  retour: Back to home
+  fermer: Close menu

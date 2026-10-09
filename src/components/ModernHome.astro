@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import { accueil } from '../i18n/accueil';
+import { t, chemin, sousPagesSoins, equivalences, coordonnees, type Langue } from '../i18n/ui';
+import { media } from './Media';
+import ModernHero from './ModernHero.astro';
+import photos from '../textes/photographies.yaml';
+const { langue } = Astro.props as { langue: Langue };
+const c = accueil[langue], tr = t(langue);
+const portrait = media('marie-ngameni')!;
+const serviceImages = photos.services.map(p => media(p.image)!);
+---
+<ModernHero langue={langue} />
+<section class="bh-services" id="services">
+  <header class="bh-section-heading"><h2>{c.piliersTitre}</h2><a href={chemin(langue, c.piliers[0].lien)}>{c.piliersSurtitre}<span aria-hidden="true">↗</span></a></header>
+  <div class="bh-service-folio">
+    <div class="bh-service-images" aria-hidden="true">{serviceImages.map((image, i) => <Image class={`bh-service-image bh-service-image-${i}`} src={image} alt="" width={1400} loading="lazy" />)}</div>
+    <p class="bh-photo-note">{photos.mentions[langue]}</p>
+    <div class="bh-service-edges">{c.piliers.map((p, i) => <details class="bh-service" name="bh-services" open={i === 0} id={`accompagnement-${i}`}><summary><h3>{p.titre}</h3><span class="bh-plus" aria-hidden="true">＋</span></summary><div class="bh-service-copy"><p>{p.texte}</p><a href={chemin(langue, p.lien)}>{tr('cta.suite')}<span aria-hidden="true">↗</span></a>{i === 0 && <nav class="bh-specialities" aria-label={tr('soins.titre')}>{sousPagesSoins.map(s => <a href={chemin(langue, langue === 'fr' ? s.fr : equivalences[s.fr])}>{tr(s.cle)}</a>)}</nav>}</div></details>)}</div>
+  </div>
+</section>
+<section class="bh-founder">
+  <Image src={portrait} alt="Marie Ngameni" width={1000} loading="lazy" />
+  <div class="bh-founder-copy"><a href={chemin(langue, c.fondatriceLien)}>{c.fondatriceSurtitre}</a><h2>{c.fondatriceTitre}</h2><p>{c.fondatriceTexte}</p><a class="bh-action" href={chemin(langue, c.fondatriceLien)}>{tr('cta.suite')}<span aria-hidden="true">↗</span></a></div>
+</section>
+<section class="bh-destination">
+  <header class="bh-section-heading"><h2>{c.raisonsTitre}</h2><a href={chemin(langue, c.raisonsLien)}>{c.raisonsSurtitre}<span aria-hidden="true">↗</span></a></header>
+  <div class="bh-facts">{c.raisons.map(r => <details><summary><span>{r.chiffre}</span><h3>{r.titre}</h3><span class="bh-plus" aria-hidden="true">＋</span></summary><p>{r.texte}</p></details>)}</div>
+</section>
+<section class="bh-testimonials">
+  <header class="bh-section-heading"><h2>{c.temoignagesTitre}</h2><a href={chemin(langue, c.temoignagesLien)}>{c.temoignagesSurtitre}<span aria-hidden="true">↗</span></a></header>
+  <div class="bh-voices">{c.temoignages.map((m, i) => <figure class:list={['bh-voice', { 'bh-voice-lead': i === 0 }]}><blockquote><p>{m.texte}</p></blockquote>{m.auteur && <figcaption>{m.auteur}</figcaption>}</figure>)}</div>
+</section>
+<section class="bh-call">
+  <div><h2>{c.appelTitre}</h2><p>{c.appelTexte}</p><p class="bh-availability">{c.toujoursDisponible}</p></div>
+  <div class="bh-call-links"><a href={`mailto:${coordonnees.courriel}`}>{coordonnees.courriel}<span aria-hidden="true">↗</span></a>{coordonnees.telephones.map((tel: any) => <a href={`tel:${tel.appel}`}>{tel.affichage}</a>)}</div>
+</section>

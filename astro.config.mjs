@@ -10,7 +10,7 @@ export default defineConfig({
     locales: ['fr', 'en'],
     routing: { prefixDefaultLocale: false },
   },
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !new URL(page).pathname.startsWith('/legacy/') })],
   build: { inlineStylesheets: 'auto' },
   // Les textes du site vivent dans src/textes/*.yaml, pour etre
   // modifiables sans toucher au code.
