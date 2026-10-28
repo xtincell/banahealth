@@ -91,6 +91,36 @@ precis, ni que ces incidents expliquent les echecs observes le 28 octobre.
 
 ## Sauvegarde et restauration
 
+### Complement : verification dans l'espace OVH connecte
+
+Apres connexion du proprietaire le 28 octobre, controle en lecture seule :
+
+- Hebergement actif, cluster120, filer 71 ; le stockage n'est pas sature.
+- `banahealth.care` et `www.banahealth.care` sont rattaches a `banahealth_2`.
+  Les quatre diagnostics OVH A/AAAA indiquent une configuration correcte.
+- Pare-feu actif sur les deux domaines ; aucune protection n'a ete desactivee.
+- Les deux certificats Let's Encrypt sont actifs, avec echeance affichee
+  au 25 novembre 2026, coherente avec le controle TLS public.
+- Journal HTTP du jour examine jusqu'a 16 h 35 (UTC+1) : 1 468 lignes,
+  aucune reponse 5xx. Les six refus 403 sur l'accueil repertories dans ce
+  journal concernent curl/Wget. D'autres refus visent les anciens scripts
+  WordPress et 123 requetes sur le parametre `lang` de la page vision/mission.
+  Le journal de securite confirme notamment des motifs `union select` et
+  des comparaisons de type tautologie, et non les liens de langue ordinaires.
+  Ces resultats ne permettent pas d'identifier une visite de la cliente.
+- Nouvelle mesure Globalping `2AMEpnrUsFW3pivGh00021OtT`, lancee a 16 h 35
+  (Afrique/Douala) : HTTP 200 et TLS valide depuis quatre reseaux, dont
+  Internet Magnate a Pretoria, qui echouait dans les mesures precedentes.
+
+Conclusion actualisee : acces retabli lors de cette contre-verification,
+sans modification supplementaire de la configuration. L'intermittence est
+constatee, mais sa cause et le lien avec le signalement client ne sont pas
+etablis. Aucun ticket OVH, changement DNS, achat ou desactivation du pare-feu
+n'a ete effectue. Les journaux bruts et les liens d'authentification ne sont
+pas copies dans ce depot.
+
+### Retour arriere de la publication
+
 Sauvegarde complete du site public et des configurations avant intervention,
 conservee hors depot. Les fichiers ont ete envoyes vers un nom temporaire puis
 renommes ; assets avant pages, configuration en dernier. Les signatures et
