@@ -69,6 +69,12 @@ seule sa cause ni etablir qu'il s'agit du probleme de la cliente. Une erreur
 avant HTTP ne se corrige pas dans les styles ou les redirections du site.
 Les journaux et le diagnostic reseau OVH restent necessaires pour conclure.
 
+Contre-verification apres publication, mesure `2CQasveAAeD2z3YxT00021OqW` :
+quatre reponses HTTP 200 (trois reseaux de Johannesburg et un de Durban),
+nouvel echec TCP a Pretoria et sonde du Cap hors ligne. Le point reseau reste
+donc ouvert apres les corrections du site ; aucune resolution universelle
+ni validation sur l'appareil de la cliente n'est revendiquee.
+
 Le 403 obtenu avec certaines signatures de robots (curl/Wget) est distinct :
 les navigateurs usuels, Office et Googlebot ont repondu 200 dans les tests.
 Le pare-feu n'a pas ete desactive sur la seule base de ce resultat.
