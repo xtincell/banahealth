@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import ModernArticle from '../components/ModernArticle.astro';
+import LegacyArticle from '../components/LegacyArticle.astro';
 export async function getStaticPaths() {
   const pages = await getCollection('pages');
   return pages.map(page => ({
@@ -13,5 +13,5 @@ const { page } = Astro.props;
 const d = page.data;
 ---
 <Base langue={d.langue} titre={d.titre} description={d.description} slug={d.url}>
-  <ModernArticle page={page} />
+  <LegacyArticle page={page} />
 </Base>

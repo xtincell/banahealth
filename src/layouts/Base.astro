@@ -4,7 +4,6 @@ import Entete from '../components/Entete.astro';
 import Pied from '../components/Pied.astro';
 import ModernHeader from '../components/ModernHeader.astro';
 import ModernFooter from '../components/ModernFooter.astro';
-import labels from '../textes/presentation.yaml';
 import '../styles/global.css';
 import '../styles/presence.css';
 
@@ -14,10 +13,10 @@ interface Props {
   description: string;
   slug?: string;
   classe?: string;
-  vue?: 'modern' | 'legacy';
+  vue?: 'classic' | 'modern' | 'legacy';
 }
 
-const { langue, titre, description, slug = '', classe = '', vue = 'modern' } = Astro.props;
+const { langue, titre, description, slug = '', classe = '', vue = 'classic' } = Astro.props;
 const tr = t(langue);
 const SITE = Astro.site ?? new URL('https://banahealth.care');
 
@@ -146,24 +145,19 @@ const donnees = {
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#0AA89E" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,800;1,400&display=swap"
-    />
+    <link rel="preload" href="/fonts/mulish-v18-latin-normal.woff2" as="font" type="font/woff2" crossorigin />
 
     <script type="application/ld+json" is:inline set:html={JSON.stringify(donnees)} />
   </head>
 
   <body class={classe}>
     <a class="lien-evitement" href="#contenu">{tr('nav.evitement')}</a>
-    {vue === 'legacy' ? <><Entete langue={langue} slug={slug} urlAutre={urlAutre} /><div class="view-bar enveloppe"><a class="view-switch" data-view-switch href={chemin(langue, slug)}>{labels[langue].moderne}</a></div></> : <ModernHeader langue={langue} slug={slug} urlAutre={urlAutre} />}
+    {vue === 'modern' ? <ModernHeader langue={langue} slug={slug} urlAutre={urlAutre} /> : <Entete langue={langue} slug={slug} urlAutre={urlAutre} />}
     <main id="contenu">
       <slot />
     </main>
-    {vue === 'legacy' ? <Pied langue={langue} /> : <ModernFooter langue={langue} slug={slug} />}
+    {vue === 'modern' ? <ModernFooter langue={langue} slug={slug} /> : <Pied langue={langue} />}
 
-    {vue === 'legacy' && <script is:inline defer src="/js/site.js"></script>}
+    {vue !== 'modern' && <script is:inline defer src="/js/site.js?v=20261028"></script>}
   </body>
 </html>

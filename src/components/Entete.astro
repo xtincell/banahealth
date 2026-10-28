@@ -18,13 +18,13 @@ const liens = menu.map((m) => {
       <Logo taille={2.35} />
     </a>
 
-    <input type="checkbox" id="bascule-menu" class="visuellement-cache" />
+    <input type="checkbox" id="bascule-menu" class="visuellement-cache" aria-controls="navigation-principale" />
     <label for="bascule-menu" class="bouton-menu">
       <span class="bouton-menu__barres" aria-hidden="true"></span>
       <span class="visuellement-cache">{tr('nav.menu')}</span>
     </label>
 
-    <nav class="navigation" aria-label={tr('nav.menu')}>
+    <nav id="navigation-principale" class="navigation" aria-label={tr('nav.menu')}>
       <ul class="navigation__liste">
         {liens.map((l) => (
           <li>
@@ -48,6 +48,7 @@ const liens = menu.map((m) => {
     position: sticky;
     top: 0;
     z-index: 50;
+    background: rgba(255, 255, 255, .96);
     background: color-mix(in srgb, var(--papier) 88%, transparent);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--trait);
@@ -125,6 +126,9 @@ const liens = menu.map((m) => {
     #bascule-menu:checked ~ .bouton-menu .bouton-menu__barres::after { transform: translateY(-6px) rotate(-45deg); }
 
     .navigation {
+      visibility: hidden;
+      max-height: calc(100vh - 4.75rem);
+      overflow-y: auto;
       position: absolute;
       inset: 100% 0 auto;
       background: var(--papier);
@@ -141,7 +145,8 @@ const liens = menu.map((m) => {
       gap: 0;
       padding-inline: var(--gouttiere);
     }
-    #bascule-menu:checked ~ .navigation { grid-template-rows: 1fr; }
+    #bascule-menu:checked ~ .navigation { grid-template-rows: 1fr; visibility: visible; }
+    #bascule-menu:focus-visible ~ .bouton-menu { outline: 3px solid var(--teal-fonce); outline-offset: 3px; }
     .navigation__lien {
       display: block;
       padding: .9rem 0;

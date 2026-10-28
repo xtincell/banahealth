@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import { t, chemin, type Langue } from '../i18n/ui';
 import { accueil } from '../i18n/accueil';
 import { media } from './Media';
+import labels from '../textes/presentation.yaml';
 
 interface Props { langue: Langue; }
 const { langue } = Astro.props;
@@ -21,19 +22,20 @@ const diapos = c.diapos.map((d) => ({ ...d, src: media(d.image), ...decouperTitr
 
 <section
   class="diaporama"
-  aria-roledescription="carrousel"
+  aria-roledescription={labels[langue].carrousel}
   aria-label={c.diapoAller}
   data-diaporama
 >
   <div class="diaporama__scene">
-    {diapos.map((d, i) => (
+    {diapos.map((d, i) => {
+      const Heading = i === 0 ? 'h1' : 'h2';
+      return (
       <article
         class:list={['diapo', { 'est-active': i === 0 }]}
         data-diapo
         role="group"
-        aria-roledescription="diapositive"
+        aria-roledescription={labels[langue].diapositive}
         aria-label={`${i + 1} / ${diapos.length}`}
-        aria-hidden={i === 0 ? undefined : 'true'}
       >
         {d.src && (
           <Image
@@ -43,13 +45,14 @@ const diapos = c.diapos.map((d) => ({ ...d, src: media(d.image), ...decouperTitr
             widths={[760, 1200, 1800]}
             sizes="100vw"
             loading={i === 0 ? 'eager' : 'lazy'}
+            fetchpriority={i === 0 ? 'high' : 'auto'}
           />
         )}
         <div class="enveloppe diapo__contenu">
           <p class="diapo__disponible">{c.toujoursDisponible}</p>
-          <h1 class="diapo__titre">
+          <Heading class="diapo__titre">
             {d.avant}{d.fort && <em>{d.fort}</em>}{d.apres}
-          </h1>
+          </Heading>
           <p class="diapo__texte">{d.texte}</p>
           {d.auteur && <p class="diapo__auteur">— {d.auteur}</p>}
           <div class="diapo__actions">
@@ -60,7 +63,7 @@ const diapos = c.diapos.map((d) => ({ ...d, src: media(d.image), ...decouperTitr
           </div>
         </div>
       </article>
-    ))}
+    ); })}
   </div>
 
   <div class="diaporama__commandes enveloppe">
@@ -83,6 +86,7 @@ const diapos = c.diapos.map((d) => ({ ...d, src: media(d.image), ...decouperTitr
     <button type="button" class="diaporama__fleche" data-suivant aria-label={c.diapoSuivante}>
       <span aria-hidden="true">→</span>
     </button>
+    <button type="button" class="diaporama__fleche diaporama__pause" data-pause data-label-pause={labels[langue].pause} data-label-play={labels[langue].reprendre} aria-label={labels[langue].pause}><span aria-hidden="true">Ⅱ</span></button>
   </div>
 </section>
 
@@ -197,7 +201,7 @@ const diapos = c.diapos.map((d) => ({ ...d, src: media(d.image), ...decouperTitr
   :global(.diaporama--actif) .diaporama__commandes { display: flex; }
   .diaporama__fleche {
     flex: none;
-    width: 2.6rem; height: 2.6rem;
+    width: 2.75rem; height: 2.75rem;
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, .4);
     background: rgba(0, 0, 0, .25);
@@ -210,18 +214,25 @@ const diapos = c.diapos.map((d) => ({ ...d, src: media(d.image), ...decouperTitr
 
   .diaporama__puces { display: flex; gap: .55rem; list-style: none; margin: 0; padding: 0; }
   .diaporama__puce {
-    width: 2.25rem; height: 4px;
+    width: 2.75rem; height: 2.75rem;
     border: 0; padding: 0;
-    border-radius: 2px;
-    background: rgba(255, 255, 255, .35);
+    background: transparent;
     cursor: pointer;
     transition: background-color .25s ease;
   }
-  .diaporama__puce:hover { background: rgba(255, 255, 255, .6); }
-  .diaporama__puce.est-active { background: var(--orange); }
+  .diaporama__puce::before { content: ''; display: block; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, .35); }
+  .diaporama__puce:hover::before { background: rgba(255, 255, 255, .6); }
+  .diaporama__puce.est-active::before { background: var(--orange); }
+  .diaporama__fleche[hidden] { display: none; }
 
   @media (max-width: 34rem) {
     .diaporama__fleche { display: none; }
+    .diaporama__pause { display: block; }
   }
 </style>
+
+<noscript><style is:inline>
+  .diaporama .diaporama__scene { grid-template-areas: none; }
+  .diaporama .diapo { grid-area: auto; opacity: 1; visibility: visible; min-height: 30rem; }
+</style></noscript>
 

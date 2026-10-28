@@ -10,10 +10,16 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # --- Une seule adresse publique, y compris les anciens liens www ---
+  # Les images email gardent un acces direct sur les deux noms de domaine.
+  RewriteCond %{REQUEST_URI} !^/signature/ [NC]
+  RewriteCond %{HTTP_HOST} ^www\.banahealth\.care$ [NC]
+  RewriteRule ^ https://banahealth.care%{REQUEST_URI} [L,R=301]
+
   # --- Toujours en HTTPS ---
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteRule ^ https://banahealth.care%{REQUEST_URI} [L,R=301]
 
   # =======================================================
   # Redirections des anciennes adresses WordPress
@@ -24,9 +30,83 @@
   # que les liens indexes par Google ne tombent dans le vide.
   # =======================================================
 
-  # L'ancien prefixe disparait : on le retire avant tout le reste.
+  # Les anciens points d'entree redirigent ; aucun index.php n'est execute.
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^(?:wordpress/)?(?:index\.php)?$ https://banahealth.care/en/ [R=301,L,QSD,NC]
+  RewriteRule ^(?:wordpress/)?index\.php$ https://banahealth.care/ [R=301,L,QSD,NC]
+  RewriteRule (^|/)index\.php(?:/|$) - [F,L,NC]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/?$ https://banahealth.care/ [R=301,L,QSD]
+
+  # L'ancien prefixe disparait avant la resolution des slugs.
   RewriteRule ^wordpress/?$ https://banahealth.care/ [R=301,L]
   RewriteRule ^wordpress/(.*)$ https://banahealth.care/$1 [R=301,L]
+
+  # --- Anciens selecteurs de langue sur les adresses actuelles ---
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^notre-fondatrice/?$ https://banahealth.care/en/our-founder/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/our-founder/?$ https://banahealth.care/notre-fondatrice/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^vision-et-mission/?$ https://banahealth.care/en/vision-and-mission/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/vision-and-mission/?$ https://banahealth.care/vision-et-mission/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^nos-services/?$ https://banahealth.care/en/our-services/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/our-services/?$ https://banahealth.care/nos-services/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^soins-medicaux/?$ https://banahealth.care/en/medical-care/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/medical-care/?$ https://banahealth.care/soins-medicaux/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^hebergement/?$ https://banahealth.care/en/accommodation/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/accommodation/?$ https://banahealth.care/hebergement/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^pourquoi-afrique-du-sud/?$ https://banahealth.care/en/why-south-africa/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/why-south-africa/?$ https://banahealth.care/pourquoi-afrique-du-sud/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^nos-reseaux/?$ https://banahealth.care/en/our-network/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/our-network/?$ https://banahealth.care/nos-reseaux/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^contact/?$ https://banahealth.care/en/contact/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/contact/?$ https://banahealth.care/contact/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^confidentialite/?$ https://banahealth.care/en/privacy-policy/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/privacy-policy/?$ https://banahealth.care/confidentialite/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^conditions-generales/?$ https://banahealth.care/en/terms-and-conditions/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/terms-and-conditions/?$ https://banahealth.care/conditions-generales/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^temoignages/?$ https://banahealth.care/en/testimonials/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/testimonials/?$ https://banahealth.care/temoignages/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^liens-utiles/?$ https://banahealth.care/en/useful-links/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/useful-links/?$ https://banahealth.care/liens-utiles/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^fecondation-in-vitro/?$ https://banahealth.care/en/in-vitro-fertilisation/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/in-vitro-fertilisation/?$ https://banahealth.care/fecondation-in-vitro/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^oncologie/?$ https://banahealth.care/en/oncology/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/oncology/?$ https://banahealth.care/oncologie/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^interventions-chirurgicales/?$ https://banahealth.care/en/surgeries/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/surgeries/?$ https://banahealth.care/interventions-chirurgicales/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$)
+  RewriteRule ^bilan-de-sante/?$ https://banahealth.care/en/general-check-up/ [R=301,L,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
+  RewriteRule ^en/general-check-up/?$ https://banahealth.care/bilan-de-sante/ [R=301,L,QSD]
 
   # --- Slugs partages entre les deux langues : le francais d'abord ---
   RewriteCond %{QUERY_STRING} (^|&)lang=fr(&|$)
@@ -80,9 +160,15 @@
 </IfModule>
 
 # --- Aucun script ne doit s'executer sur ce site ---
-<FilesMatch "\.(php|php\d|phtml|phps|pl|py|cgi|sh|lua)$">
+# Seul index.php passe aux redirections ci-dessus ; toute autre cible est refusee.
+<FilesMatch "(?i)^(?!index\.php$).*\.(php[0-9]*|phtml|phps|pl|py|cgi|sh|lua)$">
   Require all denied
 </FilesMatch>
+<IfModule !mod_rewrite.c>
+  <FilesMatch "(?i)^index\.php$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
 <IfModule mod_php.c>
   php_flag engine off
 </IfModule>
@@ -90,7 +176,7 @@ RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8
 RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8
 
 # --- Fichiers sensibles ou techniques ---
-<FilesMatch "^\.|\.(env|ini|log|sql|bak|old|swp|json|lock|yml|yaml)$">
+<FilesMatch "(?i)^\.|\.(env|ini|log|sql|bak|old|swp|json|lock|yml|yaml)$">
   Require all denied
 </FilesMatch>
 <Files ".htaccess">
@@ -130,13 +216,18 @@ ErrorDocument 404 /404.html
   <FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|svg|ico)$">
     ExpiresDefault "access plus 6 months"
   </FilesMatch>
-  <FilesMatch "\.(css|js)$">
+  <FilesMatch "\.[A-Za-z0-9_-]{8}\.(css|js)$">
     ExpiresDefault "access plus 1 year"
     Header append Cache-Control "public, immutable"
   </FilesMatch>
   # Le HTML doit rester frais : il porte les liens vers les fichiers empreintes
   <FilesMatch "\.html$">
-    ExpiresDefault "access plus 10 minutes"
+    ExpiresDefault "access plus 0 seconds"
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "^site\.js$">
+    ExpiresDefault "access plus 5 minutes"
+    Header set Cache-Control "public, max-age=300, must-revalidate"
   </FilesMatch>
 </IfModule>
 

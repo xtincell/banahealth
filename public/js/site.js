@@ -60,7 +60,7 @@
         d.classList.toggle('est-active', actif);
         if (actif) d.removeAttribute('aria-hidden');
         else d.setAttribute('aria-hidden', 'true');
-        if (moderne) d.inert = !actif;
+        d.inert = !actif;
       });
       puces.forEach(function (p, i) {
         p.classList.toggle('est-active', i === index);
@@ -71,6 +71,7 @@
 
     function demarrer() {
       if ((moderne && racine.dataset.auto !== 'true') || reduit || pauseManuelle || minuteur) return;
+      if (document.hidden || racine.contains(document.activeElement) || racine.matches(':hover')) return;
       minuteur = setInterval(function () { afficher(index + 1); }, 6500);
     }
     function arreter() {
@@ -114,6 +115,15 @@
   function demarrage() {
     revelations();
     carrousel();
+    var menu = document.getElementById('bascule-menu');
+    if (menu) {
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && menu.checked) {
+          menu.checked = false;
+          menu.focus();
+        }
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
