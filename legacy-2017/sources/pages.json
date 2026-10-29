@@ -1,0 +1,162 @@
+[
+  {
+    "original": "http://banahealth.care:80/",
+    "captured_at": "20171215061926",
+    "file": "page-01.html"
+  },
+  {
+    "original": "http://banahealth.care:80/?lang=fr",
+    "captured_at": "20171216152246",
+    "file": "page-02.html"
+  },
+  {
+    "original": "http://banahealth.care:80/accommodation/",
+    "captured_at": "20170724035836",
+    "file": "page-03.html"
+  },
+  {
+    "original": "http://banahealth.care:80/conditions/",
+    "captured_at": "20170707110339",
+    "file": "page-04.html"
+  },
+  {
+    "original": "http://banahealth.care:80/contact-us/",
+    "captured_at": "20170723094731",
+    "file": "page-05.html"
+  },
+  {
+    "original": "http://banahealth.care:80/contact-us/?lang=fr",
+    "captured_at": "20171203223937",
+    "file": "page-06.html"
+  },
+  {
+    "original": "http://banahealth.care:80/in-vitro-fertilization-ivf/",
+    "captured_at": "20171218012544",
+    "file": "page-07.html"
+  },
+  {
+    "original": "http://banahealth.care:80/meet-the-founder/",
+    "captured_at": "20170724112813",
+    "file": "page-08.html"
+  },
+  {
+    "original": "http://banahealth.care:80/our-network/",
+    "captured_at": "20170724112813",
+    "file": "page-09.html"
+  },
+  {
+    "original": "http://banahealth.care:80/our-network-2/",
+    "captured_at": "20171214185103",
+    "file": "page-10.html"
+  },
+  {
+    "original": "http://banahealth.care:80/privacy-policy/",
+    "captured_at": "20170724114217",
+    "file": "page-11.html"
+  },
+  {
+    "original": "http://banahealth.care:80/services/",
+    "captured_at": "20170723063937",
+    "file": "page-12.html"
+  },
+  {
+    "original": "http://banahealth.care:80/terms-and-conditions/",
+    "captured_at": "20170724201914",
+    "file": "page-13.html"
+  },
+  {
+    "original": "http://banahealth.care:80/testimonials/",
+    "captured_at": "20170724201946",
+    "file": "page-14.html"
+  },
+  {
+    "original": "http://banahealth.care:80/useful-links/",
+    "captured_at": "20170724035849",
+    "file": "page-15.html"
+  },
+  {
+    "original": "http://banahealth.care:80/vision-and-mission/",
+    "captured_at": "20170724035901",
+    "file": "page-16.html"
+  },
+  {
+    "original": "http://banahealth.care:80/why-south-africa/",
+    "captured_at": "20170721174627",
+    "file": "page-17.html"
+  },
+  {
+    "original": "http://banahealth.care/general-check-up/",
+    "captured_at": "20180419042229",
+    "file": "supplement-01.html"
+  },
+  {
+    "original": "http://banahealth.care/general-check-up/?lang=fr",
+    "captured_at": "20181205061612",
+    "file": "supplement-02.html"
+  },
+  {
+    "original": "http://banahealth.care/meet-the-founder/?lang=fr",
+    "captured_at": "20180908202316",
+    "file": "supplement-03.html"
+  },
+  {
+    "original": "http://banahealth.care/nos-services/?lang=fr",
+    "captured_at": "20180910101308",
+    "file": "supplement-04.html"
+  },
+  {
+    "original": "http://banahealth.care/oncology/",
+    "captured_at": "20180215202541",
+    "file": "supplement-05.html"
+  },
+  {
+    "original": "http://banahealth.care/our-network/?lang=fr",
+    "captured_at": "20180914220519",
+    "file": "supplement-06.html"
+  },
+  {
+    "original": "http://banahealth.care/pourquoi-lafrique-du-sud/?lang=fr",
+    "captured_at": "20180906235047",
+    "file": "supplement-07.html"
+  },
+  {
+    "original": "http://banahealth.care/soins-medicaux/?lang=fr",
+    "captured_at": "20180910185740",
+    "file": "supplement-08.html"
+  },
+  {
+    "original": "http://banahealth.care/surgeries/",
+    "captured_at": "20180419042045",
+    "file": "supplement-09.html"
+  },
+  {
+    "original": "http://banahealth.care/testimonials/?lang=fr",
+    "captured_at": "20180319094225",
+    "file": "supplement-10.html"
+  },
+  {
+    "original": "http://banahealth.care/useful-links/?lang=fr",
+    "captured_at": "20180906185137",
+    "file": "supplement-11.html"
+  },
+  {
+    "original": "http://banahealth.care/vision-et-mission/?lang=fr",
+    "captured_at": "20180906030716",
+    "file": "supplement-12.html"
+  },
+  {
+    "original": "http://banahealth.care/vitro-fertilization-ivf/?lang=fr",
+    "captured_at": "20181205040849",
+    "file": "supplement-medical-1.html"
+  },
+  {
+    "original": "http://banahealth.care/oncologie/?lang=fr",
+    "captured_at": "20181205053531",
+    "file": "supplement-medical-2.html"
+  },
+  {
+    "original": "http://banahealth.care/interventions-chirurgicales/?lang=fr",
+    "captured_at": "20181205101324",
+    "file": "supplement-medical-3.html"
+  }
+]

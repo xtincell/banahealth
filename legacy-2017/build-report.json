@@ -1,0 +1,335 @@
+{
+  "pages": [
+    {
+      "path": "index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/",
+        "captured_at": "20171215061926"
+      }
+    },
+    {
+      "path": "meet-the-founder/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/meet-the-founder/",
+        "captured_at": "20170724112813"
+      }
+    },
+    {
+      "path": "vision-and-mission/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/vision-and-mission/",
+        "captured_at": "20170724035901"
+      }
+    },
+    {
+      "path": "services/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/services/",
+        "captured_at": "20170723063937"
+      }
+    },
+    {
+      "path": "accommodation/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/accommodation/",
+        "captured_at": "20170724035836"
+      }
+    },
+    {
+      "path": "why-south-africa/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/why-south-africa/",
+        "captured_at": "20170721174627"
+      }
+    },
+    {
+      "path": "our-network-2/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/our-network-2/",
+        "captured_at": "20171214185103"
+      }
+    },
+    {
+      "path": "conditions/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/conditions/",
+        "captured_at": "20170707110339"
+      }
+    },
+    {
+      "path": "contact-us/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/contact-us/",
+        "captured_at": "20170723094731"
+      }
+    },
+    {
+      "path": "privacy-policy/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/privacy-policy/",
+        "captured_at": "20170724114217"
+      }
+    },
+    {
+      "path": "terms-and-conditions/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/terms-and-conditions/",
+        "captured_at": "20170724201914"
+      }
+    },
+    {
+      "path": "testimonials/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/testimonials/",
+        "captured_at": "20170724201946"
+      }
+    },
+    {
+      "path": "useful-links/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/useful-links/",
+        "captured_at": "20170724035849"
+      }
+    },
+    {
+      "path": "in-vitro-fertilization-ivf/index.html",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/in-vitro-fertilization-ivf/",
+        "captured_at": "20171218012544"
+      }
+    },
+    {
+      "path": "oncology/index.html",
+      "lang": "en",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/oncology/",
+        "captured_at": "20180215202541"
+      }
+    },
+    {
+      "path": "surgeries/index.html",
+      "lang": "en",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/surgeries/",
+        "captured_at": "20180419042045"
+      }
+    },
+    {
+      "path": "general-check-up/index.html",
+      "lang": "en",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/general-check-up/",
+        "captured_at": "20180419042229"
+      }
+    },
+    {
+      "path": "fr/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/?lang=fr",
+        "captured_at": "20171216152246"
+      }
+    },
+    {
+      "path": "fr/meet-the-founder/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/meet-the-founder/?lang=fr",
+        "captured_at": "20180908202316"
+      }
+    },
+    {
+      "path": "fr/vision-and-mission/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/vision-et-mission/?lang=fr",
+        "captured_at": "20180906030716"
+      }
+    },
+    {
+      "path": "fr/services/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/nos-services/?lang=fr",
+        "captured_at": "20180910101308"
+      }
+    },
+    {
+      "path": "fr/accommodation/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "restored_editorial_source",
+        "file": "src/content/pages/fr/hebergement.md",
+        "archived_layout_available": false,
+        "shared_english_layout_reused": true
+      }
+    },
+    {
+      "path": "fr/why-south-africa/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/pourquoi-lafrique-du-sud/?lang=fr",
+        "captured_at": "20180906235047"
+      }
+    },
+    {
+      "path": "fr/our-network-2/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/our-network/?lang=fr",
+        "captured_at": "20180914220519"
+      }
+    },
+    {
+      "path": "fr/conditions/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/soins-medicaux/?lang=fr",
+        "captured_at": "20180910185740"
+      }
+    },
+    {
+      "path": "fr/contact-us/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/contact-us/?lang=fr",
+        "captured_at": "20171203223937"
+      }
+    },
+    {
+      "path": "fr/privacy-policy/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "archived_english_legal",
+        "original": "http://banahealth.care:80/privacy-policy/",
+        "captured_at": "20170724114217",
+        "reason": "No verified French legal translation in the 2017 archive; retain the historical English legal text"
+      }
+    },
+    {
+      "path": "fr/terms-and-conditions/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "archived_english_legal",
+        "original": "http://banahealth.care:80/terms-and-conditions/",
+        "captured_at": "20170724201914",
+        "reason": "No verified French legal translation in the 2017 archive; retain the historical English legal text"
+      }
+    },
+    {
+      "path": "fr/testimonials/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/testimonials/?lang=fr",
+        "captured_at": "20180319094225"
+      }
+    },
+    {
+      "path": "fr/useful-links/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/useful-links/?lang=fr",
+        "captured_at": "20180906185137"
+      }
+    },
+    {
+      "path": "fr/in-vitro-fertilization-ivf/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/vitro-fertilization-ivf/?lang=fr",
+        "captured_at": "20181205040849"
+      }
+    },
+    {
+      "path": "fr/oncology/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/oncologie/?lang=fr",
+        "captured_at": "20181205053531"
+      }
+    },
+    {
+      "path": "fr/surgeries/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/interventions-chirurgicales/?lang=fr",
+        "captured_at": "20181205101324"
+      }
+    },
+    {
+      "path": "fr/general-check-up/index.html",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/general-check-up/?lang=fr",
+        "captured_at": "20181205061612"
+      }
+    }
+  ],
+  "shared_chrome_captures": {
+    "en": "20171215061926",
+    "fr": "20171216152246"
+  },
+  "missing_resources": [
+    "http://banahealth.care/wp-content/plugins/add-to-any/icons/custom/email.png",
+    "http://banahealth.care/wp-content/plugins/add-to-any/icons/custom/facebook.png",
+    "http://banahealth.care/wp-content/plugins/add-to-any/icons/custom/google_plus.png",
+    "http://banahealth.care/wp-content/plugins/add-to-any/icons/custom/linkedin.png",
+    "http://banahealth.care/wp-content/plugins/add-to-any/icons/custom/pinterest.png",
+    "http://banahealth.care/wp-content/plugins/add-to-any/icons/custom/twitter.png",
+    "http://banahealth.care/wp-content/plugins/add-to-any/icons/custom/whatsapp.png",
+    "http://banahealth.care/wp-content/themes/medicare/css/print.css",
+    "http://banahealth.care/wp-content/themes/medicare/gfx/demo-screen.jpg"
+  ],
+  "image_size_substitutions": {
+    "http://banahealth.care/wp-content/uploads/2017/04/HARROGATE_2212-540x540.jpg": "http://banahealth.care/wp-content/uploads/2017/04/HARROGATE_2212.jpg"
+  },
+  "wordpress_runtime": false,
+  "database": false,
+  "all_executable_scripts_replaced": true,
+  "publicly_deployed": false
+}

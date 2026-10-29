@@ -1,0 +1,28 @@
+{
+  "content_pages": 34,
+  "widths": [
+    390,
+    768,
+    1440
+  ],
+  "page_visits": 102,
+  "local_references": 1967,
+  "javascript_errors": [],
+  "external_resource_requests": [],
+  "http_errors": [],
+  "broken_images": [],
+  "horizontal_overflow": [],
+  "carousel_stable_height": [
+    710,
+    710,
+    710
+  ],
+  "mobile_menu_escape": true,
+  "gallery_dialog": true,
+  "legacy_language_query": true,
+  "equivalent_language_switch": true,
+  "reduced_motion": true,
+  "no_javascript_content": true,
+  "targeted_gallery_visits": 6,
+  "gallery_square_thumbnails": true
+}
