@@ -80,3 +80,28 @@ paramètres `lang` peuvent être traités d'abord par les règles de la racine O
 Ne pas remplacer la production ni son `.htaccess` avec ce résultat sans
 préparer une publication distincte et faire valider le rendu. L'accès OVH/SFTP
 n'a pas été utilisé dans cette reconstruction.
+
+### Client de transfert FTPS
+
+`scripts/ovh_ftps.py` fournit un client de transfert sans dépendance externe,
+avec trois commandes : `probe`, `inventory` et `publish`. Il vérifie TLS avant
+de demander le mot de passe dans le terminal. Il ne conserve pas ce mot de passe.
+Les connexions de données sont chiffrées et passent par le même relais TCP que
+la connexion de contrôle. Il utilise exclusivement le relais configuré dans un
+environnement géré et s'arrête si ce relais est inaccessible.
+
+```sh
+python legacy-2017/scripts/ovh_ftps.py probe
+python legacy-2017/scripts/ovh_ftps.py inventory --backup /chemin/prive/inventaire-neuf
+python legacy-2017/scripts/ovh_ftps.py publish --release /chemin/prive/lot-neuf --backup /chemin/prive/publication-neuve
+python -m unittest discover -s legacy-2017/scripts -p 'test_ovh_ftps.py' -v
+```
+
+La publication vérifie le manifeste local, sauvegarde les règles Apache et
+l'accueil distants, puis confirme le document root par comparaison avec
+l'accueil public. Elle refuse une destination existante, transfère dans un
+dossier neuf, relit et vérifie chaque fichier avant le renommage final. Un
+échec des contrôles HTTP après renommage entraîne le retrait du seul aperçu.
+Les sauvegardes et rapports sont privés. Ce client ne peut pas modifier les
+autorisations réseau de l'environnement. Les tests hors ligne ne prouvent
+pas une authentification ou une publication distante.
