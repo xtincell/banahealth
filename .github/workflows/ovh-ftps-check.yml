@@ -1,0 +1,30 @@
+name: OVH FTPS connectivity
+on:
+  push:
+    branches:
+      - 'codex/ovh-publication-2017-20261029192605'
+    paths:
+      - '.github/workflows/ovh-ftps-check.yml'
+permissions:
+  contents: read
+jobs:
+  connectivity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Verify OVH FTPS without authenticating
+        shell: bash
+        run: |
+          python -u - <<'PY'
+          import ftplib, json, ssl, sys
+          try:
+              ftp = ftplib.FTP_TLS(context=ssl.create_default_context(), timeout=20)
+              ftp.connect('ftp.cluster120.hosting.ovh.net', 21)
+              print('FTP greeting received.', flush=True)
+              ftp.auth()
+              print(json.dumps({'status':'ftps_ready', 'tls':ftp.sock.version(), 'authenticated':False}), flush=True)
+              ftp.quit()
+          except Exception as error:
+              print(json.dumps({'status':'failed', 'error_type':type(error).__name__}), flush=True)
+              sys.exit(1)
+          PY
