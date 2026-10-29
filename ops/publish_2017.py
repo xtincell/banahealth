@@ -97,11 +97,18 @@ def sha256(data):
 
 
 def public_bytes(url):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Python-urllib/3.12'})
-    with urllib.request.urlopen(req, timeout=30) as response:
-        if response.status != 200:
-            raise ValueError('Public verification failed')
-        return response.read()
+    req = urllib.request.Request(url, headers={'User-Agent': 'Python-urllib/3.12', 'Cache-Control': 'no-cache'})
+    for attempt in range(8):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                if response.status != 200:
+                    raise ValueError('Public verification failed')
+                return response.read()
+        except urllib.error.HTTPError as error:
+            print(json.dumps({'http_retry': attempt, 'url': url, 'status': error.code}), flush=True)
+            if error.code not in (403, 404, 429, 500, 502, 503, 504) or attempt == 7:
+                raise
+            time.sleep(min(2 ** attempt, 10))
 
 
 def release_files():
@@ -129,7 +136,11 @@ def release_files():
 
 def sftp_read(sftp, path, limit):
     with sftp.open(path, 'rb') as stream:
-        data = stream.read(limit + 1)
+        size = stream.stat().st_size
+        if size > limit:
+            raise ValueError('Remote file exceeds expected size')
+        stream.prefetch(file_size=size, max_concurrent_requests=32)
+        data = stream.read(size)
     if len(data) > limit:
         raise ValueError('Remote file exceeds expected size')
     return data
@@ -144,33 +155,20 @@ def deploy(client, manifest, tree, run):
     if not parent.endswith('/banahealth_2'):
         raise ValueError('Unexpected remote document root')
     entries = set(sftp.listdir('.'))
-    stage = MOUNT + '.upload-' + run
+    stage = MOUNT + '.offline-40940716919'
     offline = MOUNT + '.offline-' + run
-    if any(name in entries for name in (MOUNT, stage, offline)):
-        raise ValueError('Destination exists; refusing overwrite')
-    # Read and preserve the parent files in memory; never print their contents.
+    if MOUNT in entries or offline in entries or stage not in entries:
+        raise ValueError('Expected preserved release is not available for isolated activation')
     parents = {name: sftp_read(sftp, name, 2_000_000) for name in ('index.html', '.htaccess')}
     if sha256(parents['index.html']) != sha256(public_bytes('https://banahealth.care/')):
         raise ValueError('Remote root differs from public site')
-    print(json.dumps({'status': 'document_root_verified', 'files_to_publish': len(manifest['files'])}), flush=True)
-    sftp.mkdir(stage, mode=0o755)
-    folders = set()
-    for item in manifest['files']:
-        p = PurePosixPath(item['path']).parent
-        while str(p) != '.':
-            folders.add(str(p))
-            p = p.parent
-    for folder in sorted(folders, key=lambda p: (p.count('/'), p)):
-        sftp.mkdir(stage + '/' + folder, mode=0o755)
-    for i, item in enumerate(sorted(manifest['files'], key=lambda p: p['path'] == '.htaccess'), 1):
-        target = stage + '/' + item['path']
-        sftp.put(str(tree / item['path']), target, confirm=True)
-        sftp.chmod(target, 0o644)
-        data = sftp_read(sftp, target, item['bytes'])
+    print(json.dumps({'status': 'resuming_preserved_release', 'files_to_verify': len(manifest['files'])}), flush=True)
+    for i, item in enumerate(manifest['files'], 1):
+        data = sftp_read(sftp, stage + '/' + item['path'], item['bytes'])
         if len(data) != item['bytes'] or sha256(data) != item['sha256']:
-            raise ValueError('Remote release checksum mismatch')
-        if i % 25 == 0:
-            print(f'Files transferred and verified: {i}/{len(manifest["files"])}', flush=True)
+            raise ValueError('Preserved release checksum mismatch')
+        if i % 50 == 0:
+            print(f'Preserved files verified: {i}/{len(manifest["files"])}', flush=True)
     for name, data in parents.items():
         if sftp_read(sftp, name, len(data)) != data:
             raise ValueError('Parent changed during staging')

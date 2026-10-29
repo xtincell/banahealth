@@ -1,4 +1,4 @@
-name: Publish historical 2017 preview to OVH
+name: Activate verified 2017 preview on OVH
 on:
   push:
     branches:
@@ -14,7 +14,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
