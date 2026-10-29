@@ -16,15 +16,23 @@ jobs:
         shell: bash
         run: |
           python -u - <<'PY'
-          import ftplib, json, ssl, sys
+          import ftplib, json, ssl, sys, socket, subprocess
           try:
               ftp = ftplib.FTP_TLS(context=ssl.create_default_context(), timeout=20)
               ftp.connect('ftp.cluster120.hosting.ovh.net', 21)
               print('FTP greeting received.', flush=True)
+              print('FTP features:', ftp.sendcmd('FEAT'), flush=True)
               ftp.auth()
               print(json.dumps({'status':'ftps_ready', 'tls':ftp.sock.version(), 'authenticated':False}), flush=True)
               ftp.quit()
           except Exception as error:
-              print(json.dumps({'status':'failed', 'error_type':type(error).__name__}), flush=True)
-              sys.exit(1)
+              print(json.dumps({'status':'failed', 'error_type':type(error).__name__, 'message':str(error)}), flush=True)
+          for host in ('ftp.cluster120.hosting.ovh.net','ssh.cluster120.hosting.ovh.net'):
+              try:
+                  with socket.create_connection((host,22),timeout=12) as s:
+                      print('SSH banner',host,repr(s.recv(512)),flush=True)
+                  scan=subprocess.run(['ssh-keyscan','-T','12','-t','ed25519',host],capture_output=True,text=True,timeout=20)
+                  print('SSH public host key:',scan.stdout.strip(),flush=True)
+              except Exception as error:
+                  print('SSH probe',host,type(error).__name__,str(error),flush=True)
           PY
