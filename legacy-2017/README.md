@@ -64,6 +64,19 @@ tel quel dans un sous-dossier du site actuel. La configuration Apache fournie
 refuse l'indexation et l'exécution de scripts serveur. Le serveur Python de
 revue ne lit pas cette configuration Apache.
 
+Pour préparer l'aperçu OVH dans un sous-dossier isolé, utiliser :
+
+```sh
+python legacy-2017/scripts/prepare_ovh_preview.py /chemin/prive/lot-neuf
+```
+
+Ce script monte les liens, styles et sélecteurs de langue sous
+`/historique-2017/`. Il prépare des manifestes, un transfert vers un dossier
+temporaire et un renommage final ; il ne se connecte pas et ne publie rien.
+Le dossier distant et les règles Apache parentes doivent être vérifiés avant
+transfert. Les sélecteurs générés utilisent des liens directs : les anciens
+paramètres `lang` peuvent être traités d'abord par les règles de la racine OVH.
+
 Ne pas remplacer la production ni son `.htaccess` avec ce résultat sans
 préparer une publication distincte et faire valider le rendu. L'accès OVH/SFTP
 n'a pas été utilisé dans cette reconstruction.
