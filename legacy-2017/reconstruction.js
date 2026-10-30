@@ -10,6 +10,22 @@
     location.replace(location.pathname.slice(3) + location.hash); return;
   }
   document.documentElement.classList.add('reconstruction-js');
+  const topButton = document.querySelector('.back-to-top');
+  const updateTopButton = () => {
+    const visible = scrollY > 400;
+    topButton?.classList.toggle('is-visible', visible);
+    if (topButton) topButton.tabIndex = visible ? 0 : -1;
+  };
+  addEventListener('scroll', updateTopButton, {passive:true});
+  updateTopButton();
+  document.querySelectorAll('.map-details-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      document.getElementById(button.getAttribute('aria-controls')).hidden = !open;
+      button.textContent = language === 'fr' ? (open ? 'Masquer les coordonnées' : 'Afficher les coordonnées') : (open ? 'Hide contact details' : 'Show contact details');
+    });
+  });
   const menu = document.querySelector('#site-navigation');
   const menuButton = document.querySelector('.menu-toggle');
   const closeMenu = () => { menu?.classList.remove('is-open'); menuButton?.setAttribute('aria-expanded', 'false'); };
@@ -52,6 +68,7 @@
     const dots=slides.map((s,i) => button((language==='fr'?'Diapositive ':'Slide ')+(i+1),String(i+1),()=>show(i)));
     button(language==='fr'?'Suivant':'Next','›',()=>show(index+1));
     const pause=button('Pause','Ⅱ',()=>{paused=!paused;pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?(language==='fr'?'Reprendre':'Resume'):'Pause');pause.setAttribute('aria-pressed',String(paused));schedule();});
+    pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?(language==='fr'?'Reprendre':'Resume'):'Pause');pause.setAttribute('aria-pressed',String(paused));
     const schedule=()=>{clearInterval(timer);if(!paused&&!reduced.matches&&!document.hidden&&!pointerInside&&!slider.contains(document.activeElement)) timer=setInterval(()=>show(index+1),5000);};
     slider.addEventListener('mouseenter',()=>{pointerInside=true;schedule();});
     slider.addEventListener('mouseleave',()=>{pointerInside=false;schedule();});

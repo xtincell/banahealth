@@ -2,7 +2,7 @@
 
 Cette reconstruction est un site indépendant en HTML, CSS et JavaScript. Elle
 ne démarre ni WordPress, ni PHP, ni base de données, et n'utilise pas Astro à
-l'exécution ou à la compilation. Le site actuellement publié n'est pas modifié.
+l'exécution ou à la compilation. La publication principale est préparée séparément ; les anciennes sources restent disponibles pour comparaison.
 
 ## Voir le résultat
 
@@ -51,8 +51,7 @@ ont été retirés. Le menu, les sous-menus, le diaporama et la galerie utilisen
 un nouveau script autonome. Une photo d'archive tronquée est remplacée par la
 version complète du même cliché récupérée dans une autre capture.
 
-Le fond cartographique historique n'a pas été récupéré : l'adresse ouvre la
-carte dans un onglet séparé. Le formulaire prépare un courriel dans la
+La carte est désormais intégrée par une iframe Google Maps à l’adresse historique, avec un lien d’itinéraire et un panneau de coordonnées repliable. Les contrôles natifs remplacent les commandes de l’ancien thème. Le bouton de retour en haut apparaît après défilement. Le formulaire prépare un courriel dans la
 messagerie de la personne ; il n'envoie rien automatiquement et ne stocke rien.
 Les affirmations et documents historiques sont conservés, sans actualisation.
 
@@ -77,9 +76,7 @@ Le dossier distant et les règles Apache parentes doivent être vérifiés avant
 transfert. Les sélecteurs générés utilisent des liens directs : les anciens
 paramètres `lang` peuvent être traités d'abord par les règles de la racine OVH.
 
-Ne pas remplacer la production ni son `.htaccess` avec ce résultat sans
-préparer une publication distincte et faire valider le rendu. L'accès OVH/SFTP
-n'a pas été utilisé dans cette reconstruction.
+L’aperçu historique a été publié le 29 octobre 2026. Le 30 octobre, le propriétaire a demandé son passage sur le domaine principal et la correction des interactions. `scripts/prepare_main.py` prépare les URL françaises existantes à la racine et anglaises sous `/en/`, les redirections, les balises canoniques et le sitemap. `scripts/verify_main.py` teste le résultat avec Apache. La publication principale utilise une version immuable sous `/_banahealth-releases/` et un remplacement atomique du seul `.htaccess` racine. Les fichiers du site précédent restent présents ; une archive privée hors du document root permet également la restauration.
 
 ### Client de transfert FTPS
 

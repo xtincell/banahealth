@@ -194,7 +194,7 @@ def fallback(slug, lang, shell, shared_layout=None):
 def write_page(soup, slug, lang, provenance):
     soup.html['lang'] = lang
     soup.body['class'] = [c for c in soup.body.get('class', []) if c != 'bodyPreloader'] + ['btMenuHorizontal', 'reconstruction-2017']
-    for el in list(soup.select('.btPreloader, .btLoader, .btGoogleMapsWrapper script')):
+    for el in list(soup.select('.btPreloader, .btLoader, .btGoogleMapsWrapper script, .infoToggler, .btInfoPaneToggler, .a2a_button_google_plus')):
         el.decompose()
     for link in list(soup.find_all('link')):
         if 'stylesheet' in link.get('rel', []):
@@ -296,12 +296,43 @@ def write_page(soup, slug, lang, provenance):
         note.string = 'Ce formulaire prépare un courriel dans votre messagerie ; aucun message n’est envoyé automatiquement.' if lang=='fr' else 'This form prepares an email in your mail app; no message is sent automatically.'
         form.append(note)
     for map_box in soup.select('.btGmap'):
+        map_box.clear()
         map_box['class'] = ['btGmap','restored-map']
-        link = soup.new_tag('a', href='https://www.google.com/maps/search/?api=1&query=28+Reform+Avenue+Melrose+Sandton', target='_blank',rel='noopener noreferrer')
-        link.string = '28 Reform Avenue · Melrose, Sandton ↗';map_box.append(link)
+        map_box.attrs.pop('style', None)
+        frame = soup.new_tag('iframe', src='https://www.google.com/maps?q=28+Reform+Avenue+Melrose+Sandton&output=embed&hl='+lang,
+            title='Carte : 28 Reform Avenue, Melrose, Sandton' if lang=='fr' else 'Map: 28 Reform Avenue, Melrose, Sandton',
+            loading='lazy', referrerpolicy='strict-origin-when-cross-origin')
+        map_box.append(frame)
+        wrapper=map_box.find_parent(class_='btGoogleMapsWrapper')
+        link = soup.new_tag('a', attrs={'class':'map-directions'}, href='https://www.google.com/maps/dir/?api=1&destination=28+Reform+Avenue+Melrose+Sandton', target='_blank',rel='noopener noreferrer')
+        link.string = ('Itinéraire' if lang=='fr' else 'Directions')+' · 28 Reform Avenue, Melrose, Sandton ↗'
+        wrapper.append(link)
+        panel=wrapper.select_one('.btGoogleMapsContent')
+        if panel:
+            panel['id']='map-contact-details'
+            toggle=soup.new_tag('button',attrs={'type':'button','class':'map-details-toggle','aria-expanded':'true','aria-controls':'map-contact-details'})
+            toggle.string='Masquer les coordonnées' if lang=='fr' else 'Hide contact details'
+            wrapper.insert(0,toggle)
+    # Keep each service call to action with its own card on small screens.
+    if not slug:
+        for row in list(soup.select('.boldRow.Button')):
+            previous=row.find_previous_sibling(class_='boldRow')
+            if previous and len(previous.select('a.embed[href*="#step"]'))==3:
+                previous['class']=previous.get('class',[])+['service-cards']
+                for button in previous.select('a.embed'):
+                    button['class']=[c for c in button['class'] if c!='embed']
+                row.decompose()
+        for row in list(soup.select('.boldRow')):
+            if row.select('.rowItem') and not row.get_text(strip=True) and not row.select('img, iframe, .btGmap'):
+                row.decompose()
     # Correct a historical misdirected phone URI without altering visible text.
     for a in soup.select('a[href="tel:+080023367820"]'):
         a['href'] = 'tel:+27827756975'
+    for a in soup.select('a[href^="tel:"]'):
+        phone=urllib.parse.unquote(a['href'][4:]).replace('(0)','')
+        a['href']='tel:'+re.sub(r'[^+0-9]','',phone)
+    top=soup.new_tag('a',href='#top',attrs={'class':'back-to-top','aria-label':'Revenir en haut' if lang=='fr' else 'Back to top'})
+    top.string='↑';soup.body.append(top)
     script=soup.new_tag('script',src='/reconstruction.js',defer='');soup.body.append(script)
     path = SITE / ('fr' if lang=='fr' else '') / slug / 'index.html'
     path.parent.mkdir(parents=True,exist_ok=True);path.write_text(str(soup))

@@ -26,14 +26,15 @@ for file in SITE.rglob('*.html'):
             if path.is_dir():path=path/'index.html'
             assert path.is_file(),(str(file),url)
             references+=1
-    assert not soup.select('iframe, object, embed'),file
+    assert not soup.select('object, embed'),file
+    assert all(f.get('src','').startswith('https://www.google.com/maps?') for f in soup.select('iframe')),file
 errors=[];externals=set();bad_images=[];overflow=[];http_errors=set()
 with sync_playwright()as p:
     browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
     page=browser.new_page()
     page.on('pageerror',lambda error:errors.append(str(error)))
-    page.on('request',lambda request:externals.add(request.url)if not request.url.startswith(ORIGIN)else None)
-    page.on('response',lambda response:http_errors.add((response.url,response.status))if response.status>=400 else None)
+    page.on('request',lambda request:externals.add(request.url)if request.frame==page.main_frame and not request.url.startswith(ORIGIN)else None)
+    page.on('response',lambda response:http_errors.add((response.url,response.status))if response.url.startswith(ORIGIN) and response.status>=400 else None)
     for width in [390,768,1440]:
         page.set_viewport_size({'width':width,'height':900})
         for item in report['pages']:

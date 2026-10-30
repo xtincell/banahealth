@@ -36,12 +36,22 @@ html.reconstruction-js [data-rebuilt-slider] > .slidedItem:not(.is-active) { dis
 .restored-editorial-image { display:block; max-width:min(100%,640px); max-height:460px; width:auto; height:auto; object-fit:contain; margin:1.5rem 0; }
 .restored-card .restored-editorial-image { max-width:min(100%,280px); max-height:180px; }
 .restored-icon-label { display:inline-block; margin:8px; font:24px FontAwesome; }
-.restored-map { height:500px; display:flex; align-items:center; justify-content:center; background:#e4e6e3; }
-.reconstruction-2017 .restored-map > a { color:#275f5b!important; padding:14px 18px; background:#fff; box-shadow:0 2px 10px #0002; margin-left:350px; }
+.restored-map { height:540px; background:#e4e6e3; }
+.restored-map iframe { display:block; width:100%; height:100%; border:0; }
+.reconstruction-2017 .map-directions { display:block; padding:14px 20px; background:#fff; color:#275f5b!important; text-align:center; font:600 14px/1.5 Arial,sans-serif; }
+.map-details-toggle { position:absolute; z-index:3; top:12px; left:max(20px,calc((100% - 1160px)/2)); min-height:44px; padding:10px 16px; border:0; border-radius:3px; background:#fff; color:#275f5b; box-shadow:0 2px 10px #0002; font:600 14px/1.4 Arial,sans-serif; cursor:pointer; }
+html:not(.reconstruction-js) .map-details-toggle { display:none; }
 .contact-delivery-note { font:14px/1.5 Arial,sans-serif; }
 .reconstruction-2017 .btGoogleMapsWrapper { position:relative; }
-.reconstruction-2017 .btGoogleMapsContent { pointer-events:auto; position:absolute!important; top:0; bottom:0; left:max(20px,calc((100% - 1160px)/2)); width:320px; height:auto; display:flex; align-items:center; }
+.reconstruction-2017 .btGoogleMapsContent { pointer-events:auto; position:absolute!important; top:68px; bottom:56px; left:max(20px,calc((100% - 1160px)/2)); width:320px; height:auto; display:flex; align-items:center; }
+.reconstruction-2017 .btGoogleMapsContent[hidden] { display:none!important; }
 .reconstruction-2017 .btGoogleMapsWrap { width:100%; }
+.back-to-top { position:fixed; right:max(16px,env(safe-area-inset-right)); bottom:max(16px,env(safe-area-inset-bottom)); z-index:90; display:flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; background:#0a8f89; color:#fff!important; box-shadow:0 3px 12px #0003; font:26px/1 Arial,sans-serif; text-decoration:none; }
+html.reconstruction-js .back-to-top:not(.is-visible) { visibility:hidden; opacity:0; pointer-events:none; }
+.service-cards .boldRowInner { display:flex; align-items:stretch; }
+.service-cards .rowItem { display:flex; }
+.service-cards .rowItemContent { display:flex; flex-direction:column; width:100%; }
+.service-cards .rowItemContent > .btBtn { margin-top:auto; margin-bottom:20px; }
 .gallery-dialog { border:0; padding:0; min-width:44px; min-height:44px; max-width:95vw; max-height:95vh; background:transparent; }
 .gallery-dialog::backdrop { background:#000c; }
 .gallery-dialog img { display:block; max-width:90vw; max-height:85vh; object-fit:contain; }
@@ -72,7 +82,7 @@ html.reconstruction-js [data-rebuilt-slider] > .slidedItem:not(.is-active) { dis
  [data-rebuilt-slider] .btSliderPort { height:640px; min-height:640px; }
  [data-rebuilt-slider] .btSlideGutter { padding:20px; }
  [data-rebuilt-slider] .btSlidePane { width:100%; }
- .restored-map { height:330px; }
+ .restored-map { height:540px; }
  .reconstruction-2017 .topBarInLogoAreaCell { display:none; }
 }
 @media(max-width:620px) {
@@ -83,9 +93,13 @@ html.reconstruction-js [data-rebuilt-slider] > .slidedItem:not(.is-active) { dis
  [data-rebuilt-slider] .btSubTitle { font-size:17px!important; }
  .rowItem[style*="margin-top: -180px"] { margin-top:0!important; }
  .btGoogleMapsContent { position:relative!important; }
- .reconstruction-2017 .btGoogleMapsContent { position:relative!important; left:0; width:100%; }
+ .reconstruction-2017 .btGoogleMapsContent { position:relative!important; top:auto; bottom:auto; left:0; width:100%; }
  .btGoogleMapsContent .btGoogleMapsWrap { width:100%!important; }
- .reconstruction-2017 .restored-map > a { margin-left:0; }
+ .restored-map { height:350px; }
+ .map-details-toggle { position:relative; left:auto; top:auto; width:100%; border-radius:0; }
+ .service-cards .boldRowInner { display:block; }
+ .service-cards .rowItem { width:100%; }
+ .service-cards .rowItemContent > .btBtn { margin-top:16px; }
  .btSiteFooterWidgets .widget { text-align:center!important; }
 }
 @media(max-width:1000px) {
