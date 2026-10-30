@@ -57,6 +57,19 @@ Les affirmations et documents historiques sont conservés, sans actualisation.
 
 ## Publication
 
+Depuis le 30 octobre 2026, cette reconstruction est le site principal de
+https://banahealth.care/ (français) et https://banahealth.care/en/ (anglais).
+Les 36 anciennes adresses de l’aperçu `/historique-2017/` redirigent vers leurs
+pages équivalentes. La publication a vérifié les 265 fichiers et les 34 pages.
+Une archive privée des 299 fichiers du site précédent est conservée sur OVH,
+hors du document root ; les fichiers précédents restent également en place.
+La bascule modifie le `.htaccess` racine et les redirections de l’ancien aperçu.
+
+Exécutions de publication :
+- https://github.com/xtincell/banahealth/actions/runs/41051052847
+- https://github.com/xtincell/banahealth/actions/runs/41053569342
+
+
 `site/` est le seul dossier à servir. Il est prévu pour la racine d'un hôte
 de prévisualisation dédié. Ses chemins absolus ne permettent pas de le déposer
 tel quel dans un sous-dossier du site actuel. La configuration Apache fournie
