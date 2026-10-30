@@ -46,26 +46,26 @@
           "seo": 100
         },
         "metrics": {
-          "first-contentful-paint": 903.1201000000001,
-          "largest-contentful-paint": 2253.1201,
+          "first-contentful-paint": 904.4489000000001,
+          "largest-contentful-paint": 2254.4489,
           "cumulative-layout-shift": 0.0001823955464516125,
-          "total-byte-weight": 201441
+          "total-byte-weight": 201646
         }
       },
       "services": {
         "url": "http://127.0.0.1:4320/nos-services/",
         "lighthouse_version": "13.6.0",
         "scores": {
-          "performance": 94,
+          "performance": 96,
           "accessibility": 94,
           "best-practices": 100,
           "seo": 100
         },
         "metrics": {
-          "first-contentful-paint": 942.8311000000001,
-          "largest-contentful-paint": 3078.8311000000003,
+          "first-contentful-paint": 754.0147999999999,
+          "largest-contentful-paint": 2704.0148,
           "cumulative-layout-shift": 0.0002147384417751583,
-          "total-byte-weight": 348832
+          "total-byte-weight": 348976
         }
       }
     }
@@ -248,5 +248,86 @@
       },
       "note": "Single unthrottled browser probe through the session proxy; not real-user Core Web Vitals."
     }
+  },
+  "prior_after_measurement": {
+    "home": {
+      "url": "http://127.0.0.1:4320/",
+      "lighthouse_version": "13.6.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 88,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 903.1201000000001,
+        "largest-contentful-paint": 2253.1201,
+        "cumulative-layout-shift": 0.0001823955464516125,
+        "total-byte-weight": 201441
+      }
+    },
+    "services": {
+      "url": "http://127.0.0.1:4320/nos-services/",
+      "lighthouse_version": "13.6.0",
+      "scores": {
+        "performance": 94,
+        "accessibility": 94,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 942.8311000000001,
+        "largest-contentful-paint": 3078.8311000000003,
+        "cumulative-layout-shift": 0.0002147384417751583,
+        "total-byte-weight": 348832
+      }
+    }
+  },
+  "final_icon_checks_local": {
+    "origin": "http://127.0.0.1:4320",
+    "checks": [
+      {
+        "route": "/",
+        "width": 390,
+        "icons": 3
+      },
+      {
+        "route": "/contact/",
+        "width": 390,
+        "icons": 6
+      },
+      {
+        "route": "/en/contact/",
+        "width": 390,
+        "icons": 6
+      },
+      {
+        "route": "/soins-medicaux/",
+        "width": 390,
+        "icons": 0
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "icons": 3
+      },
+      {
+        "route": "/contact/",
+        "width": 1440,
+        "icons": 6
+      },
+      {
+        "route": "/en/contact/",
+        "width": 1440,
+        "icons": 6
+      },
+      {
+        "route": "/soins-medicaux/",
+        "width": 1440,
+        "icons": 0
+      }
+    ],
+    "errors": [],
+    "status": "passed"
   }
 }

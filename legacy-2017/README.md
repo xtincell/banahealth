@@ -99,7 +99,7 @@ Exécutions de publication :
 Les mesures comparatives et contrôles sont conservés dans
 [`review-quality/verification.json`](review-quality/verification.json).
 Lighthouse mobile sur le même serveur Apache de test : performance 47 → 99
-pour l’accueil et 57 → 94 pour les services ; SEO technique 100 pour ces deux
+pour l’accueil et 57 → 96 pour les services ; SEO technique 100 pour ces deux
 pages. Ces mesures ne constituent pas un contrôle des contenus médicaux ou
 juridiques historiques. Les contrastes de la palette historique restent une
 limite de l’audit d’accessibilité. Les liens externes remplacés sont contrôlés
