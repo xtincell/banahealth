@@ -86,6 +86,10 @@ https://banahealth.care/ (français) et https://banahealth.care/en/ (anglais).
 Les 36 anciennes adresses de l’aperçu `/historique-2017/` redirigent vers leurs
 pages équivalentes. La publication initiale a vérifié 265 fichiers et 34 pages.
 La révision optimisée du même jour contient 239 fichiers pour les mêmes 34 pages.
+La correction finale publie 37 fichiers (pages HTML, sitemap et robots.txt), en réutilisant
+202 ressources immuables déjà vérifiées. `prepare_html_revision.py` prépare ce
+type de révision ; `verify_icons.py` contrôle la géométrie des icônes sur mobile
+et ordinateur ainsi que le repli sans JavaScript.
 Une archive privée des 299 fichiers du site précédent est conservée sur OVH,
 hors du document root ; les fichiers précédents restent également en place.
 La bascule modifie le `.htaccess` racine et les redirections de l’ancien aperçu.
@@ -95,6 +99,7 @@ Exécutions de publication :
 - https://github.com/xtincell/banahealth/actions/runs/41053569342
 - https://github.com/xtincell/banahealth/actions/runs/41068639865 (performances, SEO, icônes et liens)
 - https://github.com/xtincell/banahealth/actions/runs/41069886682 (cache des ressources vérifié en HTTPS)
+- https://github.com/xtincell/banahealth/actions/runs/41072328136 (alignement final des icônes de contact)
 
 Les mesures comparatives et contrôles sont conservés dans
 [`review-quality/verification.json`](review-quality/verification.json).

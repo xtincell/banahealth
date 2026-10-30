@@ -219,9 +219,12 @@
   ],
   "publication": {
     "url": "https://banahealth.care/",
-    "release": "legacy-2017-20261030-optimise",
-    "workflow": "https://github.com/xtincell/banahealth/actions/runs/41068639865",
-    "cache_workflow": "https://github.com/xtincell/banahealth/actions/runs/41069886682"
+    "release": "legacy-2017-20261030-optimise-final",
+    "workflow": "https://github.com/xtincell/banahealth/actions/runs/41072328136",
+    "pages_verified_over_https": 34,
+    "new_files_verified_over_sftp": 37,
+    "previous_immutable_assets_reused": 202,
+    "html_and_asset_cache_headers_verified": true
   },
   "initial_live_check": {
     "result": "One HTTP 503 while requesting /historique-2017/fr/surgeries/. Direct recheck returned 200 at /interventions-chirurgicales/. The subsequent complete browser check passed without retries.",
@@ -329,5 +332,61 @@
     ],
     "errors": [],
     "status": "passed"
-  }
+  },
+  "publication_history": [
+    {
+      "url": "https://banahealth.care/",
+      "release": "legacy-2017-20261030-optimise",
+      "workflow": "https://github.com/xtincell/banahealth/actions/runs/41068639865",
+      "cache_workflow": "https://github.com/xtincell/banahealth/actions/runs/41069886682"
+    }
+  ],
+  "final_icon_checks_live": {
+    "origin": "https://banahealth.care",
+    "checks": [
+      {
+        "route": "/",
+        "width": 390,
+        "icons": 3
+      },
+      {
+        "route": "/contact/",
+        "width": 390,
+        "icons": 6
+      },
+      {
+        "route": "/en/contact/",
+        "width": 390,
+        "icons": 6
+      },
+      {
+        "route": "/soins-medicaux/",
+        "width": 390,
+        "icons": 0
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "icons": 3
+      },
+      {
+        "route": "/contact/",
+        "width": 1440,
+        "icons": 6
+      },
+      {
+        "route": "/en/contact/",
+        "width": 1440,
+        "icons": 6
+      },
+      {
+        "route": "/soins-medicaux/",
+        "width": 1440,
+        "icons": 0
+      }
+    ],
+    "errors": [],
+    "status": "passed"
+  },
+  "live_browser_checks_release": "legacy-2017-20261030-optimise"
 }
