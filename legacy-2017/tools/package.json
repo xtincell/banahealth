@@ -1,0 +1,11 @@
+{
+  "name": "banahealth-static-quality-build",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build-time CSS optimisation; no browser dependencies",
+  "dependencies": {
+    "cssnano": "9.9.0",
+    "postcss": "8.5.32",
+    "purgecss": "8.0.0"
+  }
+}

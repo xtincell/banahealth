@@ -1,0 +1,17 @@
+{
+  "http://www.dgmc.co.za/": "https://www.mediclinic.co.za/en/wits-donald-gordon-medical-centre/home.html",
+  "http://www.netcare.co.za/Hospitals/moduleId/2416/HospitalId/189/controller/HospitalDetail/action/Detail": "https://www.netcare.co.za/netcare-facilities/netcare-milpark-hospital",
+  "http://www.netcare.co.za/Hospitals/moduleId/2416/HospitalId/202/controller/HospitalDetail/action/Detail": "https://www.netcare.co.za/netcare-facilities/netcare-rosebank-hospital",
+  "http://www.netcare.co.za/Hospitals/moduleId/2416/HospitalId/198/controller/HospitalDetail/action/Detail": "https://www.netcare.co.za/netcare-facilities/netcare-sunninghill-hospital",
+  "http://www.medfem.co.za/": "https://medfem.co.za/",
+  "http://www.mediclinic.co.za/Hospitals/HospitalDetails/id/24": "https://www.mediclinic.co.za/en/corporate/hospitals/hospitals-in-johannesburg.html",
+  "http://www.lifehealthcare.co.za/": "https://www.lifehealthcare.co.za/",
+  "http://www.dirco.gov.za/webmissions/": "https://dirco.gov.za/south-african-representation-abroad/",
+  "http://www.hpcsa.co.za/": "https://www.hpcsa.co.za/",
+  "http://www.southafrica.net": "https://www.southafrica.net/",
+  "http://www.joburgtourism.com/things-to-do": "https://visit.joburg/",
+  "http://www.gauteng.net/resources/factsheets/general-facts": "https://www.gauteng.net/visit/",
+  "http://www.weathersa.co.za/": "https://www.weathersa.co.za/",
+  "https://www.samedical.org/about-us/main": "https://samedical.org/",
+  "http://data.worldbank.org/indicator/SH.SGR.PROC.P5": "https://data.worldbank.org/indicator/SH.SGR.PROC.P5"
+}

@@ -14,6 +14,7 @@ from xml.sax.saxutils import escape
 
 from bs4 import BeautifulSoup
 from build import PATHS, ROOT, aliases
+from quality import optimise
 
 ORIGIN='https://banahealth.care'
 EN={'meet-the-founder':'our-founder','services':'our-services',
@@ -69,7 +70,7 @@ def prepare(output, release_id):
         destination=tree/url.lstrip('/')/'index.html'
         destination.parent.mkdir(parents=True,exist_ok=True)
         destination.write_text(str(soup))
-        pages.append({'path':destination.relative_to(tree).as_posix(),'url':url,'lang':item['lang'],'source':item['source']})
+        pages.append({'path':destination.relative_to(tree).as_posix(),'url':url,'lang':item['lang'],'slug':slug,'source':item['source']})
     for filename in ('reconstruction.js','reconstruction.css'):
         text=(ROOT/filename).read_text()
         if filename.endswith('.js'):
@@ -84,6 +85,7 @@ def prepare(output, release_id):
         else:text=css(text)
         (tree/filename).write_text(text)
     for file in (tree/'assets').rglob('*.css'):file.write_text(css(file.read_text()))
+    schema_hash=optimise(tree,mount,pages,canonical_route)
     not_found=BeautifulSoup((tree/'index.html').read_text(),'html.parser')
     not_found.title.string='Page introuvable - BanaHealth'
     not_found.select_one('link[rel=canonical]').decompose()
@@ -93,7 +95,7 @@ def prepare(output, release_id):
     content.append(BeautifulSoup('<section class="boldSection gutter topSpaced bottomSpaced"><div class="port"><h1>Page introuvable</h1><p>Cette adresse n’est plus disponible.</p><p><a href="/">Revenir à l’accueil</a> · <a href="/contact/">Nous contacter</a></p></div></section>','html.parser'))
     (tree/'404.html').write_text(str(not_found))
     (tree/'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /_banahealth-releases/\nAllow: '+mount+'assets/\nAllow: '+mount+'reconstruction.css\nAllow: '+mount+'reconstruction.js\nDisallow: /nouveau/\nSitemap: '+ORIGIN+'/sitemap.xml\n')
-    (tree/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+escape(ORIGIN+p['url'])+'</loc></url>'for p in pages)+'</urlset>\n')
+    (tree/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+escape(ORIGIN+p['url'])+'</loc></url>'for p in pages if p['indexable'])+'</urlset>\n')
 
     rules=['# BanaHealth historical design, immutable release '+release_id,
         'Options -Indexes -ExecCGI','DirectoryIndex index.html',
@@ -167,9 +169,11 @@ def prepare(output, release_id):
         'Header always set Referrer-Policy "strict-origin-when-cross-origin"',
         'Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"',
         'Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"',
-        'Header always set Content-Security-Policy "default-src \'self\'; script-src \'self\'; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; img-src \'self\' data:; font-src \'self\' data: https://fonts.gstatic.com; connect-src \'self\'; frame-src https://www.google.com; object-src \'none\'; base-uri \'self\'; form-action \'self\' mailto:; frame-ancestors \'self\'"',
+        'Header always set Content-Security-Policy "default-src \'self\'; script-src \'self\' \''+schema_hash+'\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data:; font-src \'self\'; connect-src \'self\'; frame-src https://www.google.com; object-src \'none\'; base-uri \'self\'; form-action \'self\' mailto:; frame-ancestors \'self\'"',
         '<FilesMatch "\\.(html|css|js)$">','Header set Cache-Control "no-cache, must-revalidate"','</FilesMatch>',
+        'Header set Cache-Control "public, max-age=31536000, immutable" "expr=%{REQUEST_URI} =~ m#^/_banahealth-releases/[a-z0-9-]+/(assets/|reconstruction\\.js$)#"',
         '</IfModule>','ErrorDocument 404 /404.html',
+        'AddType font/woff2 .woff2','AddType image/webp .webp',
         '<IfModule mod_deflate.c>','AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript image/svg+xml','</IfModule>'])
     (output/'production.htaccess').write_text('\n'.join(rules)+'\n')
     files=[{'path':p.relative_to(tree).as_posix(),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}for p in sorted(tree.rglob('*'))if p.is_file()]

@@ -4,7 +4,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urljoin
 
 from playwright.sync_api import sync_playwright
 
@@ -19,6 +19,15 @@ def verify(release, origin, output, live=False):
         page=context.new_page()
         page.on('pageerror',lambda e:report['errors'].append({'script':str(e)}))
         page.on('response',lambda r:report['errors'].append({'url':r.url,'status':r.status})if r.url.startswith(origin)and r.status>=400 and '/unavailable-check/'not in r.url else None)
+        def follow_local(path):
+            url=origin+path
+            for _ in range(8):
+                response=context.request.get(url,max_redirects=0)
+                if response.status not in (301,302,307,308):return response
+                target=urlsplit(urljoin(url,response.headers['location']))
+                assert target.hostname in ('banahealth.care',urlsplit(origin).hostname),target
+                url=origin+target.path+('?' + target.query if target.query else '')
+            raise AssertionError('Redirect loop: '+path)
         for width in (390,768,1440):
             page.set_viewport_size({'width':width,'height':900})
             for item in manifest['pages']:
@@ -27,20 +36,21 @@ def verify(release, origin, output, live=False):
                 assert hashlib.sha256(response.body()).hexdigest()==expected[item['path']],item
                 assert page.locator('html').get_attribute('lang')==item['lang']
                 assert 'noindex'not in response.headers.get('x-robots-tag',''),item
-                assert page.locator('link[rel=canonical]').get_attribute('href')=='https://banahealth.care'+item['url']
-                page.wait_for_function("() => [...document.images].every(i=>!i.getAttribute('src')||(i.complete&&i.naturalWidth>0))")
+                if item.get('indexable',True):assert page.locator('link[rel=canonical]').get_attribute('href')=='https://banahealth.care'+item['url']
+                assert page.locator('h1').count()==1
+                page.wait_for_function("() => [...document.images].filter(i=>i.loading!=='lazy').every(i=>!i.getAttribute('src')||(i.complete&&i.naturalWidth>0))")
                 measure=page.evaluate('({overflow:document.documentElement.scrollWidth-innerWidth})')
                 assert measure['overflow']<=1,(item['url'],width,measure)
                 report['visits']+=1
             print('Browser width verified:',width,flush=True)
         report['pages']=len(manifest['pages'])
         for source,target in manifest['redirects'].items():
-            response=context.request.get(origin+source)
+            response=follow_local(source)
             assert response.status==200,(source,response.status)
             assert urlsplit(response.url).path==target,(source,target,response.url)
             report['redirects']+=1
         for source,target in [('?lang=en','/en/'),('/en/?lang=fr','/'),('/services/?lang=fr','/nos-services/'),('/notre-fondatrice/?lang=en','/en/our-founder/'),('/wordpress/contact-us/?lang=fr','/contact/'),('/index.php?lang=en','/en/')]:
-            response=context.request.get(origin+('/'if source.startswith('?')else'')+source)
+            response=follow_local(('/'if source.startswith('?')else'')+source)
             assert response.status==200 and urlsplit(response.url).path==target,(source,response.url)
         report['interactions'].append('legacy URLs and language queries')
         response=context.request.get(origin+'/unavailable-check/')

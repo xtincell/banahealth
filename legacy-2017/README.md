@@ -20,6 +20,9 @@ Les anciennes sélections `?lang=fr` et `?lang=en` sont prises en charge.
 ```sh
 python -m pip install -r legacy-2017/requirements.txt
 python legacy-2017/scripts/build.py
+npm ci --prefix legacy-2017/tools
+python legacy-2017/scripts/prepare_main.py /chemin/prive/version-neuve --release-id legacy-2017-aaaammjj-version
+python legacy-2017/scripts/verify_quality.py /chemin/prive/version-neuve
 ```
 
 Les HTML nettoyés, les ressources archivées et leurs provenances figurent dans
@@ -33,6 +36,27 @@ Pour les contrôles de navigateur, installer `requirements-review.txt` et
 Chromium avec `python -m playwright install chromium`, démarrer le serveur
 ci-dessus, puis lancer `python legacy-2017/scripts/verify.py`.
 Le résultat est écrit dans `review/verification.json`.
+
+La préparation principale optimise les images en WebP avec dimensions et tailles
+adaptatives, sous-ensembles de polices WOFF2 locales et une feuille CSS par page.
+Les icônes sont des tracés SVG issus des glyphes d’origine, intégrés au HTML.
+La carte se charge à l’approche de la zone visible ; le diaporama ne télécharge
+que les photographies affichées. Les ressources de chaque version immuable
+reçoivent un cache d’un an ; le HTML reste revalidé.
+
+`quality-metadata.json` centralise les titres et descriptions bilingues.
+`quality-links.json` centralise les remplacements des anciennes URL externes.
+Les deux documents juridiques anglais affichés dans l’interface française sont
+marqués en anglais, exclus du sitemap et non indexables ; leur canonique pointe
+vers la version anglaise, pour éviter l’indexation de doublons sans traduction.
+Le build ne requiert le réseau que pour l’installation initiale des dépendances.
+
+`verify_quality.py` contrôle les titres, descriptions, H1, SVG, dimensions et
+alternatives des images, liens internes, formulaires, hreflang et sitemap.
+`verify_main.py` vérifie avec Apache les 34 pages à 390, 768 et 1440 pixels,
+les redirections et les interactions (menus, langues, carte, galerie, diaporama).
+Les rapports Lighthouse sont des mesures de laboratoire, pas des données de
+visiteurs réels ni une promesse de classement dans les moteurs de recherche.
 
 ## Fidélité et limites
 
