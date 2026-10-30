@@ -92,7 +92,7 @@ def prepare(output, release_id):
     content=not_found.select_one('.btContent');content.clear()
     content.append(BeautifulSoup('<section class="boldSection gutter topSpaced bottomSpaced"><div class="port"><h1>Page introuvable</h1><p>Cette adresse n’est plus disponible.</p><p><a href="/">Revenir à l’accueil</a> · <a href="/contact/">Nous contacter</a></p></div></section>','html.parser'))
     (tree/'404.html').write_text(str(not_found))
-    (tree/'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /_banahealth-releases/\nDisallow: /nouveau/\nSitemap: '+ORIGIN+'/sitemap.xml\n')
+    (tree/'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /_banahealth-releases/\nAllow: '+mount+'assets/\nAllow: '+mount+'reconstruction.css\nAllow: '+mount+'reconstruction.js\nDisallow: /nouveau/\nSitemap: '+ORIGIN+'/sitemap.xml\n')
     (tree/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+escape(ORIGIN+p['url'])+'</loc></url>'for p in pages)+'</urlset>\n')
 
     rules=['# BanaHealth historical design, immutable release '+release_id,
@@ -103,6 +103,8 @@ def prepare(output, release_id):
         'RewriteRule ^ https://banahealth.care%{REQUEST_URI} [R=301,L]',
         'RewriteCond %{HTTPS} !=on','RewriteCond %{HTTP:X-Forwarded-Proto} !https',
         'RewriteRule ^ https://banahealth.care%{REQUEST_URI} [R=301,L]',
+        'RewriteCond %{THE_REQUEST} "\\s/+[^\\s?]*index\\.html(?:[\\s?])"',
+        'RewriteRule ^(.*/)?index\\.html$ /$1 [R=301,L]',
         'RewriteRule ^wordpress(?:/(.*))?$ /$1 [R=301,L]',
         'RewriteRule ^index\\.php$ / [R=301,L,NC]',
         'RewriteRule (^|/)index\\.php(?:/|$) - [F,L,NC]']
