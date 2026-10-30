@@ -1306,8 +1306,8 @@
     },
     {
       "path": "robots.txt",
-      "bytes": 121,
-      "sha256": "22b42e00979bf5c63993963b8bde208c056a726197ebfc66ce0d59e508c219ad"
+      "bytes": 316,
+      "sha256": "c82720ac5a77b689b45ca911621d3b55b2a632f546a40d61e6482fa6f1873566"
     },
     {
       "path": "sitemap.xml",
@@ -1798,5 +1798,5 @@
     "/blog/": "/en/",
     "/cookie-policy/": "/en/privacy-policy/"
   },
-  "htaccess_sha256": "07db82e1e71b2d5464d94a4300c5ec310d11611e1b0b4b805bb7e826e7144141"
+  "htaccess_sha256": "8b28b1a597370d22fe83f63ed5adc90eb5dbecf0b2c1c60857fd98849f90cfbb"
 }

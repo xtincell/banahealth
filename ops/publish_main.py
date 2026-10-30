@@ -13,7 +13,7 @@ import urllib.error
 import urllib.request
 
 from publish_2017 import (HOST, USER, HOST_KEY, X25519PrivateKey, unb64,
-    publish_key, await_password, sha256, public_bytes, sftp_read)
+    publish_key, await_password, sha256, public_bytes, api)
 
 BASE='https://banahealth.care'
 
@@ -42,47 +42,50 @@ def write(sftp,path,data,mode=0o644):
     with sftp.open(path,'wb')as f:f.set_pipelined(True);f.write(data)
     sftp.chmod(path,mode)
 
+def progress(message):
+    print(json.dumps({'progress':message}),flush=True)
+    try:api('statuses/'+os.environ['GITHUB_SHA'],{'state':'pending','context':'ovh-main/progress/'+os.environ['GITHUB_RUN_ID'],'description':message[:130]})
+    except Exception:pass
+
+def sftp_read(sftp,path,limit):
+    with sftp.open(path,'rb')as stream:
+        size=stream.stat().st_size
+        if size>limit:raise ValueError('Remote file exceeds expected size')
+        if size>131072:stream.prefetch(file_size=size,max_concurrent_requests=32)
+        data=stream.read(size)
+    if len(data)!=size:raise ValueError('Incomplete remote file')
+    return data
+
 def backup_site(client,sftp,home,parent,backup):
-    """Save a complete snapshot outside the document root. Exclude prior previews."""
-    target=backup+'/site-before.tar.gz'
-    command='umask 077; tar -czf '+shlex.quote(target)+' --exclude=banahealth_2/historique-2017 --exclude=banahealth_2/_banahealth-releases -C '+shlex.quote(home)+' banahealth_2'
-    try:
-        stdin,stdout,stderr=client.exec_command(command,timeout=180)
-        code=stdout.channel.recv_exit_status()
-        if code==0 and sftp.stat(target).st_size>0:
-            sftp.chmod(target,0o600)
-            print(json.dumps({'backup':'complete_site_archive','bytes':sftp.stat(target).st_size,'method':'server_tar'}),flush=True)
-            return
-    except Exception:
-        pass
-    # OVH plans may permit SFTP but not shell commands.
+    # Build the snapshot in the disposable runner, then upload it privately.
+    # Never open an SSH command channel on the SFTP-only hosting account.
     def walk(path,prefix=''):
         for item in sftp.listdir_attr(path):
             if not prefix and item.filename in ('historique-2017','_banahealth-releases'):continue
             name=prefix+item.filename;full=path+'/'+item.filename
             if stat.S_ISDIR(item.st_mode):yield from walk(full,name+'/')
-            elif stat.S_ISREG(item.st_mode):yield full,name,item
-            elif stat.S_ISLNK(item.st_mode):yield full,name,item
+            elif stat.S_ISREG(item.st_mode)or stat.S_ISLNK(item.st_mode):yield full,name,item
             else:raise ValueError('Unexpected non-file in website backup')
-    files=list(walk(parent))
-    if len(files)>10000 or sum(x[2].st_size for x in files)>1_000_000_000:
-        raise ValueError('Website backup requires separate capacity planning')
-    with sftp.open(target,'wb')as dest:
-        dest.set_pipelined(True)
-        with tarfile.open(fileobj=dest,mode='w|gz')as archive:
-            for i,(full,name,attrs)in enumerate(files,1):
-                info=tarfile.TarInfo('banahealth_2/'+name);info.mode=stat.S_IMODE(attrs.st_mode);info.mtime=attrs.st_mtime
-                if stat.S_ISLNK(attrs.st_mode):
-                    info.type=tarfile.SYMTYPE;info.linkname=sftp.readlink(full);archive.addfile(info)
-                else:
-                    info.size=attrs.st_size
-                    with sftp.open(full,'rb')as source:
-                        source.prefetch(file_size=attrs.st_size,max_concurrent_requests=32)
-                        archive.addfile(info,source)
-                if i%100==0:print('Backup files:',i,'/',len(files),flush=True)
-    sftp.chmod(target,0o600)
-    if sftp.stat(target).st_size<=0:raise ValueError('Empty site backup')
-    print(json.dumps({'backup':'complete_site_archive','bytes':sftp.stat(target).st_size,'method':'sftp_tar','files':len(files)}),flush=True)
+    progress('Inventorying current website for backup')
+    files=list(walk(parent));total=sum(x[2].st_size for x in files)
+    if len(files)>10000 or total>1_000_000_000:raise ValueError('Website backup requires separate capacity planning')
+    progress(f'Backing up {len(files)} files ({total} bytes)')
+    local=Path(os.environ['RUNNER_TEMP'])/'banahealth-before-main.tar.gz'
+    with tarfile.open(local,'w:gz',compresslevel=1)as archive:
+        for i,(full,name,attrs)in enumerate(files,1):
+            info=tarfile.TarInfo('banahealth_2/'+name);info.mode=stat.S_IMODE(attrs.st_mode);info.mtime=attrs.st_mtime
+            if stat.S_ISLNK(attrs.st_mode):
+                info.type=tarfile.SYMTYPE;info.linkname=sftp.readlink(full);archive.addfile(info)
+            else:
+                data=sftp_read(sftp,full,attrs.st_size);info.size=len(data);archive.addfile(info,io.BytesIO(data))
+            if i%80==0:progress(f'Backup files read: {i}/{len(files)}')
+    target=backup+'/site-before.tar.gz'
+    progress('Uploading private backup archive')
+    sftp.put(str(local),target,confirm=True);sftp.chmod(target,0o600)
+    if sha256(sftp_read(sftp,target,local.stat().st_size))!=sha256(local.read_bytes()):raise ValueError('Backup archive checksum mismatch')
+    progress('Full website backup verified')
+    print(json.dumps({'backup':'complete_site_archive','bytes':local.stat().st_size,'method':'sftp_tar','files':len(files)}),flush=True)
+
 
 def verify_http(path,expected):
     for attempt in range(8):
@@ -95,6 +98,7 @@ def verify_http(path,expected):
 
 def deploy(client,m,tree,rules,run):
     sftp=client.open_sftp();sftp.get_channel().settimeout(120)
+    progress('Reading current hosting configuration')
     home=sftp.normalize('.');sftp.chdir('banahealth_2');parent=sftp.normalize('.')
     if not parent.endswith('/banahealth_2'):raise ValueError('Unexpected document root')
     old_rules=sftp_read(sftp,'.htaccess',2_000_000)
@@ -124,8 +128,9 @@ def deploy(client,m,tree,rules,run):
         sftp.put(str(tree/f['path']),path,confirm=True);sftp.chmod(path,0o644)
         body=sftp_read(sftp,path,f['bytes'])
         if len(body)!=f['bytes']or sha256(body)!=f['sha256']:raise ValueError('Upload checksum mismatch')
-        if i%40==0:print('Uploaded and verified:',i,'/',len(m['files']),flush=True)
+        if i%40==0:progress(f'Uploaded and verified: {i}/{len(m["files"])}')
     sftp.rename(stage,final)
+    progress('Verifying staged pages over HTTPS')
     for item in m['pages']:
         expected=next(f['sha256']for f in m['files']if f['path']==item['path'])
         verify_http(m['mount']+item['path'],expected)
@@ -136,6 +141,7 @@ def deploy(client,m,tree,rules,run):
     if sha256(sftp_read(sftp,activation,len(rules)))!=m['htaccess_sha256']:
         raise ValueError('Activation file checksum mismatch')
     # OVH OpenSSH supports the POSIX rename extension: readers see old or new rules.
+    progress('Activating historical website on main domain')
     sftp.posix_rename(activation,'.htaccess')
     print(json.dumps({'status':'main_activated','release':m['release_id']}),flush=True)
     try:
@@ -158,7 +164,9 @@ def deploy(client,m,tree,rules,run):
         'previous_site_files_preserved':True,'activation_sha256':m['htaccess_sha256']}
     write(sftp,backup+'/publication-result.json',json.dumps(result).encode(),0o600)
     Path(os.environ['RUNNER_TEMP'],'ovh-main-publication-result.json').write_text(json.dumps(result))
-    print(json.dumps(result),flush=True);sftp.close()
+    print(json.dumps(result),flush=True)
+    api('statuses/'+os.environ['GITHUB_SHA'],{'state':'success','context':'ovh-main/progress/'+run,'description':'Historical website active; 34 pages verified'})
+    sftp.close()
 
 def main():
     import paramiko
