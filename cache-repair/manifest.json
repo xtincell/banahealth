@@ -1,0 +1,7 @@
+{
+  "expected_htaccess_sha256": "20f0f37c6f76727718ce3de5d075c2ef456ba485390e7ba44c12480a882ae1fc",
+  "new_htaccess_sha256": "12afaf1a57a4523954783be5054ad942de71d27b621d1670cdb5585c5d580f3d",
+  "release_id": "legacy-2017-20261030-optimise",
+  "homepage_sha256": "ea70090c8ce4a218f4e2ef77f417534e5389e6fa5c835a1eeb01429a8be709fe",
+  "css": "https://banahealth.care/_banahealth-releases/legacy-2017-20261030-optimise/assets/site-6934b2451819.css"
+}

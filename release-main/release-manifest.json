@@ -1736,7 +1736,7 @@
     "/blog/": "/en/",
     "/cookie-policy/": "/en/privacy-policy/"
   },
-  "htaccess_sha256": "20f0f37c6f76727718ce3de5d075c2ef456ba485390e7ba44c12480a882ae1fc",
+  "htaccess_sha256": "12afaf1a57a4523954783be5054ad942de71d27b621d1670cdb5585c5d580f3d",
   "previous_activation": {
     "release_id": "legacy-2017-20261030",
     "htaccess_sha256": "8b28b1a597370d22fe83f63ed5adc90eb5dbecf0b2c1c60857fd98849f90cfbb",
