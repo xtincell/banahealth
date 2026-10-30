@@ -170,7 +170,7 @@ def prepare(output, release_id):
         'Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"',
         'Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"',
         'Header always set Content-Security-Policy "default-src \'self\'; script-src \'self\' \''+schema_hash+'\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data:; font-src \'self\'; connect-src \'self\'; frame-src https://www.google.com; object-src \'none\'; base-uri \'self\'; form-action \'self\' mailto:; frame-ancestors \'self\'"',
-        '<FilesMatch "\\.(html|css|js)$">','Header set Cache-Control "no-cache, must-revalidate"','</FilesMatch>',
+        '<FilesMatch "\\.html$">','Header set Cache-Control "no-cache, must-revalidate"','</FilesMatch>',
         'Header set Cache-Control "public, max-age=31536000, immutable" "expr=%{REQUEST_URI} =~ m#^/_banahealth-releases/[a-z0-9-]+/(assets/|reconstruction\\.js$)#"',
         '</IfModule>','ErrorDocument 404 /404.html',
         'AddType font/woff2 .woff2','AddType image/webp .webp',

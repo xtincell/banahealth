@@ -84,7 +84,8 @@ Les affirmations et documents historiques sont conservés, sans actualisation.
 Depuis le 30 octobre 2026, cette reconstruction est le site principal de
 https://banahealth.care/ (français) et https://banahealth.care/en/ (anglais).
 Les 36 anciennes adresses de l’aperçu `/historique-2017/` redirigent vers leurs
-pages équivalentes. La publication a vérifié les 265 fichiers et les 34 pages.
+pages équivalentes. La publication initiale a vérifié 265 fichiers et 34 pages.
+La révision optimisée du même jour contient 239 fichiers pour les mêmes 34 pages.
 Une archive privée des 299 fichiers du site précédent est conservée sur OVH,
 hors du document root ; les fichiers précédents restent également en place.
 La bascule modifie le `.htaccess` racine et les redirections de l’ancien aperçu.
@@ -92,11 +93,23 @@ La bascule modifie le `.htaccess` racine et les redirections de l’ancien aper�
 Exécutions de publication :
 - https://github.com/xtincell/banahealth/actions/runs/41051052847
 - https://github.com/xtincell/banahealth/actions/runs/41053569342
+- https://github.com/xtincell/banahealth/actions/runs/41068639865 (performances, SEO, icônes et liens)
+- https://github.com/xtincell/banahealth/actions/runs/41069886682 (cache des ressources vérifié en HTTPS)
 
+Les mesures comparatives et contrôles sont conservés dans
+[`review-quality/verification.json`](review-quality/verification.json).
+Lighthouse mobile sur le même serveur Apache de test : performance 47 → 99
+pour l’accueil et 57 → 94 pour les services ; SEO technique 100 pour ces deux
+pages. Ces mesures ne constituent pas un contrôle des contenus médicaux ou
+juridiques historiques. Les contrastes de la palette historique restent une
+limite de l’audit d’accessibilité. Les liens externes remplacés sont contrôlés
+séparément ; certains sites tiers refusent les requêtes automatiques.
 
-`site/` est le seul dossier à servir. Il est prévu pour la racine d'un hôte
-de prévisualisation dédié. Ses chemins absolus ne permettent pas de le déposer
-tel quel dans un sous-dossier du site actuel. La configuration Apache fournie
+`site/` sert à la prévisualisation brute des archives, à la racine d’un hôte
+dédié. En production, le dossier `webroot/` produit par `prepare_main.py` est
+servi sous le chemin de version indiqué par son manifeste, via le `.htaccess`
+racine fourni. Ne pas publier le dossier `site/` brut comme version optimisée.
+La configuration Apache de prévisualisation fournie
 refuse l'indexation et l'exécution de scripts serveur. Le serveur Python de
 revue ne lit pas cette configuration Apache.
 
@@ -115,7 +128,18 @@ paramètres `lang` peuvent être traités d'abord par les règles de la racine O
 
 L’aperçu historique a été publié le 29 octobre 2026. Le 30 octobre, le propriétaire a demandé son passage sur le domaine principal et la correction des interactions. `scripts/prepare_main.py` prépare les URL françaises existantes à la racine et anglaises sous `/en/`, les redirections, les balises canoniques et le sitemap. `scripts/verify_main.py` teste le résultat avec Apache. La publication principale utilise une version immuable sous `/_banahealth-releases/` et un remplacement atomique du seul `.htaccess` racine. Les fichiers du site précédent restent présents ; une archive privée hors du document root permet également la restauration.
 
-### Client de transfert FTPS
+### Connexion et transfert
+
+La publication OVH utilise SFTP avec vérification de la clé d’hôte, depuis une
+exécution GitHub Actions. Le mot de passe est chiffré pour la clé éphémère de
+cette seule exécution ; la clé privée ne quitte pas la mémoire du processus.
+La capsule chiffrée est retirée de la branche après usage. Les scripts actifs
+figurent dans la branche `codex/historique-main-20261030`, sous `ops/`.
+La sauvegarde privée et la comparaison d’empreintes précèdent la bascule
+atomique du routage. La version précédente reste disponible pour restauration.
+
+Le client FTPS ci-dessous a servi à explorer la connexion ; ce serveur OVH ne
+prend pas en charge AUTH TLS. Il n’est pas utilisé pour la publication actuelle.
 
 `scripts/ovh_ftps.py` fournit un client de transfert sans dépendance externe,
 avec trois commandes : `probe`, `inventory` et `publish`. Il vérifie TLS avant

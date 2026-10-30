@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import os
+import time
 from pathlib import Path
 from urllib.parse import urlsplit, urljoin
 
@@ -11,7 +12,7 @@ from playwright.sync_api import sync_playwright
 def verify(release, origin, output, live=False):
     manifest=json.loads((release/'release-manifest.json').read_text())
     expected={f['path']:f['sha256']for f in manifest['files']}
-    report={'origin':origin,'pages':0,'redirects':0,'visits':0,'errors':[], 'interactions':[]}
+    report={'origin':origin,'pages':0,'redirects':0,'visits':0,'errors':[], 'interactions':[], 'http_retries':[]}
     headers={}
     with sync_playwright()as p:
         browser=p.chromium.launch(args=['--no-sandbox'],proxy={'server':os.environ['HTTPS_PROXY'],'bypass':'127.0.0.1,localhost'})
@@ -22,7 +23,11 @@ def verify(release, origin, output, live=False):
         def follow_local(path):
             url=origin+path
             for _ in range(8):
-                response=context.request.get(url,max_redirects=0)
+                for attempt in range(3):
+                    response=context.request.get(url,max_redirects=0)
+                    if response.status not in (502,503,504):break
+                    report['http_retries'].append({'url':url,'status':response.status,'attempt':attempt+1})
+                    time.sleep(attempt+1)
                 if response.status not in (301,302,307,308):return response
                 target=urlsplit(urljoin(url,response.headers['location']))
                 assert target.hostname in ('banahealth.care',urlsplit(origin).hostname),target
