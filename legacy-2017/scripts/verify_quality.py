@@ -11,7 +11,8 @@ from bs4 import BeautifulSoup
 
 def verify(release):
     manifest=json.loads((release/'release-manifest.json').read_text())
-    tree=release/'webroot';mount=manifest['mount']
+    tree=release/'webroot';mount=manifest['mount'];asset_mount=manifest.get('asset_mount',mount)
+    reused={f['path']:f for f in manifest.get('reused_files',[])}
     pages={p['url']:BeautifulSoup((tree/p['path']).read_text(),'html.parser')for p in manifest['pages']}
     titles=set();descriptions=set();icons=0;links=0;images=0
     for route,soup in pages.items():
@@ -42,7 +43,9 @@ def verify(release):
             if u.scheme in ('tel','mailto'):continue
             if u.hostname and u.hostname!='banahealth.care':continue
             path=unquote(u.path)
-            if path.startswith(mount):
+            if asset_mount!=mount and path.startswith(asset_mount):
+                assert path[len(asset_mount):] in reused,(route,raw)
+            elif path.startswith(mount):
                 assert (tree/path[len(mount):]).is_file(),(route,raw)
             else:
                 target=pages.get(path or route)

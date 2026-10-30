@@ -28,6 +28,19 @@ LEGAL = {'privacy-policy', 'terms-and-conditions'}
 SVG_CACHE = {}
 
 
+def finish_icon_layout(soup):
+    # Default (uncircled) icons need to contribute intrinsic width. Their old
+    # font pseudo-element did so; an absolutely positioned SVG does not.
+    for svg in soup.select('.btIcoDefaultType .btIcoHolder > .restored-svg'):
+        svg['style']='position:static;transform:none!important;display:inline-block!important;vertical-align:middle'
+    style=soup.new_tag('style',attrs={'data-quality-layout':'final'})
+    style.string='.skip-link:not(:focus){clip-path:inset(50%);width:1px;height:1px;padding:0;overflow:hidden;white-space:nowrap}.btGoogleMapsWrap .btIconImageRow{padding-left:14px}'
+    soup.head.append(style)
+    for ns in soup.head.find_all('noscript'):
+        tag=ns.find('style')
+        if tag:tag.string=tag.get_text()+'.restored-map iframe[data-src]{display:none!important}'
+
+
 def glyph(soup, assets, family, char):
     key = (family, char)
     if key not in SVG_CACHE:
@@ -200,6 +213,7 @@ def optimise(tree, mount, pages, canonical_route):
             for key in list(el.attrs):
                 if key.startswith('data-ico-'):del el[key]
             el['class']=el.get('class',[])+['svg-icon'];el.append(vector);counts['svg_icons']+=1
+        finish_icon_layout(soup)
         for img in soup.select('img'):images.image(img)
         for slider in soup.select('[data-rebuilt-slider]'):
             for i,slide in enumerate(slider.select(':scope > .slidedItem')):
