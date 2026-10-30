@@ -168,5 +168,85 @@
       "final": "https://data.worldbank.org/indicator/SH.SGR.PROC.P5"
     }
   ],
-  "external_limit": "Netcare and Gauteng block automated requests; official destinations confirmed from indexed official pages. HPCSA and WeatherSA remain temporarily unavailable to this audit; no invented substitute."
+  "external_limit": "Netcare and Gauteng block automated requests; official destinations confirmed from indexed official pages. HPCSA and WeatherSA remain temporarily unavailable to this audit; no invented substitute.",
+  "live_browser_checks": {
+    "origin": "https://banahealth.care",
+    "pages": 34,
+    "redirects": 121,
+    "visits": 102,
+    "errors": [],
+    "interactions": [
+      "legacy URLs and language queries",
+      "mobile menu and submenus",
+      "equivalent language switch",
+      "carousel navigation and pause",
+      "live map and contact panel",
+      "floating back-to-top",
+      "gallery open and close"
+    ],
+    "http_retries": [],
+    "status": "passed"
+  },
+  "live_cache_headers": [
+    {
+      "path": "assets/site-6934b2451819.css",
+      "status": 200,
+      "cache": "public, max-age=31536000, immutable",
+      "type": "text/css",
+      "encoding": "gzip"
+    },
+    {
+      "path": "reconstruction.js",
+      "status": 200,
+      "cache": "public, max-age=31536000, immutable",
+      "type": "application/javascript",
+      "encoding": "gzip"
+    },
+    {
+      "path": "assets/0b4aa94d8548ace0.woff2",
+      "status": 200,
+      "cache": "public, max-age=31536000, immutable",
+      "type": "font/woff2",
+      "encoding": null
+    },
+    {
+      "path": "assets/06f10c2e84d7c88f-1200.webp",
+      "status": 200,
+      "cache": "public, max-age=31536000, immutable",
+      "type": "image/webp",
+      "encoding": null
+    }
+  ],
+  "publication": {
+    "url": "https://banahealth.care/",
+    "release": "legacy-2017-20261030-optimise",
+    "workflow": "https://github.com/xtincell/banahealth/actions/runs/41068639865",
+    "cache_workflow": "https://github.com/xtincell/banahealth/actions/runs/41069886682"
+  },
+  "initial_live_check": {
+    "result": "One HTTP 503 while requesting /historique-2017/fr/surgeries/. Direct recheck returned 200 at /interventions-chirurgicales/. The subsequent complete browser check passed without retries.",
+    "raw_log": "/workspace/scratch/banahealth-quality-live-initial.log"
+  },
+  "live_network_probe": {
+    "home": {
+      "url": "https://banahealth.care/",
+      "requests": 13,
+      "transferred_bytes": 147064,
+      "metrics": {
+        "lcp": 900,
+        "cls": 0.00029295092088492956
+      },
+      "note": "Single unthrottled browser probe through the session proxy; not real-user Core Web Vitals."
+    },
+    "services": {
+      "url": "https://banahealth.care/nos-services/",
+      "requests": 23,
+      "transferred_bytes": 268464,
+      "metrics": {
+        "lcp": 1468,
+        "cls": 0.028795978666830518
+      },
+      "note": "Single unthrottled browser probe through the session proxy; not real-user Core Web Vitals."
+    }
+  }
 }
