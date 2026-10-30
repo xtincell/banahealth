@@ -21,7 +21,7 @@ jobs:
           persist-credentials: false
       - name: Install pinned SFTP dependencies
         run: python -m pip install 'paramiko==3.5.1' 'cryptography==46.0.3'
-      - name: Finalize two verified files with a private rollback copy
+      - name: Redirect the former preview to the historical main website
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python -u ops/finalize_main.py
+        run: python -u ops/fix_preview_redirects.py
