@@ -1,0 +1,1802 @@
+{
+  "release_id": "legacy-2017-20261030",
+  "mount": "/_banahealth-releases/legacy-2017-20261030/",
+  "intended_url": "https://banahealth.care/",
+  "remote_parent": "banahealth_2",
+  "files": [
+    {
+      "path": "404.html",
+      "bytes": 18727,
+      "sha256": "169617bdbf44e3e2f5e5af1e209e72df6ece7ecc77a938b9a3e7696424284cc6"
+    },
+    {
+      "path": "assets/067b8ca85e191217.css",
+      "bytes": 4973,
+      "sha256": "3513812b0d9cd9a08214faec12ad3b168011ad12cc31f1d46a760eb709c42f5d"
+    },
+    {
+      "path": "assets/06f10c2e84d7c88f.jpg",
+      "bytes": 433141,
+      "sha256": "068b8857f20e2ebe798056db18cecfc777014c3700dff35488059b8a3d397c6b"
+    },
+    {
+      "path": "assets/07054888ae93320e.jpg",
+      "bytes": 24255,
+      "sha256": "a659858266ae245e515bef048f7c337d59c0b77fc90d02cf91e5000ca7e3460c"
+    },
+    {
+      "path": "assets/09464e7bd5c4a006.png",
+      "bytes": 9860,
+      "sha256": "c1bb9dd1afe2bd4a4bceeea6f18ae04499b3d1b6a179ff38caaf98fdcc4dab15"
+    },
+    {
+      "path": "assets/0a169f8dd8a8faa2.jpg",
+      "bytes": 1104479,
+      "sha256": "9e96d831ddabc051d552dab84a295efd9bc8be9d1be0d1ae0ed47f3ce7efad25"
+    },
+    {
+      "path": "assets/0b4aa94d8548ace0.ttf",
+      "bytes": 73856,
+      "sha256": "53ad0c31d07be1b01a73a665bd9be98ee44554d29c953df28d2c4725868a544f"
+    },
+    {
+      "path": "assets/0fff692a3ed22a14.png",
+      "bytes": 11854,
+      "sha256": "faf6fa91b5e56d179418c0cd0c07637912986ac0eff87cb8c017347da893a23a"
+    },
+    {
+      "path": "assets/10019092d96d98c3.jpg",
+      "bytes": 3559515,
+      "sha256": "1cb6c699b149496cf8127ad8140ef073f602061f8ff97076594102028d2c5ddc"
+    },
+    {
+      "path": "assets/10582f97b8030adb.ttf",
+      "bytes": 125080,
+      "sha256": "fe257acbc3d8e88490c4c89b7eb1e2b49c105e96093b87661ec759fcfab374c8"
+    },
+    {
+      "path": "assets/11f6132ae2bb1d3c.eot",
+      "bytes": 125252,
+      "sha256": "ba96e69fff6c437c5bc5b484a09c371df65cfe87e5a21b2acccb565eaffa0cb1"
+    },
+    {
+      "path": "assets/121b70ec430a23a1.ttf",
+      "bytes": 165548,
+      "sha256": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8"
+    },
+    {
+      "path": "assets/1481234f5108d42d.png",
+      "bytes": 43332,
+      "sha256": "3119ecde140672579061bad54934641375dfccc9ced6ae3497dbf9aeb3e9c62a"
+    },
+    {
+      "path": "assets/14970bfd041369bd.png",
+      "bytes": 9121,
+      "sha256": "6d9e268e5be8bf19711ff04b76da575815d0ff1041d404fa1eecb0996f98ec34"
+    },
+    {
+      "path": "assets/159876775e746f12.png",
+      "bytes": 5611,
+      "sha256": "09c76516ffb3792a987c424bb948efada58ed2eff8ad08af38d2742942c84822"
+    },
+    {
+      "path": "assets/16a55ef7549284c7.jpg",
+      "bytes": 263739,
+      "sha256": "0488282dd395cfb99b4370ceb0dcc1acd7dd5cab9a8290b5fe6b760d17bef969"
+    },
+    {
+      "path": "assets/16a83e9d329fc08f.css",
+      "bytes": 19174,
+      "sha256": "a5b67590aa0856691d160e49d3504e038abbe32db4d8fbb41b62fa1b4efa8cfb"
+    },
+    {
+      "path": "assets/190c9b49bbdc0057.ttf",
+      "bytes": 72716,
+      "sha256": "0931c21277d453211f7b44811eb0203713de6ef82ded3a88645955d39e4bdba6"
+    },
+    {
+      "path": "assets/19965047dad9c5b1.jpg",
+      "bytes": 42236,
+      "sha256": "12166c5920cab60a171f0a723e2811f34247946a73b29c78e40feedc80d9d6eb"
+    },
+    {
+      "path": "assets/19d9555b900bc079.css",
+      "bytes": 7899,
+      "sha256": "c5aeeea13225abef66a61667cc1f7e742cf3f0e9d84990e922284716857d0c4f"
+    },
+    {
+      "path": "assets/1a1ac177911470d2.ttf",
+      "bytes": 73372,
+      "sha256": "7d07b8f1e9d10ec19c65bfb485f1f7546a9919546ee531e54c8020c53b897ab9"
+    },
+    {
+      "path": "assets/1a4697c424d6f4f9.png",
+      "bytes": 6091,
+      "sha256": "61e84120bda16bda571840749219439d7212fa3c498ec823c6c78f9709ab1043"
+    },
+    {
+      "path": "assets/1af7ed3c70f45396.jpg",
+      "bytes": 1281318,
+      "sha256": "168d89a71627791dd06899286e914cc3fa98c11a64e08b2f921d5b92d289126d"
+    },
+    {
+      "path": "assets/1c617f848dd2f27a.png",
+      "bytes": 248310,
+      "sha256": "abe292fd9d8f6d5963ee960045532b0dfdecb1946958a15ab77f4c6d5fd9b0c3"
+    },
+    {
+      "path": "assets/1d4338cd6ddfa970.jpg",
+      "bytes": 2548187,
+      "sha256": "cec994a6c9b5fd532671b72de6985df70aeeb9fc18d86d32ba65ce6c89c32dd3"
+    },
+    {
+      "path": "assets/1d84b6d431900fc7.gif",
+      "bytes": 62,
+      "sha256": "9bf4cfdffa5fa32b59cbfeaf4f90fc4e97071b1f44ac2b1350ee16cc005d36c2"
+    },
+    {
+      "path": "assets/1e80f229772df630.jpg",
+      "bytes": 48429,
+      "sha256": "0714c01f4d92025e5ab12724bcfaca572daa1f9d20f5818fbe010178bb74ad58"
+    },
+    {
+      "path": "assets/2118ce87d83259a1.jpg",
+      "bytes": 51647,
+      "sha256": "7ba97b88f7cc32f30dd8a3321b30891bfe76315bdad01032908e904c8867f79f"
+    },
+    {
+      "path": "assets/25ad67443951eee4.jpg",
+      "bytes": 2085681,
+      "sha256": "347d06df965d6681d9e893bc8491e84ff12bfe371e276ff3374e2f6f9fd5409e"
+    },
+    {
+      "path": "assets/262936b2cac47d8e.css",
+      "bytes": 3004,
+      "sha256": "8577df598f439b9602bfec90eb2c2a654dbb3bd1922ad1d768d6ca3aef58c825"
+    },
+    {
+      "path": "assets/2813f83ffcbd0ab4.css",
+      "bytes": 2027,
+      "sha256": "9bffee6c317b6c53396e213226bceca4e82d9f99c12f88a6fc2a58fdc5309453"
+    },
+    {
+      "path": "assets/28a2e25bf1cd767a.jpg",
+      "bytes": 2470935,
+      "sha256": "e4d3b1a5af11be9c966474ab87175ca22fd6f2c59408d75856bccd26707dcb7b"
+    },
+    {
+      "path": "assets/29af9be625a20097.css",
+      "bytes": 353,
+      "sha256": "e736f6071d7e2d1c8f37c233a49e7a5a90940620e4f386016e1651ef7955552d"
+    },
+    {
+      "path": "assets/2ad6c95b4b7245ef.woff",
+      "bytes": 1304,
+      "sha256": "d87af7a2528beb59a990e0414df87b4e4115f77f3a4a750f6616ff189b70345a"
+    },
+    {
+      "path": "assets/2c2e3504908882d8.css",
+      "bytes": 21,
+      "sha256": "388e66ec225a72dcc0e2d724d2a29fc3d6505ad8ca7e4891f9daff0cea9f4e1f"
+    },
+    {
+      "path": "assets/2cfffa46f9824073.jpg",
+      "bytes": 2443927,
+      "sha256": "664122023ba62a099e5d73fefdf26f30f8803042ab2b70c64f54a8a8cd5adaa6"
+    },
+    {
+      "path": "assets/2de219f3c334c28b.gif",
+      "bytes": 847,
+      "sha256": "65b72e15d975f67fbd1cb126d57772c06c21fa016e5651b6ce213b26ce0e6877"
+    },
+    {
+      "path": "assets/2ecc0627d09013e7.jpg",
+      "bytes": 2527864,
+      "sha256": "4d359a466f143c0856338559144edb2c246061b5072081ab73e6ef120ec87a90"
+    },
+    {
+      "path": "assets/2fa054f75ea6aa1c.ttf",
+      "bytes": 23180,
+      "sha256": "fe47ccf390e2d7174d3bc9c9695f2b98358213bd7591872a01322c565490e21f"
+    },
+    {
+      "path": "assets/330ddb578156111b.css",
+      "bytes": 498046,
+      "sha256": "3b1614c33ce8354cbd46a7ca66854f1d201557fb319196fea2ac7acff95e578f"
+    },
+    {
+      "path": "assets/3362456b074d4b10.png",
+      "bytes": 212,
+      "sha256": "505d3e4b6f05df3c4ba03bdb81289f7f041d75ab7b6816819567ee918e9af417"
+    },
+    {
+      "path": "assets/369197303779367a.jpg",
+      "bytes": 101752,
+      "sha256": "deecfc66b933ec42c7c71baf9a432c0d01e2ac3a06b5f0826f7d87a26172dc6e"
+    },
+    {
+      "path": "assets/378d4b10f2754c5d.svg",
+      "bytes": 553,
+      "sha256": "dcc21448c51890e4d6b095e8c8d501f4c05eb8ba349c78bf319d120b1ef1975f"
+    },
+    {
+      "path": "assets/38431c72b4351c35.css",
+      "bytes": 353,
+      "sha256": "e736f6071d7e2d1c8f37c233a49e7a5a90940620e4f386016e1651ef7955552d"
+    },
+    {
+      "path": "assets/398213a9162832ba.css",
+      "bytes": 8438,
+      "sha256": "4b90f96a65ca201132d0c0cdd4011dcf405bf13bcbae6d0bba75ad87dd58386a"
+    },
+    {
+      "path": "assets/39c1412ba7d56bb6.css",
+      "bytes": 11478,
+      "sha256": "1e3ac91c2c6d582f521005efd79d9ba84e2f269c00f52a738c104b9fd8bc2406"
+    },
+    {
+      "path": "assets/3abe652a8f20d5dc.jpg",
+      "bytes": 2698298,
+      "sha256": "59bec20cf9947c5f9aef1a84bd9f738581f57c23243ccf7fd188eb8469fc591e"
+    },
+    {
+      "path": "assets/3d9269fb335cef5a.svg",
+      "bytes": 444379,
+      "sha256": "ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4"
+    },
+    {
+      "path": "assets/3e5339f4f10811dd.jpg",
+      "bytes": 178575,
+      "sha256": "1551103a5e0b372fc80640f7031fcc5a90c93a8b9490afe2fd9eb90022887014"
+    },
+    {
+      "path": "assets/42189020cfbdc978.ttf",
+      "bytes": 58480,
+      "sha256": "99620ded1c4d61277630422146e2488b1afaef9be2dc0924ff3f75e2ecd71820"
+    },
+    {
+      "path": "assets/423eecd02477d7fc.css",
+      "bytes": 1767,
+      "sha256": "893485d48fc8651981b4810fee0d92ebd7fd85baa7f362ad3934a2c652be8dc9"
+    },
+    {
+      "path": "assets/4306c8a324b78757.jpg",
+      "bytes": 60479,
+      "sha256": "a1df335151ee7065f1cbda4f2ac5384265c898fbf27264a681572b8918818217"
+    },
+    {
+      "path": "assets/475fe360deb3ed4e.css",
+      "bytes": 1648,
+      "sha256": "a025e3d6cbe672d80072b76087e70edeec020cf9a1900c1569fd17e0ec0fedd4"
+    },
+    {
+      "path": "assets/483f50b4e783db11.png",
+      "bytes": 950396,
+      "sha256": "cb50046085e7399b64771655443e4051863d3784277d45d17470c349ddf178f8"
+    },
+    {
+      "path": "assets/4ac15258c019013d.jpg",
+      "bytes": 1278496,
+      "sha256": "547d1331d9a8a29835a50ae48d69365413e273c50f648088bceb983769e51c78"
+    },
+    {
+      "path": "assets/4b432fdaf5a245d1.jpg",
+      "bytes": 2752817,
+      "sha256": "c71271fd2537b4c170c8707af31dd7170a8f948391ccfa221055339aa5e0224b"
+    },
+    {
+      "path": "assets/4cab8d82ec1ee9aa.ttf",
+      "bytes": 58428,
+      "sha256": "367660e808b783ba91c13e09b6f62ab8b2908bc13cc3cf0e4b90165c7db2f7c7"
+    },
+    {
+      "path": "assets/4d8e2a801b73becb.png",
+      "bytes": 1648,
+      "sha256": "1d3dfb3adefb6327796417acdd69ed7a7d8b70cae77e727701c40f75733bf3b0"
+    },
+    {
+      "path": "assets/4ee324409846c41b.css",
+      "bytes": 353,
+      "sha256": "e736f6071d7e2d1c8f37c233a49e7a5a90940620e4f386016e1651ef7955552d"
+    },
+    {
+      "path": "assets/5002c05509d93433.css",
+      "bytes": 3108,
+      "sha256": "503339d5165289a8eb0bfa1b74911617f100043e2344dd45e6624b4abecb2196"
+    },
+    {
+      "path": "assets/523a0f1bc3216e32.woff",
+      "bytes": 11396,
+      "sha256": "5a9be3d5ea363f65b8bb0d8c6822ae8f574f53f6136a68c7651eed9b2a681093"
+    },
+    {
+      "path": "assets/53dcce278634f186.eot",
+      "bytes": 1676,
+      "sha256": "3cf20b4f76287580fcab444ddf67b5ecb4cc4140c35706db15af34ba983bacff"
+    },
+    {
+      "path": "assets/54a68e56ef282ffc.png",
+      "bytes": 4549,
+      "sha256": "81d9988ce4caf15d3e8f81a193c95f52602e976286a8d3a6335676d03ff3665a"
+    },
+    {
+      "path": "assets/54d744a695f53dc0.jpeg",
+      "bytes": 6988829,
+      "sha256": "78bafdbccc2e877a9f5d7a2aa862fa29711df9819fd9a372bbb703c8a9808a19"
+    },
+    {
+      "path": "assets/571981912f89fea1.jpg",
+      "bytes": 55374,
+      "sha256": "3fdcf9a97bb09a1e6409c5d73cc1e791d00e42340ddcb564db6c04ec1b75bb14"
+    },
+    {
+      "path": "assets/574cc281c174a0b3.woff",
+      "bytes": 98024,
+      "sha256": "ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07"
+    },
+    {
+      "path": "assets/57a227294e2b3b9a.css",
+      "bytes": 2358,
+      "sha256": "6722060cbef89c22a363281a37210730a7ff538b4d1e158ccdf4e29fdbafcd61"
+    },
+    {
+      "path": "assets/58d47951aeb38e93.jpg",
+      "bytes": 1189594,
+      "sha256": "432dc22c92b8a413f0a36784b37e2c4b633367926c0f1faa77a497e293998c13"
+    },
+    {
+      "path": "assets/598b0c608955e8b8.ttf",
+      "bytes": 23848,
+      "sha256": "541bf94d592aa493f64e6452277a9386a25010b0986991043329f10525eb3381"
+    },
+    {
+      "path": "assets/59acb16d90050478.svg",
+      "bytes": 552691,
+      "sha256": "306a6600409739623fe0cebd2d25efcf6ba49abe626b35951591b182856011cd"
+    },
+    {
+      "path": "assets/5aeb01ee4bef29b2.jpg",
+      "bytes": 553895,
+      "sha256": "881b0f330f6b0192c871d3b1e790e96b4b44a06eab1cd026dab5f67a52c46683"
+    },
+    {
+      "path": "assets/5aedbfa23af6e150.css",
+      "bytes": 1424,
+      "sha256": "60ddbdc59a12fddd73e6764e5b95f301e81f1104004ffc1519c1064c45ed41b7"
+    },
+    {
+      "path": "assets/5bb62d4af02b2797.png",
+      "bytes": 207,
+      "sha256": "266199f56e1c71e1df0f735bf7332f4305839a2b94de09110415df0910568338"
+    },
+    {
+      "path": "assets/5cb54bd49f806e32.jpg",
+      "bytes": 400816,
+      "sha256": "4d689424d812367e9ffaf49da80282e7355841ab5612c1c287e0052edbe741e8"
+    },
+    {
+      "path": "assets/5fa771c8e40a9e50.jpg",
+      "bytes": 2038314,
+      "sha256": "9854c0c345e7d9f21be2f18f67890965f33734b710e3bcec5c5519ef92afa3d5"
+    },
+    {
+      "path": "assets/604a4f7b45447584.jpg",
+      "bytes": 355575,
+      "sha256": "9f1d5f0bcf3c466b244c9106b214285e58fe0c61d93b400c73eccfaeb386d692"
+    },
+    {
+      "path": "assets/61ff81328fb36404.png",
+      "bytes": 7429,
+      "sha256": "1337e36fe3e76225062d3d4b239f2139c3801461f37bf449ef339684203fc3be"
+    },
+    {
+      "path": "assets/62cd46b3617988e4.png",
+      "bytes": 17366,
+      "sha256": "3f4fd719e11613a1c7fe643b98e19bde1186a831cde4f414e439b4e54494e4bb"
+    },
+    {
+      "path": "assets/63cf66a6d0dac446.jpg",
+      "bytes": 19155,
+      "sha256": "df3010f26b58b41e5b6f21f3954386c4f6f2bf5f5c78eb003613e36fffdba3e2"
+    },
+    {
+      "path": "assets/6459e967fb934207.jpg",
+      "bytes": 13328,
+      "sha256": "584a7565fe3cd5efb9afe19f52ebaf551f913e65fe5df0edb9010064468927bd"
+    },
+    {
+      "path": "assets/6479a05f19e07d54.ttf",
+      "bytes": 74000,
+      "sha256": "0118efbfa93e0b1062878705de55750ad61249db521bc298b7531f7efa6b8e6c"
+    },
+    {
+      "path": "assets/653943bf78e09e94.eot",
+      "bytes": 58680,
+      "sha256": "d9896922379aeb729a67c4bc12f2a51ee970c37ea079ee30f856fd2807fd3e9c"
+    },
+    {
+      "path": "assets/6573341cd0492615.css",
+      "bytes": 226,
+      "sha256": "6d82524320851cd20cae529e3b2e8f44041aac4cff1d5352d115fb2f3819d742"
+    },
+    {
+      "path": "assets/66ffeddf1f77cc61.css",
+      "bytes": 2339,
+      "sha256": "eaeb75f43268f5781975b0208e18da3841a89b83e898de8f9c7ba352c2c8ebde"
+    },
+    {
+      "path": "assets/6753148f4f221a3d.jpg",
+      "bytes": 17832,
+      "sha256": "06bfec39d68c8d72fede2eec49c99305a9b13ce1943c314947913842225fbe68"
+    },
+    {
+      "path": "assets/6b1965622b4e37fd.png",
+      "bytes": 600,
+      "sha256": "3f47c75fa68e49b1cdca50c61e9cd6603b57c521e5e6809df59a4a15e291a4ef"
+    },
+    {
+      "path": "assets/6bcc71dae8ccb0cb.jpg",
+      "bytes": 44641,
+      "sha256": "e3aa9d472423f0c3e60158dcc266e384e37688fbfdf152d04316e35df16eec32"
+    },
+    {
+      "path": "assets/6dac865f95f3c7ed.png",
+      "bytes": 335,
+      "sha256": "2b81f81ed8a80472e714ff892487b495c618d3d2e9f38260f793314914d90fd4"
+    },
+    {
+      "path": "assets/6f3151912abf47b0.png",
+      "bytes": 1661,
+      "sha256": "c086f744602ba20c7ecf2b928113c680b16d6764fd891d3cc7572ba63c44af35"
+    },
+    {
+      "path": "assets/6ffcf3fa510f828b.ttf",
+      "bytes": 74524,
+      "sha256": "64d58446a7ba9f9c0fd1dad501ddbd52f018585fac9ec407f6078f862bbb5483"
+    },
+    {
+      "path": "assets/70d86a0fc884d023.jpg",
+      "bytes": 119779,
+      "sha256": "9fb4c3c76feb09ed188b078d2a9fc2f942644101c727d03bba9a340d395f3de3"
+    },
+    {
+      "path": "assets/715fc0710ec53d22.ttf",
+      "bytes": 74852,
+      "sha256": "f314d77f5d5240958f145f5f7252fac82c554c69504dfd43b7b2d6592938ba6c"
+    },
+    {
+      "path": "assets/736cac12b7b153c2.eot",
+      "bytes": 165742,
+      "sha256": "7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979"
+    },
+    {
+      "path": "assets/753544ee3b8cf9ed.jpg",
+      "bytes": 44297,
+      "sha256": "0db34b53a9c3cd20c9e19a5ccff992ed5c8726eca8fc8c556c84f821cfc2a27d"
+    },
+    {
+      "path": "assets/759a605959399abc.jpg",
+      "bytes": 63123,
+      "sha256": "b0de3ccee6637321eb3991b3e10632816baed0cde2ec0ed4a10b6c40de2b6c3d"
+    },
+    {
+      "path": "assets/78266165a04865b9.jpg",
+      "bytes": 50210,
+      "sha256": "b316d899dadf4a5f544ea394fef2468b24a14429db848b712557b10497ece01d"
+    },
+    {
+      "path": "assets/7a9cc94a640bb600.css",
+      "bytes": 5740,
+      "sha256": "6868312e6686ec5ca3241bc1167f7699af23392b5b46e7e6c9ccb19e2bc12707"
+    },
+    {
+      "path": "assets/7abce2bdeaf5bd65.css",
+      "bytes": 7899,
+      "sha256": "c5aeeea13225abef66a61667cc1f7e742cf3f0e9d84990e922284716857d0c4f"
+    },
+    {
+      "path": "assets/7e5b01e694c53069.png",
+      "bytes": 6999,
+      "sha256": "d6251be277a5f01e3c637072e05802526e501c8fa8a237d8190edf8ee79ebb3d"
+    },
+    {
+      "path": "assets/7eb57742e9988a85.jpg",
+      "bytes": 1157262,
+      "sha256": "015a3eadf3a30d208c8f993c17f0439159412bdfe2a7eb67b7e08519a85409fe"
+    },
+    {
+      "path": "assets/8190527cf24d6224.jpg",
+      "bytes": 23829,
+      "sha256": "e29099af9964d4003de3c8d28b7658f8f9b3a1c1601028b7a9cfc5b090a7e5cc"
+    },
+    {
+      "path": "assets/823131eda6d88e0b.css",
+      "bytes": 4188,
+      "sha256": "5e99510e1a7932a03e4c1acfd2be07d9557a5965800b93202c32feead42d844b"
+    },
+    {
+      "path": "assets/82416151c9c510a2.png",
+      "bytes": 19084,
+      "sha256": "31ca5052e88285b685e7b5f6cdc772d1949ae3dd4cfcb36cb7e0e0ed17d16ac4"
+    },
+    {
+      "path": "assets/83655ead014ec04a.jpg",
+      "bytes": 1077491,
+      "sha256": "d3fca3a4063499c8e7cc354ec72ba46c12969dadd5904d1915257416fd27eafc"
+    },
+    {
+      "path": "assets/837d5dc3beee9d58.png",
+      "bytes": 7256,
+      "sha256": "3e6fd0a32d9c40a88aaceeafd508668aaa3ac33ddff1e27690dbff52c077bc27"
+    },
+    {
+      "path": "assets/855069185ba8a49f.ttf",
+      "bytes": 73920,
+      "sha256": "624338a73f68920d2ea226689cc91ae272b0d8caed58def1a27a0292238e8fbe"
+    },
+    {
+      "path": "assets/85df33c484407fbb.css",
+      "bytes": 498046,
+      "sha256": "3b1614c33ce8354cbd46a7ca66854f1d201557fb319196fea2ac7acff95e578f"
+    },
+    {
+      "path": "assets/868a8aae74562862.png",
+      "bytes": 208,
+      "sha256": "7f9cd096272c4808dd1789089e8fc06a50147895df2f6dced8e7d59fbde111ae"
+    },
+    {
+      "path": "assets/886b1c2e8f5d9cc5.jpg",
+      "bytes": 60241,
+      "sha256": "54b84dbde1d9ca58bd02df962d37e6eeb968af0dd36d0e16576ea2f07d5f09ad"
+    },
+    {
+      "path": "assets/898190be6ee4a2d3.css",
+      "bytes": 30554,
+      "sha256": "5b4361cb28c72cf7486158a558195bd5fe2e59293ac0c13b8e368a08057c802b"
+    },
+    {
+      "path": "assets/8e5002c2f43772ac.css",
+      "bytes": 440,
+      "sha256": "fbbfa2d909b3ff9438ce3b9717695e1df933da61af2fbd7432dfb25b6fb241f7"
+    },
+    {
+      "path": "assets/8f91af4bcbbb3764.jpg",
+      "bytes": 54856,
+      "sha256": "b7783bbda551502fb6983e79e3011238463dab634e2877ddf94561313e4e08af"
+    },
+    {
+      "path": "assets/8f97a24cdea0f2fc.css",
+      "bytes": 498046,
+      "sha256": "3b1614c33ce8354cbd46a7ca66854f1d201557fb319196fea2ac7acff95e578f"
+    },
+    {
+      "path": "assets/9085b79c184f1c3c.css",
+      "bytes": 7899,
+      "sha256": "c5aeeea13225abef66a61667cc1f7e742cf3f0e9d84990e922284716857d0c4f"
+    },
+    {
+      "path": "assets/90d401e0b8f4b8bc.jpg",
+      "bytes": 69553,
+      "sha256": "e1232e552de6c1e4089ed791a3ef884c35dd36dac62dd825a2fedb3b5014b5be"
+    },
+    {
+      "path": "assets/9225d7d1530cffb9.jpg",
+      "bytes": 45030,
+      "sha256": "5985fc9089b3c982744976c65fc5ed5cc8afae859f24419877cd94f303f721ed"
+    },
+    {
+      "path": "assets/924aae55c417774e.jpg",
+      "bytes": 67003,
+      "sha256": "0df33e63aea2dd555a5dc7ea73c636fe749668bda63f246d40e65d52343e367b"
+    },
+    {
+      "path": "assets/9350205e86ad0839.jpeg",
+      "bytes": 121817,
+      "sha256": "ed953904d3c6efb5ee825831a0e99c0759f0428960fa90939a8ba39bfe83cc59"
+    },
+    {
+      "path": "assets/9404fd630884366a.svg",
+      "bytes": 43767,
+      "sha256": "d5d78c44bb0a479d6c454372dd116e646194f3d3cfa385f2d62908d79c6b34e9"
+    },
+    {
+      "path": "assets/94106a13d49fa0e1.css",
+      "bytes": 4188,
+      "sha256": "5e99510e1a7932a03e4c1acfd2be07d9557a5965800b93202c32feead42d844b"
+    },
+    {
+      "path": "assets/94169019976aa859.css",
+      "bytes": 21,
+      "sha256": "388e66ec225a72dcc0e2d724d2a29fc3d6505ad8ca7e4891f9daff0cea9f4e1f"
+    },
+    {
+      "path": "assets/96f30262ddc4ec12.jpg",
+      "bytes": 409918,
+      "sha256": "dbb6527547be6b3909dbfde820b86c034616bbdd346b9e5b3750eb7434102422"
+    },
+    {
+      "path": "assets/96fa07476caddcec.ttf",
+      "bytes": 58532,
+      "sha256": "846856bdf163722ba5ef722ba13fb6ca794b5e5abd50cc5fac0e4ce667fdae76"
+    },
+    {
+      "path": "assets/97e9c9d5c8645715.png",
+      "bytes": 262,
+      "sha256": "4c1c459f96ad25342de2d019ac46915b26b551f92c681bcda7c1125047158c15"
+    },
+    {
+      "path": "assets/99353dc626be4509.png",
+      "bytes": 1147,
+      "sha256": "4ed813694f4fcdf7814bd0c9eca750b490f07bc7cd4db9995a715f193e1ff6ea"
+    },
+    {
+      "path": "assets/9b50c54feaf04490.eot",
+      "bytes": 11484,
+      "sha256": "763220cc3c3543bd9ed5988e48d16e2b7e2120a500bdccb28545e199e79c994b"
+    },
+    {
+      "path": "assets/9d52de21ad36de47.png",
+      "bytes": 1164,
+      "sha256": "448fef105750d822b504d504ecba369b29f586f3e88836a9b997fd065a544cae"
+    },
+    {
+      "path": "assets/9f0d3b62402a6bf8.png",
+      "bytes": 280,
+      "sha256": "157daa53ff3a375cb7d1903a63f7460bd92067965bce34b6eb1ae999ebbf5ccb"
+    },
+    {
+      "path": "assets/9fcd1b78e8737b52.jpg",
+      "bytes": 1048607,
+      "sha256": "69490328f83e28ce27cc640fea5008039b14bf79894df46498948a89ea6c6da2"
+    },
+    {
+      "path": "assets/a006314ae5d4b317.ttf",
+      "bytes": 72824,
+      "sha256": "dc7bbe664c92ae751aa9f8a47a4c5ca37cfc3a8ea3d6c7a1719c9f5ec6eb0f5a"
+    },
+    {
+      "path": "assets/a08fb156b8b79d0b.eot",
+      "bytes": 165742,
+      "sha256": "7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979"
+    },
+    {
+      "path": "assets/a1f311dae995c004.png",
+      "bytes": 8072,
+      "sha256": "0e697a5dbdf2f6f36689237787fe27b7c302e42f6d9186113aa5f5f5fbccfef4"
+    },
+    {
+      "path": "assets/a20e1ab47f618f60.css",
+      "bytes": 851,
+      "sha256": "e8b5c0f1aab454e3dd3d47bdb0d6be1a54c0c350dff5feaa3a595937e2006df1"
+    },
+    {
+      "path": "assets/a3bdf740bf3bc39f.png",
+      "bytes": 7147,
+      "sha256": "3643c14332b6d62ce06821f37b168d5d32156454397c11a57e5c7aef247002ef"
+    },
+    {
+      "path": "assets/a3c1509a8fbc3c03.jpg",
+      "bytes": 598968,
+      "sha256": "fb39201bf350fd6feadab9d1ba9327c748f6176993323f926a5a2c7c7873e089"
+    },
+    {
+      "path": "assets/a410ad28520bf58b.ttf",
+      "bytes": 74832,
+      "sha256": "ba7a7c04f819fdb75fea4e8c2bd8efa57288baf19dbea381b52d8d315677fd9f"
+    },
+    {
+      "path": "assets/a4898a5650c6deb4.jpg",
+      "bytes": 76596,
+      "sha256": "9166465112751d8731013fe226756561eed688bd207379f6cbaefff7062d2074"
+    },
+    {
+      "path": "assets/a4cb66571e84e4aa.gif",
+      "bytes": 4178,
+      "sha256": "e7b44c86b050fca766a96ddac2d0932af0126da6f2305280342d909168dcce6b"
+    },
+    {
+      "path": "assets/a5a10b17d07dd6c8.png",
+      "bytes": 8115,
+      "sha256": "0f31b740ac1ce10960a81a366d5bce1b773f8c64becdbf57338ada2433530034"
+    },
+    {
+      "path": "assets/a674bbce1e210a09.woff",
+      "bytes": 14176,
+      "sha256": "a6b113ce9b116a8b6f51230ef9646aa3a2b887d359f7b1ef4924b41aa4c18618"
+    },
+    {
+      "path": "assets/a6cc2d67e76d4e18.jpg",
+      "bytes": 32635,
+      "sha256": "2c198f0ead4cb5b1e2e60af423b36e6b0fdc7b627109675aa73f75fd210fe906"
+    },
+    {
+      "path": "assets/a807fb715cdb7808.ttf",
+      "bytes": 78024,
+      "sha256": "e8affebdd17b812ecc16165aec307a1c1cb18a71d2b32182a6d46dad56ffcbb9"
+    },
+    {
+      "path": "assets/a97aba7a0fd4140d.jpg",
+      "bytes": 2500098,
+      "sha256": "ca4991cff5071b038012674fcdaf9c304f0313641725c3c486f73b19e113ff1f"
+    },
+    {
+      "path": "assets/aadee9f8ba3edd24.png",
+      "bytes": 345810,
+      "sha256": "1ac7932d5b6fb1ea9fbe5e6ae22c6878b7c9cebb2a2540f9398cfd56eda5fc5c"
+    },
+    {
+      "path": "assets/ab1a7aed0f949fa5.png",
+      "bytes": 332,
+      "sha256": "ae957f0498227d210d63fadc4792210ab823170482c067e3060928710593f425"
+    },
+    {
+      "path": "assets/ad4f7cffd7cea19f.css",
+      "bytes": 440,
+      "sha256": "fbbfa2d909b3ff9438ce3b9717695e1df933da61af2fbd7432dfb25b6fb241f7"
+    },
+    {
+      "path": "assets/b1f69133600014db.css",
+      "bytes": 440,
+      "sha256": "fbbfa2d909b3ff9438ce3b9717695e1df933da61af2fbd7432dfb25b6fb241f7"
+    },
+    {
+      "path": "assets/b6d61f05416ff436.css",
+      "bytes": 440,
+      "sha256": "fbbfa2d909b3ff9438ce3b9717695e1df933da61af2fbd7432dfb25b6fb241f7"
+    },
+    {
+      "path": "assets/b75b47687bd0ec9e.jpg",
+      "bytes": 2706869,
+      "sha256": "019a70dadf1b0609028b1a3e5c2730dae61a2c9d6ff920255edae34a9fffcfcd"
+    },
+    {
+      "path": "assets/b78e44f029938487.ttf",
+      "bytes": 58204,
+      "sha256": "f193c7bc00b39d8092b8d1aab09f42bb6d4faa548b3cdb7e2c8a3144b4cb32fa"
+    },
+    {
+      "path": "assets/b7b362e893357db2.css",
+      "bytes": 21,
+      "sha256": "388e66ec225a72dcc0e2d724d2a29fc3d6505ad8ca7e4891f9daff0cea9f4e1f"
+    },
+    {
+      "path": "assets/b93ae59c6b7f232a.png",
+      "bytes": 20376,
+      "sha256": "1a2452edcf9b90e6a6c0994f24676b8b90080e73f2c3e063e7b4fedc0b3ad7a7"
+    },
+    {
+      "path": "assets/bab7b69585c8bf47.png",
+      "bytes": 5167,
+      "sha256": "9abd6f01906e31f88e5fb05a2b76ff2b4b7df75d1a85e7c5994122b6d40eae90"
+    },
+    {
+      "path": "assets/bb24ac224176f123.css",
+      "bytes": 28285,
+      "sha256": "c5e2a2a1970cd2738e81aaee93d9c8be9e4ed68c4b7bd13aa588568b35476b1e"
+    },
+    {
+      "path": "assets/bb6af74f068346e0.png",
+      "bytes": 4549,
+      "sha256": "6efd8f3d9b03e210c241f33f31c6569faa32e5bb5b650199ab7a4690293e6271"
+    },
+    {
+      "path": "assets/bbfb3751033ce95e.png",
+      "bytes": 950258,
+      "sha256": "00e4d85964001609ff384372904ddd01d7bad9dac307629349b87ae173adb1a8"
+    },
+    {
+      "path": "assets/bc8adc4fa807f0a2.ttf",
+      "bytes": 72692,
+      "sha256": "da959ae12bfd1aa39cfe2f0f68dba3da2e0658860bbf8ce611c16be7e5edd961"
+    },
+    {
+      "path": "assets/bd95a419aacdb560.jpg",
+      "bytes": 60173,
+      "sha256": "d9af50eef51893f5dcf77ea477e3576bf61849f3fc46d1bd8f30d4dd63116aef"
+    },
+    {
+      "path": "assets/bf79b4abc366491e.css",
+      "bytes": 2027,
+      "sha256": "9bffee6c317b6c53396e213226bceca4e82d9f99c12f88a6fc2a58fdc5309453"
+    },
+    {
+      "path": "assets/bff01a9506246097.png",
+      "bytes": 1181,
+      "sha256": "40c8e2350216b73b62b2ae9c399d0865df927035366b5c69844049c0f848eef0"
+    },
+    {
+      "path": "assets/c0874d1152e9e2bd.ttf",
+      "bytes": 11320,
+      "sha256": "81cb6051cc9548d3426e50652f0609c8fa3b1b8920366203a180c73dd3e1e67f"
+    },
+    {
+      "path": "assets/c136b242aac570ec.jpg",
+      "bytes": 11584,
+      "sha256": "d73f9eb235a9bacff013ebc11d4f08e18a13373a2e16152b517afbdaf7a660b8"
+    },
+    {
+      "path": "assets/c1f7b1cb1b7cd703.png",
+      "bytes": 18389,
+      "sha256": "ef6167b19a06b697787ff4ee8352f1974a2a744cf1fc3ce4c98f8779aa79a422"
+    },
+    {
+      "path": "assets/c424a75dbecce48a.png",
+      "bytes": 1189,
+      "sha256": "1d9fdf106f253ed1de54abc64e1e36f40003c5ed73a20c4cc3e410097d1e0527"
+    },
+    {
+      "path": "assets/c5afee65f291b09a.png",
+      "bytes": 268,
+      "sha256": "9c86c0c02ccb446b1a50d0282f4d9715e45670be443c4c3f666c263601e36274"
+    },
+    {
+      "path": "assets/c60ed214339475d6.png",
+      "bytes": 6904,
+      "sha256": "448a8a0d5805593f2429b12b9cd0c879f195d2579ef20fd52eaa7b8ba41f8283"
+    },
+    {
+      "path": "assets/c66a18eeeb6201bc.eot",
+      "bytes": 14280,
+      "sha256": "339310b31b1f7cc0881ab815abab6c9273391016ea860146a7e72a545ee4985f"
+    },
+    {
+      "path": "assets/c693eaa9a4db2887.png",
+      "bytes": 2100,
+      "sha256": "4e9f81a86a6243fc60e6f4464e8827c69707477c1d9d9fb0a8a5f52627a68650"
+    },
+    {
+      "path": "assets/c6c847806d6063a1.css",
+      "bytes": 4188,
+      "sha256": "5e99510e1a7932a03e4c1acfd2be07d9557a5965800b93202c32feead42d844b"
+    },
+    {
+      "path": "assets/c734d6183fef3b5a.css",
+      "bytes": 344,
+      "sha256": "a3247b5ccf25b938d6f94ef7a15dfed34dd2c6e40f0eadf7dd9610d3f116d24d"
+    },
+    {
+      "path": "assets/c77d525ab6486b4e.woff2",
+      "bytes": 77160,
+      "sha256": "2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe"
+    },
+    {
+      "path": "assets/c8dece47c8314e40.svg",
+      "bytes": 50740,
+      "sha256": "314cad2e6981ea61c9543f7f2a52762733fc0444be17f587a0ea839b6ea28bbc"
+    },
+    {
+      "path": "assets/caa97df203ba5a22.ttf",
+      "bytes": 72272,
+      "sha256": "82cd4e2b4923c279ea921c1e47667507659715827a8e1354a04b8d27fec9486c"
+    },
+    {
+      "path": "assets/cbc2503138ef540d.css",
+      "bytes": 21,
+      "sha256": "388e66ec225a72dcc0e2d724d2a29fc3d6505ad8ca7e4891f9daff0cea9f4e1f"
+    },
+    {
+      "path": "assets/cd1f61446d033d03.jpg",
+      "bytes": 846643,
+      "sha256": "851612635674087e609f2808572ab40ae0095421f1d5a10586406f3ebc30c54d"
+    },
+    {
+      "path": "assets/cd28511c67da59f3.png",
+      "bytes": 6915,
+      "sha256": "45ffcb2b6db88abc0d4791ed74622e193bf840b06bf7035d2645acae154cd356"
+    },
+    {
+      "path": "assets/ceda3c45b9bc50d1.ttf",
+      "bytes": 14100,
+      "sha256": "f65ff67d52b04268a02b526a9d27a57e6969259dbf481a1f950b3150b0339d2b"
+    },
+    {
+      "path": "assets/cfcad76b05385bc0.css",
+      "bytes": 19174,
+      "sha256": "a5b67590aa0856691d160e49d3504e038abbe32db4d8fbb41b62fa1b4efa8cfb"
+    },
+    {
+      "path": "assets/cfdfe29dbb1a3d8c.css",
+      "bytes": 7639,
+      "sha256": "03cc395c13c14ddf256125b51a2a72ee9df179a5b47f338a0a031d1d59746f7e"
+    },
+    {
+      "path": "assets/d060af4c5728f157.css",
+      "bytes": 498046,
+      "sha256": "3b1614c33ce8354cbd46a7ca66854f1d201557fb319196fea2ac7acff95e578f"
+    },
+    {
+      "path": "assets/d091e18c13ac3752.png",
+      "bytes": 1412,
+      "sha256": "b3d5a44c5d5a6506f34befd0c56bfb7096f89026bc8d74e2d7f1900d5f818149"
+    },
+    {
+      "path": "assets/d1e281c85ad9e8eb.jpg",
+      "bytes": 2184602,
+      "sha256": "6f7f5c04f596dfb2548480a3feddbcf6909023ab1918e45117cabe424c2dc2b5"
+    },
+    {
+      "path": "assets/d227f9472a1261a5.png",
+      "bytes": 8244,
+      "sha256": "44f7f681b8b61f2bff1f8cb0bc436085f77c218291b804142abbcfa57e0ce929"
+    },
+    {
+      "path": "assets/d2b3343bc18b9ffe.png",
+      "bytes": 6992,
+      "sha256": "43ab89c7b21ee94fa79133cf427f78778c6550567513d147a11ce9e4d3fae29a"
+    },
+    {
+      "path": "assets/d2b815238bb637b2.jpg",
+      "bytes": 131150,
+      "sha256": "27e8484774427318c98e7ba856c1c8e4c902d1801d5b70a429f2632bc147ac5d"
+    },
+    {
+      "path": "assets/d332b4583a8af472.ttf",
+      "bytes": 73496,
+      "sha256": "4caeac76cdb50f758dba935d18a1dfa553c0549950b4f662dcf9328c807a69c0"
+    },
+    {
+      "path": "assets/d37f175705ed5442.css",
+      "bytes": 7639,
+      "sha256": "03cc395c13c14ddf256125b51a2a72ee9df179a5b47f338a0a031d1d59746f7e"
+    },
+    {
+      "path": "assets/d4d0c7c8fff23469.jpg",
+      "bytes": 56269,
+      "sha256": "cc8e7b9f067d22dba1a5eb956be881e5f11070dc406bc4e3639a2d6e723dc40b"
+    },
+    {
+      "path": "assets/d55cdc572388ad09.css",
+      "bytes": 4973,
+      "sha256": "3513812b0d9cd9a08214faec12ad3b168011ad12cc31f1d46a760eb709c42f5d"
+    },
+    {
+      "path": "assets/d601e3df56b53370.ttf",
+      "bytes": 73648,
+      "sha256": "a345cc5fa4e0575d14603444db96fb9027d44c367792b5a703ed8d9cc433bbf2"
+    },
+    {
+      "path": "assets/d6bc51e2602374df.eot",
+      "bytes": 58680,
+      "sha256": "d9896922379aeb729a67c4bc12f2a51ee970c37ea079ee30f856fd2807fd3e9c"
+    },
+    {
+      "path": "assets/d6c3ddc29ce09277.ttf",
+      "bytes": 1512,
+      "sha256": "f8013885c947a7d72df4397ddbbe611fb9ac251622cf658e60ceb25a83c23c8d"
+    },
+    {
+      "path": "assets/d71d66aec2eb2b37.css",
+      "bytes": 7899,
+      "sha256": "c5aeeea13225abef66a61667cc1f7e742cf3f0e9d84990e922284716857d0c4f"
+    },
+    {
+      "path": "assets/d895f36b6fdb4f33.css",
+      "bytes": 8438,
+      "sha256": "4b90f96a65ca201132d0c0cdd4011dcf405bf13bcbae6d0bba75ad87dd58386a"
+    },
+    {
+      "path": "assets/d8ee6ea8a4e6afc6.css",
+      "bytes": 30554,
+      "sha256": "5b4361cb28c72cf7486158a558195bd5fe2e59293ac0c13b8e368a08057c802b"
+    },
+    {
+      "path": "assets/d999bb592440feeb.png",
+      "bytes": 6922,
+      "sha256": "fe1b726012dd5775d4f64a7d42730a210f29057e8e814f33904d3912c4d9abdb"
+    },
+    {
+      "path": "assets/dbe2cb3facb301bc.png",
+      "bytes": 811,
+      "sha256": "50693c0591a7afe1441543eb43e4bbb584c601ede8f356e5ecfc8868d5b9f3c8"
+    },
+    {
+      "path": "assets/dc5da94d91b60a42.jpg",
+      "bytes": 2486447,
+      "sha256": "4686e0a07399af735e4e5236a2cea9c909cc449e5c16d2710a89d0dd8a34e963"
+    },
+    {
+      "path": "assets/dc6adea1fba53d2c.jpg",
+      "bytes": 575384,
+      "sha256": "e3ecfb5a20a239b85faa5f98ec465fcd2feb53b6da77abe3a6739590952ba12a"
+    },
+    {
+      "path": "assets/dcd278a4db7e8785.png",
+      "bytes": 1108,
+      "sha256": "8d5240ca48e645ed3a164b3cd88fd0d1f87c50b60d4c116369aa48559d614305"
+    },
+    {
+      "path": "assets/ddc851c1ddd1521b.jpg",
+      "bytes": 1014733,
+      "sha256": "f032442d221e34bf4ddb815a35bda998f250e3aac3cc3508e54c49b9905fef3e"
+    },
+    {
+      "path": "assets/ddd17946e64b379f.woff",
+      "bytes": 58556,
+      "sha256": "6fb4217048f333e23e0fd0ba2ab05e05fd7500f86a5a80a7cf04a2f94b257bec"
+    },
+    {
+      "path": "assets/ddf29e8ee1f7d204.jpg",
+      "bytes": 43011,
+      "sha256": "423bb5dd88dc8dc5a9fb7eb0a7621ca705d252d602a042dd7cdabeba748fa218"
+    },
+    {
+      "path": "assets/df80990b1e941b6f.jpg",
+      "bytes": 54476,
+      "sha256": "a3b3599d3d08d21af9f5261286058a81f5fab8328274f2a870a8068918679bad"
+    },
+    {
+      "path": "assets/e08e36ac996fe382.jpg",
+      "bytes": 49189,
+      "sha256": "6f4953a70aaad35f114d55b66b7d4c2dc3e2ece4642c16fae411db5e15d150ac"
+    },
+    {
+      "path": "assets/e15574e5c3f540d9.svg",
+      "bytes": 164020,
+      "sha256": "c508f5a34aba76da55d77ad996baf4095b6e9b64b35566e3657e5f73f1921417"
+    },
+    {
+      "path": "assets/e183033f4374a44b.ttf",
+      "bytes": 75260,
+      "sha256": "e30d729bf6510d2c85d91bfc96662b68716d983b497c12d803744ea6a9d63201"
+    },
+    {
+      "path": "assets/e296d3fb48e15270.jpg",
+      "bytes": 218856,
+      "sha256": "8856aecdccb1e73d3e4978e8e3edc620f147f22f893916ca38eba1fc3a5271b9"
+    },
+    {
+      "path": "assets/e34a57661ce44d21.jpg",
+      "bytes": 65333,
+      "sha256": "a0b7b1388377b8515a10eb9ad5cddf7e5592ae9afdcb0d350e73e903bfff5f7a"
+    },
+    {
+      "path": "assets/e3faf77d3b86034e.jpg",
+      "bytes": 72633,
+      "sha256": "767c37d260d3ced6b0f12e914fb748489c6c82725d5490108f75556f0007f661"
+    },
+    {
+      "path": "assets/e44d53d7128dd076.svg",
+      "bytes": 1391,
+      "sha256": "a71e4b1a8a13427e47e9ee7f95acb3c2911bdf3f6fd0ce89a8789775aee0dfcd"
+    },
+    {
+      "path": "assets/e7bdb32df8455512.css",
+      "bytes": 1648,
+      "sha256": "a025e3d6cbe672d80072b76087e70edeec020cf9a1900c1569fd17e0ec0fedd4"
+    },
+    {
+      "path": "assets/e830b7001b9a9545.jpg",
+      "bytes": 3107978,
+      "sha256": "ee85a1be27c96bc87422c788ede52b401b01670b1387b0ef592e056e01c4c1b5"
+    },
+    {
+      "path": "assets/ea923b9a073dea79.ttf",
+      "bytes": 76888,
+      "sha256": "dfb4ff1f3d608ef409ca91d7e20f03850850c814af997733b7e83bc43a69ed25"
+    },
+    {
+      "path": "assets/ece8c73cf24a4611.jpg",
+      "bytes": 20912,
+      "sha256": "d5bcf934a28e0f868e7b522d74a29eabb5c42f45d7f8e9476612f0afd910487b"
+    },
+    {
+      "path": "assets/ee52bf87e867b70d.jpg",
+      "bytes": 13430,
+      "sha256": "19e058357e71cb2fd6913ae2c3fd5ee69ad6cdb9e135f21fda5532574559541e"
+    },
+    {
+      "path": "assets/f36b524c7fb53be0.woff",
+      "bytes": 125156,
+      "sha256": "61a8b9cbc55f41e64859b00b22f182472d473ca932973dca272b6d6fa079ea49"
+    },
+    {
+      "path": "assets/f3d427e762f8e64f.css",
+      "bytes": 2421,
+      "sha256": "2501d57b2fb9e7c99388b4de0480ab50691fe1ec4e7c4a132740ce3bdabf59b9"
+    },
+    {
+      "path": "assets/f4e372f64fbb2bff.ttf",
+      "bytes": 74048,
+      "sha256": "02ede37c937fb03f2bbb76f2aabcc995d47bde21821df7ac8c14ecbb3aec4e24"
+    },
+    {
+      "path": "assets/f70e78e84e4a2c1d.css",
+      "bytes": 353,
+      "sha256": "e736f6071d7e2d1c8f37c233a49e7a5a90940620e4f386016e1651ef7955552d"
+    },
+    {
+      "path": "assets/f84b2dddb0a3966b.png",
+      "bytes": 634115,
+      "sha256": "67bc3c8150b7cbef4aaac223a2a69438eabc73682509acbeb98d6c488b04b89f"
+    },
+    {
+      "path": "assets/f952a445bb08b7aa.png",
+      "bytes": 262,
+      "sha256": "3d4060618f747c4378c4fcbbe0b95bfc0d69ec5e2b68c664912df8bba4a51ccf"
+    },
+    {
+      "path": "assets/fa763dff208772c8.png",
+      "bytes": 11183,
+      "sha256": "40e2d44d62888f1241cf3c586a95b568b2301b5a832009a125800941dfe57896"
+    },
+    {
+      "path": "assets/fa95e4d072bf0f36.css",
+      "bytes": 5347,
+      "sha256": "0b151e4da2ef4ac0028f7ef9a5e85c52dfcd021e22ff2c3c86fe57694a60cda8"
+    },
+    {
+      "path": "assets/fcac51ad54c2e420.png",
+      "bytes": 1638,
+      "sha256": "daed89653927da65e0bcd9307ae670d343ea85ff38467882d1bebf2ac71d4159"
+    },
+    {
+      "path": "assets/fcbb2d0856252190.ttf",
+      "bytes": 73368,
+      "sha256": "5aba7262ac6b4790bbdd4a6a2c73ef4f7a5fbb6784d04eb3f00cc260828d0fcf"
+    },
+    {
+      "path": "assets/ff90c67d01f23737.png",
+      "bytes": 331566,
+      "sha256": "fc6bbd18e6d008c07208a6691b8ca6d3f40383bb72e385eda80c091071a63a84"
+    },
+    {
+      "path": "bilan-de-sante/index.html",
+      "bytes": 26372,
+      "sha256": "a6c43d74143092f79b200d17f3d251323d639f858e032eb84824e3b12c9151e8"
+    },
+    {
+      "path": "conditions-generales/index.html",
+      "bytes": 24616,
+      "sha256": "87aa27616e296843d5c195e134e4e175d82c945b3a92f15e1c4f551187a96c62"
+    },
+    {
+      "path": "confidentialite/index.html",
+      "bytes": 25516,
+      "sha256": "434ae392add5a812c957144f943d49705628db30f748f82c224980d2e27a31ec"
+    },
+    {
+      "path": "contact/index.html",
+      "bytes": 27580,
+      "sha256": "bdb3de7aeab61a57886d8d3b9e192f1040d737d1af59afee97d985b4f2f9f524"
+    },
+    {
+      "path": "en/accommodation/index.html",
+      "bytes": 32923,
+      "sha256": "129976530dd9b6cbd5cf8e6dfbf6bf684715814387cfada95267f317ad8f5442"
+    },
+    {
+      "path": "en/contact/index.html",
+      "bytes": 26388,
+      "sha256": "1e44fd06d34ace70a0191879561d4a19a62becaacbe9d7ac4f90ca1732887a5a"
+    },
+    {
+      "path": "en/general-check-up/index.html",
+      "bytes": 25494,
+      "sha256": "3afdacb0bf2ad57bd995ab17ab797b9ec3dbb7c26aa4a4d3a1655051d8ddb502"
+    },
+    {
+      "path": "en/in-vitro-fertilisation/index.html",
+      "bytes": 25065,
+      "sha256": "7bbe46bb1c1ec423de346f7666f8978f1cb71f75c22302ed6615cab7b50504f0"
+    },
+    {
+      "path": "en/index.html",
+      "bytes": 32121,
+      "sha256": "06803bf6b1a06859dfc5789f0c951d29faed0849649b4aa91f17c493f87d2912"
+    },
+    {
+      "path": "en/medical-care/index.html",
+      "bytes": 31373,
+      "sha256": "3220a3757f805d4fb79f66edbd3ec61ccfba57401b56e1c9b2af63e8518c2112"
+    },
+    {
+      "path": "en/oncology/index.html",
+      "bytes": 28816,
+      "sha256": "c0131edb11abb0d7acf8bc50acdb0015ac9b826efee7d872485f6a76304adbeb"
+    },
+    {
+      "path": "en/our-founder/index.html",
+      "bytes": 23813,
+      "sha256": "32585416ac6a022ed7c84e978fea5f02907836afd56e5d3568e02d87f91a8c00"
+    },
+    {
+      "path": "en/our-network/index.html",
+      "bytes": 43841,
+      "sha256": "674896f6b0e95ddc3ee0c3a493db5072ae85b79a5f8dcf85aee4c87c7cf555ed"
+    },
+    {
+      "path": "en/our-services/index.html",
+      "bytes": 34689,
+      "sha256": "62a1e464ce1b74e9d62f53178955345eb7cccfeb13dd80d4d5b29ed2da45a135"
+    },
+    {
+      "path": "en/privacy-policy/index.html",
+      "bytes": 25492,
+      "sha256": "1ef52f90c26bab14a177a06c522b310314852745a1a225b272094ccde72a36e1"
+    },
+    {
+      "path": "en/surgeries/index.html",
+      "bytes": 28204,
+      "sha256": "1aef926a46a9e9ee7b246fae308eb265b0a369e5f1d8fb9d6fc7ed80e1850e98"
+    },
+    {
+      "path": "en/terms-and-conditions/index.html",
+      "bytes": 24598,
+      "sha256": "0f183a5b26525f5c7ddd2f84f1ac0dd7a231bb7c08bee0a6cff8efd7e40a53f9"
+    },
+    {
+      "path": "en/testimonials/index.html",
+      "bytes": 26716,
+      "sha256": "c479230802959c1b42de3dc94191152ea3ebc5cc9a2c998cb247405fd0fa4fad"
+    },
+    {
+      "path": "en/useful-links/index.html",
+      "bytes": 37462,
+      "sha256": "f81856f6ad6c7a80d048b5913b05fd96c0eaeb1101126c813873ab2d7869fffb"
+    },
+    {
+      "path": "en/vision-and-mission/index.html",
+      "bytes": 20985,
+      "sha256": "69e92e2d9c6c58283f12af2d1f472553f6a37812ccf1d816b34f1b97cd4eb5e6"
+    },
+    {
+      "path": "en/why-south-africa/index.html",
+      "bytes": 29330,
+      "sha256": "c92cbb4d2d5ffe55fc1b5e90476fe905b779f7a36e27b6abecec408340fbd2bb"
+    },
+    {
+      "path": "fecondation-in-vitro/index.html",
+      "bytes": 26397,
+      "sha256": "b9bbc8298a32365bdf8cdf11e33d9172183e079b4974d80760b91f6c34beda7b"
+    },
+    {
+      "path": "hebergement/index.html",
+      "bytes": 31831,
+      "sha256": "fb5e81be4dfb8768b727ad252c137af96756278fec0c4f2e38d22d207c30ad69"
+    },
+    {
+      "path": "index.html",
+      "bytes": 32469,
+      "sha256": "7163af905120a424187b9257ca108ec897eec68ee32bb3aed9336e1a6185b0cf"
+    },
+    {
+      "path": "interventions-chirurgicales/index.html",
+      "bytes": 30041,
+      "sha256": "ef1ed16b43612fcfcb80f24cf13761a2742d7f2187d0f216f852c2307cb93114"
+    },
+    {
+      "path": "liens-utiles/index.html",
+      "bytes": 39088,
+      "sha256": "7a4ff692cf921eff3121028748572377541fa1e7fb75ec1e4a1a8664545fc70b"
+    },
+    {
+      "path": "nos-reseaux/index.html",
+      "bytes": 45956,
+      "sha256": "008edd9ab22d9aa90217c65b2699a66afefbb722cf8a4c6cd2a9ee391d088efc"
+    },
+    {
+      "path": "nos-services/index.html",
+      "bytes": 36956,
+      "sha256": "42230668559710f6cb426ecb95e525ae5f2e9f98e800382b81d045ff3e9762ee"
+    },
+    {
+      "path": "notre-fondatrice/index.html",
+      "bytes": 25735,
+      "sha256": "c13f0319e9d55a2bd17f0eb09a737e4d3b39c9f7ac4b594c971bbfbd09b78edf"
+    },
+    {
+      "path": "oncologie/index.html",
+      "bytes": 31042,
+      "sha256": "5c587ba1950198cfb212a1fef54b839f9e42181c77b8258310c33d7aa7fbe45e"
+    },
+    {
+      "path": "pourquoi-afrique-du-sud/index.html",
+      "bytes": 31494,
+      "sha256": "2c4acc35c76ac4a94b7ddb782a33f4e0f4b58112b63180cfb70d04372c7c17ad"
+    },
+    {
+      "path": "reconstruction.css",
+      "bytes": 9629,
+      "sha256": "80c1412f022953ff5515abc3f12d9d2941612bb02d4eb5f6435b24d0935a3eb0"
+    },
+    {
+      "path": "reconstruction.js",
+      "bytes": 6589,
+      "sha256": "d6181fb6f982a27ac2abc61c0e26288b77f09cb59d2719462684df2f8f0a2b5d"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 121,
+      "sha256": "22b42e00979bf5c63993963b8bde208c056a726197ebfc66ce0d59e508c219ad"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 2208,
+      "sha256": "69de682f03610dfd6d5744f56b1e94d330423609c3420e3b9562817db2b45a57"
+    },
+    {
+      "path": "soins-medicaux/index.html",
+      "bytes": 33278,
+      "sha256": "a7e532332a966520f2ab1472d14add5a3133da1e59c8bd44286732e54b4f6e98"
+    },
+    {
+      "path": "temoignages/index.html",
+      "bytes": 28636,
+      "sha256": "342e0f4fd47e5a5f3eaaeb39f42817a99c4a07b63e59b3f7d6ae20fa7049fa61"
+    },
+    {
+      "path": "vision-et-mission/index.html",
+      "bytes": 22402,
+      "sha256": "e2230f23f52a033186bcf54dde51aeb02f2cfd4e6fc858d70b03acfea8233a8e"
+    }
+  ],
+  "pages": [
+    {
+      "path": "en/index.html",
+      "url": "/en/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/",
+        "captured_at": "20171215061926"
+      }
+    },
+    {
+      "path": "en/our-founder/index.html",
+      "url": "/en/our-founder/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/meet-the-founder/",
+        "captured_at": "20170724112813"
+      }
+    },
+    {
+      "path": "en/vision-and-mission/index.html",
+      "url": "/en/vision-and-mission/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/vision-and-mission/",
+        "captured_at": "20170724035901"
+      }
+    },
+    {
+      "path": "en/our-services/index.html",
+      "url": "/en/our-services/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/services/",
+        "captured_at": "20170723063937"
+      }
+    },
+    {
+      "path": "en/accommodation/index.html",
+      "url": "/en/accommodation/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/accommodation/",
+        "captured_at": "20170724035836"
+      }
+    },
+    {
+      "path": "en/why-south-africa/index.html",
+      "url": "/en/why-south-africa/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/why-south-africa/",
+        "captured_at": "20170721174627"
+      }
+    },
+    {
+      "path": "en/our-network/index.html",
+      "url": "/en/our-network/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/our-network-2/",
+        "captured_at": "20171214185103"
+      }
+    },
+    {
+      "path": "en/medical-care/index.html",
+      "url": "/en/medical-care/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/conditions/",
+        "captured_at": "20170707110339"
+      }
+    },
+    {
+      "path": "en/contact/index.html",
+      "url": "/en/contact/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/contact-us/",
+        "captured_at": "20170723094731"
+      }
+    },
+    {
+      "path": "en/privacy-policy/index.html",
+      "url": "/en/privacy-policy/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/privacy-policy/",
+        "captured_at": "20170724114217"
+      }
+    },
+    {
+      "path": "en/terms-and-conditions/index.html",
+      "url": "/en/terms-and-conditions/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/terms-and-conditions/",
+        "captured_at": "20170724201914"
+      }
+    },
+    {
+      "path": "en/testimonials/index.html",
+      "url": "/en/testimonials/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/testimonials/",
+        "captured_at": "20170724201946"
+      }
+    },
+    {
+      "path": "en/useful-links/index.html",
+      "url": "/en/useful-links/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/useful-links/",
+        "captured_at": "20170724035849"
+      }
+    },
+    {
+      "path": "en/in-vitro-fertilisation/index.html",
+      "url": "/en/in-vitro-fertilisation/",
+      "lang": "en",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/in-vitro-fertilization-ivf/",
+        "captured_at": "20171218012544"
+      }
+    },
+    {
+      "path": "en/oncology/index.html",
+      "url": "/en/oncology/",
+      "lang": "en",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/oncology/",
+        "captured_at": "20180215202541"
+      }
+    },
+    {
+      "path": "en/surgeries/index.html",
+      "url": "/en/surgeries/",
+      "lang": "en",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/surgeries/",
+        "captured_at": "20180419042045"
+      }
+    },
+    {
+      "path": "en/general-check-up/index.html",
+      "url": "/en/general-check-up/",
+      "lang": "en",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/general-check-up/",
+        "captured_at": "20180419042229"
+      }
+    },
+    {
+      "path": "index.html",
+      "url": "/",
+      "lang": "fr",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/?lang=fr",
+        "captured_at": "20171216152246"
+      }
+    },
+    {
+      "path": "notre-fondatrice/index.html",
+      "url": "/notre-fondatrice/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/meet-the-founder/?lang=fr",
+        "captured_at": "20180908202316"
+      }
+    },
+    {
+      "path": "vision-et-mission/index.html",
+      "url": "/vision-et-mission/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/vision-et-mission/?lang=fr",
+        "captured_at": "20180906030716"
+      }
+    },
+    {
+      "path": "nos-services/index.html",
+      "url": "/nos-services/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/nos-services/?lang=fr",
+        "captured_at": "20180910101308"
+      }
+    },
+    {
+      "path": "hebergement/index.html",
+      "url": "/hebergement/",
+      "lang": "fr",
+      "source": {
+        "type": "restored_editorial_source",
+        "file": "src/content/pages/fr/hebergement.md",
+        "archived_layout_available": false,
+        "shared_english_layout_reused": true
+      }
+    },
+    {
+      "path": "pourquoi-afrique-du-sud/index.html",
+      "url": "/pourquoi-afrique-du-sud/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/pourquoi-lafrique-du-sud/?lang=fr",
+        "captured_at": "20180906235047"
+      }
+    },
+    {
+      "path": "nos-reseaux/index.html",
+      "url": "/nos-reseaux/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/our-network/?lang=fr",
+        "captured_at": "20180914220519"
+      }
+    },
+    {
+      "path": "soins-medicaux/index.html",
+      "url": "/soins-medicaux/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/soins-medicaux/?lang=fr",
+        "captured_at": "20180910185740"
+      }
+    },
+    {
+      "path": "contact/index.html",
+      "url": "/contact/",
+      "lang": "fr",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/contact-us/?lang=fr",
+        "captured_at": "20171203223937"
+      }
+    },
+    {
+      "path": "confidentialite/index.html",
+      "url": "/confidentialite/",
+      "lang": "fr",
+      "source": {
+        "type": "archived_english_legal",
+        "original": "http://banahealth.care:80/privacy-policy/",
+        "captured_at": "20170724114217",
+        "reason": "No verified French legal translation in the 2017 archive; retain the historical English legal text"
+      }
+    },
+    {
+      "path": "conditions-generales/index.html",
+      "url": "/conditions-generales/",
+      "lang": "fr",
+      "source": {
+        "type": "archived_english_legal",
+        "original": "http://banahealth.care:80/terms-and-conditions/",
+        "captured_at": "20170724201914",
+        "reason": "No verified French legal translation in the 2017 archive; retain the historical English legal text"
+      }
+    },
+    {
+      "path": "temoignages/index.html",
+      "url": "/temoignages/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/testimonials/?lang=fr",
+        "captured_at": "20180319094225"
+      }
+    },
+    {
+      "path": "liens-utiles/index.html",
+      "url": "/liens-utiles/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/useful-links/?lang=fr",
+        "captured_at": "20180906185137"
+      }
+    },
+    {
+      "path": "fecondation-in-vitro/index.html",
+      "url": "/fecondation-in-vitro/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/vitro-fertilization-ivf/?lang=fr",
+        "captured_at": "20181205040849"
+      }
+    },
+    {
+      "path": "oncologie/index.html",
+      "url": "/oncologie/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/oncologie/?lang=fr",
+        "captured_at": "20181205053531"
+      }
+    },
+    {
+      "path": "interventions-chirurgicales/index.html",
+      "url": "/interventions-chirurgicales/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/interventions-chirurgicales/?lang=fr",
+        "captured_at": "20181205101324"
+      }
+    },
+    {
+      "path": "bilan-de-sante/index.html",
+      "url": "/bilan-de-sante/",
+      "lang": "fr",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/general-check-up/?lang=fr",
+        "captured_at": "20181205061612"
+      }
+    }
+  ],
+  "redirects": {
+    "/historique-2017/": "/en/",
+    "/meet-the-founder/": "/en/our-founder/",
+    "/historique-2017/meet-the-founder/": "/en/our-founder/",
+    "/vision-and-mission/": "/en/vision-and-mission/",
+    "/historique-2017/vision-and-mission/": "/en/vision-and-mission/",
+    "/services/": "/en/our-services/",
+    "/historique-2017/services/": "/en/our-services/",
+    "/accommodation/": "/en/accommodation/",
+    "/historique-2017/accommodation/": "/en/accommodation/",
+    "/why-south-africa/": "/en/why-south-africa/",
+    "/historique-2017/why-south-africa/": "/en/why-south-africa/",
+    "/our-network-2/": "/en/our-network/",
+    "/historique-2017/our-network-2/": "/en/our-network/",
+    "/conditions/": "/en/medical-care/",
+    "/historique-2017/conditions/": "/en/medical-care/",
+    "/contact-us/": "/en/contact/",
+    "/historique-2017/contact-us/": "/en/contact/",
+    "/privacy-policy/": "/en/privacy-policy/",
+    "/historique-2017/privacy-policy/": "/en/privacy-policy/",
+    "/terms-and-conditions/": "/en/terms-and-conditions/",
+    "/historique-2017/terms-and-conditions/": "/en/terms-and-conditions/",
+    "/testimonials/": "/en/testimonials/",
+    "/historique-2017/testimonials/": "/en/testimonials/",
+    "/useful-links/": "/en/useful-links/",
+    "/historique-2017/useful-links/": "/en/useful-links/",
+    "/in-vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
+    "/historique-2017/in-vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
+    "/oncology/": "/en/oncology/",
+    "/historique-2017/oncology/": "/en/oncology/",
+    "/surgeries/": "/en/surgeries/",
+    "/historique-2017/surgeries/": "/en/surgeries/",
+    "/general-check-up/": "/en/general-check-up/",
+    "/historique-2017/general-check-up/": "/en/general-check-up/",
+    "/fr/": "/",
+    "/historique-2017/fr/": "/",
+    "/fr/meet-the-founder/": "/notre-fondatrice/",
+    "/historique-2017/fr/meet-the-founder/": "/notre-fondatrice/",
+    "/fr/vision-and-mission/": "/vision-et-mission/",
+    "/historique-2017/fr/vision-and-mission/": "/vision-et-mission/",
+    "/fr/services/": "/nos-services/",
+    "/historique-2017/fr/services/": "/nos-services/",
+    "/fr/accommodation/": "/hebergement/",
+    "/historique-2017/fr/accommodation/": "/hebergement/",
+    "/fr/why-south-africa/": "/pourquoi-afrique-du-sud/",
+    "/historique-2017/fr/why-south-africa/": "/pourquoi-afrique-du-sud/",
+    "/fr/our-network-2/": "/nos-reseaux/",
+    "/historique-2017/fr/our-network-2/": "/nos-reseaux/",
+    "/fr/conditions/": "/soins-medicaux/",
+    "/historique-2017/fr/conditions/": "/soins-medicaux/",
+    "/fr/contact-us/": "/contact/",
+    "/historique-2017/fr/contact-us/": "/contact/",
+    "/fr/privacy-policy/": "/confidentialite/",
+    "/historique-2017/fr/privacy-policy/": "/confidentialite/",
+    "/fr/terms-and-conditions/": "/conditions-generales/",
+    "/historique-2017/fr/terms-and-conditions/": "/conditions-generales/",
+    "/fr/testimonials/": "/temoignages/",
+    "/historique-2017/fr/testimonials/": "/temoignages/",
+    "/fr/useful-links/": "/liens-utiles/",
+    "/historique-2017/fr/useful-links/": "/liens-utiles/",
+    "/fr/in-vitro-fertilization-ivf/": "/fecondation-in-vitro/",
+    "/historique-2017/fr/in-vitro-fertilization-ivf/": "/fecondation-in-vitro/",
+    "/fr/oncology/": "/oncologie/",
+    "/historique-2017/fr/oncology/": "/oncologie/",
+    "/fr/surgeries/": "/interventions-chirurgicales/",
+    "/historique-2017/fr/surgeries/": "/interventions-chirurgicales/",
+    "/fr/general-check-up/": "/bilan-de-sante/",
+    "/historique-2017/fr/general-check-up/": "/bilan-de-sante/",
+    "/our-network/": "/en/our-network/",
+    "/fr/our-network/": "/nos-reseaux/",
+    "/medical-care/": "/en/medical-care/",
+    "/fr/medical-care/": "/soins-medicaux/",
+    "/in-vitro-fertilisation/": "/en/in-vitro-fertilisation/",
+    "/fr/in-vitro-fertilisation/": "/fecondation-in-vitro/",
+    "/vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
+    "/en/vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
+    "/fr/vitro-fertilization-ivf/": "/fecondation-in-vitro/",
+    "/pourquoi-lafrique-du-sud/": "/en/why-south-africa/",
+    "/en/pourquoi-lafrique-du-sud/": "/en/why-south-africa/",
+    "/fr/pourquoi-lafrique-du-sud/": "/pourquoi-afrique-du-sud/",
+    "/en/interventions-chirurgicales/": "/en/surgeries/",
+    "/fr/interventions-chirurgicales/": "/interventions-chirurgicales/",
+    "/en/notre-fondatrice/": "/en/our-founder/",
+    "/fr/notre-fondatrice/": "/notre-fondatrice/",
+    "/our-founder/": "/en/our-founder/",
+    "/fr/our-founder/": "/notre-fondatrice/",
+    "/en/vision-et-mission/": "/en/vision-and-mission/",
+    "/fr/vision-et-mission/": "/vision-et-mission/",
+    "/en/nos-services/": "/en/our-services/",
+    "/fr/nos-services/": "/nos-services/",
+    "/our-services/": "/en/our-services/",
+    "/fr/our-services/": "/nos-services/",
+    "/en/hebergement/": "/en/accommodation/",
+    "/fr/hebergement/": "/hebergement/",
+    "/en/pourquoi-afrique-du-sud/": "/en/why-south-africa/",
+    "/fr/pourquoi-afrique-du-sud/": "/pourquoi-afrique-du-sud/",
+    "/en/nos-reseaux/": "/en/our-network/",
+    "/fr/nos-reseaux/": "/nos-reseaux/",
+    "/en/soins-medicaux/": "/en/medical-care/",
+    "/fr/soins-medicaux/": "/soins-medicaux/",
+    "/en/conditions/": "/en/medical-care/",
+    "/fr/contact/": "/contact/",
+    "/en/contact-us/": "/en/contact/",
+    "/en/confidentialite/": "/en/privacy-policy/",
+    "/fr/confidentialite/": "/confidentialite/",
+    "/en/conditions-generales/": "/en/terms-and-conditions/",
+    "/fr/conditions-generales/": "/conditions-generales/",
+    "/en/temoignages/": "/en/testimonials/",
+    "/fr/temoignages/": "/temoignages/",
+    "/en/liens-utiles/": "/en/useful-links/",
+    "/fr/liens-utiles/": "/liens-utiles/",
+    "/en/fecondation-in-vitro/": "/en/in-vitro-fertilisation/",
+    "/fr/fecondation-in-vitro/": "/fecondation-in-vitro/",
+    "/en/in-vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
+    "/en/oncologie/": "/en/oncology/",
+    "/fr/oncologie/": "/oncologie/",
+    "/en/bilan-de-sante/": "/en/general-check-up/",
+    "/fr/bilan-de-sante/": "/bilan-de-sante/",
+    "/page-daccueil/": "/",
+    "/sample-page/": "/en/",
+    "/blog/": "/en/",
+    "/cookie-policy/": "/en/privacy-policy/"
+  },
+  "htaccess_sha256": "07db82e1e71b2d5464d94a4300c5ec310d11611e1b0b4b805bb7e826e7144141"
+}

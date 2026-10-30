@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_banahealth-releases/
+Disallow: /nouveau/
+Sitemap: https://banahealth.care/sitemap.xml
