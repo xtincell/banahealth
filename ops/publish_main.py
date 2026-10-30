@@ -102,7 +102,15 @@ def deploy(client,m,tree,rules,run):
     home=sftp.normalize('.');sftp.chdir('banahealth_2');parent=sftp.normalize('.')
     if not parent.endswith('/banahealth_2'):raise ValueError('Unexpected document root')
     old_rules=sftp_read(sftp,'.htaccess',2_000_000)
-    old_index=sftp_read(sftp,'index.html',2_000_000)
+    previous=m.get('previous_activation')
+    old_index_path='index.html'
+    if previous:
+        if sha256(old_rules)!=previous['htaccess_sha256']:
+            raise ValueError('Active routing changed since review')
+        old_index_path='_banahealth-releases/'+previous['release_id']+'/index.html'
+    old_index=sftp_read(sftp,old_index_path,2_000_000)
+    if previous and sha256(old_index)!=previous['homepage_sha256']:
+        raise ValueError('Previous immutable release changed since review')
     if sha256(old_index)!=sha256(public_bytes(BASE+'/')):
         raise ValueError('Current homepage differs from remote root; inspect before replacing routing')
     backup_root=home+'/.banahealth-backups'
@@ -113,7 +121,15 @@ def deploy(client,m,tree,rules,run):
     sftp.mkdir(backup,mode=0o700)
     write(sftp,backup+'/.htaccess',old_rules,0o600)
     write(sftp,backup+'/index.html',old_index,0o600)
-    backup_site(client,sftp,home,parent,backup)
+    if previous:
+        # Releases are immutable and remain on disk. Routing is the only replaced
+        # file, so a verified routing backup restores the whole previous site.
+        write(sftp,backup+'/previous-activation.json',json.dumps(previous).encode(),0o600)
+        if sftp_read(sftp,backup+'/.htaccess',len(old_rules))!=old_rules:
+            raise ValueError('Routing backup verification failed')
+        progress('Previous release retained; routing backup verified')
+    else:
+        backup_site(client,sftp,home,parent,backup)
     # The existing site remains on disk. Only the routing file will be replaced.
     releases='_banahealth-releases'
     if not exists(sftp,releases):sftp.mkdir(releases,mode=0o755)
@@ -148,7 +164,7 @@ def deploy(client,m,tree,rules,run):
         for item in m['pages']:
             expected=next(f['sha256']for f in m['files']if f['path']==item['path'])
             verify_http(item['url'],expected)
-        if sftp_read(sftp,'index.html',len(old_index))!=old_index:
+        if sftp_read(sftp,old_index_path,len(old_index))!=old_index:
             raise ValueError('Preserved homepage changed unexpectedly')
         for path in ('robots.txt','sitemap.xml','404.html'):
             verify_http('/'+path,next(f['sha256']for f in m['files']if f['path']==path))
@@ -165,7 +181,7 @@ def deploy(client,m,tree,rules,run):
     write(sftp,backup+'/publication-result.json',json.dumps(result).encode(),0o600)
     Path(os.environ['RUNNER_TEMP'],'ovh-main-publication-result.json').write_text(json.dumps(result))
     print(json.dumps(result),flush=True)
-    api('statuses/'+os.environ['GITHUB_SHA'],{'state':'success','context':'ovh-main/progress/'+run,'description':'Historical website active; 34 pages verified'})
+    api('statuses/'+os.environ['GITHUB_SHA'],{'state':'success','context':'ovh-main/progress/'+run,'description':'Historical website active; all release pages verified'})
     sftp.close()
 
 def main():

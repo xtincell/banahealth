@@ -1,4 +1,4 @@
-# BanaHealth historical design, immutable release legacy-2017-20261030
+# BanaHealth historical design, immutable release legacy-2017-20261030-optimise
 Options -Indexes -ExecCGI
 DirectoryIndex index.html
 <IfModule mod_rewrite.c>
@@ -740,143 +740,143 @@ RewriteRule ^vision\-and\-mission/?$ /en/vision-and-mission/ [R=301,L,QSD]
 RewriteRule ^vitro\-fertilization\-ivf/?$ /en/in-vitro-fertilisation/ [R=301,L,QSD]
 RewriteRule ^why\-south\-africa/?$ /en/why-south-africa/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/(?:index\.html)?$ /en/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/(?:index\.html)?$ /en/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/our\-founder/(?:index\.html)?$ /en/our-founder/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/our\-founder/(?:index\.html)?$ /en/our-founder/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/vision\-and\-mission/(?:index\.html)?$ /en/vision-and-mission/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/vision\-and\-mission/(?:index\.html)?$ /en/vision-and-mission/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/our\-services/(?:index\.html)?$ /en/our-services/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/our\-services/(?:index\.html)?$ /en/our-services/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/accommodation/(?:index\.html)?$ /en/accommodation/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/accommodation/(?:index\.html)?$ /en/accommodation/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/why\-south\-africa/(?:index\.html)?$ /en/why-south-africa/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/why\-south\-africa/(?:index\.html)?$ /en/why-south-africa/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/our\-network/(?:index\.html)?$ /en/our-network/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/our\-network/(?:index\.html)?$ /en/our-network/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/medical\-care/(?:index\.html)?$ /en/medical-care/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/medical\-care/(?:index\.html)?$ /en/medical-care/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/contact/(?:index\.html)?$ /en/contact/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/contact/(?:index\.html)?$ /en/contact/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/privacy\-policy/(?:index\.html)?$ /en/privacy-policy/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/privacy\-policy/(?:index\.html)?$ /en/privacy-policy/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/terms\-and\-conditions/(?:index\.html)?$ /en/terms-and-conditions/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/terms\-and\-conditions/(?:index\.html)?$ /en/terms-and-conditions/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/testimonials/(?:index\.html)?$ /en/testimonials/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/testimonials/(?:index\.html)?$ /en/testimonials/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/useful\-links/(?:index\.html)?$ /en/useful-links/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/useful\-links/(?:index\.html)?$ /en/useful-links/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/in\-vitro\-fertilisation/(?:index\.html)?$ /en/in-vitro-fertilisation/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/in\-vitro\-fertilisation/(?:index\.html)?$ /en/in-vitro-fertilisation/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/oncology/(?:index\.html)?$ /en/oncology/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/oncology/(?:index\.html)?$ /en/oncology/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/surgeries/(?:index\.html)?$ /en/surgeries/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/surgeries/(?:index\.html)?$ /en/surgeries/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/en/general\-check\-up/(?:index\.html)?$ /en/general-check-up/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/en/general\-check\-up/(?:index\.html)?$ /en/general-check-up/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/(?:index\.html)?$ / [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/(?:index\.html)?$ / [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/notre\-fondatrice/(?:index\.html)?$ /notre-fondatrice/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/notre\-fondatrice/(?:index\.html)?$ /notre-fondatrice/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/vision\-et\-mission/(?:index\.html)?$ /vision-et-mission/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/vision\-et\-mission/(?:index\.html)?$ /vision-et-mission/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/nos\-services/(?:index\.html)?$ /nos-services/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/nos\-services/(?:index\.html)?$ /nos-services/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/hebergement/(?:index\.html)?$ /hebergement/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/hebergement/(?:index\.html)?$ /hebergement/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/pourquoi\-afrique\-du\-sud/(?:index\.html)?$ /pourquoi-afrique-du-sud/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/pourquoi\-afrique\-du\-sud/(?:index\.html)?$ /pourquoi-afrique-du-sud/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/nos\-reseaux/(?:index\.html)?$ /nos-reseaux/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/nos\-reseaux/(?:index\.html)?$ /nos-reseaux/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/soins\-medicaux/(?:index\.html)?$ /soins-medicaux/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/soins\-medicaux/(?:index\.html)?$ /soins-medicaux/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/contact/(?:index\.html)?$ /contact/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/contact/(?:index\.html)?$ /contact/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/confidentialite/(?:index\.html)?$ /confidentialite/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/confidentialite/(?:index\.html)?$ /confidentialite/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/conditions\-generales/(?:index\.html)?$ /conditions-generales/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/conditions\-generales/(?:index\.html)?$ /conditions-generales/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/temoignages/(?:index\.html)?$ /temoignages/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/temoignages/(?:index\.html)?$ /temoignages/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/liens\-utiles/(?:index\.html)?$ /liens-utiles/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/liens\-utiles/(?:index\.html)?$ /liens-utiles/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/fecondation\-in\-vitro/(?:index\.html)?$ /fecondation-in-vitro/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/fecondation\-in\-vitro/(?:index\.html)?$ /fecondation-in-vitro/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/oncologie/(?:index\.html)?$ /oncologie/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/oncologie/(?:index\.html)?$ /oncologie/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/interventions\-chirurgicales/(?:index\.html)?$ /interventions-chirurgicales/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/interventions\-chirurgicales/(?:index\.html)?$ /interventions-chirurgicales/ [R=301,L,QSD]
 RewriteCond %{THE_REQUEST} "\s/+_banahealth-releases/"
-RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030/bilan\-de\-sante/(?:index\.html)?$ /bilan-de-sante/ [R=301,L,QSD]
+RewriteRule ^_banahealth\-releases/legacy\-2017\-20261030\-optimise/bilan\-de\-sante/(?:index\.html)?$ /bilan-de-sante/ [R=301,L,QSD]
 RewriteRule ^en$ /en/ [R=301,L]
-RewriteRule ^en/$ _banahealth-releases/legacy-2017-20261030/en/index.html [END]
+RewriteRule ^en/$ _banahealth-releases/legacy-2017-20261030-optimise/en/index.html [END]
 RewriteRule ^en/our\-founder$ /en/our-founder/ [R=301,L]
-RewriteRule ^en/our\-founder/$ _banahealth-releases/legacy-2017-20261030/en/our-founder/index.html [END]
+RewriteRule ^en/our\-founder/$ _banahealth-releases/legacy-2017-20261030-optimise/en/our-founder/index.html [END]
 RewriteRule ^en/vision\-and\-mission$ /en/vision-and-mission/ [R=301,L]
-RewriteRule ^en/vision\-and\-mission/$ _banahealth-releases/legacy-2017-20261030/en/vision-and-mission/index.html [END]
+RewriteRule ^en/vision\-and\-mission/$ _banahealth-releases/legacy-2017-20261030-optimise/en/vision-and-mission/index.html [END]
 RewriteRule ^en/our\-services$ /en/our-services/ [R=301,L]
-RewriteRule ^en/our\-services/$ _banahealth-releases/legacy-2017-20261030/en/our-services/index.html [END]
+RewriteRule ^en/our\-services/$ _banahealth-releases/legacy-2017-20261030-optimise/en/our-services/index.html [END]
 RewriteRule ^en/accommodation$ /en/accommodation/ [R=301,L]
-RewriteRule ^en/accommodation/$ _banahealth-releases/legacy-2017-20261030/en/accommodation/index.html [END]
+RewriteRule ^en/accommodation/$ _banahealth-releases/legacy-2017-20261030-optimise/en/accommodation/index.html [END]
 RewriteRule ^en/why\-south\-africa$ /en/why-south-africa/ [R=301,L]
-RewriteRule ^en/why\-south\-africa/$ _banahealth-releases/legacy-2017-20261030/en/why-south-africa/index.html [END]
+RewriteRule ^en/why\-south\-africa/$ _banahealth-releases/legacy-2017-20261030-optimise/en/why-south-africa/index.html [END]
 RewriteRule ^en/our\-network$ /en/our-network/ [R=301,L]
-RewriteRule ^en/our\-network/$ _banahealth-releases/legacy-2017-20261030/en/our-network/index.html [END]
+RewriteRule ^en/our\-network/$ _banahealth-releases/legacy-2017-20261030-optimise/en/our-network/index.html [END]
 RewriteRule ^en/medical\-care$ /en/medical-care/ [R=301,L]
-RewriteRule ^en/medical\-care/$ _banahealth-releases/legacy-2017-20261030/en/medical-care/index.html [END]
+RewriteRule ^en/medical\-care/$ _banahealth-releases/legacy-2017-20261030-optimise/en/medical-care/index.html [END]
 RewriteRule ^en/contact$ /en/contact/ [R=301,L]
-RewriteRule ^en/contact/$ _banahealth-releases/legacy-2017-20261030/en/contact/index.html [END]
+RewriteRule ^en/contact/$ _banahealth-releases/legacy-2017-20261030-optimise/en/contact/index.html [END]
 RewriteRule ^en/privacy\-policy$ /en/privacy-policy/ [R=301,L]
-RewriteRule ^en/privacy\-policy/$ _banahealth-releases/legacy-2017-20261030/en/privacy-policy/index.html [END]
+RewriteRule ^en/privacy\-policy/$ _banahealth-releases/legacy-2017-20261030-optimise/en/privacy-policy/index.html [END]
 RewriteRule ^en/terms\-and\-conditions$ /en/terms-and-conditions/ [R=301,L]
-RewriteRule ^en/terms\-and\-conditions/$ _banahealth-releases/legacy-2017-20261030/en/terms-and-conditions/index.html [END]
+RewriteRule ^en/terms\-and\-conditions/$ _banahealth-releases/legacy-2017-20261030-optimise/en/terms-and-conditions/index.html [END]
 RewriteRule ^en/testimonials$ /en/testimonials/ [R=301,L]
-RewriteRule ^en/testimonials/$ _banahealth-releases/legacy-2017-20261030/en/testimonials/index.html [END]
+RewriteRule ^en/testimonials/$ _banahealth-releases/legacy-2017-20261030-optimise/en/testimonials/index.html [END]
 RewriteRule ^en/useful\-links$ /en/useful-links/ [R=301,L]
-RewriteRule ^en/useful\-links/$ _banahealth-releases/legacy-2017-20261030/en/useful-links/index.html [END]
+RewriteRule ^en/useful\-links/$ _banahealth-releases/legacy-2017-20261030-optimise/en/useful-links/index.html [END]
 RewriteRule ^en/in\-vitro\-fertilisation$ /en/in-vitro-fertilisation/ [R=301,L]
-RewriteRule ^en/in\-vitro\-fertilisation/$ _banahealth-releases/legacy-2017-20261030/en/in-vitro-fertilisation/index.html [END]
+RewriteRule ^en/in\-vitro\-fertilisation/$ _banahealth-releases/legacy-2017-20261030-optimise/en/in-vitro-fertilisation/index.html [END]
 RewriteRule ^en/oncology$ /en/oncology/ [R=301,L]
-RewriteRule ^en/oncology/$ _banahealth-releases/legacy-2017-20261030/en/oncology/index.html [END]
+RewriteRule ^en/oncology/$ _banahealth-releases/legacy-2017-20261030-optimise/en/oncology/index.html [END]
 RewriteRule ^en/surgeries$ /en/surgeries/ [R=301,L]
-RewriteRule ^en/surgeries/$ _banahealth-releases/legacy-2017-20261030/en/surgeries/index.html [END]
+RewriteRule ^en/surgeries/$ _banahealth-releases/legacy-2017-20261030-optimise/en/surgeries/index.html [END]
 RewriteRule ^en/general\-check\-up$ /en/general-check-up/ [R=301,L]
-RewriteRule ^en/general\-check\-up/$ _banahealth-releases/legacy-2017-20261030/en/general-check-up/index.html [END]
-RewriteRule ^$ _banahealth-releases/legacy-2017-20261030/index.html [END]
+RewriteRule ^en/general\-check\-up/$ _banahealth-releases/legacy-2017-20261030-optimise/en/general-check-up/index.html [END]
+RewriteRule ^$ _banahealth-releases/legacy-2017-20261030-optimise/index.html [END]
 RewriteRule ^notre\-fondatrice$ /notre-fondatrice/ [R=301,L]
-RewriteRule ^notre\-fondatrice/$ _banahealth-releases/legacy-2017-20261030/notre-fondatrice/index.html [END]
+RewriteRule ^notre\-fondatrice/$ _banahealth-releases/legacy-2017-20261030-optimise/notre-fondatrice/index.html [END]
 RewriteRule ^vision\-et\-mission$ /vision-et-mission/ [R=301,L]
-RewriteRule ^vision\-et\-mission/$ _banahealth-releases/legacy-2017-20261030/vision-et-mission/index.html [END]
+RewriteRule ^vision\-et\-mission/$ _banahealth-releases/legacy-2017-20261030-optimise/vision-et-mission/index.html [END]
 RewriteRule ^nos\-services$ /nos-services/ [R=301,L]
-RewriteRule ^nos\-services/$ _banahealth-releases/legacy-2017-20261030/nos-services/index.html [END]
+RewriteRule ^nos\-services/$ _banahealth-releases/legacy-2017-20261030-optimise/nos-services/index.html [END]
 RewriteRule ^hebergement$ /hebergement/ [R=301,L]
-RewriteRule ^hebergement/$ _banahealth-releases/legacy-2017-20261030/hebergement/index.html [END]
+RewriteRule ^hebergement/$ _banahealth-releases/legacy-2017-20261030-optimise/hebergement/index.html [END]
 RewriteRule ^pourquoi\-afrique\-du\-sud$ /pourquoi-afrique-du-sud/ [R=301,L]
-RewriteRule ^pourquoi\-afrique\-du\-sud/$ _banahealth-releases/legacy-2017-20261030/pourquoi-afrique-du-sud/index.html [END]
+RewriteRule ^pourquoi\-afrique\-du\-sud/$ _banahealth-releases/legacy-2017-20261030-optimise/pourquoi-afrique-du-sud/index.html [END]
 RewriteRule ^nos\-reseaux$ /nos-reseaux/ [R=301,L]
-RewriteRule ^nos\-reseaux/$ _banahealth-releases/legacy-2017-20261030/nos-reseaux/index.html [END]
+RewriteRule ^nos\-reseaux/$ _banahealth-releases/legacy-2017-20261030-optimise/nos-reseaux/index.html [END]
 RewriteRule ^soins\-medicaux$ /soins-medicaux/ [R=301,L]
-RewriteRule ^soins\-medicaux/$ _banahealth-releases/legacy-2017-20261030/soins-medicaux/index.html [END]
+RewriteRule ^soins\-medicaux/$ _banahealth-releases/legacy-2017-20261030-optimise/soins-medicaux/index.html [END]
 RewriteRule ^contact$ /contact/ [R=301,L]
-RewriteRule ^contact/$ _banahealth-releases/legacy-2017-20261030/contact/index.html [END]
+RewriteRule ^contact/$ _banahealth-releases/legacy-2017-20261030-optimise/contact/index.html [END]
 RewriteRule ^confidentialite$ /confidentialite/ [R=301,L]
-RewriteRule ^confidentialite/$ _banahealth-releases/legacy-2017-20261030/confidentialite/index.html [END]
+RewriteRule ^confidentialite/$ _banahealth-releases/legacy-2017-20261030-optimise/confidentialite/index.html [END]
 RewriteRule ^conditions\-generales$ /conditions-generales/ [R=301,L]
-RewriteRule ^conditions\-generales/$ _banahealth-releases/legacy-2017-20261030/conditions-generales/index.html [END]
+RewriteRule ^conditions\-generales/$ _banahealth-releases/legacy-2017-20261030-optimise/conditions-generales/index.html [END]
 RewriteRule ^temoignages$ /temoignages/ [R=301,L]
-RewriteRule ^temoignages/$ _banahealth-releases/legacy-2017-20261030/temoignages/index.html [END]
+RewriteRule ^temoignages/$ _banahealth-releases/legacy-2017-20261030-optimise/temoignages/index.html [END]
 RewriteRule ^liens\-utiles$ /liens-utiles/ [R=301,L]
-RewriteRule ^liens\-utiles/$ _banahealth-releases/legacy-2017-20261030/liens-utiles/index.html [END]
+RewriteRule ^liens\-utiles/$ _banahealth-releases/legacy-2017-20261030-optimise/liens-utiles/index.html [END]
 RewriteRule ^fecondation\-in\-vitro$ /fecondation-in-vitro/ [R=301,L]
-RewriteRule ^fecondation\-in\-vitro/$ _banahealth-releases/legacy-2017-20261030/fecondation-in-vitro/index.html [END]
+RewriteRule ^fecondation\-in\-vitro/$ _banahealth-releases/legacy-2017-20261030-optimise/fecondation-in-vitro/index.html [END]
 RewriteRule ^oncologie$ /oncologie/ [R=301,L]
-RewriteRule ^oncologie/$ _banahealth-releases/legacy-2017-20261030/oncologie/index.html [END]
+RewriteRule ^oncologie/$ _banahealth-releases/legacy-2017-20261030-optimise/oncologie/index.html [END]
 RewriteRule ^interventions\-chirurgicales$ /interventions-chirurgicales/ [R=301,L]
-RewriteRule ^interventions\-chirurgicales/$ _banahealth-releases/legacy-2017-20261030/interventions-chirurgicales/index.html [END]
+RewriteRule ^interventions\-chirurgicales/$ _banahealth-releases/legacy-2017-20261030-optimise/interventions-chirurgicales/index.html [END]
 RewriteRule ^bilan\-de\-sante$ /bilan-de-sante/ [R=301,L]
-RewriteRule ^bilan\-de\-sante/$ _banahealth-releases/legacy-2017-20261030/bilan-de-sante/index.html [END]
-RewriteRule ^robots\.txt$ _banahealth-releases/legacy-2017-20261030/robots.txt [END]
-RewriteRule ^sitemap\.xml$ _banahealth-releases/legacy-2017-20261030/sitemap.xml [END]
-RewriteRule ^404\.html$ _banahealth-releases/legacy-2017-20261030/404.html [END]
+RewriteRule ^bilan\-de\-sante/$ _banahealth-releases/legacy-2017-20261030-optimise/bilan-de-sante/index.html [END]
+RewriteRule ^robots\.txt$ _banahealth-releases/legacy-2017-20261030-optimise/robots.txt [END]
+RewriteRule ^sitemap\.xml$ _banahealth-releases/legacy-2017-20261030-optimise/sitemap.xml [END]
+RewriteRule ^404\.html$ _banahealth-releases/legacy-2017-20261030-optimise/404.html [END]
 RewriteRule ^sitemap-index\.xml$ /sitemap.xml [R=301,L]
 RewriteRule ^(?:wp-admin|wp-content|wp-includes|wp-login\.php|xmlrpc\.php)(?:/|$) / [R=301,L]
 </IfModule>
@@ -902,12 +902,15 @@ Header always set X-Frame-Options "SAMEORIGIN"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self'; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'self'"
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-8lnFCOo4sKWvswfYrUefbJFVQ5+w1LeJdNglyQ1eFVw='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'self'"
 <FilesMatch "\.(html|css|js)$">
 Header set Cache-Control "no-cache, must-revalidate"
 </FilesMatch>
+Header set Cache-Control "public, max-age=31536000, immutable" "expr=%{REQUEST_URI} =~ m#^/_banahealth-releases/[a-z0-9-]+/(assets/|reconstruction\.js$)#"
 </IfModule>
 ErrorDocument 404 /404.html
+AddType font/woff2 .woff2
+AddType image/webp .webp
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript image/svg+xml
 </IfModule>

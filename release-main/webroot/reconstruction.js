@@ -8,6 +8,17 @@
     if (alternate) { location.replace(alternate.href + location.hash); return; }
   }
   document.documentElement.classList.add('reconstruction-js');
+  const loadDeferred = element => {
+    if (element.dataset.srcset) { element.srcset=element.dataset.srcset; delete element.dataset.srcset; }
+    if (element.dataset.src) { element.src=element.dataset.src; delete element.dataset.src; }
+  };
+  const mapFrames=document.querySelectorAll('.restored-map iframe[data-src]');
+  if ('IntersectionObserver' in window) {
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(entry.isIntersecting){loadDeferred(entry.target);observer.unobserve(entry.target);}
+    }),{rootMargin:'180px'});
+    mapFrames.forEach(frame=>observer.observe(frame));
+  } else mapFrames.forEach(loadDeferred);
   const topButton = document.querySelector('.back-to-top');
   const updateTopButton = () => {
     const visible = scrollY > 400;
@@ -59,7 +70,7 @@
     };
     const show = n => {
       index = (n + slides.length) % slides.length;
-      slides.forEach((s,i) => { const active=i===index;s.classList.toggle('is-active',active);s.inert=!active;s.setAttribute('aria-hidden',String(!active)); });
+      slides.forEach((s,i) => { const active=i===index;s.classList.toggle('is-active',active);s.inert=!active;s.setAttribute('aria-hidden',String(!active)); if(active)s.querySelectorAll('img[data-src]').forEach(loadDeferred); });
       dots.forEach((b,i) => b.setAttribute('aria-current',String(i===index)));
     };
     button(language==='fr'?'Précédent':'Previous', '‹', () => show(index-1));
