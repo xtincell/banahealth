@@ -1,0 +1,172 @@
+{
+  "measurement": "Lighthouse mobile lab on the same local Apache, cold browser cache, simulated throttling. Not real-user Core Web Vitals. Values vary across runs.",
+  "results": {
+    "before": {
+      "home": {
+        "url": "http://127.0.0.1:4320/",
+        "lighthouse_version": "13.6.0",
+        "scores": {
+          "performance": 47,
+          "accessibility": 75,
+          "best-practices": 96,
+          "seo": 92
+        },
+        "metrics": {
+          "first-contentful-paint": 2125.917,
+          "largest-contentful-paint": 14066.467199999997,
+          "cumulative-layout-shift": 0.8639125151883353,
+          "total-byte-weight": 2700374
+        }
+      },
+      "services": {
+        "url": "http://127.0.0.1:4320/nos-services/",
+        "lighthouse_version": "13.6.0",
+        "scores": {
+          "performance": 57,
+          "accessibility": 81,
+          "best-practices": 96,
+          "seo": 92
+        },
+        "metrics": {
+          "first-contentful-paint": 1966.9437500000004,
+          "largest-contentful-paint": 8802.11,
+          "cumulative-layout-shift": 0.3408401788495694,
+          "total-byte-weight": 1403506
+        }
+      }
+    },
+    "after": {
+      "home": {
+        "url": "http://127.0.0.1:4320/",
+        "lighthouse_version": "13.6.0",
+        "scores": {
+          "performance": 99,
+          "accessibility": 88,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "first-contentful-paint": 903.1201000000001,
+          "largest-contentful-paint": 2253.1201,
+          "cumulative-layout-shift": 0.0001823955464516125,
+          "total-byte-weight": 201441
+        }
+      },
+      "services": {
+        "url": "http://127.0.0.1:4320/nos-services/",
+        "lighthouse_version": "13.6.0",
+        "scores": {
+          "performance": 94,
+          "accessibility": 94,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "first-contentful-paint": 942.8311000000001,
+          "largest-contentful-paint": 3078.8311000000003,
+          "cumulative-layout-shift": 0.0002147384417751583,
+          "total-byte-weight": 348832
+        }
+      }
+    }
+  },
+  "browser_checks": {
+    "origin": "http://127.0.0.1:4320",
+    "pages": 34,
+    "redirects": 121,
+    "visits": 102,
+    "errors": [],
+    "interactions": [
+      "legacy URLs and language queries",
+      "mobile menu and submenus",
+      "equivalent language switch",
+      "carousel navigation and pause",
+      "live map and contact panel",
+      "floating back-to-top",
+      "gallery open and close"
+    ],
+    "status": "passed"
+  },
+  "static_checks": {
+    "status": "passed",
+    "pages": 34,
+    "unique_titles": 34,
+    "unique_descriptions": 34,
+    "inline_svg_icons": 515,
+    "internal_references_checked": 1291,
+    "images_with_geometry_and_alt": 296,
+    "sitemap_urls": 32
+  },
+  "external_link_checks": [
+    {
+      "url": "https://www.mediclinic.co.za/en/wits-donald-gordon-medical-centre/home.html",
+      "status": 200,
+      "final": "https://www.mediclinic.co.za/en/wits-donald-gordon-medical-centre/home.html"
+    },
+    {
+      "url": "https://www.netcare.co.za/netcare-facilities/netcare-milpark-hospital",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.netcare.co.za/netcare-facilities/netcare-rosebank-hospital",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.netcare.co.za/netcare-facilities/netcare-sunninghill-hospital",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://medfem.co.za/",
+      "status": 200,
+      "final": "https://medfem.co.za/"
+    },
+    {
+      "url": "https://www.mediclinic.co.za/en/corporate/hospitals/hospitals-in-johannesburg.html",
+      "status": 200,
+      "final": "https://www.mediclinic.co.za/en/corporate/hospitals/hospitals-in-johannesburg.html"
+    },
+    {
+      "url": "https://www.lifehealthcare.co.za/",
+      "status": 200,
+      "final": "https://www.lifehealthcare.co.za/"
+    },
+    {
+      "url": "https://dirco.gov.za/south-african-representation-abroad/",
+      "status": 200,
+      "final": "https://dirco.gov.za/south-african-representation-abroad/"
+    },
+    {
+      "url": "https://www.hpcsa.co.za/",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.southafrica.net/",
+      "status": 200,
+      "final": "https://www.southafrica.net/fr/fr/"
+    },
+    {
+      "url": "https://visit.joburg/",
+      "status": 200,
+      "final": "https://visit.joburg/"
+    },
+    {
+      "url": "https://www.gauteng.net/visit/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.weathersa.co.za/",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://samedical.org/",
+      "status": 200,
+      "final": "https://samedical.org/"
+    },
+    {
+      "url": "https://data.worldbank.org/indicator/SH.SGR.PROC.P5",
+      "status": 200,
+      "final": "https://data.worldbank.org/indicator/SH.SGR.PROC.P5"
+    }
+  ],
+  "external_limit": "Netcare and Gauteng block automated requests; official destinations confirmed from indexed official pages. HPCSA and WeatherSA remain temporarily unavailable to this audit; no invented substitute."
+}
