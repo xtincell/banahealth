@@ -1,4 +1,4 @@
-name: Publish historical BanaHealth as main website
+name: Publish optimised historical BanaHealth website
 on:
   push:
     branches:
@@ -21,7 +21,7 @@ jobs:
           persist-credentials: false
       - name: Install pinned SFTP dependencies
         run: python -m pip install 'paramiko==3.5.1' 'cryptography==46.0.3'
-      - name: Back up and publish entirely over SFTP with live progress
+      - name: Back up routing and publish verified optimised static release
         env:
           GH_TOKEN: ${{ github.token }}
         run: python -u ops/publish_main.py
