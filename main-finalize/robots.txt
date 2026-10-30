@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /_banahealth-releases/
-Allow: /_banahealth-releases/legacy-2017-20261030/assets/
-Allow: /_banahealth-releases/legacy-2017-20261030/reconstruction.css
-Allow: /_banahealth-releases/legacy-2017-20261030/reconstruction.js
-Disallow: /nouveau/
-Sitemap: https://banahealth.care/sitemap.xml
