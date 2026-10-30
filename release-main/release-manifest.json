@@ -1,14 +1,739 @@
 {
-  "release_id": "legacy-2017-20261030-optimise",
-  "mount": "/_banahealth-releases/legacy-2017-20261030-optimise/",
+  "release_id": "legacy-2017-20261030-optimise-final",
+  "mount": "/_banahealth-releases/legacy-2017-20261030-optimise-final/",
   "intended_url": "https://banahealth.care/",
   "remote_parent": "banahealth_2",
   "files": [
     {
       "path": "404.html",
-      "bytes": 28330,
-      "sha256": "48c744844edc33fae673f22c309938658701daa5dbc1809bab34d5d62358f302"
+      "bytes": 28595,
+      "sha256": "0d3e752cd351b9d98748f849fedf03050658a1736299bb7071beafe78eb0fd32"
     },
+    {
+      "path": "bilan-de-sante/index.html",
+      "bytes": 37020,
+      "sha256": "7e1041ec32956670e0143c58b5cffae854024bce9f5faa2a2dbc4b1e40fff6a9"
+    },
+    {
+      "path": "conditions-generales/index.html",
+      "bytes": 35863,
+      "sha256": "5d092348a73befd557c8d7d6956785586bcc4e2815841879ddf5592028e7bb56"
+    },
+    {
+      "path": "confidentialite/index.html",
+      "bytes": 36821,
+      "sha256": "a0a98218163c66609ef62c8c3f04c34c581f58ab770f60bf6d87937684cbd1de"
+    },
+    {
+      "path": "contact/index.html",
+      "bytes": 47268,
+      "sha256": "a3837ac94e443c7dcf99331e4f7729c6ca91d1e831df20eeb54a41826f55444a"
+    },
+    {
+      "path": "en/accommodation/index.html",
+      "bytes": 51753,
+      "sha256": "b31f9522349a6a0dd2ff23e89dc46117513ab756e4e2d071ad6577d0f13e0afe"
+    },
+    {
+      "path": "en/contact/index.html",
+      "bytes": 46963,
+      "sha256": "b1a41f59a5a078711ffb84b8a3f0f7473ed3c4297105139b7b111c2383756191"
+    },
+    {
+      "path": "en/general-check-up/index.html",
+      "bytes": 35929,
+      "sha256": "044c466f05caff08b179178b66c4566a600944b6e3e23f51fa13a079d079490c"
+    },
+    {
+      "path": "en/in-vitro-fertilisation/index.html",
+      "bytes": 35610,
+      "sha256": "8684bd11032008fdd9ca1ab93f107bbfed343b8745fe7137cc5a9002378f68d3"
+    },
+    {
+      "path": "en/index.html",
+      "bytes": 56485,
+      "sha256": "120f929692f3fa500cb8b2e11859a715b698d9ff60855ac5ef6707a272db2856"
+    },
+    {
+      "path": "en/medical-care/index.html",
+      "bytes": 52148,
+      "sha256": "d66fce86f8b11cece3744fd5e81d0581fb205f220b1aa9d123e924ab7c56a77b"
+    },
+    {
+      "path": "en/oncology/index.html",
+      "bytes": 39279,
+      "sha256": "c4fe17df400383e1afe4213dcfa64357c1496caa644c372a67c8998e3c8ec6a5"
+    },
+    {
+      "path": "en/our-founder/index.html",
+      "bytes": 38398,
+      "sha256": "6d026d58dcff079eff0856479b07e9604d4f8af634a5a34b9f09a830bb725e01"
+    },
+    {
+      "path": "en/our-network/index.html",
+      "bytes": 58991,
+      "sha256": "290d923bbe1f5a920d24f025aacb6546e7f1d22baec529e274da9100d8ade148"
+    },
+    {
+      "path": "en/our-services/index.html",
+      "bytes": 49071,
+      "sha256": "71ec7894a230198b2bfbbde78ee5a2828e85fbb38833ecfd5057885af56d6480"
+    },
+    {
+      "path": "en/privacy-policy/index.html",
+      "bytes": 36630,
+      "sha256": "9622c84fb0a8eae52ed08772180bcbbedfda500b77d8903fb32bb98ad0fa7e72"
+    },
+    {
+      "path": "en/surgeries/index.html",
+      "bytes": 38686,
+      "sha256": "640713344d13b97b89e372ec2cf4f7dbc2cfed77f73317ce12dfb80661b7a834"
+    },
+    {
+      "path": "en/terms-and-conditions/index.html",
+      "bytes": 35734,
+      "sha256": "75a2377dbf1b45bcc644d65b905737eeaac8c109a2f4b5c87b96ff8b74938df7"
+    },
+    {
+      "path": "en/testimonials/index.html",
+      "bytes": 39273,
+      "sha256": "ea12727bb33042154cf57bcf0f74ddccd33c2145598b3c73e2d0d92d260ef7c3"
+    },
+    {
+      "path": "en/useful-links/index.html",
+      "bytes": 51015,
+      "sha256": "bfa8387a63bdfbd4ece417439592f64f69f956393822c7cee085e6eb5e09c2e3"
+    },
+    {
+      "path": "en/vision-and-mission/index.html",
+      "bytes": 32442,
+      "sha256": "01289b2f2c6ef48b093e39f643b539cc35332af630e1388aff976d5c03f67447"
+    },
+    {
+      "path": "en/why-south-africa/index.html",
+      "bytes": 45389,
+      "sha256": "e6ebda5455ba40d01552740692e0ba050f70f1cda1671fcb331c029b34b10e1f"
+    },
+    {
+      "path": "fecondation-in-vitro/index.html",
+      "bytes": 37041,
+      "sha256": "73e5f7d8bba8518058c6b03d3e41ac80ced47d6305b6bb336d9b7d0e97679af6"
+    },
+    {
+      "path": "hebergement/index.html",
+      "bytes": 50143,
+      "sha256": "3564edfcae0b0df84fca15ed3e417d2bbbf276a61203c29aa69c8df2c36dea5c"
+    },
+    {
+      "path": "index.html",
+      "bytes": 56863,
+      "sha256": "861f3574415f6c12d10b7dfb006d2e2e2b7532d6261a2b459a7e47a97f09e0d4"
+    },
+    {
+      "path": "interventions-chirurgicales/index.html",
+      "bytes": 40619,
+      "sha256": "82be8041cf8d859b6323780285b52f8067219cace385c734a57122f764ba3cba"
+    },
+    {
+      "path": "liens-utiles/index.html",
+      "bytes": 52346,
+      "sha256": "3123f5e2ad5f3f580c1fa045be46b9b0365c563da60fb3bca9077b55c310ebe6"
+    },
+    {
+      "path": "nos-reseaux/index.html",
+      "bytes": 61820,
+      "sha256": "1b8d545c14844154d531bddd1707b1db18efae95fb745778b0571fe332f576ae"
+    },
+    {
+      "path": "nos-services/index.html",
+      "bytes": 50574,
+      "sha256": "96f2f800e3f3a15fd68de2a576d736226cad49a09a4b5583c759bfc5b2ab3594"
+    },
+    {
+      "path": "notre-fondatrice/index.html",
+      "bytes": 39449,
+      "sha256": "81c5b0bf4dc8dc28e982cc9e55ff0fd0f57da4508f7b98e492a14125365a5f60"
+    },
+    {
+      "path": "oncologie/index.html",
+      "bytes": 41655,
+      "sha256": "914763df13ba1863d85b55f74d8b47f0d6ee08d377c7fe9610e76546584f1232"
+    },
+    {
+      "path": "pourquoi-afrique-du-sud/index.html",
+      "bytes": 46670,
+      "sha256": "b413e8f0c6188f9517bd0270810dfa3719a374bc1158ac6bbd59d2406f30ce6e"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 343,
+      "sha256": "492edf6c775d6b3a8f5d0b305352669759c830d23e3da74a02186d39e1c5d355"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 2079,
+      "sha256": "1ac8d3f4eca0d55c51c7098c0f104c344d22a901644b63d927171b623331402b"
+    },
+    {
+      "path": "soins-medicaux/index.html",
+      "bytes": 53307,
+      "sha256": "ed5bafba02362dfa139c9b2f45dba6d521500561d84d86e2d1e15575f881558c"
+    },
+    {
+      "path": "temoignages/index.html",
+      "bytes": 40333,
+      "sha256": "a90cc510c137057e099280218e24f09701fe2ae18a992941e0e4f9c3a433a5f6"
+    },
+    {
+      "path": "vision-et-mission/index.html",
+      "bytes": 32982,
+      "sha256": "1c7d53d909df68f8a383c06c8bc404109eb67704106a8d7ac9304deeb947ec26"
+    }
+  ],
+  "pages": [
+    {
+      "path": "en/index.html",
+      "url": "/en/",
+      "lang": "en",
+      "slug": "",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/",
+        "captured_at": "20171215061926"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/our-founder/index.html",
+      "url": "/en/our-founder/",
+      "lang": "en",
+      "slug": "meet-the-founder",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/meet-the-founder/",
+        "captured_at": "20170724112813"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/vision-and-mission/index.html",
+      "url": "/en/vision-and-mission/",
+      "lang": "en",
+      "slug": "vision-and-mission",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/vision-and-mission/",
+        "captured_at": "20170724035901"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/our-services/index.html",
+      "url": "/en/our-services/",
+      "lang": "en",
+      "slug": "services",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/services/",
+        "captured_at": "20170723063937"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/accommodation/index.html",
+      "url": "/en/accommodation/",
+      "lang": "en",
+      "slug": "accommodation",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/accommodation/",
+        "captured_at": "20170724035836"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/why-south-africa/index.html",
+      "url": "/en/why-south-africa/",
+      "lang": "en",
+      "slug": "why-south-africa",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/why-south-africa/",
+        "captured_at": "20170721174627"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/our-network/index.html",
+      "url": "/en/our-network/",
+      "lang": "en",
+      "slug": "our-network-2",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/our-network-2/",
+        "captured_at": "20171214185103"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/medical-care/index.html",
+      "url": "/en/medical-care/",
+      "lang": "en",
+      "slug": "conditions",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/conditions/",
+        "captured_at": "20170707110339"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/contact/index.html",
+      "url": "/en/contact/",
+      "lang": "en",
+      "slug": "contact-us",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/contact-us/",
+        "captured_at": "20170723094731"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/privacy-policy/index.html",
+      "url": "/en/privacy-policy/",
+      "lang": "en",
+      "slug": "privacy-policy",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/privacy-policy/",
+        "captured_at": "20170724114217"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/terms-and-conditions/index.html",
+      "url": "/en/terms-and-conditions/",
+      "lang": "en",
+      "slug": "terms-and-conditions",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/terms-and-conditions/",
+        "captured_at": "20170724201914"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/testimonials/index.html",
+      "url": "/en/testimonials/",
+      "lang": "en",
+      "slug": "testimonials",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/testimonials/",
+        "captured_at": "20170724201946"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/useful-links/index.html",
+      "url": "/en/useful-links/",
+      "lang": "en",
+      "slug": "useful-links",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/useful-links/",
+        "captured_at": "20170724035849"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/in-vitro-fertilisation/index.html",
+      "url": "/en/in-vitro-fertilisation/",
+      "lang": "en",
+      "slug": "in-vitro-fertilization-ivf",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/in-vitro-fertilization-ivf/",
+        "captured_at": "20171218012544"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/oncology/index.html",
+      "url": "/en/oncology/",
+      "lang": "en",
+      "slug": "oncology",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/oncology/",
+        "captured_at": "20180215202541"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/surgeries/index.html",
+      "url": "/en/surgeries/",
+      "lang": "en",
+      "slug": "surgeries",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/surgeries/",
+        "captured_at": "20180419042045"
+      },
+      "indexable": true
+    },
+    {
+      "path": "en/general-check-up/index.html",
+      "url": "/en/general-check-up/",
+      "lang": "en",
+      "slug": "general-check-up",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/general-check-up/",
+        "captured_at": "20180419042229"
+      },
+      "indexable": true
+    },
+    {
+      "path": "index.html",
+      "url": "/",
+      "lang": "fr",
+      "slug": "",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/?lang=fr",
+        "captured_at": "20171216152246"
+      },
+      "indexable": true
+    },
+    {
+      "path": "notre-fondatrice/index.html",
+      "url": "/notre-fondatrice/",
+      "lang": "fr",
+      "slug": "meet-the-founder",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/meet-the-founder/?lang=fr",
+        "captured_at": "20180908202316"
+      },
+      "indexable": true
+    },
+    {
+      "path": "vision-et-mission/index.html",
+      "url": "/vision-et-mission/",
+      "lang": "fr",
+      "slug": "vision-and-mission",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/vision-et-mission/?lang=fr",
+        "captured_at": "20180906030716"
+      },
+      "indexable": true
+    },
+    {
+      "path": "nos-services/index.html",
+      "url": "/nos-services/",
+      "lang": "fr",
+      "slug": "services",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/nos-services/?lang=fr",
+        "captured_at": "20180910101308"
+      },
+      "indexable": true
+    },
+    {
+      "path": "hebergement/index.html",
+      "url": "/hebergement/",
+      "lang": "fr",
+      "slug": "accommodation",
+      "source": {
+        "type": "restored_editorial_source",
+        "file": "src/content/pages/fr/hebergement.md",
+        "archived_layout_available": false,
+        "shared_english_layout_reused": true
+      },
+      "indexable": true
+    },
+    {
+      "path": "pourquoi-afrique-du-sud/index.html",
+      "url": "/pourquoi-afrique-du-sud/",
+      "lang": "fr",
+      "slug": "why-south-africa",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/pourquoi-lafrique-du-sud/?lang=fr",
+        "captured_at": "20180906235047"
+      },
+      "indexable": true
+    },
+    {
+      "path": "nos-reseaux/index.html",
+      "url": "/nos-reseaux/",
+      "lang": "fr",
+      "slug": "our-network-2",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/our-network/?lang=fr",
+        "captured_at": "20180914220519"
+      },
+      "indexable": true
+    },
+    {
+      "path": "soins-medicaux/index.html",
+      "url": "/soins-medicaux/",
+      "lang": "fr",
+      "slug": "conditions",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/soins-medicaux/?lang=fr",
+        "captured_at": "20180910185740"
+      },
+      "indexable": true
+    },
+    {
+      "path": "contact/index.html",
+      "url": "/contact/",
+      "lang": "fr",
+      "slug": "contact-us",
+      "source": {
+        "type": "archived_page",
+        "original": "http://banahealth.care:80/contact-us/?lang=fr",
+        "captured_at": "20171203223937"
+      },
+      "indexable": true
+    },
+    {
+      "path": "confidentialite/index.html",
+      "url": "/confidentialite/",
+      "lang": "fr",
+      "slug": "privacy-policy",
+      "source": {
+        "type": "archived_english_legal",
+        "original": "http://banahealth.care:80/privacy-policy/",
+        "captured_at": "20170724114217",
+        "reason": "No verified French legal translation in the 2017 archive; retain the historical English legal text"
+      },
+      "indexable": false
+    },
+    {
+      "path": "conditions-generales/index.html",
+      "url": "/conditions-generales/",
+      "lang": "fr",
+      "slug": "terms-and-conditions",
+      "source": {
+        "type": "archived_english_legal",
+        "original": "http://banahealth.care:80/terms-and-conditions/",
+        "captured_at": "20170724201914",
+        "reason": "No verified French legal translation in the 2017 archive; retain the historical English legal text"
+      },
+      "indexable": false
+    },
+    {
+      "path": "temoignages/index.html",
+      "url": "/temoignages/",
+      "lang": "fr",
+      "slug": "testimonials",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/testimonials/?lang=fr",
+        "captured_at": "20180319094225"
+      },
+      "indexable": true
+    },
+    {
+      "path": "liens-utiles/index.html",
+      "url": "/liens-utiles/",
+      "lang": "fr",
+      "slug": "useful-links",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/useful-links/?lang=fr",
+        "captured_at": "20180906185137"
+      },
+      "indexable": true
+    },
+    {
+      "path": "fecondation-in-vitro/index.html",
+      "url": "/fecondation-in-vitro/",
+      "lang": "fr",
+      "slug": "in-vitro-fertilization-ivf",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/vitro-fertilization-ivf/?lang=fr",
+        "captured_at": "20181205040849"
+      },
+      "indexable": true
+    },
+    {
+      "path": "oncologie/index.html",
+      "url": "/oncologie/",
+      "lang": "fr",
+      "slug": "oncology",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/oncologie/?lang=fr",
+        "captured_at": "20181205053531"
+      },
+      "indexable": true
+    },
+    {
+      "path": "interventions-chirurgicales/index.html",
+      "url": "/interventions-chirurgicales/",
+      "lang": "fr",
+      "slug": "surgeries",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/interventions-chirurgicales/?lang=fr",
+        "captured_at": "20181205101324"
+      },
+      "indexable": true
+    },
+    {
+      "path": "bilan-de-sante/index.html",
+      "url": "/bilan-de-sante/",
+      "lang": "fr",
+      "slug": "general-check-up",
+      "source": {
+        "type": "adjacent_archive_layout",
+        "original": "http://banahealth.care/general-check-up/?lang=fr",
+        "captured_at": "20181205061612"
+      },
+      "indexable": true
+    }
+  ],
+  "redirects": {
+    "/historique-2017/": "/en/",
+    "/meet-the-founder/": "/en/our-founder/",
+    "/historique-2017/meet-the-founder/": "/en/our-founder/",
+    "/vision-and-mission/": "/en/vision-and-mission/",
+    "/historique-2017/vision-and-mission/": "/en/vision-and-mission/",
+    "/services/": "/en/our-services/",
+    "/historique-2017/services/": "/en/our-services/",
+    "/accommodation/": "/en/accommodation/",
+    "/historique-2017/accommodation/": "/en/accommodation/",
+    "/why-south-africa/": "/en/why-south-africa/",
+    "/historique-2017/why-south-africa/": "/en/why-south-africa/",
+    "/our-network-2/": "/en/our-network/",
+    "/historique-2017/our-network-2/": "/en/our-network/",
+    "/conditions/": "/en/medical-care/",
+    "/historique-2017/conditions/": "/en/medical-care/",
+    "/contact-us/": "/en/contact/",
+    "/historique-2017/contact-us/": "/en/contact/",
+    "/privacy-policy/": "/en/privacy-policy/",
+    "/historique-2017/privacy-policy/": "/en/privacy-policy/",
+    "/terms-and-conditions/": "/en/terms-and-conditions/",
+    "/historique-2017/terms-and-conditions/": "/en/terms-and-conditions/",
+    "/testimonials/": "/en/testimonials/",
+    "/historique-2017/testimonials/": "/en/testimonials/",
+    "/useful-links/": "/en/useful-links/",
+    "/historique-2017/useful-links/": "/en/useful-links/",
+    "/in-vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
+    "/historique-2017/in-vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
+    "/oncology/": "/en/oncology/",
+    "/historique-2017/oncology/": "/en/oncology/",
+    "/surgeries/": "/en/surgeries/",
+    "/historique-2017/surgeries/": "/en/surgeries/",
+    "/general-check-up/": "/en/general-check-up/",
+    "/historique-2017/general-check-up/": "/en/general-check-up/",
+    "/fr/": "/",
+    "/historique-2017/fr/": "/",
+    "/fr/meet-the-founder/": "/notre-fondatrice/",
+    "/historique-2017/fr/meet-the-founder/": "/notre-fondatrice/",
+    "/fr/vision-and-mission/": "/vision-et-mission/",
+    "/historique-2017/fr/vision-and-mission/": "/vision-et-mission/",
+    "/fr/services/": "/nos-services/",
+    "/historique-2017/fr/services/": "/nos-services/",
+    "/fr/accommodation/": "/hebergement/",
+    "/historique-2017/fr/accommodation/": "/hebergement/",
+    "/fr/why-south-africa/": "/pourquoi-afrique-du-sud/",
+    "/historique-2017/fr/why-south-africa/": "/pourquoi-afrique-du-sud/",
+    "/fr/our-network-2/": "/nos-reseaux/",
+    "/historique-2017/fr/our-network-2/": "/nos-reseaux/",
+    "/fr/conditions/": "/soins-medicaux/",
+    "/historique-2017/fr/conditions/": "/soins-medicaux/",
+    "/fr/contact-us/": "/contact/",
+    "/historique-2017/fr/contact-us/": "/contact/",
+    "/fr/privacy-policy/": "/confidentialite/",
+    "/historique-2017/fr/privacy-policy/": "/confidentialite/",
+    "/fr/terms-and-conditions/": "/conditions-generales/",
+    "/historique-2017/fr/terms-and-conditions/": "/conditions-generales/",
+    "/fr/testimonials/": "/temoignages/",
+    "/historique-2017/fr/testimonials/": "/temoignages/",
+    "/fr/useful-links/": "/liens-utiles/",
+    "/historique-2017/fr/useful-links/": "/liens-utiles/",
+    "/fr/in-vitro-fertilization-ivf/": "/fecondation-in-vitro/",
+    "/historique-2017/fr/in-vitro-fertilization-ivf/": "/fecondation-in-vitro/",
+    "/fr/oncology/": "/oncologie/",
+    "/historique-2017/fr/oncology/": "/oncologie/",
+    "/fr/surgeries/": "/interventions-chirurgicales/",
+    "/historique-2017/fr/surgeries/": "/interventions-chirurgicales/",
+    "/fr/general-check-up/": "/bilan-de-sante/",
+    "/historique-2017/fr/general-check-up/": "/bilan-de-sante/",
+    "/our-network/": "/en/our-network/",
+    "/fr/our-network/": "/nos-reseaux/",
+    "/medical-care/": "/en/medical-care/",
+    "/fr/medical-care/": "/soins-medicaux/",
+    "/in-vitro-fertilisation/": "/en/in-vitro-fertilisation/",
+    "/fr/in-vitro-fertilisation/": "/fecondation-in-vitro/",
+    "/vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
+    "/en/vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
+    "/fr/vitro-fertilization-ivf/": "/fecondation-in-vitro/",
+    "/pourquoi-lafrique-du-sud/": "/en/why-south-africa/",
+    "/en/pourquoi-lafrique-du-sud/": "/en/why-south-africa/",
+    "/fr/pourquoi-lafrique-du-sud/": "/pourquoi-afrique-du-sud/",
+    "/en/interventions-chirurgicales/": "/en/surgeries/",
+    "/fr/interventions-chirurgicales/": "/interventions-chirurgicales/",
+    "/en/notre-fondatrice/": "/en/our-founder/",
+    "/fr/notre-fondatrice/": "/notre-fondatrice/",
+    "/our-founder/": "/en/our-founder/",
+    "/fr/our-founder/": "/notre-fondatrice/",
+    "/en/vision-et-mission/": "/en/vision-and-mission/",
+    "/fr/vision-et-mission/": "/vision-et-mission/",
+    "/en/nos-services/": "/en/our-services/",
+    "/fr/nos-services/": "/nos-services/",
+    "/our-services/": "/en/our-services/",
+    "/fr/our-services/": "/nos-services/",
+    "/en/hebergement/": "/en/accommodation/",
+    "/fr/hebergement/": "/hebergement/",
+    "/en/pourquoi-afrique-du-sud/": "/en/why-south-africa/",
+    "/fr/pourquoi-afrique-du-sud/": "/pourquoi-afrique-du-sud/",
+    "/en/nos-reseaux/": "/en/our-network/",
+    "/fr/nos-reseaux/": "/nos-reseaux/",
+    "/en/soins-medicaux/": "/en/medical-care/",
+    "/fr/soins-medicaux/": "/soins-medicaux/",
+    "/en/conditions/": "/en/medical-care/",
+    "/fr/contact/": "/contact/",
+    "/en/contact-us/": "/en/contact/",
+    "/en/confidentialite/": "/en/privacy-policy/",
+    "/fr/confidentialite/": "/confidentialite/",
+    "/en/conditions-generales/": "/en/terms-and-conditions/",
+    "/fr/conditions-generales/": "/conditions-generales/",
+    "/en/temoignages/": "/en/testimonials/",
+    "/fr/temoignages/": "/temoignages/",
+    "/en/liens-utiles/": "/en/useful-links/",
+    "/fr/liens-utiles/": "/liens-utiles/",
+    "/en/fecondation-in-vitro/": "/en/in-vitro-fertilisation/",
+    "/fr/fecondation-in-vitro/": "/fecondation-in-vitro/",
+    "/en/in-vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
+    "/en/oncologie/": "/en/oncology/",
+    "/fr/oncologie/": "/oncologie/",
+    "/en/bilan-de-sante/": "/en/general-check-up/",
+    "/fr/bilan-de-sante/": "/bilan-de-sante/",
+    "/page-daccueil/": "/",
+    "/sample-page/": "/en/",
+    "/blog/": "/en/",
+    "/cookie-policy/": "/en/privacy-policy/"
+  },
+  "htaccess_sha256": "461b2d1629ea4364178a2a8660ac292a2fe35d6044a75549233bc5d7d045cf7e",
+  "previous_activation": {
+    "release_id": "legacy-2017-20261030-optimise",
+    "htaccess_sha256": "12afaf1a57a4523954783be5054ad942de71d27b621d1670cdb5585c5d580f3d",
+    "homepage_sha256": "ea70090c8ce4a218f4e2ef77f417534e5389e6fa5c835a1eeb01429a8be709fe"
+  },
+  "asset_mount": "/_banahealth-releases/legacy-2017-20261030-optimise/",
+  "reused_files": [
     {
       "path": "assets/06f10c2e84d7c88f-1200.webp",
       "bytes": 26994,
@@ -1015,731 +1740,9 @@
       "sha256": "45fe5c6f5d05545f21bde364b05dcfece5ee4205a0f0af1eb1f81e04c5ea653d"
     },
     {
-      "path": "bilan-de-sante/index.html",
-      "bytes": 36755,
-      "sha256": "e3ee7850844537596be77f9cf1e09c4c3fcf2c3aaecf73653755ef14ce81697b"
-    },
-    {
-      "path": "conditions-generales/index.html",
-      "bytes": 35598,
-      "sha256": "712c7b0bd28efead53f328bf2a0c1867f1ada57281053ee21eb89bf5866da9a0"
-    },
-    {
-      "path": "confidentialite/index.html",
-      "bytes": 36556,
-      "sha256": "55bc3a2fe7820e1d20527afa61a29338ab8ef5d620c0bc4ee7cf28b6e5aa6663"
-    },
-    {
-      "path": "contact/index.html",
-      "bytes": 46391,
-      "sha256": "e174b0f4a45756fcd338dd22517f208dd16696d6bd913a9907deb3b15aa551e7"
-    },
-    {
-      "path": "en/accommodation/index.html",
-      "bytes": 51488,
-      "sha256": "0c0f54d3a448a80cee1ceaa8864e5eed3f71b1676546e582575654dd34941eb7"
-    },
-    {
-      "path": "en/contact/index.html",
-      "bytes": 46086,
-      "sha256": "3e8ca07bb5c8f2380065257e3d2d2c9a3fa302f48f3748ce686fc73a80e4faf3"
-    },
-    {
-      "path": "en/general-check-up/index.html",
-      "bytes": 35664,
-      "sha256": "3ab2ab5b9d8016f9ec78a43562587395833b49e1453c9c59a0ae233a906af008"
-    },
-    {
-      "path": "en/in-vitro-fertilisation/index.html",
-      "bytes": 35345,
-      "sha256": "8fa47eec04234de9e0b8f04897e7b22849bc3f090fc0fce4487c41c41fdf65a4"
-    },
-    {
-      "path": "en/index.html",
-      "bytes": 55914,
-      "sha256": "3eee7e543122b7b04ae9111c9900bd6db7f0c587c42ad0708b3abf5c55916c55"
-    },
-    {
-      "path": "en/medical-care/index.html",
-      "bytes": 51883,
-      "sha256": "5e7e2349b94cef56b35b7a7e725dd2707d79eb69dc5b9f1e1f2cf8e1e17989be"
-    },
-    {
-      "path": "en/oncology/index.html",
-      "bytes": 39014,
-      "sha256": "130e0f46c05642d8cedd7cbf0eb492f29540ed010205699211bc092bd897be63"
-    },
-    {
-      "path": "en/our-founder/index.html",
-      "bytes": 37929,
-      "sha256": "4bfd13190ae02b0ad9c34288a699bb204f9ea966a1f5549e39f7d055a1f3e1cc"
-    },
-    {
-      "path": "en/our-network/index.html",
-      "bytes": 58726,
-      "sha256": "e60f23d35986d3b6b20376c0ef6b985bbababadfd382868d70814d7d68f15813"
-    },
-    {
-      "path": "en/our-services/index.html",
-      "bytes": 48806,
-      "sha256": "e90a4210d214efd978e6522de1d126b5eb7a9e4e4671a73f2d17f5656931accf"
-    },
-    {
-      "path": "en/privacy-policy/index.html",
-      "bytes": 36365,
-      "sha256": "81071f74c9f18859fd37ca48dba529cf4013c9a4218d762f846f8643b9c367e8"
-    },
-    {
-      "path": "en/surgeries/index.html",
-      "bytes": 38421,
-      "sha256": "e851592c24b5f1eee7aab09700e811f110911a8d5eff572cab02c03991f040ae"
-    },
-    {
-      "path": "en/terms-and-conditions/index.html",
-      "bytes": 35469,
-      "sha256": "620e978db17f16fca562ea7adfff46a9ad6a4ec1d9a6c1d332428435a3f34263"
-    },
-    {
-      "path": "en/testimonials/index.html",
-      "bytes": 39008,
-      "sha256": "aa2e16444a276cb51e3d51c70752f3876b57ec6f085384902b166e984e17160d"
-    },
-    {
-      "path": "en/useful-links/index.html",
-      "bytes": 50750,
-      "sha256": "8dbe7f89a8273e830d6ab13d240428e6a8bba043f9e292abadc72cdff1b015b5"
-    },
-    {
-      "path": "en/vision-and-mission/index.html",
-      "bytes": 32177,
-      "sha256": "dca6bc902afbdf388f9d716480a2bfb4ebb9ad7fe73a9b63a22e7d16a9b61427"
-    },
-    {
-      "path": "en/why-south-africa/index.html",
-      "bytes": 45124,
-      "sha256": "abbe7f6997a6596677d8b71170c2c495f05c08fc8181806cc7c8e0b70409cd42"
-    },
-    {
-      "path": "fecondation-in-vitro/index.html",
-      "bytes": 36776,
-      "sha256": "1727fd8beb92b1e362a5bd7a6a9706b2cb944551a1b8ab6112cd4657f94e6c93"
-    },
-    {
-      "path": "hebergement/index.html",
-      "bytes": 49878,
-      "sha256": "e66909314fe3bd536185c88d0375f8acdf989c39005545f7c8dbbb6b8b6e494e"
-    },
-    {
-      "path": "index.html",
-      "bytes": 56292,
-      "sha256": "ea70090c8ce4a218f4e2ef77f417534e5389e6fa5c835a1eeb01429a8be709fe"
-    },
-    {
-      "path": "interventions-chirurgicales/index.html",
-      "bytes": 40354,
-      "sha256": "33ddbce5ee3cf139e856f723765912e689591f9e9977ba75e9ee941a2565eede"
-    },
-    {
-      "path": "liens-utiles/index.html",
-      "bytes": 52081,
-      "sha256": "6147ae5327f17ab227a9860bbb3eb2027164bcc4d67a42fd976ff6187fd5905e"
-    },
-    {
-      "path": "nos-reseaux/index.html",
-      "bytes": 61555,
-      "sha256": "318c725189c56539fac6d6c96f459a620bbd0df05abbe0e1a4b96fc110529192"
-    },
-    {
-      "path": "nos-services/index.html",
-      "bytes": 50309,
-      "sha256": "1c1ced68bd16165a2ab40255e544d73d114f3bda79af1da3ae7953a0436485ae"
-    },
-    {
-      "path": "notre-fondatrice/index.html",
-      "bytes": 38980,
-      "sha256": "8a6a03f192aea199e19817f41db1589ee4608081a26a27a48967a60c3331c8e1"
-    },
-    {
-      "path": "oncologie/index.html",
-      "bytes": 41390,
-      "sha256": "a21d12c3398a6a97f9defd88edc8c0fe6df9a9fb6428e92e959d28acf0961a39"
-    },
-    {
-      "path": "pourquoi-afrique-du-sud/index.html",
-      "bytes": 46405,
-      "sha256": "17a95fc68918886de37ac791d3eb9b5e3aeaaa6beb14a572c835822ada9f7361"
-    },
-    {
       "path": "reconstruction.js",
       "bytes": 7318,
       "sha256": "02f33b6f38c0a2bfde1a61b8d662ff1bdc6641682d86967a03bf72305f066fb5"
-    },
-    {
-      "path": "robots.txt",
-      "bytes": 343,
-      "sha256": "492edf6c775d6b3a8f5d0b305352669759c830d23e3da74a02186d39e1c5d355"
-    },
-    {
-      "path": "sitemap.xml",
-      "bytes": 2079,
-      "sha256": "1ac8d3f4eca0d55c51c7098c0f104c344d22a901644b63d927171b623331402b"
-    },
-    {
-      "path": "soins-medicaux/index.html",
-      "bytes": 53042,
-      "sha256": "faa0432aaebed4f500f70a3428a7652c7de6d616df3adfce0f935f3bd2e63002"
-    },
-    {
-      "path": "temoignages/index.html",
-      "bytes": 40068,
-      "sha256": "7905c120c48d23e7ddf15369731d76863aa33d99c621706efc69f5883519ba65"
-    },
-    {
-      "path": "vision-et-mission/index.html",
-      "bytes": 32717,
-      "sha256": "52620cc3fea2d5eb07b08d6c8b1297ac3879e7104a53e3cbdde2996a5b5d2264"
     }
-  ],
-  "pages": [
-    {
-      "path": "en/index.html",
-      "url": "/en/",
-      "lang": "en",
-      "slug": "",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/",
-        "captured_at": "20171215061926"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/our-founder/index.html",
-      "url": "/en/our-founder/",
-      "lang": "en",
-      "slug": "meet-the-founder",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/meet-the-founder/",
-        "captured_at": "20170724112813"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/vision-and-mission/index.html",
-      "url": "/en/vision-and-mission/",
-      "lang": "en",
-      "slug": "vision-and-mission",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/vision-and-mission/",
-        "captured_at": "20170724035901"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/our-services/index.html",
-      "url": "/en/our-services/",
-      "lang": "en",
-      "slug": "services",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/services/",
-        "captured_at": "20170723063937"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/accommodation/index.html",
-      "url": "/en/accommodation/",
-      "lang": "en",
-      "slug": "accommodation",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/accommodation/",
-        "captured_at": "20170724035836"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/why-south-africa/index.html",
-      "url": "/en/why-south-africa/",
-      "lang": "en",
-      "slug": "why-south-africa",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/why-south-africa/",
-        "captured_at": "20170721174627"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/our-network/index.html",
-      "url": "/en/our-network/",
-      "lang": "en",
-      "slug": "our-network-2",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/our-network-2/",
-        "captured_at": "20171214185103"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/medical-care/index.html",
-      "url": "/en/medical-care/",
-      "lang": "en",
-      "slug": "conditions",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/conditions/",
-        "captured_at": "20170707110339"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/contact/index.html",
-      "url": "/en/contact/",
-      "lang": "en",
-      "slug": "contact-us",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/contact-us/",
-        "captured_at": "20170723094731"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/privacy-policy/index.html",
-      "url": "/en/privacy-policy/",
-      "lang": "en",
-      "slug": "privacy-policy",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/privacy-policy/",
-        "captured_at": "20170724114217"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/terms-and-conditions/index.html",
-      "url": "/en/terms-and-conditions/",
-      "lang": "en",
-      "slug": "terms-and-conditions",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/terms-and-conditions/",
-        "captured_at": "20170724201914"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/testimonials/index.html",
-      "url": "/en/testimonials/",
-      "lang": "en",
-      "slug": "testimonials",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/testimonials/",
-        "captured_at": "20170724201946"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/useful-links/index.html",
-      "url": "/en/useful-links/",
-      "lang": "en",
-      "slug": "useful-links",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/useful-links/",
-        "captured_at": "20170724035849"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/in-vitro-fertilisation/index.html",
-      "url": "/en/in-vitro-fertilisation/",
-      "lang": "en",
-      "slug": "in-vitro-fertilization-ivf",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/in-vitro-fertilization-ivf/",
-        "captured_at": "20171218012544"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/oncology/index.html",
-      "url": "/en/oncology/",
-      "lang": "en",
-      "slug": "oncology",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/oncology/",
-        "captured_at": "20180215202541"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/surgeries/index.html",
-      "url": "/en/surgeries/",
-      "lang": "en",
-      "slug": "surgeries",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/surgeries/",
-        "captured_at": "20180419042045"
-      },
-      "indexable": true
-    },
-    {
-      "path": "en/general-check-up/index.html",
-      "url": "/en/general-check-up/",
-      "lang": "en",
-      "slug": "general-check-up",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/general-check-up/",
-        "captured_at": "20180419042229"
-      },
-      "indexable": true
-    },
-    {
-      "path": "index.html",
-      "url": "/",
-      "lang": "fr",
-      "slug": "",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/?lang=fr",
-        "captured_at": "20171216152246"
-      },
-      "indexable": true
-    },
-    {
-      "path": "notre-fondatrice/index.html",
-      "url": "/notre-fondatrice/",
-      "lang": "fr",
-      "slug": "meet-the-founder",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/meet-the-founder/?lang=fr",
-        "captured_at": "20180908202316"
-      },
-      "indexable": true
-    },
-    {
-      "path": "vision-et-mission/index.html",
-      "url": "/vision-et-mission/",
-      "lang": "fr",
-      "slug": "vision-and-mission",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/vision-et-mission/?lang=fr",
-        "captured_at": "20180906030716"
-      },
-      "indexable": true
-    },
-    {
-      "path": "nos-services/index.html",
-      "url": "/nos-services/",
-      "lang": "fr",
-      "slug": "services",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/nos-services/?lang=fr",
-        "captured_at": "20180910101308"
-      },
-      "indexable": true
-    },
-    {
-      "path": "hebergement/index.html",
-      "url": "/hebergement/",
-      "lang": "fr",
-      "slug": "accommodation",
-      "source": {
-        "type": "restored_editorial_source",
-        "file": "src/content/pages/fr/hebergement.md",
-        "archived_layout_available": false,
-        "shared_english_layout_reused": true
-      },
-      "indexable": true
-    },
-    {
-      "path": "pourquoi-afrique-du-sud/index.html",
-      "url": "/pourquoi-afrique-du-sud/",
-      "lang": "fr",
-      "slug": "why-south-africa",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/pourquoi-lafrique-du-sud/?lang=fr",
-        "captured_at": "20180906235047"
-      },
-      "indexable": true
-    },
-    {
-      "path": "nos-reseaux/index.html",
-      "url": "/nos-reseaux/",
-      "lang": "fr",
-      "slug": "our-network-2",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/our-network/?lang=fr",
-        "captured_at": "20180914220519"
-      },
-      "indexable": true
-    },
-    {
-      "path": "soins-medicaux/index.html",
-      "url": "/soins-medicaux/",
-      "lang": "fr",
-      "slug": "conditions",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/soins-medicaux/?lang=fr",
-        "captured_at": "20180910185740"
-      },
-      "indexable": true
-    },
-    {
-      "path": "contact/index.html",
-      "url": "/contact/",
-      "lang": "fr",
-      "slug": "contact-us",
-      "source": {
-        "type": "archived_page",
-        "original": "http://banahealth.care:80/contact-us/?lang=fr",
-        "captured_at": "20171203223937"
-      },
-      "indexable": true
-    },
-    {
-      "path": "confidentialite/index.html",
-      "url": "/confidentialite/",
-      "lang": "fr",
-      "slug": "privacy-policy",
-      "source": {
-        "type": "archived_english_legal",
-        "original": "http://banahealth.care:80/privacy-policy/",
-        "captured_at": "20170724114217",
-        "reason": "No verified French legal translation in the 2017 archive; retain the historical English legal text"
-      },
-      "indexable": false
-    },
-    {
-      "path": "conditions-generales/index.html",
-      "url": "/conditions-generales/",
-      "lang": "fr",
-      "slug": "terms-and-conditions",
-      "source": {
-        "type": "archived_english_legal",
-        "original": "http://banahealth.care:80/terms-and-conditions/",
-        "captured_at": "20170724201914",
-        "reason": "No verified French legal translation in the 2017 archive; retain the historical English legal text"
-      },
-      "indexable": false
-    },
-    {
-      "path": "temoignages/index.html",
-      "url": "/temoignages/",
-      "lang": "fr",
-      "slug": "testimonials",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/testimonials/?lang=fr",
-        "captured_at": "20180319094225"
-      },
-      "indexable": true
-    },
-    {
-      "path": "liens-utiles/index.html",
-      "url": "/liens-utiles/",
-      "lang": "fr",
-      "slug": "useful-links",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/useful-links/?lang=fr",
-        "captured_at": "20180906185137"
-      },
-      "indexable": true
-    },
-    {
-      "path": "fecondation-in-vitro/index.html",
-      "url": "/fecondation-in-vitro/",
-      "lang": "fr",
-      "slug": "in-vitro-fertilization-ivf",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/vitro-fertilization-ivf/?lang=fr",
-        "captured_at": "20181205040849"
-      },
-      "indexable": true
-    },
-    {
-      "path": "oncologie/index.html",
-      "url": "/oncologie/",
-      "lang": "fr",
-      "slug": "oncology",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/oncologie/?lang=fr",
-        "captured_at": "20181205053531"
-      },
-      "indexable": true
-    },
-    {
-      "path": "interventions-chirurgicales/index.html",
-      "url": "/interventions-chirurgicales/",
-      "lang": "fr",
-      "slug": "surgeries",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/interventions-chirurgicales/?lang=fr",
-        "captured_at": "20181205101324"
-      },
-      "indexable": true
-    },
-    {
-      "path": "bilan-de-sante/index.html",
-      "url": "/bilan-de-sante/",
-      "lang": "fr",
-      "slug": "general-check-up",
-      "source": {
-        "type": "adjacent_archive_layout",
-        "original": "http://banahealth.care/general-check-up/?lang=fr",
-        "captured_at": "20181205061612"
-      },
-      "indexable": true
-    }
-  ],
-  "redirects": {
-    "/historique-2017/": "/en/",
-    "/meet-the-founder/": "/en/our-founder/",
-    "/historique-2017/meet-the-founder/": "/en/our-founder/",
-    "/vision-and-mission/": "/en/vision-and-mission/",
-    "/historique-2017/vision-and-mission/": "/en/vision-and-mission/",
-    "/services/": "/en/our-services/",
-    "/historique-2017/services/": "/en/our-services/",
-    "/accommodation/": "/en/accommodation/",
-    "/historique-2017/accommodation/": "/en/accommodation/",
-    "/why-south-africa/": "/en/why-south-africa/",
-    "/historique-2017/why-south-africa/": "/en/why-south-africa/",
-    "/our-network-2/": "/en/our-network/",
-    "/historique-2017/our-network-2/": "/en/our-network/",
-    "/conditions/": "/en/medical-care/",
-    "/historique-2017/conditions/": "/en/medical-care/",
-    "/contact-us/": "/en/contact/",
-    "/historique-2017/contact-us/": "/en/contact/",
-    "/privacy-policy/": "/en/privacy-policy/",
-    "/historique-2017/privacy-policy/": "/en/privacy-policy/",
-    "/terms-and-conditions/": "/en/terms-and-conditions/",
-    "/historique-2017/terms-and-conditions/": "/en/terms-and-conditions/",
-    "/testimonials/": "/en/testimonials/",
-    "/historique-2017/testimonials/": "/en/testimonials/",
-    "/useful-links/": "/en/useful-links/",
-    "/historique-2017/useful-links/": "/en/useful-links/",
-    "/in-vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
-    "/historique-2017/in-vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
-    "/oncology/": "/en/oncology/",
-    "/historique-2017/oncology/": "/en/oncology/",
-    "/surgeries/": "/en/surgeries/",
-    "/historique-2017/surgeries/": "/en/surgeries/",
-    "/general-check-up/": "/en/general-check-up/",
-    "/historique-2017/general-check-up/": "/en/general-check-up/",
-    "/fr/": "/",
-    "/historique-2017/fr/": "/",
-    "/fr/meet-the-founder/": "/notre-fondatrice/",
-    "/historique-2017/fr/meet-the-founder/": "/notre-fondatrice/",
-    "/fr/vision-and-mission/": "/vision-et-mission/",
-    "/historique-2017/fr/vision-and-mission/": "/vision-et-mission/",
-    "/fr/services/": "/nos-services/",
-    "/historique-2017/fr/services/": "/nos-services/",
-    "/fr/accommodation/": "/hebergement/",
-    "/historique-2017/fr/accommodation/": "/hebergement/",
-    "/fr/why-south-africa/": "/pourquoi-afrique-du-sud/",
-    "/historique-2017/fr/why-south-africa/": "/pourquoi-afrique-du-sud/",
-    "/fr/our-network-2/": "/nos-reseaux/",
-    "/historique-2017/fr/our-network-2/": "/nos-reseaux/",
-    "/fr/conditions/": "/soins-medicaux/",
-    "/historique-2017/fr/conditions/": "/soins-medicaux/",
-    "/fr/contact-us/": "/contact/",
-    "/historique-2017/fr/contact-us/": "/contact/",
-    "/fr/privacy-policy/": "/confidentialite/",
-    "/historique-2017/fr/privacy-policy/": "/confidentialite/",
-    "/fr/terms-and-conditions/": "/conditions-generales/",
-    "/historique-2017/fr/terms-and-conditions/": "/conditions-generales/",
-    "/fr/testimonials/": "/temoignages/",
-    "/historique-2017/fr/testimonials/": "/temoignages/",
-    "/fr/useful-links/": "/liens-utiles/",
-    "/historique-2017/fr/useful-links/": "/liens-utiles/",
-    "/fr/in-vitro-fertilization-ivf/": "/fecondation-in-vitro/",
-    "/historique-2017/fr/in-vitro-fertilization-ivf/": "/fecondation-in-vitro/",
-    "/fr/oncology/": "/oncologie/",
-    "/historique-2017/fr/oncology/": "/oncologie/",
-    "/fr/surgeries/": "/interventions-chirurgicales/",
-    "/historique-2017/fr/surgeries/": "/interventions-chirurgicales/",
-    "/fr/general-check-up/": "/bilan-de-sante/",
-    "/historique-2017/fr/general-check-up/": "/bilan-de-sante/",
-    "/our-network/": "/en/our-network/",
-    "/fr/our-network/": "/nos-reseaux/",
-    "/medical-care/": "/en/medical-care/",
-    "/fr/medical-care/": "/soins-medicaux/",
-    "/in-vitro-fertilisation/": "/en/in-vitro-fertilisation/",
-    "/fr/in-vitro-fertilisation/": "/fecondation-in-vitro/",
-    "/vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
-    "/en/vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
-    "/fr/vitro-fertilization-ivf/": "/fecondation-in-vitro/",
-    "/pourquoi-lafrique-du-sud/": "/en/why-south-africa/",
-    "/en/pourquoi-lafrique-du-sud/": "/en/why-south-africa/",
-    "/fr/pourquoi-lafrique-du-sud/": "/pourquoi-afrique-du-sud/",
-    "/en/interventions-chirurgicales/": "/en/surgeries/",
-    "/fr/interventions-chirurgicales/": "/interventions-chirurgicales/",
-    "/en/notre-fondatrice/": "/en/our-founder/",
-    "/fr/notre-fondatrice/": "/notre-fondatrice/",
-    "/our-founder/": "/en/our-founder/",
-    "/fr/our-founder/": "/notre-fondatrice/",
-    "/en/vision-et-mission/": "/en/vision-and-mission/",
-    "/fr/vision-et-mission/": "/vision-et-mission/",
-    "/en/nos-services/": "/en/our-services/",
-    "/fr/nos-services/": "/nos-services/",
-    "/our-services/": "/en/our-services/",
-    "/fr/our-services/": "/nos-services/",
-    "/en/hebergement/": "/en/accommodation/",
-    "/fr/hebergement/": "/hebergement/",
-    "/en/pourquoi-afrique-du-sud/": "/en/why-south-africa/",
-    "/fr/pourquoi-afrique-du-sud/": "/pourquoi-afrique-du-sud/",
-    "/en/nos-reseaux/": "/en/our-network/",
-    "/fr/nos-reseaux/": "/nos-reseaux/",
-    "/en/soins-medicaux/": "/en/medical-care/",
-    "/fr/soins-medicaux/": "/soins-medicaux/",
-    "/en/conditions/": "/en/medical-care/",
-    "/fr/contact/": "/contact/",
-    "/en/contact-us/": "/en/contact/",
-    "/en/confidentialite/": "/en/privacy-policy/",
-    "/fr/confidentialite/": "/confidentialite/",
-    "/en/conditions-generales/": "/en/terms-and-conditions/",
-    "/fr/conditions-generales/": "/conditions-generales/",
-    "/en/temoignages/": "/en/testimonials/",
-    "/fr/temoignages/": "/temoignages/",
-    "/en/liens-utiles/": "/en/useful-links/",
-    "/fr/liens-utiles/": "/liens-utiles/",
-    "/en/fecondation-in-vitro/": "/en/in-vitro-fertilisation/",
-    "/fr/fecondation-in-vitro/": "/fecondation-in-vitro/",
-    "/en/in-vitro-fertilization-ivf/": "/en/in-vitro-fertilisation/",
-    "/en/oncologie/": "/en/oncology/",
-    "/fr/oncologie/": "/oncologie/",
-    "/en/bilan-de-sante/": "/en/general-check-up/",
-    "/fr/bilan-de-sante/": "/bilan-de-sante/",
-    "/page-daccueil/": "/",
-    "/sample-page/": "/en/",
-    "/blog/": "/en/",
-    "/cookie-policy/": "/en/privacy-policy/"
-  },
-  "htaccess_sha256": "12afaf1a57a4523954783be5054ad942de71d27b621d1670cdb5585c5d580f3d",
-  "previous_activation": {
-    "release_id": "legacy-2017-20261030",
-    "htaccess_sha256": "8b28b1a597370d22fe83f63ed5adc90eb5dbecf0b2c1c60857fd98849f90cfbb",
-    "homepage_sha256": "7163af905120a424187b9257ca108ec897eec68ee32bb3aed9336e1a6185b0cf"
-  }
+  ]
 }

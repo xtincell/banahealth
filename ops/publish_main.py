@@ -111,6 +111,14 @@ def deploy(client,m,tree,rules,run):
     old_index=sftp_read(sftp,old_index_path,2_000_000)
     if previous and sha256(old_index)!=previous['homepage_sha256']:
         raise ValueError('Previous immutable release changed since review')
+    if m.get('asset_mount'):
+        assert previous and m['asset_mount']=='/_banahealth-releases/'+previous['release_id']+'/'
+        # All reused assets were checksum-verified in the previous publication.
+        # Verify executable presentation resources again before reusing them.
+        for f in m['reused_files']:
+            if f['path'].endswith(('.css','.js')):
+                remote=m['asset_mount'].lstrip('/')+f['path']
+                assert sha256(sftp_read(sftp,remote,f['bytes']))==f['sha256']
     if sha256(old_index)!=sha256(public_bytes(BASE+'/')):
         raise ValueError('Current homepage differs from remote root; inspect before replacing routing')
     backup_root=home+'/.banahealth-backups'
